@@ -1,0 +1,11 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.72 clang-900.0.38)"
+options: "db662d235e624d6538fbec60d695f523"
+build_time: [1525390222, 30156000]
+inputs:
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_pageview.swift": [1524876110, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_main.swift": [1525201843, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/StateUserInfo.swift": [1521135160, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_login.swift": [1525390220, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_secondary.swift": [1524875472, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_pageview_content.swift": [1524781880, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/AppDelegate.swift": [1525390159, 0]
