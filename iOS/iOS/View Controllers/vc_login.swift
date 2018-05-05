@@ -29,7 +29,12 @@ class vc_login: UIViewController {
         
 
         self.DownloadUserData(UserEmail:Username)
-
+        
+        
+        // Move to the next viewpager: the pick-deck screen.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck") 
+        self.present(newViewController, animated: true, completion: nil)
         
     }
     

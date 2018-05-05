@@ -173,6 +173,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -199,10 +201,22 @@ SWIFT_CLASS("_TtC3iOS11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
+@class UIImageView;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC3iOS32SelectDeckCellCollectionViewCell")
+@interface SelectDeckCellCollectionViewCell : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LabelTitle;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LabelDifficulty;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified ImagePreview;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITextField;
 @class UIButton;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC3iOS8vc_login")
 @interface vc_login : UIViewController
@@ -223,11 +237,10 @@ SWIFT_CLASS("_TtC3iOS8vc_login")
 
 SWIFT_CLASS("_TtC3iOS7vc_main")
 @interface vc_main : UIViewController <UITextFieldDelegate>
+- (void)updateTimer;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
-- (IBAction)ButtonClickNext:(UIButton * _Nonnull)sender;
-- (IBAction)ButtonClickNextStoryboard:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -247,8 +260,6 @@ SWIFT_CLASS("_TtC3iOS11vc_pageview")
 - (UIViewController * _Nullable)pageViewController:(UIPageViewController * _Nonnull)pageViewController viewControllerBeforeViewController:(UIViewController * _Nonnull)viewController SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class UIImageView;
-@class UILabel;
 
 SWIFT_CLASS("_TtC3iOS19vc_pageview_content")
 @interface vc_pageview_content : UIViewController
@@ -269,6 +280,19 @@ SWIFT_CLASS("_TtC3iOS12vc_secondary")
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)ButtonClickStartPager:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionView;
+
+SWIFT_CLASS("_TtC3iOS14vc_select_deck")
+@interface vc_select_deck : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

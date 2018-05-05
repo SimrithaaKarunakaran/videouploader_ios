@@ -1,36 +1,46 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "timer"
 - "vc_main"
 provides-nominal:
 - "3iOS7vc_mainC"
 provides-member:
 - ["3iOS7vc_mainC", ""]
 provides-dynamic-lookup:
-- "ButtonClickNext"
-- "ButtonClickNextStoryboard"
 - "didReceiveMemoryWarning"
+- "updateTimer"
 - "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
+- !private "-="
+- !private "=="
+- "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
+- "BooleanLiteralType"
 - "CastingPrecedence"
 - !private "StringLiteralType"
-- "UIButton"
+- "Timer"
 - !private "UIStoryboard"
 - "UITextFieldDelegate"
 - "UIViewController"
 - !private "os_log"
+- "timer"
 - "vc_main"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "SecondsTillTransition"]
+- !private ["s7CVarArgP", "Timer"]
 - !private ["s7CVarArgP", "UIStoryboard"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
-- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "instantiateViewController"]
+- !private ["s7CVarArgP", "invalidate"]
+- !private ["s7CVarArgP", "isTimerRunning"]
 - !private ["s7CVarArgP", "os_log"]
-- !private ["s7CVarArgP", "performSegue"]
 - !private ["s7CVarArgP", "present"]
+- !private ["s7CVarArgP", "runTimer"]
+- !private ["s7CVarArgP", "scheduledTimer"]
 - ["s7CVarArgP", "textField"]
 - ["s7CVarArgP", "textFieldDidBeginEditing"]
 - ["s7CVarArgP", "textFieldDidEndEditing"]
@@ -38,17 +48,25 @@ depends-member:
 - ["s7CVarArgP", "textFieldShouldClear"]
 - ["s7CVarArgP", "textFieldShouldEndEditing"]
 - ["s7CVarArgP", "textFieldShouldReturn"]
+- !private ["s7CVarArgP", "timer"]
+- !private ["s7CVarArgP", "updateTimer"]
+- !private ["s7CVarArgP", "vc_main"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "SecondsTillTransition"]
+- !private ["s28CustomDebugStringConvertibleP", "Timer"]
 - !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "instantiateViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "invalidate"]
+- !private ["s28CustomDebugStringConvertibleP", "isTimerRunning"]
 - !private ["s28CustomDebugStringConvertibleP", "os_log"]
-- !private ["s28CustomDebugStringConvertibleP", "performSegue"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
+- !private ["s28CustomDebugStringConvertibleP", "runTimer"]
+- !private ["s28CustomDebugStringConvertibleP", "scheduledTimer"]
 - ["s28CustomDebugStringConvertibleP", "textField"]
 - ["s28CustomDebugStringConvertibleP", "textFieldDidBeginEditing"]
 - ["s28CustomDebugStringConvertibleP", "textFieldDidEndEditing"]
@@ -56,17 +74,28 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldClear"]
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldEndEditing"]
 - ["s28CustomDebugStringConvertibleP", "textFieldShouldReturn"]
+- !private ["s28CustomDebugStringConvertibleP", "timer"]
+- !private ["s28CustomDebugStringConvertibleP", "updateTimer"]
+- !private ["s28CustomDebugStringConvertibleP", "vc_main"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "SecondsTillTransition"]
+- !private ["s23CustomStringConvertibleP", "Timer"]
 - !private ["s23CustomStringConvertibleP", "UIStoryboard"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
-- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "instantiateViewController"]
+- !private ["s23CustomStringConvertibleP", "invalidate"]
+- !private ["s23CustomStringConvertibleP", "isTimerRunning"]
 - !private ["s23CustomStringConvertibleP", "os_log"]
-- !private ["s23CustomStringConvertibleP", "performSegue"]
 - !private ["s23CustomStringConvertibleP", "present"]
+- !private ["s23CustomStringConvertibleP", "runTimer"]
+- !private ["s23CustomStringConvertibleP", "scheduledTimer"]
 - ["s23CustomStringConvertibleP", "textField"]
 - ["s23CustomStringConvertibleP", "textFieldDidBeginEditing"]
 - ["s23CustomStringConvertibleP", "textFieldDidEndEditing"]
@@ -74,17 +103,28 @@ depends-member:
 - ["s23CustomStringConvertibleP", "textFieldShouldClear"]
 - ["s23CustomStringConvertibleP", "textFieldShouldEndEditing"]
 - ["s23CustomStringConvertibleP", "textFieldShouldReturn"]
+- !private ["s23CustomStringConvertibleP", "timer"]
+- !private ["s23CustomStringConvertibleP", "updateTimer"]
+- !private ["s23CustomStringConvertibleP", "vc_main"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "SecondsTillTransition"]
+- !private ["s9EquatableP", "Timer"]
 - !private ["s9EquatableP", "UIStoryboard"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
-- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "instantiateViewController"]
+- !private ["s9EquatableP", "invalidate"]
+- !private ["s9EquatableP", "isTimerRunning"]
 - !private ["s9EquatableP", "os_log"]
-- !private ["s9EquatableP", "performSegue"]
 - !private ["s9EquatableP", "present"]
+- !private ["s9EquatableP", "runTimer"]
+- !private ["s9EquatableP", "scheduledTimer"]
 - ["s9EquatableP", "textField"]
 - ["s9EquatableP", "textFieldDidBeginEditing"]
 - ["s9EquatableP", "textFieldDidEndEditing"]
@@ -92,18 +132,28 @@ depends-member:
 - ["s9EquatableP", "textFieldShouldClear"]
 - ["s9EquatableP", "textFieldShouldEndEditing"]
 - ["s9EquatableP", "textFieldShouldReturn"]
+- !private ["s9EquatableP", "timer"]
+- !private ["s9EquatableP", "updateTimer"]
+- !private ["s9EquatableP", "vc_main"]
 - !private ["s9EquatableP", "viewDidLoad"]
 - ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "SecondsTillTransition"]
+- !private ["s8HashableP", "Timer"]
 - !private ["s8HashableP", "UIStoryboard"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
-- !private ["s8HashableP", "init"]
+- ["s8HashableP", "init"]
 - !private ["s8HashableP", "instantiateViewController"]
+- !private ["s8HashableP", "invalidate"]
+- !private ["s8HashableP", "isTimerRunning"]
 - !private ["s8HashableP", "os_log"]
-- !private ["s8HashableP", "performSegue"]
 - !private ["s8HashableP", "present"]
+- !private ["s8HashableP", "runTimer"]
+- !private ["s8HashableP", "scheduledTimer"]
 - ["s8HashableP", "textField"]
 - ["s8HashableP", "textFieldDidBeginEditing"]
 - ["s8HashableP", "textFieldDidEndEditing"]
@@ -111,16 +161,23 @@ depends-member:
 - ["s8HashableP", "textFieldShouldClear"]
 - ["s8HashableP", "textFieldShouldEndEditing"]
 - ["s8HashableP", "textFieldShouldReturn"]
+- !private ["s8HashableP", "timer"]
+- !private ["s8HashableP", "updateTimer"]
+- !private ["s8HashableP", "vc_main"]
 - !private ["s8HashableP", "viewDidLoad"]
 - ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "SecondsTillTransition"]
+- !private ["So8NSCodingP", "Timer"]
 - !private ["So8NSCodingP", "UIStoryboard"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isTimerRunning"]
 - !private ["So8NSCodingP", "os_log"]
-- !private ["So8NSCodingP", "performSegue"]
 - !private ["So8NSCodingP", "present"]
+- !private ["So8NSCodingP", "runTimer"]
 - ["So8NSCodingP", "textField"]
 - ["So8NSCodingP", "textFieldDidBeginEditing"]
 - ["So8NSCodingP", "textFieldDidEndEditing"]
@@ -128,15 +185,21 @@ depends-member:
 - ["So8NSCodingP", "textFieldShouldClear"]
 - ["So8NSCodingP", "textFieldShouldEndEditing"]
 - ["So8NSCodingP", "textFieldShouldReturn"]
+- !private ["So8NSCodingP", "timer"]
+- !private ["So8NSCodingP", "updateTimer"]
+- !private ["So8NSCodingP", "vc_main"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", ""]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "SecondsTillTransition"]
+- !private ["So26NSExtensionRequestHandlingP", "Timer"]
 - !private ["So26NSExtensionRequestHandlingP", "UIStoryboard"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "isTimerRunning"]
 - !private ["So26NSExtensionRequestHandlingP", "os_log"]
-- !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
+- !private ["So26NSExtensionRequestHandlingP", "runTimer"]
 - ["So26NSExtensionRequestHandlingP", "textField"]
 - ["So26NSExtensionRequestHandlingP", "textFieldDidBeginEditing"]
 - ["So26NSExtensionRequestHandlingP", "textFieldDidEndEditing"]
@@ -144,23 +207,28 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldClear"]
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldEndEditing"]
 - ["So26NSExtensionRequestHandlingP", "textFieldShouldReturn"]
+- !private ["So26NSExtensionRequestHandlingP", "timer"]
+- !private ["So26NSExtensionRequestHandlingP", "updateTimer"]
+- !private ["So26NSExtensionRequestHandlingP", "vc_main"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "init"]
 - ["So8NSObjectC", "Bool"]
-- ["So8NSObjectC", "ButtonClickNext"]
-- ["So8NSObjectC", "ButtonClickNextStoryboard"]
-- ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "SecondsTillTransition"]
+- !private ["So8NSObjectC", "Timer"]
 - !private ["So8NSObjectC", "UIStoryboard"]
 - !private ["So8NSObjectC", "UIViewController"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "instantiateViewController"]
+- !private ["So8NSObjectC", "invalidate"]
+- ["So8NSObjectC", "isTimerRunning"]
 - !private ["So8NSObjectC", "os_log"]
-- !private ["So8NSObjectC", "performSegue"]
 - !private ["So8NSObjectC", "present"]
+- ["So8NSObjectC", "runTimer"]
+- !private ["So8NSObjectC", "scheduledTimer"]
 - ["So8NSObjectC", "textField"]
 - ["So8NSObjectC", "textFieldDidBeginEditing"]
 - ["So8NSObjectC", "textFieldDidEndEditing"]
@@ -168,15 +236,23 @@ depends-member:
 - ["So8NSObjectC", "textFieldShouldClear"]
 - ["So8NSObjectC", "textFieldShouldEndEditing"]
 - ["So8NSObjectC", "textFieldShouldReturn"]
+- !private ["So8NSObjectC", "timer"]
+- ["So8NSObjectC", "updateTimer"]
+- !private ["So8NSObjectC", "vc_main"]
 - ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "SecondsTillTransition"]
+- !private ["So16NSObjectProtocolP", "Timer"]
 - !private ["So16NSObjectProtocolP", "UIStoryboard"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
-- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "instantiateViewController"]
+- !private ["So16NSObjectProtocolP", "invalidate"]
+- !private ["So16NSObjectProtocolP", "isTimerRunning"]
 - !private ["So16NSObjectProtocolP", "os_log"]
-- !private ["So16NSObjectProtocolP", "performSegue"]
 - !private ["So16NSObjectProtocolP", "present"]
+- !private ["So16NSObjectProtocolP", "runTimer"]
+- !private ["So16NSObjectProtocolP", "scheduledTimer"]
 - ["So16NSObjectProtocolP", "textField"]
 - ["So16NSObjectProtocolP", "textFieldDidBeginEditing"]
 - ["So16NSObjectProtocolP", "textFieldDidEndEditing"]
@@ -184,6 +260,9 @@ depends-member:
 - ["So16NSObjectProtocolP", "textFieldShouldClear"]
 - ["So16NSObjectProtocolP", "textFieldShouldEndEditing"]
 - ["So16NSObjectProtocolP", "textFieldShouldReturn"]
+- !private ["So16NSObjectProtocolP", "timer"]
+- !private ["So16NSObjectProtocolP", "updateTimer"]
+- !private ["So16NSObjectProtocolP", "vc_main"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - ["So16NSObjectProtocolP", ""]
 - !private ["So14NSSecureCodingP", "init"]
@@ -195,12 +274,18 @@ depends-member:
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- ["So5TimerC", "init"]
+- !private ["So5TimerC", "invalidate"]
+- !private ["So5TimerC", "scheduledTimer"]
+- !private ["So21UIAppearanceContainerP", "SecondsTillTransition"]
+- !private ["So21UIAppearanceContainerP", "Timer"]
 - !private ["So21UIAppearanceContainerP", "UIStoryboard"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "isTimerRunning"]
 - !private ["So21UIAppearanceContainerP", "os_log"]
-- !private ["So21UIAppearanceContainerP", "performSegue"]
 - !private ["So21UIAppearanceContainerP", "present"]
+- !private ["So21UIAppearanceContainerP", "runTimer"]
 - ["So21UIAppearanceContainerP", "textField"]
 - ["So21UIAppearanceContainerP", "textFieldDidBeginEditing"]
 - ["So21UIAppearanceContainerP", "textFieldDidEndEditing"]
@@ -208,14 +293,20 @@ depends-member:
 - ["So21UIAppearanceContainerP", "textFieldShouldClear"]
 - ["So21UIAppearanceContainerP", "textFieldShouldEndEditing"]
 - ["So21UIAppearanceContainerP", "textFieldShouldReturn"]
+- !private ["So21UIAppearanceContainerP", "timer"]
+- !private ["So21UIAppearanceContainerP", "updateTimer"]
+- !private ["So21UIAppearanceContainerP", "vc_main"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So18UIContentContainerP", "SecondsTillTransition"]
+- !private ["So18UIContentContainerP", "Timer"]
 - !private ["So18UIContentContainerP", "UIStoryboard"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "isTimerRunning"]
 - !private ["So18UIContentContainerP", "os_log"]
-- !private ["So18UIContentContainerP", "performSegue"]
 - !private ["So18UIContentContainerP", "present"]
+- !private ["So18UIContentContainerP", "runTimer"]
 - ["So18UIContentContainerP", "textField"]
 - ["So18UIContentContainerP", "textFieldDidBeginEditing"]
 - ["So18UIContentContainerP", "textFieldDidEndEditing"]
@@ -223,14 +314,20 @@ depends-member:
 - ["So18UIContentContainerP", "textFieldShouldClear"]
 - ["So18UIContentContainerP", "textFieldShouldEndEditing"]
 - ["So18UIContentContainerP", "textFieldShouldReturn"]
+- !private ["So18UIContentContainerP", "timer"]
+- !private ["So18UIContentContainerP", "updateTimer"]
+- !private ["So18UIContentContainerP", "vc_main"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", ""]
+- !private ["So18UIFocusEnvironmentP", "SecondsTillTransition"]
+- !private ["So18UIFocusEnvironmentP", "Timer"]
 - !private ["So18UIFocusEnvironmentP", "UIStoryboard"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "isTimerRunning"]
 - !private ["So18UIFocusEnvironmentP", "os_log"]
-- !private ["So18UIFocusEnvironmentP", "performSegue"]
 - !private ["So18UIFocusEnvironmentP", "present"]
+- !private ["So18UIFocusEnvironmentP", "runTimer"]
 - ["So18UIFocusEnvironmentP", "textField"]
 - ["So18UIFocusEnvironmentP", "textFieldDidBeginEditing"]
 - ["So18UIFocusEnvironmentP", "textFieldDidEndEditing"]
@@ -238,14 +335,20 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "textFieldShouldClear"]
 - ["So18UIFocusEnvironmentP", "textFieldShouldEndEditing"]
 - ["So18UIFocusEnvironmentP", "textFieldShouldReturn"]
+- !private ["So18UIFocusEnvironmentP", "timer"]
+- !private ["So18UIFocusEnvironmentP", "updateTimer"]
+- !private ["So18UIFocusEnvironmentP", "vc_main"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "SecondsTillTransition"]
+- !private ["So30UIPasteConfigurationSupportingP", "Timer"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIStoryboard"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "isTimerRunning"]
 - !private ["So30UIPasteConfigurationSupportingP", "os_log"]
-- !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
+- !private ["So30UIPasteConfigurationSupportingP", "runTimer"]
 - ["So30UIPasteConfigurationSupportingP", "textField"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldDidBeginEditing"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldDidEndEditing"]
@@ -253,19 +356,22 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldClear"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldEndEditing"]
 - ["So30UIPasteConfigurationSupportingP", "textFieldShouldReturn"]
+- !private ["So30UIPasteConfigurationSupportingP", "timer"]
+- !private ["So30UIPasteConfigurationSupportingP", "updateTimer"]
+- !private ["So30UIPasteConfigurationSupportingP", "vc_main"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So11UIResponderC", "Bool"]
-- ["So11UIResponderC", "ButtonClickNext"]
-- ["So11UIResponderC", "ButtonClickNextStoryboard"]
-- ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "SecondsTillTransition"]
+- !private ["So11UIResponderC", "Timer"]
 - !private ["So11UIResponderC", "UIStoryboard"]
 - !private ["So11UIResponderC", "UIViewController"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "isTimerRunning"]
 - !private ["So11UIResponderC", "os_log"]
-- !private ["So11UIResponderC", "performSegue"]
 - !private ["So11UIResponderC", "present"]
+- ["So11UIResponderC", "runTimer"]
 - ["So11UIResponderC", "textField"]
 - ["So11UIResponderC", "textFieldDidBeginEditing"]
 - ["So11UIResponderC", "textFieldDidEndEditing"]
@@ -273,14 +379,20 @@ depends-member:
 - ["So11UIResponderC", "textFieldShouldClear"]
 - ["So11UIResponderC", "textFieldShouldEndEditing"]
 - ["So11UIResponderC", "textFieldShouldReturn"]
+- !private ["So11UIResponderC", "timer"]
+- ["So11UIResponderC", "updateTimer"]
+- !private ["So11UIResponderC", "vc_main"]
 - ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "SecondsTillTransition"]
+- !private ["So30UIResponderStandardEditActionsP", "Timer"]
 - !private ["So30UIResponderStandardEditActionsP", "UIStoryboard"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "isTimerRunning"]
 - !private ["So30UIResponderStandardEditActionsP", "os_log"]
-- !private ["So30UIResponderStandardEditActionsP", "performSegue"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
+- !private ["So30UIResponderStandardEditActionsP", "runTimer"]
 - ["So30UIResponderStandardEditActionsP", "textField"]
 - ["So30UIResponderStandardEditActionsP", "textFieldDidBeginEditing"]
 - ["So30UIResponderStandardEditActionsP", "textFieldDidEndEditing"]
@@ -288,14 +400,20 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldClear"]
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldEndEditing"]
 - ["So30UIResponderStandardEditActionsP", "textFieldShouldReturn"]
+- !private ["So30UIResponderStandardEditActionsP", "timer"]
+- !private ["So30UIResponderStandardEditActionsP", "updateTimer"]
+- !private ["So30UIResponderStandardEditActionsP", "vc_main"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So16UIStateRestoringP", "SecondsTillTransition"]
+- !private ["So16UIStateRestoringP", "Timer"]
 - !private ["So16UIStateRestoringP", "UIStoryboard"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "isTimerRunning"]
 - !private ["So16UIStateRestoringP", "os_log"]
-- !private ["So16UIStateRestoringP", "performSegue"]
 - !private ["So16UIStateRestoringP", "present"]
+- !private ["So16UIStateRestoringP", "runTimer"]
 - ["So16UIStateRestoringP", "textField"]
 - ["So16UIStateRestoringP", "textFieldDidBeginEditing"]
 - ["So16UIStateRestoringP", "textFieldDidEndEditing"]
@@ -303,14 +421,20 @@ depends-member:
 - ["So16UIStateRestoringP", "textFieldShouldClear"]
 - ["So16UIStateRestoringP", "textFieldShouldEndEditing"]
 - ["So16UIStateRestoringP", "textFieldShouldReturn"]
+- !private ["So16UIStateRestoringP", "timer"]
+- !private ["So16UIStateRestoringP", "updateTimer"]
+- !private ["So16UIStateRestoringP", "vc_main"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So12UIStoryboardC", "init"]
 - !private ["So12UIStoryboardC", "instantiateViewController"]
+- !private ["So19UITextFieldDelegateP", "SecondsTillTransition"]
+- !private ["So19UITextFieldDelegateP", "Timer"]
 - !private ["So19UITextFieldDelegateP", "UIStoryboard"]
+- !private ["So19UITextFieldDelegateP", "isTimerRunning"]
 - !private ["So19UITextFieldDelegateP", "os_log"]
-- !private ["So19UITextFieldDelegateP", "performSegue"]
 - !private ["So19UITextFieldDelegateP", "present"]
+- !private ["So19UITextFieldDelegateP", "runTimer"]
 - ["So19UITextFieldDelegateP", "textField"]
 - ["So19UITextFieldDelegateP", "textFieldDidBeginEditing"]
 - ["So19UITextFieldDelegateP", "textFieldDidEndEditing"]
@@ -318,13 +442,19 @@ depends-member:
 - ["So19UITextFieldDelegateP", "textFieldShouldClear"]
 - ["So19UITextFieldDelegateP", "textFieldShouldEndEditing"]
 - ["So19UITextFieldDelegateP", "textFieldShouldReturn"]
+- !private ["So19UITextFieldDelegateP", "timer"]
+- !private ["So19UITextFieldDelegateP", "updateTimer"]
+- !private ["So19UITextFieldDelegateP", "vc_main"]
 - ["So19UITextFieldDelegateP", ""]
+- !private ["So18UITraitEnvironmentP", "SecondsTillTransition"]
+- !private ["So18UITraitEnvironmentP", "Timer"]
 - !private ["So18UITraitEnvironmentP", "UIStoryboard"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "isTimerRunning"]
 - !private ["So18UITraitEnvironmentP", "os_log"]
-- !private ["So18UITraitEnvironmentP", "performSegue"]
 - !private ["So18UITraitEnvironmentP", "present"]
+- !private ["So18UITraitEnvironmentP", "runTimer"]
 - ["So18UITraitEnvironmentP", "textField"]
 - ["So18UITraitEnvironmentP", "textFieldDidBeginEditing"]
 - ["So18UITraitEnvironmentP", "textFieldDidEndEditing"]
@@ -332,19 +462,22 @@ depends-member:
 - ["So18UITraitEnvironmentP", "textFieldShouldClear"]
 - ["So18UITraitEnvironmentP", "textFieldShouldEndEditing"]
 - ["So18UITraitEnvironmentP", "textFieldShouldReturn"]
+- !private ["So18UITraitEnvironmentP", "timer"]
+- !private ["So18UITraitEnvironmentP", "updateTimer"]
+- !private ["So18UITraitEnvironmentP", "vc_main"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So16UIViewControllerC", "Bool"]
-- ["So16UIViewControllerC", "ButtonClickNext"]
-- ["So16UIViewControllerC", "ButtonClickNextStoryboard"]
-- ["So16UIViewControllerC", "UIButton"]
+- ["So16UIViewControllerC", "SecondsTillTransition"]
+- !private ["So16UIViewControllerC", "Timer"]
 - !private ["So16UIViewControllerC", "UIStoryboard"]
 - !private ["So16UIViewControllerC", "UIViewController"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "isTimerRunning"]
 - !private ["So16UIViewControllerC", "os_log"]
-- !private ["So16UIViewControllerC", "performSegue"]
 - !private ["So16UIViewControllerC", "present"]
+- ["So16UIViewControllerC", "runTimer"]
 - ["So16UIViewControllerC", "textField"]
 - ["So16UIViewControllerC", "textFieldDidBeginEditing"]
 - ["So16UIViewControllerC", "textFieldDidEndEditing"]
@@ -352,10 +485,14 @@ depends-member:
 - ["So16UIViewControllerC", "textFieldShouldClear"]
 - ["So16UIViewControllerC", "textFieldShouldEndEditing"]
 - ["So16UIViewControllerC", "textFieldShouldReturn"]
+- !private ["So16UIViewControllerC", "timer"]
+- ["So16UIViewControllerC", "updateTimer"]
+- !private ["So16UIViewControllerC", "vc_main"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", ""]
 - !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -364,13 +501,18 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "init"]
 - !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SecondsTillTransition"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Timer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "instantiateViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "invalidate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isTimerRunning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "os_log"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "runTimer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scheduledTimer"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textField"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDidBeginEditing"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldDidEndEditing"]
@@ -378,23 +520,27 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldClear"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldEndEditing"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "textFieldShouldReturn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateTimer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "vc_main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 - ["3iOS7vc_mainC", "Bool"]
-- ["3iOS7vc_mainC", "ButtonClickNext"]
-- ["3iOS7vc_mainC", "ButtonClickNextStoryboard"]
-- ["3iOS7vc_mainC", "UIButton"]
+- ["3iOS7vc_mainC", "SecondsTillTransition"]
+- !private ["3iOS7vc_mainC", "Timer"]
 - !private ["3iOS7vc_mainC", "UIStoryboard"]
 - !private ["3iOS7vc_mainC", "UIViewController"]
 - ["3iOS7vc_mainC", "deinit"]
 - ["3iOS7vc_mainC", "didReceiveMemoryWarning"]
 - ["3iOS7vc_mainC", "init"]
+- ["3iOS7vc_mainC", "isTimerRunning"]
 - !private ["3iOS7vc_mainC", "os_log"]
-- !private ["3iOS7vc_mainC", "performSegue"]
 - !private ["3iOS7vc_mainC", "present"]
+- ["3iOS7vc_mainC", "runTimer"]
 - ["3iOS7vc_mainC", "textField"]
 - ["3iOS7vc_mainC", "textFieldDidBeginEditing"]
 - ["3iOS7vc_mainC", "textFieldDidEndEditing"]
@@ -402,10 +548,14 @@ depends-member:
 - ["3iOS7vc_mainC", "textFieldShouldClear"]
 - ["3iOS7vc_mainC", "textFieldShouldEndEditing"]
 - ["3iOS7vc_mainC", "textFieldShouldReturn"]
+- !private ["3iOS7vc_mainC", "timer"]
+- ["3iOS7vc_mainC", "updateTimer"]
+- !private ["3iOS7vc_mainC", "vc_main"]
 - ["3iOS7vc_mainC", "viewDidAppear"]
 - ["3iOS7vc_mainC", "viewDidLoad"]
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
+- !private "Sb"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -416,6 +566,7 @@ depends-nominal:
 - !private "s9DecodableP"
 - !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
@@ -439,6 +590,7 @@ depends-nominal:
 - !private "s14StringProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
+- "So5TimerC"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
 - "So18UIFocusEnvironmentP"
@@ -451,6 +603,7 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So16UIViewControllerC"
 - !private "s23_BidirectionalIndexableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -481,97 +634,6 @@ depends-external:
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebasePerformance/Frameworks/FirebasePerformance.framework/Headers/FIRHTTPMetric.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebasePerformance/Frameworks/FirebasePerformance.framework/Headers/FIRTrace.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebasePerformance/Frameworks/FirebasePerformance.framework/Headers/FIRPerformance.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebasePerformance/Frameworks/FirebasePerformance.framework/Headers/FirebasePerformance.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebasePerformance/Frameworks/FirebasePerformance.framework/Headers/FIRPerformanceAttributable.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestore.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/Firebase/Core/Sources/Firebase.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseRemoteConfig/Frameworks/FirebaseRemoteConfig.framework/Headers/FIRRemoteConfig.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseRemoteConfig/Frameworks/FirebaseRemoteConfig.framework/Headers/FirebaseRemoteConfig.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseMessaging/Frameworks/FirebaseMessaging.framework/Headers/FIRMessaging.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseMessaging/Frameworks/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCrash/Frameworks/FirebaseCrash.framework/Headers/FIRCrashLog.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCrash/Frameworks/FirebaseCrash.framework/Headers/FIRCrash.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCrash/Frameworks/FirebaseCrash.framework/Headers/FirebaseCrash.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRTransaction.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSetOptions.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuery.h"
 - "/Users/haik/Documents/iOS/iOS/Pods/Firebase/Core/Sources/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebasePerformance/Frameworks/FirebasePerformance.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseRemoteConfig/Frameworks/FirebaseRemoteConfig.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseMessaging/Frameworks/FirebaseMessaging.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseCrash/Frameworks/FirebaseCrash.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-- "/Users/haik/Documents/iOS/iOS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
-interface-hash: "a6abf93fc5c658587ae26398f0af0dfa"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Firebase/Core/Sources/module.modulemap"
+interface-hash: "92362555a2aca8cead161b0146dcff4a"
