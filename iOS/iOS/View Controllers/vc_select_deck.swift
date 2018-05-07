@@ -14,7 +14,13 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     var ArrayTitles       = ["Emoji", "Animals", "Faces", "Sports", "Jobs", "All Decks"]
     var ArrayDifficulties = ["Medium", "Easy", "Easy", "Hard", "Hard", "Variety"]
     var ArrayImages       = [#imageLiteral(resourceName: "a2_grin.png"),#imageLiteral(resourceName: "c3_horse.png"),#imageLiteral(resourceName: "f_angry3.png"),#imageLiteral(resourceName: "d2_soccer.png"),#imageLiteral(resourceName: "e3_doctor.png"),#imageLiteral(resourceName: "a13_confused.png")]
+    
+    
+    // Keep track of what game modes are selected
+    var ArraySelected = [false, false, false, false, false, false];
 
+    
+    
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -28,9 +34,9 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! SelectDeckCellCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.LabelTitle.text      = self.ArrayTitles[indexPath.item]
-        cell.LabelDifficulty.text = self.ArrayDifficulties[indexPath.item]
-        cell.ImagePreview.image = self.ArrayImages[indexPath.item]
+        cell.LabelTitle.text      = self.ArrayTitles       [indexPath.item]
+        cell.LabelDifficulty.text = self.ArrayDifficulties [indexPath.item]
+        cell.ImagePreview.image   = self.ArrayImages       [indexPath.item]
         
         return cell
     }
@@ -42,11 +48,20 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         if let cell = collectionView.cellForItem(at:indexPath) as! SelectDeckCellCollectionViewCell?{
-            cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
-            cell.LabelTitle.text      = "Clicked"
+            
+            let Index = indexPath.row
+            
+            // Toggle whether or not this game mode is selected.
+            ArraySelected[Index] = !ArraySelected[Index]
+            
+            if(ArraySelected[Index] == true){
+                // "Selected" state
+                cell.backgroundColor = UIColor.cyan
+            } else {
+                // "Not Selected" state
+                cell.backgroundColor = UIColor.white
+            }
         }
-
-
     }
     
     override func viewDidLoad() {

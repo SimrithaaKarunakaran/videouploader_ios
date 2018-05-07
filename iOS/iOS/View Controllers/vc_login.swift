@@ -16,6 +16,7 @@ class vc_login: UIViewController {
     
     @IBOutlet weak var ButtonLogin: UIButton!
     
+    @IBOutlet weak var TextSignUpLink: UILabel!
     
     
     /// <#Description#>
@@ -41,12 +42,26 @@ class vc_login: UIViewController {
     
     ///
     func DownloadUserData(UserEmail: String){
-        
+
     }
+    
+    @objc func TextSignUpClickHandler(sender:UITapGestureRecognizer) {
+        // Direct user to screen where they can create an account.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_create_account")
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Setup the onclick handler when user presses the "Don't Have An Account" link
+        let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))
+        TextSignUpLink.isUserInteractionEnabled = true
+        TextSignUpLink.addGestureRecognizer(tap)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -13,7 +13,7 @@
         <!--story_one_viewcontroller-->
         <scene sceneID="1SJ-2E-fGc">
             <objects>
-                <viewController storyboardIdentifier="story_one_viewcontroller" title="story_one_viewcontroller" id="uCN-9C-Itd" customClass="vc_secondary" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="story_one_viewcontroller" title="story_one_viewcontroller" id="uCN-9C-Itd" customClass="vc_countdown" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="waB-sN-4nQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,46 +54,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulI-3P-iOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-706.39999999999998" y="177.66116941529236"/>
-        </scene>
-        <!--Vc pageview-->
-        <scene sceneID="tTr-Ew-hRQ">
-            <objects>
-                <pageViewController storyboardIdentifier="vc_pageviewctrl" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="SWP-Yg-TrZ" customClass="vc_pageview" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5H7-wa-xaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-6" y="172"/>
-        </scene>
-        <!--Vc pageview content-->
-        <scene sceneID="k06-Zf-Dhv">
-            <objects>
-                <viewController storyboardIdentifier="vc_pageview_content" id="PGe-cA-t9w" customClass="vc_pageview_content" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WFM-hp-YcG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fU-7Z-gMN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oj3-oR-17a">
-                                <rect key="frame" x="75" y="287" width="247" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.19926532681975159" green="0.0" blue="0.61285621759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="af1-ad-NVH"/>
-                    </view>
-                    <connections>
-                        <outlet property="ImageViewOutlet" destination="8fU-7Z-gMN" id="HtG-xf-WgV"/>
-                        <outlet property="LabelOutlet" destination="oj3-oR-17a" id="qEF-g5-Qhp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mNv-AR-DB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="824.79999999999995" y="167.76611694152925"/>
         </scene>
     </scenes>
 </document>

@@ -214,72 +214,92 @@ SWIFT_CLASS("_TtC3iOS32SelectDeckCellCollectionViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
-@class UIButton;
 @class NSBundle;
 
-SWIFT_CLASS("_TtC3iOS8vc_login")
-@interface vc_login : UIViewController
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextViewUsername;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextViewPassword;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ButtonLogin;
-/// <#Description#>
-/// Windows, alt, slash
-/// \param sender <#sender description#>
-///
-- (IBAction)ButtonLoginClick:(id _Nonnull)sender;
+SWIFT_CLASS("_TtC3iOS12vc_consent_1")
+@interface vc_consent_1 : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)ConsentClickContinue:(id _Nonnull)sender;
+- (IBAction)ConsentClickBack:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_CLASS("_TtC3iOS7vc_main")
-@interface vc_main : UIViewController <UITextFieldDelegate>
-- (void)updateTimer;
+SWIFT_CLASS("_TtC3iOS12vc_consent_2")
+@interface vc_consent_2 : UIViewController
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+- (IBAction)ConsentClickBack:(id _Nonnull)sender;
+- (IBAction)ConsentClickContinue:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_CLASS("_TtC3iOS11vc_pageview")
-@interface vc_pageview : UIPageViewController
+SWIFT_CLASS("_TtC3iOS12vc_consent_3")
+@interface vc_consent_3 : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithTransitionStyle:(UIPageViewControllerTransitionStyle)style navigationOrientation:(UIPageViewControllerNavigationOrientation)navigationOrientation options:(NSDictionary<NSString *, id> * _Nullable)options OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface vc_pageview (SWIFT_EXTENSION(iOS)) <UIPageViewControllerDataSource>
-- (UIViewController * _Nullable)pageViewController:(UIPageViewController * _Nonnull)pageViewController viewControllerAfterViewController:(UIViewController * _Nonnull)viewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)pageViewController:(UIPageViewController * _Nonnull)pageViewController viewControllerBeforeViewController:(UIViewController * _Nonnull)viewController SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC3iOS19vc_pageview_content")
-@interface vc_pageview_content : UIViewController
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified ImageViewOutlet;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LabelOutlet;
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (IBAction)ConsentClickBack:(id _Nonnull)sender;
+- (IBAction)ConsentClickNext:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 
-SWIFT_CLASS("_TtC3iOS12vc_secondary")
-@interface vc_secondary : UIViewController
+SWIFT_CLASS("_TtC3iOS12vc_countdown")
+@interface vc_countdown : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LabelTimeLeft;
 - (void)updateTimer;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)ButtonClickStartPager:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS17vc_create_account")
+@interface vc_create_account : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)CreateAccountNextClick:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS15vc_launchscreen")
+@interface vc_launchscreen : UIViewController <UITextFieldDelegate>
+- (void)updateTimer;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITextField;
+@class UITapGestureRecognizer;
+
+SWIFT_CLASS("_TtC3iOS8vc_login")
+@interface vc_login : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextViewUsername;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextViewPassword;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ButtonLogin;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextSignUpLink;
+/// <#Description#>
+/// Windows, alt, slash
+/// \param sender <#sender description#>
+///
+- (IBAction)ButtonLoginClick:(id _Nonnull)sender;
+- (void)TextSignUpClickHandlerWithSender:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
