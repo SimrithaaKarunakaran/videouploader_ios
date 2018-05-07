@@ -19,5 +19,207 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS/View Controllers/vc_consent_1.swift"
+            timestampString = "547419156.875182"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS/View Controllers/vc_consent_1.swift"
+            timestampString = "547419156.875623"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.__deallocating_deinit"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419127.690797"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; iOS.vc_consent_1"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419127.6921639"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; iOS.vc_consent_1"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419127.693592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "283">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS.vc_consent_1&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419127.694927"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS.vc_consent_1&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419127.696216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS/View Controllers/vc_consent_1.swift"
+            timestampString = "547419156.875934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "vc_consent_1"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.__deallocating_deinit"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419146.143548"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; iOS.vc_consent_1"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419146.145059"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; iOS.vc_consent_1"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419146.14657"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "283">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS.vc_consent_1&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419146.148239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_consent_1.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS.vc_consent_1&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_consent_1.swift"
+                  timestampString = "547419146.1497329"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
