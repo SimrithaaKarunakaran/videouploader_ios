@@ -108,6 +108,7 @@
 		22908DC920A0D8B5007CDA7F /* vc_consent_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22908DC820A0D8B5007CDA7F /* vc_consent_1.swift */; };
 		22908DCB20A0D8C2007CDA7F /* vc_consent_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22908DCA20A0D8C2007CDA7F /* vc_consent_2.swift */; };
 		22908DCD20A0D8D1007CDA7F /* vc_consent_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22908DCC20A0D8D1007CDA7F /* vc_consent_3.swift */; };
+		22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810B220A23BA50052CCB9 /* vc_survey1.swift */; };
 		22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE7DC020913C4300883AE9 /* vc_countdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -216,6 +217,7 @@
 		22908DC820A0D8B5007CDA7F /* vc_consent_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_consent_1.swift; sourceTree = "<group>"; };
 		22908DCA20A0D8C2007CDA7F /* vc_consent_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_consent_2.swift; sourceTree = "<group>"; };
 		22908DCC20A0D8D1007CDA7F /* vc_consent_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_consent_3.swift; sourceTree = "<group>"; };
+		22B810B220A23BA50052CCB9 /* vc_survey1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey1.swift; sourceTree = "<group>"; };
 		22FE7DC020913C4300883AE9 /* vc_countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_countdown.swift; sourceTree = "<group>"; };
 		40AD23C01F66B68EE54574CA /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +288,7 @@
 				22908DC820A0D8B5007CDA7F /* vc_consent_1.swift */,
 				22908DCA20A0D8C2007CDA7F /* vc_consent_2.swift */,
 				22908DCC20A0D8D1007CDA7F /* vc_consent_3.swift */,
+				22B810B220A23BA50052CCB9 /* vc_survey1.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */,
 				22908DC720A0D703007CDA7F /* vc_create_account.swift in Sources */,
 				22908DC0209D1F5B007CDA7F /* vc_select_deck.swift in Sources */,
+				22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */,
 				22207F1B2057553100D447F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

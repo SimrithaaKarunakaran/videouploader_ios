@@ -35,8 +35,15 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
             timer.invalidate();
             
             // Move to the next viewpager: the login screen.
+            
+            /*
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login") as! UIViewController
+            self.present(newViewController, animated: true, completion: nil)
+            */
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey1") as! UIViewController
             self.present(newViewController, animated: true, completion: nil)
         }
     }
