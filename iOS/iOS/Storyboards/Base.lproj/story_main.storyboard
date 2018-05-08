@@ -652,13 +652,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="xuj-I4-eYJ">
-                                <rect key="frame" x="12" y="0.0" width="351" height="104"/>
+                                <rect key="frame" x="12" y="0.0" width="349" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="YQp-Je-e1a"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-uS-QuZ" userLabel="NoButton">
-                                <rect key="frame" x="12" y="596" width="351" height="65"/>
+                                <rect key="frame" x="10" y="596" width="353" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
@@ -678,7 +678,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-v7-aHs" userLabel="YesButton">
-                                <rect key="frame" x="12" y="522" width="351" height="65"/>
+                                <rect key="frame" x="10" y="522" width="353" height="65"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="DOf-pb-8p3"/>
@@ -700,10 +700,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x5-Z6c">
-                                <rect key="frame" x="0.0" y="110" width="375" height="412"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="407"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="5983.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
+                                        <rect key="frame" x="5" y="0.0" width="375" height="5983.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
 
@@ -733,7 +733,8 @@ As a participant, your responsibilities include:
 The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
 Authorization To Use Your Health Information For Research Purposes: Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
 
-What is the purpose of this research study and how will my health information be utilized in the study? This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+What is the purpose of this research study and how will my health information be utilized in the study? 
+This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
 
 We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
 
@@ -783,7 +784,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E2j-eD-Xok" secondAttribute="bottom" constant="20" symbolic="YES" id="7WI-jH-cAi"/>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="WwM-x5-Z6c" secondAttribute="leading" id="KvK-Ks-z9d"/>
+                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="WwM-x5-Z6c" secondAttribute="leading" constant="5" id="KvK-Ks-z9d"/>
                                     <constraint firstAttribute="trailing" secondItem="E2j-eD-Xok" secondAttribute="trailing" id="YrA-sy-7Cc"/>
                                     <constraint firstItem="E2j-eD-Xok" firstAttribute="top" secondItem="WwM-x5-Z6c" secondAttribute="top" id="crT-gi-w2t"/>
                                     <constraint firstItem="E2j-eD-Xok" firstAttribute="width" secondItem="WwM-x5-Z6c" secondAttribute="width" id="j2J-QZ-cVm"/>
@@ -797,7 +798,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                             <constraint firstItem="KnH-v7-aHs" firstAttribute="centerX" secondItem="xuj-I4-eYJ" secondAttribute="centerX" id="7qK-qe-LBF"/>
                             <constraint firstItem="xuj-I4-eYJ" firstAttribute="top" secondItem="e3e-0Y-CXZ" secondAttribute="top" id="9U8-C2-l2d"/>
                             <constraint firstAttribute="trailing" secondItem="KnH-v7-aHs" secondAttribute="trailing" constant="12" id="AcR-T6-xpI"/>
-                            <constraint firstItem="KnH-v7-aHs" firstAttribute="leading" secondItem="e3e-0Y-CXZ" secondAttribute="leading" constant="12" id="OD0-00-dqJ"/>
+                            <constraint firstItem="KnH-v7-aHs" firstAttribute="leading" secondItem="e3e-0Y-CXZ" secondAttribute="leading" constant="10" id="OD0-00-dqJ"/>
                             <constraint firstItem="6A8-hb-u9z" firstAttribute="bottom" secondItem="vVr-uS-QuZ" secondAttribute="bottom" constant="6" id="UkE-d5-zcp"/>
                             <constraint firstItem="WwM-x5-Z6c" firstAttribute="top" secondItem="xuj-I4-eYJ" secondAttribute="top" constant="110" id="WkE-VH-vMm"/>
                             <constraint firstItem="xuj-I4-eYJ" firstAttribute="leading" secondItem="6A8-hb-u9z" secondAttribute="leading" constant="12" id="X10-Vb-u16"/>
@@ -805,7 +806,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="top" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="9" id="dm2-6f-6kK"/>
                             <constraint firstItem="WwM-x5-Z6c" firstAttribute="width" secondItem="e3e-0Y-CXZ" secondAttribute="width" id="f5Z-2w-B8F"/>
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="leading" secondItem="KnH-v7-aHs" secondAttribute="leading" id="hXn-P6-Ebf"/>
-                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="bottom" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="-65" id="pzO-c3-i3i"/>
+                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="bottom" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="-70" id="pzO-c3-i3i"/>
                             <constraint firstItem="WwM-x5-Z6c" firstAttribute="leading" secondItem="6A8-hb-u9z" secondAttribute="leading" id="wFS-It-P0r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6A8-hb-u9z"/>
@@ -816,83 +817,350 @@ By clicking the “Accept” button below, you are consenting to participate and
             <point key="canvasLocation" x="991.20000000000005" y="700.29985007496259"/>
         </scene>
         <!--Vc consent2-->
-        <scene sceneID="hlc-Tp-37b">
+        <scene sceneID="ly2-wa-P3Z">
             <objects>
-                <viewController storyboardIdentifier="vc_consent_2" id="Gxs-kt-mbh" customClass="vc_consent_2" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pno-NW-ge3">
+                <viewController storyboardIdentifier="vc_consent_2" id="JAG-K3-TGH" customClass="vc_consent_2" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1vC-IY-G5G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="TsA-HF-bdk">
-                                <rect key="frame" x="12" y="0.0" width="351" height="104"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wcv-sO-mFd">
+                                <rect key="frame" x="12" y="0.0" width="349" height="104"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="104" id="cEi-BL-Hvz"/>
+                                    <constraint firstAttribute="height" constant="104" id="uby-8D-jA6"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEu-Hn-5oj">
-                                <rect key="frame" x="12" y="595" width="351" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8RI-6C-FPy" userLabel="NoButton">
+                                <rect key="frame" x="10" y="596" width="353" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="1fW-XS-IhS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.71827600830000005" green="0.86865405419999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="No! I am not interested in sharing my data and therefore choose not to participate in this study.">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="ConsentClickBack:" destination="Gxs-kt-mbh" eventType="touchUpInside" id="Xn8-st-MIu"/>
+                                    <action selector="ButtonLoginClick:" destination="ypJ-GJ-O0I" eventType="touchUpInside" id="47t-nT-TLv"/>
+                                    <action selector="ConsentClickBack:" destination="JAG-K3-TGH" eventType="touchDragOutside" id="QaN-cd-QD0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNb-10-miS">
-                                <rect key="frame" x="12" y="522" width="351" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGF-bG-JdH" userLabel="YesButton">
+                                <rect key="frame" x="10" y="522" width="353" height="65"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="Y3b-7k-80D"/>
+                                    <constraint firstAttribute="height" constant="65" id="aqA-NU-l7w"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.71827600830000005" green="0.86865405419999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Yes! I agree to share my video and demographics data with researchers at Stanford University.">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="ConsentClickContinue:" destination="Gxs-kt-mbh" eventType="touchUpInside" id="qx8-e7-VLl"/>
+                                    <action selector="ConsentClickContinue:" destination="JAG-K3-TGH" eventType="touchUpInside" id="2IF-Mb-sGq"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-mO-4VI">
+                                <rect key="frame" x="0.0" y="110" width="375" height="407"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIl-eE-p7Q" userLabel="TextBlock">
+                                        <rect key="frame" x="5" y="0.0" width="375" height="5983.5"/>
+                                        <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
+
+RESEARCH:  You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
+
+PROCEDURES:  If you choose to participate, you will be asked to complete the following study phases: 
+1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
+ 2. Behavior survey: We ask families to respond to a behavioral questionnaire about the child they are submitting a home video for to get a well-rounded perspective of that child’s day-to-day behavior. There are 15 questions and this will take you 5-10 minutes to complete.
+ 3. Home Video: We ask families to upload a 3-5 minute home video of their child. We ask the video clearly show the child’s face and hands, and includes social interactions with a family member, such as a parent or a sibling. The video should be of good quality and displays the child's typical day-to-day behavior. The video may ONLY be of the consented parent’s child and not include any other person in the video. If a submitted video does not meet these criteria, we will reach out to the participant and request they resubmit a new video. 
+For the following two phases, you must opt-in to participate:
+
+4. Share your data: We ask families to share home video (and associated audio) data of their child, as well as that child's biological sex at birth and age in the video (in years) so that we can begin to understand if the crowd can detect core features of autism. If you decide to share these data, only participants who have consented and signed a confidentiality agreement will be able to view and analyze your data. Participants will be presented with your video and audio data, biological sex at birth, and age (in years) of your child on a secure analyst portal that they will need to securely log into. No other identifying information, such as name, date of birth, and ect. other than that just listed, will be viewable by participants analyzing the approved data. They will watch the video and respond to a 30-question survey about what they see in the video. The study team reviews and monitors all activity in the analyst portal and takes your privacy and confidentiality into consideration. We will limit access to the portal and only allow analysts to view your data once. After they submit the questionnaire, based on behaviors viewed in the video, the link to the data will be removed from their dashboard and not have access to it again.
+
+5. Analyze data of other participants: We ask families to analyze home video data of other participants’ children who consented to share their data. If you opt-in to analyze others\’ data, you will create a unique username and password to access our encrypted analyst portal where you will be presented with videos of children (all videos match the same criteria as the video you submitted for the study). You will be told the child\’s gender and age at time of the video. You are able to view the video once and then are asked to answer a set of 10-questions based off of behaviors you viewed (or didn’t view) during the video. Your responses will never be shared with the participant. If you opt-in to analyze other's data, you must consent and sign a confidentiality agreement.  Your study participation will last between 10-15 minutes for the first 3 phases. If you choose to analyze others’ data, it will take you about 10 minutes to analyze a video and you may choose how many videos you then analyze.
+
+You have the right to refuse to answer any question. If you provide your email, the research team will contact about future studies. There is no risk to participating in this study. We cannot and do not guarantee or promise that you will receive any benefits from this study. If you have any questions about the procedures, please contact the research coordinator, Jena Daniels, at danielsj@stanford.edu.
+
+Your participation in this study is entirely voluntary. All data is stored on secure and encrypted servers, approved by Stanford University. The Wall Lab has taken every measure to ensure data confidentiality; however, there is always a small probability that the database may be hacked. If this occurs, the Wall Lab will notify you immediately. Additionally, if the content of the video recordings and/or responses to study surveys raise suspicion of child abuse, child neglect, or a child being in a dangerous situation, the research staff is required by law to report such issues to the appropriate authorities.  You will not receive payment for your participation. You can decide to participate now, but withdraw your consent later. If you decide to withdraw, please inform the study coordinator immediately at jesseys@stanford.edu.
+As a participant, your responsibilities include:
+
+- Follow the instructions the Protocol Director and study staff have set forth on this website
+- Complete the phases that you consent to, as instructed
+- Ask questions as you think of them
+
+The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
+Authorization To Use Your Health Information For Research Purposes: Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
+
+What is the purpose of this research study and how will my health information be utilized in the study? 
+This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
+
+Do I have to agree with this authorization form?: 
+You do not have to give your authorization. But if you do not, you will not be able to participate in this research study. If I give my authorization, can I revoke it or withdraw from the research later?: If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: 
+
+ATTN: Dennis Wall, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
+
+What Personal Information Will Be Obtained, Used or Disclosed?: Your health information related to this study may be used or disclosed in connection with this research study, including, but not limited to:
+
+-Participant email and name
+-Information on the child of the participant:
+-State and Zipcode
+-Name (first, last)
+-Date of birth
+-If applicable, developmental delay medical diagnosis (and when)
+-If possible, picture of medical diagnostic report of developmental delay to confirm disclosed medical diagnosis
+-Gender
+-Ethnicity
+-Other diagnoses
+-If they have any siblings
+-Home video
+-Age of child in the home video
+
+Who May Use or Disclose the Information?: The following parties are authorized to use and/or disclose your health information in connection with this research study:
+-The Protocol Director: Dr. Wall
+-The Co-Protocol Director: Jessey Schwartz
+-The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
+-Research Staff
+
+Who May Receive or Use the Information?: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
+The Office for Human Research Protections in the U.S. Department of Health and Human Services
+
+Your information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.
+
+When will my authorization expire?: Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
+
+CONTACT: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
+
+If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306.
+
+By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</mutableString>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YIl-eE-p7Q" firstAttribute="width" secondItem="0l7-mO-4VI" secondAttribute="width" id="BqK-c5-FOa"/>
+                                    <constraint firstAttribute="bottom" secondItem="YIl-eE-p7Q" secondAttribute="bottom" constant="20" symbolic="YES" id="jJG-OK-My9"/>
+                                    <constraint firstAttribute="trailing" secondItem="YIl-eE-p7Q" secondAttribute="trailing" id="oyr-uN-XUG"/>
+                                    <constraint firstItem="YIl-eE-p7Q" firstAttribute="top" secondItem="0l7-mO-4VI" secondAttribute="top" id="sPz-px-OWO"/>
+                                    <constraint firstItem="YIl-eE-p7Q" firstAttribute="leading" secondItem="0l7-mO-4VI" secondAttribute="leading" constant="5" id="yn2-Q1-56c"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vEu-Hn-5oj" firstAttribute="top" secondItem="gNb-10-miS" secondAttribute="bottom" constant="8" symbolic="YES" id="7Vk-Av-vdp"/>
-                            <constraint firstItem="TsA-HF-bdk" firstAttribute="leading" secondItem="wv5-UQ-iuR" secondAttribute="leading" constant="12" id="DSM-ct-dwI"/>
-                            <constraint firstItem="vEu-Hn-5oj" firstAttribute="trailing" secondItem="gNb-10-miS" secondAttribute="trailing" id="J70-bv-7AL"/>
-                            <constraint firstItem="vEu-Hn-5oj" firstAttribute="leading" secondItem="gNb-10-miS" secondAttribute="leading" id="bei-Ah-TvU"/>
-                            <constraint firstItem="gNb-10-miS" firstAttribute="centerX" secondItem="TsA-HF-bdk" secondAttribute="centerX" id="gGd-2t-1tM"/>
-                            <constraint firstItem="TsA-HF-bdk" firstAttribute="top" secondItem="pno-NW-ge3" secondAttribute="top" id="kdM-jZ-Pt6"/>
-                            <constraint firstItem="TsA-HF-bdk" firstAttribute="leading" secondItem="gNb-10-miS" secondAttribute="leading" id="oKV-go-HyK"/>
-                            <constraint firstItem="wv5-UQ-iuR" firstAttribute="bottom" secondItem="vEu-Hn-5oj" secondAttribute="bottom" constant="7" id="p0a-Py-2ZA"/>
-                            <constraint firstItem="TsA-HF-bdk" firstAttribute="centerX" secondItem="pno-NW-ge3" secondAttribute="centerX" id="tXf-hL-LJu"/>
+                            <constraint firstItem="0l7-mO-4VI" firstAttribute="top" secondItem="Wcv-sO-mFd" secondAttribute="top" constant="110" id="0it-VX-FTy"/>
+                            <constraint firstItem="O2G-PJ-eqc" firstAttribute="bottom" secondItem="8RI-6C-FPy" secondAttribute="bottom" constant="6" id="3dk-Bh-oad"/>
+                            <constraint firstItem="8RI-6C-FPy" firstAttribute="leading" secondItem="FGF-bG-JdH" secondAttribute="leading" id="422-t5-r9s"/>
+                            <constraint firstItem="8RI-6C-FPy" firstAttribute="top" secondItem="FGF-bG-JdH" secondAttribute="bottom" constant="9" id="4s6-2A-ipR"/>
+                            <constraint firstItem="0l7-mO-4VI" firstAttribute="leading" secondItem="O2G-PJ-eqc" secondAttribute="leading" id="64h-Oe-AqF"/>
+                            <constraint firstItem="8RI-6C-FPy" firstAttribute="trailing" secondItem="FGF-bG-JdH" secondAttribute="trailing" id="D5a-PS-s6I"/>
+                            <constraint firstItem="O2G-PJ-eqc" firstAttribute="trailing" secondItem="0l7-mO-4VI" secondAttribute="trailing" id="PwR-Nn-BeA"/>
+                            <constraint firstItem="Wcv-sO-mFd" firstAttribute="leading" secondItem="O2G-PJ-eqc" secondAttribute="leading" constant="12" id="QgH-Ps-Zij"/>
+                            <constraint firstAttribute="trailing" secondItem="FGF-bG-JdH" secondAttribute="trailing" constant="12" id="Sxt-yT-2T4"/>
+                            <constraint firstAttribute="bottom" secondItem="FGF-bG-JdH" secondAttribute="bottom" constant="80" id="dbj-Tl-oZ0"/>
+                            <constraint firstItem="FGF-bG-JdH" firstAttribute="leading" secondItem="1vC-IY-G5G" secondAttribute="leading" constant="10" id="eyf-gr-vXV"/>
+                            <constraint firstItem="0l7-mO-4VI" firstAttribute="width" secondItem="1vC-IY-G5G" secondAttribute="width" id="fCh-Hz-n24"/>
+                            <constraint firstItem="Wcv-sO-mFd" firstAttribute="top" secondItem="1vC-IY-G5G" secondAttribute="top" id="lrB-Ra-rPB"/>
+                            <constraint firstItem="FGF-bG-JdH" firstAttribute="centerX" secondItem="Wcv-sO-mFd" secondAttribute="centerX" id="sh0-5l-Bfu"/>
+                            <constraint firstItem="0l7-mO-4VI" firstAttribute="bottom" secondItem="FGF-bG-JdH" secondAttribute="bottom" constant="-70" id="tec-EX-aEg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wv5-UQ-iuR"/>
+                        <viewLayoutGuide key="safeArea" id="O2G-PJ-eqc"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jSq-Nm-7jK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYW-Ll-G7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="703.89805097451278"/>
+            <point key="canvasLocation" x="1646" y="704"/>
         </scene>
         <!--Vc consent3-->
-        <scene sceneID="8Pu-6Q-9hH">
+        <scene sceneID="z5w-cx-ncq">
             <objects>
-                <viewController storyboardIdentifier="vc_consent_3" id="GAh-jq-Gum" customClass="vc_consent_3" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SMr-J6-oWX">
+                <viewController storyboardIdentifier="vc_consent_3" id="xC0-Fl-bMT" customClass="vc_consent_3" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UqG-bP-PSw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="kJ2-ek-6oN">
+                                <rect key="frame" x="12" y="0.0" width="349" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="Ku3-fC-wf0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-XM-VR2" userLabel="NoButton">
+                                <rect key="frame" x="10" y="596" width="353" height="65"/>
+                                <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="No! I am not interested in sharing my data and therefore choose not to participate in this study.">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonLoginClick:" destination="ypJ-GJ-O0I" eventType="touchUpInside" id="Jiw-eU-WcH"/>
+                                    <action selector="ConsentClickBack:" destination="xC0-Fl-bMT" eventType="touchDragOutside" id="154-W8-AFv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-Iz-wie" userLabel="YesButton">
+                                <rect key="frame" x="10" y="522" width="353" height="65"/>
+                                <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="sDD-34-Egb"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Yes! I agree to share my video and demographics data with researchers at Stanford University.">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="ConsentClickContinue:" destination="xC0-Fl-bMT" eventType="touchUpInside" id="oCS-lu-alp"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-Wb-9GL">
+                                <rect key="frame" x="0.0" y="110" width="375" height="407"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-eQ-W5q" userLabel="TextBlock">
+                                        <rect key="frame" x="5" y="0.0" width="375" height="5983.5"/>
+                                        <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
+
+RESEARCH:  You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
+
+PROCEDURES:  If you choose to participate, you will be asked to complete the following study phases: 
+1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
+ 2. Behavior survey: We ask families to respond to a behavioral questionnaire about the child they are submitting a home video for to get a well-rounded perspective of that child’s day-to-day behavior. There are 15 questions and this will take you 5-10 minutes to complete.
+ 3. Home Video: We ask families to upload a 3-5 minute home video of their child. We ask the video clearly show the child’s face and hands, and includes social interactions with a family member, such as a parent or a sibling. The video should be of good quality and displays the child's typical day-to-day behavior. The video may ONLY be of the consented parent’s child and not include any other person in the video. If a submitted video does not meet these criteria, we will reach out to the participant and request they resubmit a new video. 
+For the following two phases, you must opt-in to participate:
+
+4. Share your data: We ask families to share home video (and associated audio) data of their child, as well as that child's biological sex at birth and age in the video (in years) so that we can begin to understand if the crowd can detect core features of autism. If you decide to share these data, only participants who have consented and signed a confidentiality agreement will be able to view and analyze your data. Participants will be presented with your video and audio data, biological sex at birth, and age (in years) of your child on a secure analyst portal that they will need to securely log into. No other identifying information, such as name, date of birth, and ect. other than that just listed, will be viewable by participants analyzing the approved data. They will watch the video and respond to a 30-question survey about what they see in the video. The study team reviews and monitors all activity in the analyst portal and takes your privacy and confidentiality into consideration. We will limit access to the portal and only allow analysts to view your data once. After they submit the questionnaire, based on behaviors viewed in the video, the link to the data will be removed from their dashboard and not have access to it again.
+
+5. Analyze data of other participants: We ask families to analyze home video data of other participants’ children who consented to share their data. If you opt-in to analyze others\’ data, you will create a unique username and password to access our encrypted analyst portal where you will be presented with videos of children (all videos match the same criteria as the video you submitted for the study). You will be told the child\’s gender and age at time of the video. You are able to view the video once and then are asked to answer a set of 10-questions based off of behaviors you viewed (or didn’t view) during the video. Your responses will never be shared with the participant. If you opt-in to analyze other's data, you must consent and sign a confidentiality agreement.  Your study participation will last between 10-15 minutes for the first 3 phases. If you choose to analyze others’ data, it will take you about 10 minutes to analyze a video and you may choose how many videos you then analyze.
+
+You have the right to refuse to answer any question. If you provide your email, the research team will contact about future studies. There is no risk to participating in this study. We cannot and do not guarantee or promise that you will receive any benefits from this study. If you have any questions about the procedures, please contact the research coordinator, Jena Daniels, at danielsj@stanford.edu.
+
+Your participation in this study is entirely voluntary. All data is stored on secure and encrypted servers, approved by Stanford University. The Wall Lab has taken every measure to ensure data confidentiality; however, there is always a small probability that the database may be hacked. If this occurs, the Wall Lab will notify you immediately. Additionally, if the content of the video recordings and/or responses to study surveys raise suspicion of child abuse, child neglect, or a child being in a dangerous situation, the research staff is required by law to report such issues to the appropriate authorities.  You will not receive payment for your participation. You can decide to participate now, but withdraw your consent later. If you decide to withdraw, please inform the study coordinator immediately at jesseys@stanford.edu.
+As a participant, your responsibilities include:
+
+- Follow the instructions the Protocol Director and study staff have set forth on this website
+- Complete the phases that you consent to, as instructed
+- Ask questions as you think of them
+
+The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
+Authorization To Use Your Health Information For Research Purposes: Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
+
+What is the purpose of this research study and how will my health information be utilized in the study? 
+This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
+
+Do I have to agree with this authorization form?: 
+You do not have to give your authorization. But if you do not, you will not be able to participate in this research study. If I give my authorization, can I revoke it or withdraw from the research later?: If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: 
+
+ATTN: Dennis Wall, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
+
+What Personal Information Will Be Obtained, Used or Disclosed?: Your health information related to this study may be used or disclosed in connection with this research study, including, but not limited to:
+
+-Participant email and name
+-Information on the child of the participant:
+-State and Zipcode
+-Name (first, last)
+-Date of birth
+-If applicable, developmental delay medical diagnosis (and when)
+-If possible, picture of medical diagnostic report of developmental delay to confirm disclosed medical diagnosis
+-Gender
+-Ethnicity
+-Other diagnoses
+-If they have any siblings
+-Home video
+-Age of child in the home video
+
+Who May Use or Disclose the Information?: The following parties are authorized to use and/or disclose your health information in connection with this research study:
+-The Protocol Director: Dr. Wall
+-The Co-Protocol Director: Jessey Schwartz
+-The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
+-Research Staff
+
+Who May Receive or Use the Information?: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
+The Office for Human Research Protections in the U.S. Department of Health and Human Services
+
+Your information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.
+
+When will my authorization expire?: Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
+
+CONTACT: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
+
+If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306.
+
+By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</mutableString>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="leading" secondItem="dUf-Wb-9GL" secondAttribute="leading" constant="5" id="810-CS-zIO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ssm-eQ-W5q" secondAttribute="trailing" id="JeL-eh-hOu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ssm-eQ-W5q" secondAttribute="bottom" constant="20" symbolic="YES" id="NXE-QL-5ss"/>
+                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="width" secondItem="dUf-Wb-9GL" secondAttribute="width" id="Ptw-ri-T4J"/>
+                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="top" secondItem="dUf-Wb-9GL" secondAttribute="top" id="z5b-iZ-Hyc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="17v-Mi-h4J"/>
+                        <constraints>
+                            <constraint firstItem="dUf-Wb-9GL" firstAttribute="bottom" secondItem="pMg-Iz-wie" secondAttribute="bottom" constant="-70" id="01d-At-vsa"/>
+                            <constraint firstItem="dUf-Wb-9GL" firstAttribute="width" secondItem="UqG-bP-PSw" secondAttribute="width" id="0V1-tm-R1y"/>
+                            <constraint firstItem="fnq-XM-VR2" firstAttribute="leading" secondItem="pMg-Iz-wie" secondAttribute="leading" id="1SM-0A-kUd"/>
+                            <constraint firstItem="9HV-Zw-N1I" firstAttribute="bottom" secondItem="fnq-XM-VR2" secondAttribute="bottom" constant="6" id="1an-jw-pyN"/>
+                            <constraint firstItem="fnq-XM-VR2" firstAttribute="trailing" secondItem="pMg-Iz-wie" secondAttribute="trailing" id="5cB-7z-Vqj"/>
+                            <constraint firstAttribute="bottom" secondItem="pMg-Iz-wie" secondAttribute="bottom" constant="80" id="6SN-7g-ist"/>
+                            <constraint firstItem="dUf-Wb-9GL" firstAttribute="leading" secondItem="9HV-Zw-N1I" secondAttribute="leading" id="8sE-ZD-GZ1"/>
+                            <constraint firstItem="pMg-Iz-wie" firstAttribute="leading" secondItem="UqG-bP-PSw" secondAttribute="leading" constant="10" id="9T0-1m-xuo"/>
+                            <constraint firstItem="9HV-Zw-N1I" firstAttribute="trailing" secondItem="dUf-Wb-9GL" secondAttribute="trailing" id="DMS-tl-l1E"/>
+                            <constraint firstAttribute="trailing" secondItem="pMg-Iz-wie" secondAttribute="trailing" constant="12" id="N5y-aP-KHe"/>
+                            <constraint firstItem="pMg-Iz-wie" firstAttribute="centerX" secondItem="kJ2-ek-6oN" secondAttribute="centerX" id="Z2j-pX-D8Q"/>
+                            <constraint firstItem="kJ2-ek-6oN" firstAttribute="leading" secondItem="9HV-Zw-N1I" secondAttribute="leading" constant="12" id="n62-RX-UC5"/>
+                            <constraint firstItem="fnq-XM-VR2" firstAttribute="top" secondItem="pMg-Iz-wie" secondAttribute="bottom" constant="9" id="pG3-bF-6dC"/>
+                            <constraint firstItem="kJ2-ek-6oN" firstAttribute="top" secondItem="UqG-bP-PSw" secondAttribute="top" id="qu9-Gl-BmB"/>
+                            <constraint firstItem="dUf-Wb-9GL" firstAttribute="top" secondItem="kJ2-ek-6oN" secondAttribute="top" constant="110" id="r5W-JD-y4l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9HV-Zw-N1I"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dz-Xn-IHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07k-Rk-8bm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2325.5999999999999" y="700.29985007496259"/>
+            <point key="canvasLocation" x="2321" y="704"/>
         </scene>
     </scenes>
     <resources>
