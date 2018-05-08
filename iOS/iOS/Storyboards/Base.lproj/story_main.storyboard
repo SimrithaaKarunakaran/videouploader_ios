@@ -703,13 +703,13 @@
                                 <rect key="frame" x="0.0" y="110" width="375" height="407"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
-                                        <rect key="frame" x="5" y="0.0" width="375" height="5983.5"/>
+                                        <rect key="frame" x="5" y="0.0" width="375" height="6002.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
 
 RESEARCH:  You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
 
-We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
 
 PROCEDURES:  If you choose to participate, you will be asked to complete the following study phases: 
 1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
@@ -731,6 +731,7 @@ As a participant, your responsibilities include:
 - Ask questions as you think of them
 
 The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
+
 Authorization To Use Your Health Information For Research Purposes: Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
 
 What is the purpose of this research study and how will my health information be utilized in the study? 
@@ -836,7 +837,8 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="No! I am not interested in sharing my data and therefore choose not to participate in this study.">
+                                        <fragment>
+                                            <string key="content">No! I do not wish to opt-in to sharing my data. (You can still participate without sharing your data; only the research staff will review your data.</string>
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="14" name="Helvetica"/>
@@ -851,15 +853,16 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGF-bG-JdH" userLabel="YesButton">
-                                <rect key="frame" x="10" y="522" width="353" height="65"/>
+                                <rect key="frame" x="10" y="512" width="353" height="75"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="aqA-NU-l7w"/>
+                                    <constraint firstAttribute="height" constant="75" id="aqA-NU-l7w"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Yes! I agree to share my video and demographics data with researchers at Stanford University.">
+                                        <fragment>
+                                            <string key="content">Yes! I agree to share the video, audio, gender, age, and diagnoses of my child so other participants can review and analyze the home video.</string>
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="14" name="Helvetica"/>
@@ -873,83 +876,83 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-mO-4VI">
-                                <rect key="frame" x="0.0" y="110" width="375" height="407"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIl-eE-p7Q" userLabel="TextBlock">
-                                        <rect key="frame" x="5" y="0.0" width="375" height="5983.5"/>
+                                        <rect key="frame" x="5" y="0.0" width="375" height="5107.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
+                                        <mutableString key="text">In addition to sharing your video with researchers at Stanford, you can optionally consent to share your videos with other participants. This will help us understand if crowdsourcing methods can identify the core features of autism.
 
-RESEARCH:  You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+As a reminder, we ask families to share home video data of their child, as well as that child\’s biological sex at birth, age in the video (in years), and audio from the video so that we can begin to understand if the crowd can detect core features of autism. By marking yes below, you agree to share these data to other participants who have consented and signed a confidentiality agreement who will view and analyze your data. These participants will be presented with your video, gender, and age of your child on a secure analyst portal that they will need to securely log into. They will watch the video and respond to a 10-question survey about what they see in the video. The study team reviews and monitors all activity in the analyst portal and takes your privacy and confidentiality into consideration. We will limit access to the portal and only allow analysts to view your data once. After they submit the questionnaire, based on behaviors viewed in the video, the link to the data will be removed from their dashboard and will not have access to view it again.
 
-We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
+We do not limit the amount of consented participants who can view and analyze your video. We do, however, require each analyst to consent that they will not discuss anything about the videos with others. We want to understand if by using crowdsourcing methods to acquire and analyze home videos of children, if the power of the crowd can identify core features of autism.
 
-PROCEDURES:  If you choose to participate, you will be asked to complete the following study phases: 
-1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
- 2. Behavior survey: We ask families to respond to a behavioral questionnaire about the child they are submitting a home video for to get a well-rounded perspective of that child’s day-to-day behavior. There are 15 questions and this will take you 5-10 minutes to complete.
- 3. Home Video: We ask families to upload a 3-5 minute home video of their child. We ask the video clearly show the child’s face and hands, and includes social interactions with a family member, such as a parent or a sibling. The video should be of good quality and displays the child's typical day-to-day behavior. The video may ONLY be of the consented parent’s child and not include any other person in the video. If a submitted video does not meet these criteria, we will reach out to the participant and request they resubmit a new video. 
-For the following two phases, you must opt-in to participate:
+Hopeful Outcomes from sharing your data:
+As the number of autism diagnoses has increased, so too has the number of children with a high risk for autism that remain undiagnosed. This translates into a waiting period estimated to average 13 months for a diagnostic assessment in the US. These wait times are even longer in rural environments and underserved areas with lower socioeconomic status. Disparities in geographic coverage of resources often coincide with a lack of public awareness of autism spectrum disorders (ASD) and difficulty in finding diagnostic or post-diagnosis options with appropriate insurance coverage, exacerbating diagnostic delays and increasing the amount of hassle and stress for families navigating complexities associated with an ASD diagnosis throughout that individual’s life.  The resulting delays in diagnoses are also detrimental to children who are unable to receive behavioral and intervention therapies during the critical periods in which they are maximally impactful.
 
-4. Share your data: We ask families to share home video (and associated audio) data of their child, as well as that child's biological sex at birth and age in the video (in years) so that we can begin to understand if the crowd can detect core features of autism. If you decide to share these data, only participants who have consented and signed a confidentiality agreement will be able to view and analyze your data. Participants will be presented with your video and audio data, biological sex at birth, and age (in years) of your child on a secure analyst portal that they will need to securely log into. No other identifying information, such as name, date of birth, and ect. other than that just listed, will be viewable by participants analyzing the approved data. They will watch the video and respond to a 30-question survey about what they see in the video. The study team reviews and monitors all activity in the analyst portal and takes your privacy and confidentiality into consideration. We will limit access to the portal and only allow analysts to view your data once. After they submit the questionnaire, based on behaviors viewed in the video, the link to the data will be removed from their dashboard and not have access to it again.
-
-5. Analyze data of other participants: We ask families to analyze home video data of other participants’ children who consented to share their data. If you opt-in to analyze others\’ data, you will create a unique username and password to access our encrypted analyst portal where you will be presented with videos of children (all videos match the same criteria as the video you submitted for the study). You will be told the child\’s gender and age at time of the video. You are able to view the video once and then are asked to answer a set of 10-questions based off of behaviors you viewed (or didn’t view) during the video. Your responses will never be shared with the participant. If you opt-in to analyze other's data, you must consent and sign a confidentiality agreement.  Your study participation will last between 10-15 minutes for the first 3 phases. If you choose to analyze others’ data, it will take you about 10 minutes to analyze a video and you may choose how many videos you then analyze.
+We aim to create a robust and clinically validated autism-screening app that can identify children at risk of an autism spectrum disorder diagnosis. We hope that if this system is clinically validated, parents who have suspicion of a developmental delay in their child can submit a video and basic behavioral data and have it analyzed instantly by the crowd where the results will help the parent navigate the next steps in terms of seeking a medical diagnosis for their child. Additionally, we hope that clinicians will trust and implement the system, allowing for shorter lengths of time for diagnostic appointments, which will allow for more patients to be seen and hopefully start to eliminate the long wait time between suspicion and diagnosis for children with autism.
+Your study participation for analysis will take you about 10 minutes to analyze a video and you may choose how many videos you then analyze.
 
 You have the right to refuse to answer any question. If you provide your email, the research team will contact about future studies. There is no risk to participating in this study. We cannot and do not guarantee or promise that you will receive any benefits from this study. If you have any questions about the procedures, please contact the research coordinator, Jena Daniels, at danielsj@stanford.edu.
 
-Your participation in this study is entirely voluntary. All data is stored on secure and encrypted servers, approved by Stanford University. The Wall Lab has taken every measure to ensure data confidentiality; however, there is always a small probability that the database may be hacked. If this occurs, the Wall Lab will notify you immediately. Additionally, if the content of the video recordings and/or responses to study surveys raise suspicion of child abuse, child neglect, or a child being in a dangerous situation, the research staff is required by law to report such issues to the appropriate authorities.  You will not receive payment for your participation. You can decide to participate now, but withdraw your consent later. If you decide to withdraw, please inform the study coordinator immediately at jesseys@stanford.edu.
-As a participant, your responsibilities include:
+Your participation in this study is entirely voluntary. This is a low-risk and all data are stored on secure and encrypted servers, approved by Stanford University. The Wall Lab has taken every measure to ensure data confidentiality; however, there is always a small probability that the database may be hacked. If this occurs, the Wall Lab will notify you immediately. Additionally, if the content of the video recordings and/or responses to study surveys raise suspicion of child abuse, child neglect, or a child being in a dangerous situation, the research staff is required by law to report such issues to the appropriate authorities.
 
-- Follow the instructions the Protocol Director and study staff have set forth on this website
-- Complete the phases that you consent to, as instructed
-- Ask questions as you think of them
+You will not receive payment for your participation. You can decide to participate now, but withdraw your consent later. If you decide to withdraw, please inform the study coordinator immediately at danielsj@stanford.edu.
+As a participant, your responsibilities include: (1) Follow the instructions the Protocol Director and study staff have set forth on this website (2) Complete the phases that you consent to, as instructed, and (3) Ask questions as you think of them
 
 The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
-Authorization To Use Your Health Information For Research Purposes: Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
 
-What is the purpose of this research study and how will my health information be utilized in the study? 
+Authorization To Use Your Health Information For Research Purposes:
+Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
+
+What is the purpose of this research study and how will my health information be utilized in the study?:
 This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
 
-We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.
 
-Do I have to agree with this authorization form?: 
-You do not have to give your authorization. But if you do not, you will not be able to participate in this research study. If I give my authorization, can I revoke it or withdraw from the research later?: If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: 
+Do I have to agree with this authorization form?:
+You do not have to give your authorization. But if you do not, you will not be able to participate in this research study.
 
-ATTN: Dennis Wall, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
+If I give my authorization, can I revoke it or withdraw from the research later?:
+If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: ATTN: Dennis Wall / Jena Daniels, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
 
 What Personal Information Will Be Obtained, Used or Disclosed?: Your health information related to this study may be used or disclosed in connection with this research study, including, but not limited to:
+(1) Participant email and name
+(2) Information on the child of the participant:
+(3) State and Zipcode
+(4) Name (first, last)
+(5) Date of birth
+(6) If applicable, developmental delay medical diagnosis (and when)
+(7) If possible, picture of medical diagnostic report of developmental delay to confirm disclosed medical diagnosis
+(8) Gender
+(9) Ethnicity
+(10) Other diagnoses
+(11) If they have any siblings
+(12) Home video
+(13)Age of child in the home video
 
--Participant email and name
--Information on the child of the participant:
--State and Zipcode
--Name (first, last)
--Date of birth
--If applicable, developmental delay medical diagnosis (and when)
--If possible, picture of medical diagnostic report of developmental delay to confirm disclosed medical diagnosis
--Gender
--Ethnicity
--Other diagnoses
--If they have any siblings
--Home video
--Age of child in the home video
+Who May Use or Disclose the Information?: 
+The following parties are authorized to use and/or disclose your health information in connection with this research study:
+(1) The Protocol Director: Dr. Wall
+(2) The Co-Protocol Director: Jena Daniels
+(3) The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
+(4) Research Staff
 
-Who May Use or Disclose the Information?: The following parties are authorized to use and/or disclose your health information in connection with this research study:
--The Protocol Director: Dr. Wall
--The Co-Protocol Director: Jessey Schwartz
--The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
--Research Staff
-
-Who May Receive or Use the Information?: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
-The Office for Human Research Protections in the U.S. Department of Health and Human Services
-
+Who May Receive or Use the Information?:
+The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study:
+(1) The Office for Human Research Protections in the U.S. Department of Health and Human Services
 Your information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.
 
-When will my authorization expire?: Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
+When will my authorization expire?
+Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
 
-CONTACT: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
+CONTACT:
+If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at danielsj@stanford.edu.
 
 If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306.
 
-By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</mutableString>
+By clicking the “Yes” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form. Please print a copy of this page for your records.
+</mutableString>
                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -980,7 +983,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                             <constraint firstItem="0l7-mO-4VI" firstAttribute="width" secondItem="1vC-IY-G5G" secondAttribute="width" id="fCh-Hz-n24"/>
                             <constraint firstItem="Wcv-sO-mFd" firstAttribute="top" secondItem="1vC-IY-G5G" secondAttribute="top" id="lrB-Ra-rPB"/>
                             <constraint firstItem="FGF-bG-JdH" firstAttribute="centerX" secondItem="Wcv-sO-mFd" secondAttribute="centerX" id="sh0-5l-Bfu"/>
-                            <constraint firstItem="0l7-mO-4VI" firstAttribute="bottom" secondItem="FGF-bG-JdH" secondAttribute="bottom" constant="-70" id="tec-EX-aEg"/>
+                            <constraint firstItem="0l7-mO-4VI" firstAttribute="bottom" secondItem="FGF-bG-JdH" secondAttribute="bottom" constant="-80" id="tec-EX-aEg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O2G-PJ-eqc"/>
                     </view>
@@ -1003,13 +1006,14 @@ By clicking the “Accept” button below, you are consenting to participate and
                                     <constraint firstAttribute="height" constant="104" id="Ku3-fC-wf0"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-XM-VR2" userLabel="NoButton">
-                                <rect key="frame" x="10" y="596" width="353" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-XM-VR2" userLabel="NoButton">
+                                <rect key="frame" x="10" y="596" width="353" height="85"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="No! I am not interested in sharing my data and therefore choose not to participate in this study.">
+                                        <fragment>
+                                            <string key="content">No! I do not wish to opt-in to analyzing other participants. (You can still participate without analyzing the data your data; only the research staff will review and analyze your data.</string>
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="14" name="Helvetica"/>
@@ -1024,15 +1028,16 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-Iz-wie" userLabel="YesButton">
-                                <rect key="frame" x="10" y="522" width="353" height="65"/>
+                                <rect key="frame" x="10" y="502" width="353" height="85"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="sDD-34-Egb"/>
+                                    <constraint firstAttribute="height" constant="85" id="sDD-34-Egb"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Yes! I agree to share my video and demographics data with researchers at Stanford University.">
+                                        <fragment>
+                                            <string key="content">Yes! I agree to analyze other participants’ home videos. I also consent that I will not discuss anything about the videos with anyone else. If I have any questions regarding a video, I will only contact the research team about my question.</string>
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="14" name="Helvetica"/>
@@ -1046,83 +1051,74 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-Wb-9GL">
-                                <rect key="frame" x="0.0" y="110" width="375" height="407"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="387"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-eQ-W5q" userLabel="TextBlock">
-                                        <rect key="frame" x="5" y="0.0" width="375" height="5983.5"/>
+                                        <rect key="frame" x="5" y="0.0" width="375" height="4753.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
+                                        <mutableString key="text">Optionally, you can choose to opt in to view videos of other participants and answer several questions. If you are interested, please read the information below carefully.
 
-RESEARCH:  You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+As a reminder, we ask families to analyze home video data of other participants’ children who consented to share their data. If you opt-in to analyze others’ data, you will create a unique username and password to access our encrypted analyst portal where you will be presented with videos of children (all videos match the same criteria as the video you submitted for the study). You will be told the child’s gender and age at time of the video. You are able to view the video once and then are asked to answer a set of 10-questions based off of behaviors you viewed (or didn’t view) during the video. Your responses will never be shared with the participant. If you opt-in to analyze other’s data, you must mark yes and sign the confidentiality agreement below.
 
-We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
+Hopeful Outcomes from sharing your data:
+As the number of autism diagnoses has increased, so too has the number of children with a high risk for autism that remain undiagnosed. This translates into a waiting period estimated to average 13 months for a diagnostic assessment in the US. These wait times are even longer in rural environments and underserved areas with lower socioeconomic status. Disparities in geographic coverage of resources often coincide with a lack of public awareness of autism spectrum disorders (ASD) and difficulty in finding diagnostic or post-diagnosis options with appropriate insurance coverage, exacerbating diagnostic delays and increasing the amount of hassle and stress for families navigating complexities associated with an ASD diagnosis throughout that individual’s life.  The resulting delays in diagnoses are also detrimental to children who are unable to receive behavioral and intervention therapies during the critical periods in which they are maximally impactful.
 
-PROCEDURES:  If you choose to participate, you will be asked to complete the following study phases: 
-1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
- 2. Behavior survey: We ask families to respond to a behavioral questionnaire about the child they are submitting a home video for to get a well-rounded perspective of that child’s day-to-day behavior. There are 15 questions and this will take you 5-10 minutes to complete.
- 3. Home Video: We ask families to upload a 3-5 minute home video of their child. We ask the video clearly show the child’s face and hands, and includes social interactions with a family member, such as a parent or a sibling. The video should be of good quality and displays the child's typical day-to-day behavior. The video may ONLY be of the consented parent’s child and not include any other person in the video. If a submitted video does not meet these criteria, we will reach out to the participant and request they resubmit a new video. 
-For the following two phases, you must opt-in to participate:
+We aim to create a robust and clinically validated autism-screening app that can identify children at risk of an autism spectrum disorder diagnosis. We hope that if this system is clinically validated, parents who have suspicion of a developmental delay in their child can submit a video and basic behavioral data and have it analyzed instantly by the crowd where the results will help the parent navigate the next steps in terms of seeking a medical diagnosis for their child. Additionally, we hope that clinicians will trust and implement the system, allowing for shorter lengths of time for diagnostic appointments, which will allow for more patients to be seen and hopefully start to eliminate the long wait time between suspicion and diagnosis for children with autism. Your study participation for analysis will take you about 10 minutes to analyze a video and you may choose how many videos you then analyze.
 
-4. Share your data: We ask families to share home video (and associated audio) data of their child, as well as that child's biological sex at birth and age in the video (in years) so that we can begin to understand if the crowd can detect core features of autism. If you decide to share these data, only participants who have consented and signed a confidentiality agreement will be able to view and analyze your data. Participants will be presented with your video and audio data, biological sex at birth, and age (in years) of your child on a secure analyst portal that they will need to securely log into. No other identifying information, such as name, date of birth, and ect. other than that just listed, will be viewable by participants analyzing the approved data. They will watch the video and respond to a 30-question survey about what they see in the video. The study team reviews and monitors all activity in the analyst portal and takes your privacy and confidentiality into consideration. We will limit access to the portal and only allow analysts to view your data once. After they submit the questionnaire, based on behaviors viewed in the video, the link to the data will be removed from their dashboard and not have access to it again.
+You have the right to refuse to answer any question. If you provide your email, the research team will contact about future studies. There is no risk to participating in this study. We cannot and do not guarantee or promise that you will receive any benefits from this study. If you have any questions about the procedures, please contact the research coordinator, Jena Daniels, at danielsj@stanford.edu. Your participation in this study is entirely voluntary. This is a low-risk and all data are stored on secure and encrypted servers, approved by Stanford University. The Wall Lab has taken every measure to ensure data confidentiality; however, there is always a small probability that the database may be hacked. If this occurs, the Wall Lab will notify you immediately. Additionally, if the content of the video recordings and/or responses to study surveys raise suspicion of child abuse, child neglect, or a child being in a dangerous situation, the research staff is required by law to report such issues to the appropriate authorities.
 
-5. Analyze data of other participants: We ask families to analyze home video data of other participants’ children who consented to share their data. If you opt-in to analyze others\’ data, you will create a unique username and password to access our encrypted analyst portal where you will be presented with videos of children (all videos match the same criteria as the video you submitted for the study). You will be told the child\’s gender and age at time of the video. You are able to view the video once and then are asked to answer a set of 10-questions based off of behaviors you viewed (or didn’t view) during the video. Your responses will never be shared with the participant. If you opt-in to analyze other's data, you must consent and sign a confidentiality agreement.  Your study participation will last between 10-15 minutes for the first 3 phases. If you choose to analyze others’ data, it will take you about 10 minutes to analyze a video and you may choose how many videos you then analyze.
+You will not receive payment for your participation. You can decide to participate now, but withdraw your consent later. If you decide to withdraw, please inform the study coordinator immediately at danielsj@stanford.edu. As a participant, your responsibilities include: (1) Follow the instructions the Protocol Director and study staff have set forth on this website (2) Complete the phases that you consent to, as instructed, and (3) Ask questions as you think of them The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
 
-You have the right to refuse to answer any question. If you provide your email, the research team will contact about future studies. There is no risk to participating in this study. We cannot and do not guarantee or promise that you will receive any benefits from this study. If you have any questions about the procedures, please contact the research coordinator, Jena Daniels, at danielsj@stanford.edu.
+Authorization To Use Your Health Information For Research Purposes:
+Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
 
-Your participation in this study is entirely voluntary. All data is stored on secure and encrypted servers, approved by Stanford University. The Wall Lab has taken every measure to ensure data confidentiality; however, there is always a small probability that the database may be hacked. If this occurs, the Wall Lab will notify you immediately. Additionally, if the content of the video recordings and/or responses to study surveys raise suspicion of child abuse, child neglect, or a child being in a dangerous situation, the research staff is required by law to report such issues to the appropriate authorities.  You will not receive payment for your participation. You can decide to participate now, but withdraw your consent later. If you decide to withdraw, please inform the study coordinator immediately at jesseys@stanford.edu.
-As a participant, your responsibilities include:
-
-- Follow the instructions the Protocol Director and study staff have set forth on this website
-- Complete the phases that you consent to, as instructed
-- Ask questions as you think of them
-
-The results of this research study may be presented at scientific or medical meetings or published in scientific journals. The Wall Lab is collaborating with the Hartwell Foundation and your de-identified data may be shared with them. Your identity and any other personally identifiable data will not be disclosed except as authorized by you or as required by law.  Patient information may be provided to Federal and other regulatory agencies as required. It is important to note that, as always, there is some risk that even de-identified information might be re-identified.
-Authorization To Use Your Health Information For Research Purposes: Because information about you and your health is personal and private, it generally cannot be used in this research study without your authorization. If you continue to participate in this study, it will provide that authorization. The form is intended to inform you about how your health information will be used or disclosed in the study. Your information will only be used in accordance with this authorization form and the informed consent form and as required or allowed by law. Please read it carefully before agreeing.
-
-What is the purpose of this research study and how will my health information be utilized in the study? 
+What is the purpose of this research study and how will my health information be utilized in the study?:
 This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
 
-We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
+We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.
 
-Do I have to agree with this authorization form?: 
-You do not have to give your authorization. But if you do not, you will not be able to participate in this research study. If I give my authorization, can I revoke it or withdraw from the research later?: If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: 
+Do I have to agree with this authorization form?:
+You do not have to give your authorization. But if you do not, you will not be able to participate in this research study.
 
-ATTN: Dennis Wall, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
+If I give my authorization, can I revoke it or withdraw from the research later?:
+If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: ATTN: Dennis Wall / Jena Daniels, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
 
 What Personal Information Will Be Obtained, Used or Disclosed?: Your health information related to this study may be used or disclosed in connection with this research study, including, but not limited to:
-
--Participant email and name
--Information on the child of the participant:
--State and Zipcode
--Name (first, last)
--Date of birth
--If applicable, developmental delay medical diagnosis (and when)
--If possible, picture of medical diagnostic report of developmental delay to confirm disclosed medical diagnosis
--Gender
--Ethnicity
--Other diagnoses
--If they have any siblings
--Home video
--Age of child in the home video
+(1) Participant email and name
+(2) Information on the child of the participant:
+(3) State and Zipcode
+(4) Name (first, last)
+(5) Date of birth
+(6) If applicable, developmental delay medical diagnosis (and when)
+(7) If possible, picture of medical diagnostic report of developmental delay to confirm disclosed medical diagnosis
+(8) Gender
+(9) Ethnicity
+(10) Other diagnoses
+(11) If they have any siblings
+(12) Home video
+(13)Age of child in the home video
 
 Who May Use or Disclose the Information?: The following parties are authorized to use and/or disclose your health information in connection with this research study:
--The Protocol Director: Dr. Wall
--The Co-Protocol Director: Jessey Schwartz
--The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
--Research Staff
+(1) The Protocol Director: Dr. Wall
+(2) The Co-Protocol Director: Jena Daniels
+(3) The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
+(4) Research Staff
 
-Who May Receive or Use the Information?: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
-The Office for Human Research Protections in the U.S. Department of Health and Human Services
-
+Who May Receive or Use the Information?:
+The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study:
+(1) The Office for Human Research Protections in the U.S. Department of Health and Human Services
 Your information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.
 
-When will my authorization expire?: Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
+When will my authorization expire?:
+Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
 
-CONTACT: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
+CONTACT:
+If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at danielsj@stanford.edu.
 
 If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306.
 
-By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</mutableString>
+By clicking the “Yes” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form. Please print a copy of this page for your records.
+</mutableString>
                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1139,7 +1135,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dUf-Wb-9GL" firstAttribute="bottom" secondItem="pMg-Iz-wie" secondAttribute="bottom" constant="-70" id="01d-At-vsa"/>
+                            <constraint firstItem="dUf-Wb-9GL" firstAttribute="bottom" secondItem="pMg-Iz-wie" secondAttribute="bottom" constant="-90" id="01d-At-vsa"/>
                             <constraint firstItem="dUf-Wb-9GL" firstAttribute="width" secondItem="UqG-bP-PSw" secondAttribute="width" id="0V1-tm-R1y"/>
                             <constraint firstItem="fnq-XM-VR2" firstAttribute="leading" secondItem="pMg-Iz-wie" secondAttribute="leading" id="1SM-0A-kUd"/>
                             <constraint firstItem="9HV-Zw-N1I" firstAttribute="bottom" secondItem="fnq-XM-VR2" secondAttribute="bottom" constant="6" id="1an-jw-pyN"/>
