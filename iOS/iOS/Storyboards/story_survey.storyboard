@@ -209,7 +209,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-qa-pEJ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-qa-pEJ" userLabel="SwitchLatino">
                                 <rect key="frame" x="16" y="357" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qdh-2Z-gGB">
@@ -419,6 +419,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mR4-AV-D4e"/>
                     </view>
+                    <connections>
+                        <outlet property="ArabSwitch" destination="u9h-Vo-tey" id="1sP-Kb-r2R"/>
+                        <outlet property="AsianSwitch" destination="Qdh-2Z-gGB" id="HHy-6c-BQh"/>
+                        <outlet property="CaribbeanSwitch" destination="cBY-pd-WmQ" id="q1Y-5n-bId"/>
+                        <outlet property="LatinoSwitch" destination="Goh-qa-pEJ" id="uKy-FE-JEq"/>
+                        <outlet property="NativeAmericanSwitch" destination="8uv-IS-iiD" id="uhH-5k-WWO"/>
+                        <outlet property="OtherSwitch" destination="ax8-yQ-GBR" id="KFP-C1-cB1"/>
+                        <outlet property="PacificSwitch" destination="bva-DV-gmk" id="Qhf-ps-2Dx"/>
+                        <outlet property="SouthAsianSwitch" destination="GVo-a1-WNg" id="gT6-Vz-kXh"/>
+                        <outlet property="SoutheastSwitch" destination="a9F-J0-UbW" id="UJq-cP-z4x"/>
+                        <outlet property="WhiteSwitch" destination="arx-Z1-hi2" id="urE-Xs-aPb"/>
+                        <outlet property="textAutism" destination="zDk-Du-W2x" id="o6f-UI-ldF"/>
+                        <outlet property="textCity" destination="Y0D-YV-lLP" id="c4l-A7-YuR"/>
+                        <outlet property="textCountry" destination="Y0D-YV-lLP" id="VIr-2c-gAl"/>
+                        <outlet property="textDOB" destination="zgZ-Oe-ogf" id="Eql-tg-xqE"/>
+                        <outlet property="textGender" destination="Or2-xB-PHy" id="Uvu-AR-KZp"/>
+                        <outlet property="textName" destination="7Wk-03-Zwx" id="BB1-AQ-WlE"/>
+                        <outlet property="textOtherDiagnosis" destination="R31-5Y-mk3" id="keS-7r-shz"/>
+                        <outlet property="textState" destination="H6s-Lb-Sy1" id="Q4x-EZ-G4A"/>
+                        <outlet property="textZIP" destination="qvv-Ry-wYE" id="jfz-Gl-Z9R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmg-Tc-L31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
