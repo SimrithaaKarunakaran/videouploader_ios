@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0.3 (swiftlang-900.0.72 clang-900.0.38)"
 options: "db662d235e624d6538fbec60d695f523"
-build_time: [1525721840, 156338000]
+build_time: [1525735899, 476529000]
 inputs:
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/UIElements/SelectDeckCellCollectionViewCell.swift": [1525481882, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_launchscreen.swift": [1525719088, 0]
@@ -8,7 +8,7 @@ inputs:
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_3.swift": [1525720481, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/StateUserInfo.swift": [1521135160, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_login.swift": [1525720040, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_1.swift": [1525721536, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_1.swift": [1525726401, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_countdown.swift": [1525719065, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_create_account.swift": [1525720189, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_select_deck.swift": [1525712311, 0]

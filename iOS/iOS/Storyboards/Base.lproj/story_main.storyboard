@@ -702,44 +702,18 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x5-Z6c">
                                 <rect key="frame" x="0.0" y="110" width="375" height="412"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
-                                        <rect key="frame" x="10" y="0.0" width="355" height="6114"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="5983.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
+                                        <mutableString key="text">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="RESEARCH">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">: You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+RESEARCH: 
+You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
 
 We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="PROCEDURES">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">: If you choose to participate, you will be asked to complete the following study phases: 
+PROCEDURES: 
+If you choose to participate, you will be asked to complete the following study phases: 
 1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
  2. Behavior survey: We ask families to respond to a behavioral questionnaire about the child they are submitting a home video for to get a well-rounded perspective of that child’s day-to-day behavior. There are 15 questions and this will take you 5-10 minutes to complete.
  3. Home Video: We ask families to upload a 3-5 minute home video of their child. We ask the video clearly show the child’s face and hands, and includes social interactions with a family member, such as a parent or a sibling. The video should be of good quality and displays the child's typical day-to-day behavior. The video may ONLY be of the consented parent’s child and not include any other person in the video. If a submitted video does not meet these criteria, we will reach out to the participant and request they resubmit a new video. 
@@ -765,26 +739,12 @@ What is the purpose of this research study and how will my health information be
 
 We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="Do I have to agree with this authorization form?:">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> 
+Do I have to agree with this authorization form?: 
 You do not have to give your authorization. But if you do not, you will not be able to participate in this research study. If I give my authorization, can I revoke it or withdraw from the research later?: If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: 
 
 ATTN: Dennis Wall, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
 
 What Personal Information Will Be Obtained, Used or Disclosed?: Your health information related to this study may be used or disclosed in connection with this research study, including, but not limited to:
-
 
 -Participant email and name
 -Information on the child of the participant:
@@ -800,84 +760,36 @@ What Personal Information Will Be Obtained, Used or Disclosed?: Your health info
 -Home video
 -Age of child in the home video
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="Who May Use or Disclose the Information?: ">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">The following parties are authorized to use and/or disclose your health information in connection with this research study:
+Who May Use or Disclose the Information?: The following parties are authorized to use and/or disclose your health information in connection with this research study:
 -The Protocol Director: Dr. Wall
 -The Co-Protocol Director: Jessey Schwartz
 -The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
 -Research Staff
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="Who May Receive or Use the Information?">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
+Who May Receive or Use the Information?: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
 The Office for Human Research Protections in the U.S. Department of Health and Human Services
 
 Your information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.
 
 When will my authorization expire?: Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="CONTACT">
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
+CONTACT:
+If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
 
 If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306.
 
-</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="16" name="Tahoma"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</mutableString>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="16"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E2j-eD-Xok" secondAttribute="bottom" constant="20" symbolic="YES" id="7WI-jH-cAi"/>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="WwM-x5-Z6c" secondAttribute="leading" constant="10" id="KvK-Ks-z9d"/>
-                                    <constraint firstAttribute="trailing" secondItem="E2j-eD-Xok" secondAttribute="trailing" constant="10" id="YrA-sy-7Cc"/>
+                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="WwM-x5-Z6c" secondAttribute="leading" id="KvK-Ks-z9d"/>
+                                    <constraint firstAttribute="trailing" secondItem="E2j-eD-Xok" secondAttribute="trailing" id="YrA-sy-7Cc"/>
                                     <constraint firstItem="E2j-eD-Xok" firstAttribute="top" secondItem="WwM-x5-Z6c" secondAttribute="top" id="crT-gi-w2t"/>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="width" secondItem="WwM-x5-Z6c" secondAttribute="width" constant="-20" id="j2J-QZ-cVm"/>
+                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="width" secondItem="WwM-x5-Z6c" secondAttribute="width" id="j2J-QZ-cVm"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
