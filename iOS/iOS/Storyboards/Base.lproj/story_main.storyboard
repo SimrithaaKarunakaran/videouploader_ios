@@ -657,7 +657,7 @@
                                     <constraint firstAttribute="height" constant="104" id="YQp-Je-e1a"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-uS-QuZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-uS-QuZ" userLabel="NoButton">
                                 <rect key="frame" x="12" y="596" width="351" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -667,46 +667,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="14" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -716,7 +677,7 @@
                                     <action selector="ConsentClickBack:" destination="sZB-NZ-jo7" eventType="touchDragOutside" id="1Gx-vt-mRE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-v7-aHs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-v7-aHs" userLabel="YesButton">
                                 <rect key="frame" x="12" y="522" width="351" height="65"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -738,202 +699,47 @@
                                     <action selector="ConsentClickContinue:" destination="sZB-NZ-jo7" eventType="touchUpInside" id="efG-aJ-cCA"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-nU-d0l">
-                                <rect key="frame" x="0.0" y="112" width="375" height="402"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x5-Z6c">
+                                <rect key="frame" x="0.0" y="110" width="375" height="412"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="402"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="5872"/>
+                                        <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
+                                                <string key="content">Families who participate in this game are helping researchers at Stanford University diagnose and treat autism. Because this is a research study, we ask that you answer a few questions about your child's everyday interactions before you begin to play. Please review the consent form to continue.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="RESEARCH">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">: You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
+                                                <string key="content">: You are invited to participate in a research study. This study seeks to recruit parents of children, between the ages of 1.5-6 years, via a secure website and/or phone app. Your participation is completed remotely. We aim to understand the ability of gamified and crowd-powered systems to aid in the screening of autism spectrum disorder through unstructured home videos by the crowd. Participants will use their own personal phone to download our study app and/or visit the study website. The app/website will walk participants through a variety of games and questionnaires that are relevant to the screening and tracking of autism. The interactive games will be video recorded and all data are transferred securely to the Wall Lab for analysis.
 
 We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant\’s shared data.  We will recruit 2000 participants. We will recruit 1000 children with autism, 500 children who are typically developing, and 500 children with any other developmental delay.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="PROCEDURES">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">: If you choose to participate, you will be asked to complete the following study phases: 
+                                                <string key="content">: If you choose to participate, you will be asked to complete the following study phases: 
 1. General information:  We ask families to respond to general information, including but not limited to, data on their child (name, date of birth/age, diagnosis and age of diagnosis, gender, ethnicity, premature birth, receipt of autism-therapy, and age of suspicion of developmental delay), family members and history, location, and contact information (email/phone number). We will combine this data with another Wall Lab approved IRB (eProtocol #38493). This will take you 5 minutes to complete.
  2. Behavior survey: We ask families to respond to a behavioral questionnaire about the child they are submitting a home video for to get a well-rounded perspective of that child’s day-to-day behavior. There are 15 questions and this will take you 5-10 minutes to complete.
  3. Home Video: We ask families to upload a 3-5 minute home video of their child. We ask the video clearly show the child’s face and hands, and includes social interactions with a family member, such as a parent or a sibling. The video should be of good quality and displays the child's typical day-to-day behavior. The video may ONLY be of the consented parent’s child and not include any other person in the video. If a submitted video does not meet these criteria, we will reach out to the participant and request they resubmit a new video. 
@@ -959,98 +765,20 @@ What is the purpose of this research study and how will my health information be
 
 We aim to further validate machine-learning algorithms to analyze characteristics of autism to identify core features of the disorder and investigate how to get the crowd to not only submit a home video of their child, but also share their data and analyze home videos of children that other participants shared. You may choose to participate and either (1) only submit data for the research team to review and analyze; (2) submit data for the research team and other consented participants to review and analyze; or (3) only submit data for the research team to review and analyze AND analyze another participant'ss shared data.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="Do I have to agree with this authorization form?:">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content"> 
+                                                <string key="content"> 
 You do not have to give your authorization. But if you do not, you will not be able to participate in this research study. If I give my authorization, can I revoke it or withdraw from the research later?: If you decide to participate, you are free to withdraw your authorization regarding the use and disclosure of your health information (and to discontinue any other participation in the study) at any time. After any revocation, your health information will no longer be used or disclosed in the study, except to the extent that the law allows us to continue using your information (e.g., necessary to maintain integrity of research). If you wish to revoke your authorization for the research use or disclosure of your health information in this study, you must write to: Jena Daniels or Dennis Wall at: 
 
 ATTN: Dennis Wall, Stanford University, 1265 Welch Rd, X143, Stanford, CA 94305.
@@ -1072,385 +800,72 @@ What Personal Information Will Be Obtained, Used or Disclosed?: Your health info
 -Home video
 -Age of child in the home video
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="Who May Use or Disclose the Information?: ">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">The following parties are authorized to use and/or disclose your health information in connection with this research study:
+                                                <string key="content">The following parties are authorized to use and/or disclose your health information in connection with this research study:
 -The Protocol Director: Dr. Wall
 -The Co-Protocol Director: Jessey Schwartz
 -The Stanford University Administrative Panel on Human Subjects in Medical Research and any other unit of Stanford University as necessary
 -Research Staff
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="Who May Receive or Use the Information?">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
+                                                <string key="content">: The parties listed in the preceding paragraph may disclose your health information to the following persons and organizations for their use in connection with this research study: 
 The Office for Human Research Protections in the U.S. Department of Health and Human Services
 
 Your information may be re-disclosed by the recipients described above, if they are not required by law to protect the privacy of the information.
 
 When will my authorization expire?: Your authorization for the use and/or disclosure of your health information will end on September 1st, 2050 or when the research project ends, whichever is earlier. All data collected in this study will be securely kept until this date and then properly destroyed.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="CONTACT">
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
+                                                <string key="content">: If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, Dr. Dennis Wall. You may contact him now or later at 650-497-9214. If you cannot reach the Protocol Director, please contact the research coordinator at jesseys@stanford.edu.
 
 If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at (650)-723-5244 or toll free at 1-866-680-2906.  You can also write to the Stanford IRB, Stanford University, 3000 El Camino Real, Five Palo Alto Square, 4th Floor, Palo Alto, CA 94306.
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</mutableString>
+                                                <string key="content">By clicking the “Accept” button below, you are consenting to participate and that you are at least 18 years of age. You are also consenting to participate on behalf of your child. You are also consenting that you have read and that you understand this consent form.</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="Tahoma"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="111" tailIndent="111" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -1458,35 +873,31 @@ If you are not satisfied with how this study is being conducted, or if you have 
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="WLH-nU-d0l" secondAttribute="leading" id="KaE-4i-52V"/>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="top" secondItem="WLH-nU-d0l" secondAttribute="top" id="Q10-Hb-D0Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="E2j-eD-Xok" secondAttribute="trailing" constant="333" id="Rm0-oR-d73"/>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="height" secondItem="WLH-nU-d0l" secondAttribute="height" id="Saz-hk-xvH"/>
-                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="width" secondItem="WLH-nU-d0l" secondAttribute="width" id="XuY-qN-FeX"/>
-                                    <constraint firstAttribute="bottom" secondItem="E2j-eD-Xok" secondAttribute="bottom" constant="381" id="koS-YN-6lc"/>
+                                    <constraint firstAttribute="bottom" secondItem="E2j-eD-Xok" secondAttribute="bottom" constant="20" symbolic="YES" id="7WI-jH-cAi"/>
+                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="WwM-x5-Z6c" secondAttribute="leading" id="KvK-Ks-z9d"/>
+                                    <constraint firstAttribute="trailing" secondItem="E2j-eD-Xok" secondAttribute="trailing" id="YrA-sy-7Cc"/>
+                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="top" secondItem="WwM-x5-Z6c" secondAttribute="top" id="crT-gi-w2t"/>
+                                    <constraint firstItem="E2j-eD-Xok" firstAttribute="width" secondItem="WwM-x5-Z6c" secondAttribute="width" id="j2J-QZ-cVm"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6A8-hb-u9z" firstAttribute="trailing" secondItem="WwM-x5-Z6c" secondAttribute="trailing" id="2nD-F9-MMJ"/>
                             <constraint firstAttribute="bottom" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="80" id="5wv-lU-WSE"/>
                             <constraint firstItem="KnH-v7-aHs" firstAttribute="centerX" secondItem="xuj-I4-eYJ" secondAttribute="centerX" id="7qK-qe-LBF"/>
                             <constraint firstItem="xuj-I4-eYJ" firstAttribute="top" secondItem="e3e-0Y-CXZ" secondAttribute="top" id="9U8-C2-l2d"/>
                             <constraint firstAttribute="trailing" secondItem="KnH-v7-aHs" secondAttribute="trailing" constant="12" id="AcR-T6-xpI"/>
-                            <constraint firstItem="WLH-nU-d0l" firstAttribute="centerX" secondItem="KnH-v7-aHs" secondAttribute="centerX" id="JIF-X9-KVC"/>
                             <constraint firstItem="KnH-v7-aHs" firstAttribute="leading" secondItem="e3e-0Y-CXZ" secondAttribute="leading" constant="12" id="OD0-00-dqJ"/>
                             <constraint firstItem="6A8-hb-u9z" firstAttribute="bottom" secondItem="vVr-uS-QuZ" secondAttribute="bottom" constant="6" id="UkE-d5-zcp"/>
+                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="top" secondItem="xuj-I4-eYJ" secondAttribute="top" constant="110" id="WkE-VH-vMm"/>
                             <constraint firstItem="xuj-I4-eYJ" firstAttribute="leading" secondItem="6A8-hb-u9z" secondAttribute="leading" constant="12" id="X10-Vb-u16"/>
-                            <constraint firstItem="KnH-v7-aHs" firstAttribute="top" secondItem="WLH-nU-d0l" secondAttribute="bottom" constant="8" symbolic="YES" id="Y93-GJ-x7T"/>
-                            <constraint firstItem="E2j-eD-Xok" firstAttribute="leading" secondItem="6A8-hb-u9z" secondAttribute="leading" id="aUj-9c-hSn"/>
-                            <constraint firstItem="6A8-hb-u9z" firstAttribute="trailing" secondItem="E2j-eD-Xok" secondAttribute="trailing" id="bll-2D-CFn"/>
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="trailing" secondItem="KnH-v7-aHs" secondAttribute="trailing" id="cQl-XW-2qh"/>
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="top" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="9" id="dm2-6f-6kK"/>
-                            <constraint firstItem="WLH-nU-d0l" firstAttribute="top" secondItem="xuj-I4-eYJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fHA-eD-OLK"/>
+                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="width" secondItem="e3e-0Y-CXZ" secondAttribute="width" id="f5Z-2w-B8F"/>
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="leading" secondItem="KnH-v7-aHs" secondAttribute="leading" id="hXn-P6-Ebf"/>
-                            <constraint firstItem="6A8-hb-u9z" firstAttribute="trailing" secondItem="WLH-nU-d0l" secondAttribute="trailing" id="lJW-md-LNB"/>
-                            <constraint firstItem="WLH-nU-d0l" firstAttribute="leading" secondItem="e3e-0Y-CXZ" secondAttribute="leading" id="zSM-HA-3Dk"/>
-                            <constraint firstItem="WLH-nU-d0l" firstAttribute="width" secondItem="e3e-0Y-CXZ" secondAttribute="width" id="zYY-Eb-87q"/>
+                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="bottom" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="-65" id="pzO-c3-i3i"/>
+                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="leading" secondItem="6A8-hb-u9z" secondAttribute="leading" id="wFS-It-P0r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6A8-hb-u9z"/>
                     </view>
