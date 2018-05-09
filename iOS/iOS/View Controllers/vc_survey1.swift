@@ -12,6 +12,9 @@ import UIKit
 class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     
+    @IBOutlet weak var ButtonBack: UIButton!
+    @IBOutlet weak var ButtonContinue: UIButton!
+    
     let AutismDiagnosis = ["Autism Spectrum Disorder (ASD)","Autism Disorder","Asperger Syndrome", "Pervasive Developmental Disorder - Not Otherwise Specified", "Rett's Disorder","Childhood Disintegrative Disorder",
     "No ASD Diagnosis", "No ASD Diagnosis, but Suspicious", "Social Communication (Pragmatic) Disorder"]
     
@@ -49,6 +52,16 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var textAutism: UITextField!
     @IBOutlet weak var textCity: UITextField!
     
+    
+    @IBAction func ContinueClick(_ sender: Any) {
+        // Move to the next viewpager: the second survey
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey2")
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func BackClick(_ sender: Any) {
+    }
     
     
     // returns the number of 'columns' to display.

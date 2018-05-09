@@ -322,6 +322,8 @@ SWIFT_CLASS("_TtC3iOS14vc_select_deck")
 
 SWIFT_CLASS("_TtC3iOS10vc_survey1")
 @interface vc_survey1 : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ButtonBack;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ButtonContinue;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified LatinoSwitch;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified AsianSwitch;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NativeAmericanSwitch;
@@ -341,10 +343,21 @@ SWIFT_CLASS("_TtC3iOS10vc_survey1")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textOtherDiagnosis;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textAutism;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textCity;
+- (IBAction)ContinueClick:(id _Nonnull)sender;
+- (IBAction)BackClick:(id _Nonnull)sender;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS10vc_survey2")
+@interface vc_survey2 : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
