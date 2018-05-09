@@ -54,25 +54,64 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     // returns the number of 'columns' to display.
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
-        
     }
     
     
     // returns the # of rows in each component..
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return States.count
+        
+        if(pickerView == PickerViewStates){
+            return States.count
+        } else if(pickerView == PickerViewCountries){
+            return Countries.count
+        }
+        else if(pickerView == PickerViewGenders){
+            return Genders.count
+        }
+        else if(pickerView == PickerViewDiagnosis){
+            return AutismDiagnosis.count
+        }
+        else{
+            return States.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return States[row]
-
-        
+        if(pickerView == PickerViewStates){
+            return States[row]
+        } else if(pickerView == PickerViewCountries){
+            return Countries[row]
+        }
+        else if(pickerView == PickerViewGenders){
+            return Genders[row]
+        }
+        else if(pickerView == PickerViewDiagnosis){
+            return AutismDiagnosis[row]
+        }
+        else{
+            return States[row]
+        }
     }
     
     // When user actually selects a field
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textState.text = States[row]
-        textState.resignFirstResponder()
+        if(pickerView == PickerViewStates){
+            textState.text = States[row]
+            textState.resignFirstResponder()
+        } else if(pickerView == PickerViewCountries){
+            textCountry.text = Countries[row]
+            textCountry.resignFirstResponder()        }
+        else if(pickerView == PickerViewGenders){
+            textGender.text = Genders[row]
+            textGender.resignFirstResponder()        }
+        else if(pickerView == PickerViewDiagnosis){
+            textAutism.text = AutismDiagnosis[row]
+            textAutism.resignFirstResponder()
+        }
+        else{
+            textState.text = States[row]
+            textState.resignFirstResponder()
+        }
     }
     
     
@@ -84,10 +123,27 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         PickerViewStates.delegate = self
         PickerViewStates.dataSource = self
         
+        PickerViewCountries.delegate = self
+        PickerViewCountries.dataSource = self
+      
+        PickerViewGenders.delegate = self
+        PickerViewGenders.dataSource = self
+        
+        PickerViewDiagnosis.delegate = self
+        PickerViewDiagnosis.dataSource = self
         
         textState.inputView = PickerViewStates
-        //textState.textAlignment = .center
         textState.placeholder = "Select State"
+        
+        textCountry.inputView = PickerViewCountries
+        textCountry.placeholder = "Select Country"
+        
+        textGender.inputView = PickerViewGenders
+        textGender.placeholder = "Select Gender"
+        
+        textAutism.inputView = PickerViewDiagnosis
+        textAutism.placeholder = "Select Diagnosis"
+        
         // Do any additional setup after loading the view.
     }
 
