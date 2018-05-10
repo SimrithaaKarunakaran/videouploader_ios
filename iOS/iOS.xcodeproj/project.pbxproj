@@ -114,6 +114,8 @@
 		22B810B920A39AB30052CCB9 /* vc_survey4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810B820A39AB30052CCB9 /* vc_survey4.swift */; };
 		22B810BB20A39AD10052CCB9 /* vc_survey5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810BA20A39AD10052CCB9 /* vc_survey5.swift */; };
 		22B810BD20A39B140052CCB9 /* vc_survey6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810BC20A39B140052CCB9 /* vc_survey6.swift */; };
+		22B810BF20A4B4E20052CCB9 /* AddPlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B810BE20A4B4E20052CCB9 /* AddPlayer.png */; };
+		22B810C120A4BF270052CCB9 /* ImageClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B810C020A4BF270052CCB9 /* ImageClock.png */; };
 		22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE7DC020913C4300883AE9 /* vc_countdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +230,8 @@
 		22B810B820A39AB30052CCB9 /* vc_survey4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey4.swift; sourceTree = "<group>"; };
 		22B810BA20A39AD10052CCB9 /* vc_survey5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey5.swift; sourceTree = "<group>"; };
 		22B810BC20A39B140052CCB9 /* vc_survey6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey6.swift; sourceTree = "<group>"; };
+		22B810BE20A4B4E20052CCB9 /* AddPlayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddPlayer.png; sourceTree = "<group>"; };
+		22B810C020A4BF270052CCB9 /* ImageClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageClock.png; sourceTree = "<group>"; };
 		22FE7DC020913C4300883AE9 /* vc_countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_countdown.swift; sourceTree = "<group>"; };
 		40AD23C01F66B68EE54574CA /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,6 +332,8 @@
 		22908D11209CF85A007CDA7F /* Logos */ = {
 			isa = PBXGroup;
 			children = (
+				22B810BE20A4B4E20052CCB9 /* AddPlayer.png */,
+				22B810C020A4BF270052CCB9 /* ImageClock.png */,
 				22908D12209CF85A007CDA7F /* LogoSecondary.png */,
 				22908D13209CF85A007CDA7F /* LogoInstructions.png */,
 				22908D14209CF85A007CDA7F /* LogoTitle.png */,
@@ -569,6 +575,7 @@
 				22908D72209CF85C007CDA7F /* f_neutral2.png in Resources */,
 				22908D75209CF85C007CDA7F /* f_disgust.png in Resources */,
 				22908D97209CF85C007CDA7F /* a9_cry.png in Resources */,
+				22B810BF20A4B4E20052CCB9 /* AddPlayer.png in Resources */,
 				22908D74209CF85C007CDA7F /* d11_running.png in Resources */,
 				22908D76209CF85C007CDA7F /* b8_sad.png in Resources */,
 				22908D8C209CF85C007CDA7F /* b7_surprised.png in Resources */,
@@ -591,6 +598,7 @@
 				22908DAC209CF85C007CDA7F /* a6_angry.png in Resources */,
 				22908DB6209CF85C007CDA7F /* f_surprised2.png in Resources */,
 				22908DBD209CF85C007CDA7F /* b4_sad.png in Resources */,
+				22B810C120A4BF270052CCB9 /* ImageClock.png in Resources */,
 				22908D87209CF85C007CDA7F /* d2_soccer.png in Resources */,
 				22908D71209CF85C007CDA7F /* f_angry3.png in Resources */,
 				22908D92209CF85C007CDA7F /* c8_chicken.png in Resources */,
