@@ -35,5 +35,83 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS/View Controllers/vc_survey1.swift"
+            timestampString = "547678163.545585"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "AutismDiagnosis"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of iOS.vc_survey1.AutismDiagnosis : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_survey1.swift"
+                  timestampString = "547678061.651993"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_survey1.AutismDiagnosis.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_survey1.swift"
+                  timestampString = "547678061.655497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_survey1.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; iOS.vc_survey1"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_survey1.swift"
+                  timestampString = "547678061.658673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS.vc_survey1.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS.vc_survey1&gt;"
+                  moduleName = "iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haik/Documents/guesswhat_ios/iOS/iOS/View%20Controllers/vc_survey1.swift"
+                  timestampString = "547678061.662495"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "257">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
