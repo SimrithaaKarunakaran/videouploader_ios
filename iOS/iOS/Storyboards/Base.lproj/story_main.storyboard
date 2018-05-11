@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4k5-wY-x1f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,31 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--MainNavigation-->
-        <scene sceneID="2yJ-W7-iuY">
-            <objects>
-                <navigationController autoresizesArchivedViewToFullSize="NO" title="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="4k5-wY-x1f" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="VJP-oe-ttD">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eTs-6Y-yhs">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8c8-P1-vIh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cBH-oV-vW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-825" y="38"/>
-        </scene>
-        <!--Vc launchscreen-->
+        <!--vc_launchscreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="vc_launchscreen" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_launchscreen" id="BYZ-38-t0r" userLabel="vc_launchscreen" customClass="vc_launchscreen" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="40"/>
+            <point key="canvasLocation" x="-1822" y="-171"/>
         </scene>
         <!--Vc login-->
         <scene sceneID="nEl-TY-1ZH">
@@ -203,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCF-dz-jR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594.375" y="39.08450704225352"/>
+            <point key="canvasLocation" x="-1823" y="1252"/>
         </scene>
         <!--vc_select_deck-->
         <scene sceneID="laJ-57-5wh">
@@ -322,7 +301,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tiF-KY-4Yr" firstAttribute="bottom" secondItem="MSK-n2-sjv" secondAttribute="bottom" constant="12" id="PgN-Zj-0yw"/>
-                            <constraint firstItem="SVI-6l-V2V" firstAttribute="top" secondItem="tiF-KY-4Yr" secondAttribute="top" id="RjG-XB-ufm"/>
+                            <constraint firstItem="SVI-6l-V2V" firstAttribute="top" secondItem="tiF-KY-4Yr" secondAttribute="top" id="SJd-8A-GnN"/>
                             <constraint firstItem="0lV-vK-gEL" firstAttribute="top" secondItem="SVI-6l-V2V" secondAttribute="bottom" constant="10" id="Ufm-0v-m18"/>
                             <constraint firstItem="SgR-FR-Txg" firstAttribute="top" secondItem="0lV-vK-gEL" secondAttribute="bottom" constant="10" id="dDM-DV-l4f"/>
                             <constraint firstItem="0lV-vK-gEL" firstAttribute="trailing" secondItem="tiF-KY-4Yr" secondAttribute="trailing" constant="-10" id="hLB-4i-9Ig"/>
@@ -335,13 +314,10 @@
                         <viewLayoutGuide key="safeArea" id="tiF-KY-4Yr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="z0O-s5-s7G"/>
-                    <connections>
-                        <segue destination="Px0-PO-gqO" kind="show" id="NnN-Bc-fAG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33S-kR-vfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246.875" y="40.140845070422536"/>
+            <point key="canvasLocation" x="-1143" y="-171"/>
         </scene>
         <!--vc_wifi_warn-->
         <scene sceneID="j0q-aV-xB0">
@@ -411,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIg-nv-OKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897.5" y="43.309859154929576"/>
+            <point key="canvasLocation" x="-458" y="-171"/>
         </scene>
         <!--Vc create account-->
         <scene sceneID="aKc-ky-CBy">
@@ -515,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2t-wb-N9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84.375" y="732.04225352112678"/>
+            <point key="canvasLocation" x="-1143" y="1252"/>
         </scene>
         <!--Vc consent1-->
         <scene sceneID="9uL-Lj-NWY">
@@ -689,7 +665,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhy-Kw-RvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="732"/>
+            <point key="canvasLocation" x="-1823" y="525"/>
         </scene>
         <!--Vc consent2-->
         <scene sceneID="ly2-wa-P3Z">
@@ -855,7 +831,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYW-Ll-G7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="731"/>
+            <point key="canvasLocation" x="-1142" y="525"/>
         </scene>
         <!--Vc consent3-->
         <scene sceneID="z5w-cx-ncq">
@@ -1015,7 +991,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07k-Rk-8bm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897.1014492753625" y="730.43478260869574"/>
+            <point key="canvasLocation" x="-457" y="525"/>
         </scene>
     </scenes>
     <resources>

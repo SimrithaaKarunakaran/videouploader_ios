@@ -20,6 +20,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     var ArraySelected = [false, false, false, false, false, false];
 
     
+
     
     
     // tell the collection view how many cells to make

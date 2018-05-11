@@ -13,6 +13,8 @@ import AWSAuthUI
 import AWSMobileClient
 import AWSUserPoolsSignIn
 
+import AWSCore
+import AWSCognitoIdentityProvider
 
 var timer          = Timer()
 
@@ -31,6 +33,25 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
     }
     
     
+    final class CustomIdentityProvider: NSObject, AWSIdentityProviderManager {
+        var tokens: [String : String]?
+        
+        init(tokens: [String : String]?) {
+            self.tokens = tokens
+        }
+        
+        /**
+         Each entry in logins represents a single login with an identity provider.
+         The key is the domain of the login provider (e.g. 'graph.facebook.com')
+         and the value is the OAuth/OpenId Connect token that results from an authentication with that login provider.
+         */
+        func logins() -> AWSTask<NSDictionary> {
+            let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
+            return AWSTask(result: logins)
+        }
+    }
+    
+    
     @objc func updateTimer() {
         
         // Decrement number of seconds left.
@@ -38,57 +59,53 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
         
         if(SecondsTillTransition == 0){
             timer.invalidate();
+
             
-            // Move to the next viewpager: the login screen.
+            // Settings for UserPool (login)
+            let cognitoRegion            = AWSRegionType.USWest2
+            let cognitoIdentityPoolId    = "us-west-2_bB7kdaf7g";
+            let AppClientID              = "6arguf9m5ecvbgulsei89ketnm";
+            let AppClientSecret          = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
+            
+            // Information for S3 bucket
+            let  IdentityPoolID          = "us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4";
+            let  BucketName              = "headsup-du1r3b78fy";
+           
+            
             
             /*
-            let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login") as! UIViewController
-            self.present(newViewController, animated: true, completion: nil)
-            */
+            let credentialsProvider = AWSCognitoCredentialsProvider(regionType: cognitoRegion,
+                                                                    identityPoolId: cognitoIdentityPoolId,
+                                                                    identityProviderManager: customIdentityProvider)
+            let configuration = AWSServiceConfiguration(region: cognitoRegion,
+                                                        credentialsProvider: credentialsProvider)
+            AWSServiceManager.default().defaultServiceConfiguration = configuration
+            
+            credentialsProvider.getIdentityId().continue({ (task) in
+                guard task.error == nil else {
+                    print(task.error)
+                    return nil
+                }
+                // We've got a session and now we can access AWS service via default()
+                // e.g.: let cognito = AWSCognito.default()
+                return task
+            })*/
+
+            
+            
+            
+            
             
             print("[HK] Timer is up: transitioning.")
-            if AWSSignInManager.sharedInstance().isLoggedIn {
-                print("[HK] User is currently logged in.")
 
-                // If we are logged in, lets go to "Select Deck" for now.
-                let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
-                self.present(newViewController, animated: true, completion: nil)
-                
-            } else {
-                presentAuthUIViewController()
-
-            }
+            // If we are logged in, lets go to "Select Deck" for now.
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
+            self.present(newViewController, animated: true, completion: nil)
+            
         }
     }
     
-    
-    func presentAuthUIViewController() {
-
-        print("\n[HK] Presenting AuthUIViewController.")
-
-        let config = AWSAuthUIConfiguration()
-        config.enableUserPoolsUI = true
-        config.logoImage = #imageLiteral(resourceName: "LogoTitle.png")
-        config.backgroundColor = UIColor.blue
-        config.font = UIFont (name: "Helvetica Neue", size: 18)
-        config.isBackgroundColorFullScreen = true
-        config.canCancel = true
-        
-        AWSAuthUIViewController
-            .presentViewController(with: self.navigationController!,
-                                   configuration: config,
-                                   completionHandler: { (provider: AWSSignInProvider, error: Error?) in
-                                    if error != nil {
-                                        print("Error occurred: \(String(describing: error))")
-                                        print("\n[HK] Error.")
-                                    } else {
-                                        // sign in successful.
-                                        print("\n[HK] Success.")
-                                    }
-            })
-    }
     
     
     override func viewDidLoad() {

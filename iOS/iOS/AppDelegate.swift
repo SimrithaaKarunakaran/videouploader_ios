@@ -22,17 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIApplication.shared.isStatusBarHidden = true
 
-    
-        /*
-        Then add another instance of AWSMobileClient in the didFinishLaunching function to register the sign in providers, and to fetch an Amazon Cognito credentials that AWS will use to authorize access once the user signs in.
-        */
-
-        var AWSClient = AWSMobileClient.sharedInstance().interceptApplication(application,         didFinishLaunchingWithOptions: launchOptions)
         
-        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
-        AWSDDLog.sharedInstance.logLevel = .info
-        
-        return AWSClient
+        return true
     }
     
     
@@ -44,10 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
         
-        return AWSMobileClient.sharedInstance().interceptApplication(
-            application, open: url,
-            sourceApplication: sourceApplication,
-            annotation: annotation)
+        return true
         
     }
     
