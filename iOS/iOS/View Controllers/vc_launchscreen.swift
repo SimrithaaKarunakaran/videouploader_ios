@@ -68,10 +68,17 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
 
         print("\n[HK] Presenting AuthUIViewController.")
 
+        let config = AWSAuthUIConfiguration()
+        config.enableUserPoolsUI = true
+        config.logoImage = #imageLiteral(resourceName: "LogoTitle.png")
+        config.backgroundColor = UIColor.blue
+        config.font = UIFont (name: "Helvetica Neue", size: 18)
+        config.isBackgroundColorFullScreen = true
+        config.canCancel = true
         
         AWSAuthUIViewController
             .presentViewController(with: self.navigationController!,
-                                   configuration: nil,
+                                   configuration: config,
                                    completionHandler: { (provider: AWSSignInProvider, error: Error?) in
                                     if error != nil {
                                         print("Error occurred: \(String(describing: error))")

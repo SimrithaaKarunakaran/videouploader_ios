@@ -12,6 +12,7 @@
 		22207F202057553100D447F2 /* story_main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22207F1E2057553100D447F2 /* story_main.storyboard */; };
 		22207F222057553100D447F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22207F212057553100D447F2 /* Assets.xcassets */; };
 		224CF92120A538A40070F7A7 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 224CF92020A538A40070F7A7 /* awsconfiguration.json */; };
+		224CF92320A61C410070F7A7 /* vc_wifi_warn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */; };
 		2265BB3B208FD1D20096CCAE /* story_pageview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265BB3A208FD1D20096CCAE /* story_pageview.storyboard */; };
 		228C1E50205AE46500DD9F63 /* StateUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */; };
 		22908D0C2097EF11007CDA7F /* vc_login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22908D0B2097EF11007CDA7F /* vc_login.swift */; };
@@ -128,6 +129,7 @@
 		22207F212057553100D447F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22207F262057553200D447F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224CF92020A538A40070F7A7 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Desktop/awsconfiguration.json; sourceTree = "<group>"; };
+		224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_wifi_warn.swift; sourceTree = "<group>"; };
 		2265BB3A208FD1D20096CCAE /* story_pageview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = story_pageview.storyboard; sourceTree = "<group>"; };
 		228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateUserInfo.swift; sourceTree = "<group>"; };
 		22908D0B2097EF11007CDA7F /* vc_login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_login.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				22B810B820A39AB30052CCB9 /* vc_survey4.swift */,
 				22B810BA20A39AD10052CCB9 /* vc_survey5.swift */,
 				22B810BC20A39B140052CCB9 /* vc_survey6.swift */,
+				224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				22B810B720A39AA80052CCB9 /* vc_survey3.swift in Sources */,
 				22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */,
 				22B810B920A39AB30052CCB9 /* vc_survey4.swift in Sources */,
+				224CF92320A61C410070F7A7 /* vc_wifi_warn.swift in Sources */,
 				22908DC720A0D703007CDA7F /* vc_create_account.swift in Sources */,
 				22908DC0209D1F5B007CDA7F /* vc_select_deck.swift in Sources */,
 				22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */,
