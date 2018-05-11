@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSMobileClient
+import AWSCore
 
 // This designates the AppDeligate class as the entry point.
 // Check info.plist for details.
@@ -17,26 +19,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
-        /*
-         Hide Status bar.
-        */
         UIApplication.shared.isStatusBarHidden = true
-        
-        /*
-         Hide navigation bar
-        */
-        
-        //navigationController?.isNavigationBarHidden = true  //Hide
 
-        
+    
         /*
-        Initialize Firebase
+        Then add another instance of AWSMobileClient in the didFinishLaunching function to register the sign in providers, and to fetch an Amazon Cognito credentials that AWS will use to authorize access once the user signs in.
         */
 
-        return true
+        var AWSClient = AWSMobileClient.sharedInstance().interceptApplication(application,         didFinishLaunchingWithOptions: launchOptions)
+        
+        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
+        AWSDDLog.sharedInstance.logLevel = .info
+        
+        return AWSClient
     }
+    
+    
+    /*
+    Add code to create an instance of AWSMobileClient in the application:open url function of your AppDelegate.swift, to resume a previously signed-in authenticated session.
+    */
+ 
+
+    func application(_ application: UIApplication, open url: URL,
+                     sourceApplication: String?, annotation: Any) -> Bool {
+        
+        return AWSMobileClient.sharedInstance().interceptApplication(
+            application, open: url,
+            sourceApplication: sourceApplication,
+            annotation: annotation)
+        
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

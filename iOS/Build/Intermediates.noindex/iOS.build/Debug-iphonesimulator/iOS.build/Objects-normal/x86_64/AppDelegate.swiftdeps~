@@ -14,20 +14,39 @@ provides-dynamic-lookup:
 - "applicationWillTerminate"
 - "window"
 depends-top-level:
+- !private "AWSDDLog"
+- !private "AWSDDTTYLogger"
+- !private "AWSMobileClient"
 - "AppDelegate"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
+- "String"
 - "UIApplication"
 - "UIApplicationDelegate"
 - "UIApplicationLaunchOptionsKey"
 - "UIResponder"
 - "UIWindow"
+- "URL"
 depends-member:
+- !private ["So19AWSDDAbstractLoggerC", "sharedInstance"]
+- !private ["So8AWSDDLogC", "add"]
+- !private ["So8AWSDDLogC", "logLevel"]
+- !private ["So8AWSDDLogC", "sharedInstance"]
+- !private ["SC13AWSDDLogLevelO", "info"]
+- !private ["So11AWSDDLoggerP", "sharedInstance"]
+- !private ["So14AWSDDTTYLoggerC", "sharedInstance"]
+- !private ["So15AWSMobileClientC", "interceptApplication"]
+- !private ["So15AWSMobileClientC", "sharedInstance"]
+- !private ["3iOS11AppDelegateC", "AWSDDLog"]
+- !private ["3iOS11AppDelegateC", "AWSDDTTYLogger"]
+- !private ["3iOS11AppDelegateC", "AWSMobileClient"]
 - ["3iOS11AppDelegateC", "Bool"]
+- ["3iOS11AppDelegateC", "String"]
 - ["3iOS11AppDelegateC", "UIApplication"]
 - ["3iOS11AppDelegateC", "UIApplicationLaunchOptionsKey"]
 - ["3iOS11AppDelegateC", "UIWindow"]
+- ["3iOS11AppDelegateC", "URL"]
 - ["3iOS11AppDelegateC", "application"]
 - ["3iOS11AppDelegateC", "applicationDidBecomeActive"]
 - ["3iOS11AppDelegateC", "applicationDidEnterBackground"]
@@ -43,7 +62,11 @@ depends-member:
 - ["3iOS11AppDelegateC", "deinit"]
 - ["3iOS11AppDelegateC", "init"]
 - ["3iOS11AppDelegateC", "window"]
+- !private ["s7CVarArgP", "AWSDDLog"]
+- !private ["s7CVarArgP", "AWSDDTTYLogger"]
+- !private ["s7CVarArgP", "AWSMobileClient"]
 - !private ["s7CVarArgP", "UIApplication"]
+- !private ["s7CVarArgP", "add"]
 - ["s7CVarArgP", "application"]
 - ["s7CVarArgP", "applicationDidBecomeActive"]
 - ["s7CVarArgP", "applicationDidEnterBackground"]
@@ -57,11 +80,18 @@ depends-member:
 - ["s7CVarArgP", "applicationWillResignActive"]
 - ["s7CVarArgP", "applicationWillTerminate"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "interceptApplication"]
 - !private ["s7CVarArgP", "isStatusBarHidden"]
+- !private ["s7CVarArgP", "logLevel"]
 - !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "sharedInstance"]
 - ["s7CVarArgP", "window"]
 - ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "AWSDDLog"]
+- !private ["s28CustomDebugStringConvertibleP", "AWSDDTTYLogger"]
+- !private ["s28CustomDebugStringConvertibleP", "AWSMobileClient"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
 - ["s28CustomDebugStringConvertibleP", "application"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidBecomeActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidEnterBackground"]
@@ -75,11 +105,18 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "interceptApplication"]
 - !private ["s28CustomDebugStringConvertibleP", "isStatusBarHidden"]
+- !private ["s28CustomDebugStringConvertibleP", "logLevel"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedInstance"]
 - ["s28CustomDebugStringConvertibleP", "window"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "AWSDDLog"]
+- !private ["s23CustomStringConvertibleP", "AWSDDTTYLogger"]
+- !private ["s23CustomStringConvertibleP", "AWSMobileClient"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
+- !private ["s23CustomStringConvertibleP", "add"]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
 - ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
@@ -93,11 +130,18 @@ depends-member:
 - ["s23CustomStringConvertibleP", "applicationWillResignActive"]
 - ["s23CustomStringConvertibleP", "applicationWillTerminate"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "interceptApplication"]
 - !private ["s23CustomStringConvertibleP", "isStatusBarHidden"]
+- !private ["s23CustomStringConvertibleP", "logLevel"]
 - !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "sharedInstance"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s9EquatableP", "AWSDDLog"]
+- !private ["s9EquatableP", "AWSDDTTYLogger"]
+- !private ["s9EquatableP", "AWSMobileClient"]
 - !private ["s9EquatableP", "UIApplication"]
+- !private ["s9EquatableP", "add"]
 - ["s9EquatableP", "application"]
 - ["s9EquatableP", "applicationDidBecomeActive"]
 - ["s9EquatableP", "applicationDidEnterBackground"]
@@ -110,12 +154,20 @@ depends-member:
 - ["s9EquatableP", "applicationWillEnterForeground"]
 - ["s9EquatableP", "applicationWillResignActive"]
 - ["s9EquatableP", "applicationWillTerminate"]
+- !private ["s9EquatableP", "info"]
 - !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "interceptApplication"]
 - !private ["s9EquatableP", "isStatusBarHidden"]
+- !private ["s9EquatableP", "logLevel"]
 - !private ["s9EquatableP", "shared"]
+- !private ["s9EquatableP", "sharedInstance"]
 - ["s9EquatableP", "window"]
 - ["s9EquatableP", ""]
+- !private ["s8HashableP", "AWSDDLog"]
+- !private ["s8HashableP", "AWSDDTTYLogger"]
+- !private ["s8HashableP", "AWSMobileClient"]
 - !private ["s8HashableP", "UIApplication"]
+- !private ["s8HashableP", "add"]
 - ["s8HashableP", "application"]
 - ["s8HashableP", "applicationDidBecomeActive"]
 - ["s8HashableP", "applicationDidEnterBackground"]
@@ -128,15 +180,25 @@ depends-member:
 - ["s8HashableP", "applicationWillEnterForeground"]
 - ["s8HashableP", "applicationWillResignActive"]
 - ["s8HashableP", "applicationWillTerminate"]
+- !private ["s8HashableP", "info"]
 - !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "interceptApplication"]
 - !private ["s8HashableP", "isStatusBarHidden"]
+- !private ["s8HashableP", "logLevel"]
 - !private ["s8HashableP", "shared"]
+- !private ["s8HashableP", "sharedInstance"]
 - ["s8HashableP", "window"]
 - ["s8HashableP", ""]
+- !private ["So8NSObjectC", "AWSDDLog"]
+- !private ["So8NSObjectC", "AWSDDTTYLogger"]
+- !private ["So8NSObjectC", "AWSMobileClient"]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIApplication"]
 - ["So8NSObjectC", "UIApplicationLaunchOptionsKey"]
 - ["So8NSObjectC", "UIWindow"]
+- ["So8NSObjectC", "URL"]
+- !private ["So8NSObjectC", "add"]
 - ["So8NSObjectC", "application"]
 - ["So8NSObjectC", "applicationDidBecomeActive"]
 - ["So8NSObjectC", "applicationDidEnterBackground"]
@@ -150,10 +212,17 @@ depends-member:
 - ["So8NSObjectC", "applicationWillResignActive"]
 - ["So8NSObjectC", "applicationWillTerminate"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "interceptApplication"]
 - !private ["So8NSObjectC", "isStatusBarHidden"]
+- !private ["So8NSObjectC", "logLevel"]
 - !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "sharedInstance"]
 - ["So8NSObjectC", "window"]
+- !private ["So16NSObjectProtocolP", "AWSDDLog"]
+- !private ["So16NSObjectProtocolP", "AWSDDTTYLogger"]
+- !private ["So16NSObjectProtocolP", "AWSMobileClient"]
 - !private ["So16NSObjectProtocolP", "UIApplication"]
+- !private ["So16NSObjectProtocolP", "add"]
 - ["So16NSObjectProtocolP", "application"]
 - ["So16NSObjectProtocolP", "applicationDidBecomeActive"]
 - ["So16NSObjectProtocolP", "applicationDidEnterBackground"]
@@ -167,12 +236,19 @@ depends-member:
 - ["So16NSObjectProtocolP", "applicationWillResignActive"]
 - ["So16NSObjectProtocolP", "applicationWillTerminate"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "interceptApplication"]
 - !private ["So16NSObjectProtocolP", "isStatusBarHidden"]
+- !private ["So16NSObjectProtocolP", "logLevel"]
 - !private ["So16NSObjectProtocolP", "shared"]
+- !private ["So16NSObjectProtocolP", "sharedInstance"]
 - ["So16NSObjectProtocolP", "window"]
 - ["So16NSObjectProtocolP", ""]
+- !private ["s16RawRepresentableP", "info"]
 - !private ["So13UIApplicationC", "isStatusBarHidden"]
 - !private ["So13UIApplicationC", "shared"]
+- !private ["So21UIApplicationDelegateP", "AWSDDLog"]
+- !private ["So21UIApplicationDelegateP", "AWSDDTTYLogger"]
+- !private ["So21UIApplicationDelegateP", "AWSMobileClient"]
 - !private ["So21UIApplicationDelegateP", "UIApplication"]
 - ["So21UIApplicationDelegateP", "application"]
 - ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
@@ -188,6 +264,9 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - ["So21UIApplicationDelegateP", "window"]
 - ["So21UIApplicationDelegateP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "AWSDDLog"]
+- !private ["So30UIPasteConfigurationSupportingP", "AWSDDTTYLogger"]
+- !private ["So30UIPasteConfigurationSupportingP", "AWSMobileClient"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "application"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
@@ -206,10 +285,15 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So11UIResponderC", "AWSDDLog"]
+- !private ["So11UIResponderC", "AWSDDTTYLogger"]
+- !private ["So11UIResponderC", "AWSMobileClient"]
 - ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIApplicationLaunchOptionsKey"]
 - ["So11UIResponderC", "UIWindow"]
+- ["So11UIResponderC", "URL"]
 - ["So11UIResponderC", "application"]
 - ["So11UIResponderC", "applicationDidBecomeActive"]
 - ["So11UIResponderC", "applicationDidEnterBackground"]
@@ -227,6 +311,9 @@ depends-member:
 - !private ["So11UIResponderC", "shared"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", ""]
+- !private ["So30UIResponderStandardEditActionsP", "AWSDDLog"]
+- !private ["So30UIResponderStandardEditActionsP", "AWSDDTTYLogger"]
+- !private ["So30UIResponderStandardEditActionsP", "AWSMobileClient"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "application"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
@@ -245,7 +332,11 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
 - ["So30UIResponderStandardEditActionsP", "window"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSDDLog"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSDDTTYLogger"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSMobileClient"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidBecomeActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidEnterBackground"]
@@ -259,11 +350,20 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "interceptApplication"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isStatusBarHidden"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "logLevel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedInstance"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 depends-nominal:
+- !private "So19AWSDDAbstractLoggerC"
+- !private "So8AWSDDLogC"
+- !private "SC13AWSDDLogLevelO"
+- !private "So11AWSDDLoggerP"
+- !private "So14AWSDDTTYLoggerC"
+- !private "So15AWSMobileClientC"
 - "3iOS11AppDelegateC"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
@@ -272,6 +372,7 @@ depends-nominal:
 - "s8HashableP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
+- !private "s16RawRepresentableP"
 - !private "So13UIApplicationC"
 - "So21UIApplicationDelegateP"
 - "So30UIPasteConfigurationSupportingP"
@@ -283,6 +384,7 @@ depends-external:
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotesc"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -295,6 +397,94 @@ depends-external:
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/haik/Documents/iOS/iOS/Pods/Firebase/Core/Sources/module.modulemap"
-- "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Firebase/Core/Sources/module.modulemap"
-interface-hash: "b306772a10463f7c5fce689aa6452f8e"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMDB.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSGZIP.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTS.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDLog+LOGV.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCore-umbrella.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSAuthCore-umbrella.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Headers/AWSMobileClient-umbrella.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSGeneric.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTSService.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSService.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCognitoIdentityService.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCancellationTokenSource.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTaskCompletionSource.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTMCache.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTMDiskCache.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTMMemoryCache.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMantle.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCore.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSAuthCore.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSUICKeyChainStore.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSignature.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDASLLogCapture.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMDatabase.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMDatabaseQueue.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLModel+NSCoding.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSLogging.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSNetworking.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDLog.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCocoaLumberjack.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTask.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLModel.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTSModel.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSModel.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCognitoIdentityModel.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMDatabasePool.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSServiceEnum.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCancellationToken.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSValidation.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCancellationTokenRegistration.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSUIConfiguration.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSerialization.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSURLResponseSerialization.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSURLRequestSerialization.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLReflection.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/NSError+AWSMTLModelException.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSInfo.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSSignInProvider.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCredentialsProvider.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSIdentityProvider.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTMCacheBackgroundTaskManager.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSSignInManager.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSURLSessionManager.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSIdentityManager.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDASLLogger.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDOSLogger.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDTTYLogger.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDFileLogger.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDAbstractDatabaseLogger.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSURLRequestRetryHandler.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLValueTransformer.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLJSONAdapter.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLManagedObjectAdapter.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDDispatchQueueLogFormatter.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDContextFilterLogFormatter.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDMultiFormatter.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSExecutor.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTSResources.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCognitoIdentityResources.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMDatabaseAdditions.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/NSValueTransformer+AWSMTLInversionAdditions.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/NSArray+AWSMTLManipulationAdditions.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/NSDictionary+AWSMTLManipulationAdditions.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/NSObject+AWSMTLComparisonAdditions.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/NSValueTransformer+AWSMTLPredefinedTransformerAdditions.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDLogMacros.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDAssertMacros.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDLegacyMacros.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSBolts.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMResultSet.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Headers/AWSMobileClient.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSSignInProviderApplicationIntercept.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSClientContext.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSSignInButtonView.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSynchronizedMutableDictionary.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCategory.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSKSReachability.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCognitoIdentity.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Modules/module.modulemap"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Modules/module.modulemap"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
+interface-hash: "95195d7efe8a48e1152c288971ed8e45"

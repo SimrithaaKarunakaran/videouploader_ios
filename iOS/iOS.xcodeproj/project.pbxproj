@@ -12,7 +12,6 @@
 		22207F202057553100D447F2 /* story_main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22207F1E2057553100D447F2 /* story_main.storyboard */; };
 		22207F222057553100D447F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22207F212057553100D447F2 /* Assets.xcassets */; };
 		224CF91F20A515B80070F7A7 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 224CF91E20A515B80070F7A7 /* awsconfiguration.json */; };
-		2258427F205C551A00D6C5D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2258427E205C551A00D6C5D6 /* GoogleService-Info.plist */; };
 		2265BB3B208FD1D20096CCAE /* story_pageview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265BB3A208FD1D20096CCAE /* story_pageview.storyboard */; };
 		228C1E50205AE46500DD9F63 /* StateUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */; };
 		22908D0C2097EF11007CDA7F /* vc_login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22908D0B2097EF11007CDA7F /* vc_login.swift */; };
@@ -118,10 +117,10 @@
 		22B810BF20A4B4E20052CCB9 /* AddPlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B810BE20A4B4E20052CCB9 /* AddPlayer.png */; };
 		22B810C120A4BF270052CCB9 /* ImageClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B810C020A4BF270052CCB9 /* ImageClock.png */; };
 		22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE7DC020913C4300883AE9 /* vc_countdown.swift */; };
+		7D41C41477A8F109ECE0673F /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F22C9EA96EC1CB311D235B1 /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D73758BB83DAE38208F36A9 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		22207F172057553100D447F2 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22207F1A2057553100D447F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22207F1C2057553100D447F2 /* vc_launchscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_launchscreen.swift; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 		22207F212057553100D447F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22207F262057553200D447F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224CF91E20A515B80070F7A7 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		2258427E205C551A00D6C5D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2265BB3A208FD1D20096CCAE /* story_pageview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = story_pageview.storyboard; sourceTree = "<group>"; };
 		228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateUserInfo.swift; sourceTree = "<group>"; };
 		22908D0B2097EF11007CDA7F /* vc_login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_login.swift; sourceTree = "<group>"; };
@@ -235,7 +233,9 @@
 		22B810BE20A4B4E20052CCB9 /* AddPlayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddPlayer.png; sourceTree = "<group>"; };
 		22B810C020A4BF270052CCB9 /* ImageClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageClock.png; sourceTree = "<group>"; };
 		22FE7DC020913C4300883AE9 /* vc_countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_countdown.swift; sourceTree = "<group>"; };
-		40AD23C01F66B68EE54574CA /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		26FF3EE95720A99AE021AF88 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7E209C5EFA10721AF8752391 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9F22C9EA96EC1CB311D235B1 /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,19 +243,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D41C41477A8F109ECE0673F /* Pods_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17AE67887384C899188AB879 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26FF3EE95720A99AE021AF88 /* Pods-iOS.debug.xcconfig */,
+				7E209C5EFA10721AF8752391 /* Pods-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		22207F0E2057553100D447F2 = {
 			isa = PBXGroup;
 			children = (
 				22207F192057553100D447F2 /* iOS */,
 				22207F182057553100D447F2 /* Products */,
-				805BA07ACD61ED6F372574F6 /* Pods */,
 				E20DB9670AD944F96952EA44 /* Frameworks */,
+				17AE67887384C899188AB879 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,7 +288,6 @@
 				22207F1A2057553100D447F2 /* AppDelegate.swift */,
 				22207F212057553100D447F2 /* Assets.xcassets */,
 				224CF91E20A515B80070F7A7 /* awsconfiguration.json */,
-				2258427E205C551A00D6C5D6 /* GoogleService-Info.plist */,
 				22207F262057553200D447F2 /* Info.plist */,
 			);
 			path = iOS;
@@ -442,18 +451,10 @@
 			path = UIElements;
 			sourceTree = "<group>";
 		};
-		805BA07ACD61ED6F372574F6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0D73758BB83DAE38208F36A9 /* Pods-iOS.debug.xcconfig */,
-				40AD23C01F66B68EE54574CA /* Pods-iOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		E20DB9670AD944F96952EA44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F22C9EA96EC1CB311D235B1 /* Pods_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -470,7 +471,6 @@
 				22207F142057553100D447F2 /* Frameworks */,
 				22207F152057553100D447F2 /* Resources */,
 				E176F55F5B25090F7B9DCB82 /* [CP] Embed Pods Frameworks */,
-				27A05BB6529B2622E9656F11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -529,7 +529,6 @@
 				22908D6E209CF85C007CDA7F /* d4_football.png in Resources */,
 				22908D98209CF85C007CDA7F /* f_neutral.png in Resources */,
 				22908D90209CF85C007CDA7F /* f_disgust3.png in Resources */,
-				2258427F205C551A00D6C5D6 /* GoogleService-Info.plist in Resources */,
 				22207F222057553100D447F2 /* Assets.xcassets in Resources */,
 				2265BB3B208FD1D20096CCAE /* story_pageview.storyboard in Resources */,
 				22908DA0209CF85C007CDA7F /* f_disgust4.png in Resources */,
@@ -620,21 +619,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27A05BB6529B2622E9656F11 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AC3D6D93E70403677F8DEB9F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,29 +644,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -839,7 +817,7 @@
 		};
 		22207F2A2057553200D447F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D73758BB83DAE38208F36A9 /* Pods-iOS.debug.xcconfig */;
+			baseConfigurationReference = 26FF3EE95720A99AE021AF88 /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -855,7 +833,7 @@
 		};
 		22207F2B2057553200D447F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40AD23C01F66B68EE54574CA /* Pods-iOS.release.xcconfig */;
+			baseConfigurationReference = 7E209C5EFA10721AF8752391 /* Pods-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,6 +8,11 @@
 
 import UIKit
 import os.log
+import AWSAuthCore
+import AWSAuthUI
+import AWSMobileClient
+import AWSUserPoolsSignIn
+
 
 var timer          = Timer()
 
@@ -42,10 +47,39 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
             self.present(newViewController, animated: true, completion: nil)
             */
             
-            let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey1") as! UIViewController
-            self.present(newViewController, animated: true, completion: nil)
+            print("[HK] Timer is up: transitioning.")
+            if AWSSignInManager.sharedInstance().isLoggedIn {
+                print("[HK] User is currently logged in.")
+
+                // If we are logged in, lets go to "Select Deck" for now.
+                let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
+                self.present(newViewController, animated: true, completion: nil)
+                
+            } else {
+                presentAuthUIViewController()
+
+            }
         }
+    }
+    
+    
+    func presentAuthUIViewController() {
+
+        print("\n[HK] Presenting AuthUIViewController.")
+
+        AWSAuthUIViewController
+            .presentViewController(with: self.navigationController!,
+                                   configuration: nil,
+                                   completionHandler: { (provider: AWSSignInProvider, error: Error?) in
+                                    if error != nil {
+                                        print("Error occurred: \(String(describing: error))")
+                                        print("\n[HK] Error.")
+                                    } else {
+                                        // sign in successful.
+                                        print("\n[HK] Success.")
+                                    }
+            })
     }
     
     

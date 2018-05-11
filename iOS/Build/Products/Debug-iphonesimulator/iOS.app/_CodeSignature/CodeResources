@@ -10,191 +10,227 @@
 		</data>
 		<key>Base.lproj/story_main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		mLarhcPvXSa+gAoiDLEnXPX0UBs=
+		5Pkkw5/FLmKMjPPhrauHyztTl1M=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/Info.plist</key>
 		<data>
-		MJoaulHmwUWyAv6z1s1xkjSwlss=
+		leVp/xQL+hGSokFPx/n5t6vmvK4=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/JAG-K3-TGH-view-1vC-IY-G5G.nib</key>
 		<data>
-		znbOai9kPlb2cBkvFVVFe2IF9TU=
+		D6M+1JjDri67sA5tDRrMCAojEsI=
 		</data>
-		<key>Base.lproj/story_main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/story_main.storyboardc/UINavigationController-4k5-wY-x1f.nib</key>
 		<data>
-		NN9GmA/No9QzlPV1vva0A36KmH8=
+		upoVEOeLLAcZ57fMehFvYEfLYsc=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/dvs-Iq-Hb4-view-z8r-3v-6Yg.nib</key>
 		<data>
-		acdL+gzVBrs3KcMGMIAW+R5/7bI=
+		a523Mif01fwsi36JyCC3HzSL30c=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/sZB-NZ-jo7-view-e3e-0Y-CXZ.nib</key>
 		<data>
-		MYXyvw64EmCrK/sBw9+s88M/7mA=
+		arzu1cfSfF/i5jGfGTdlEEMShjc=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/tNA-PW-8yv-view-bF9-nL-vvw.nib</key>
 		<data>
-		Cg7R5rvlwDVrq5sTRx9SQeNONbA=
+		K0wqLldOW+7eY/oioMorqs9lcXU=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/vc_consent_1.nib</key>
 		<data>
-		ZPDZv/C1exc3jS64wN2qS4B8Zq0=
+		TqvmUw08ZkYOlAZhGLqHczTO3Xw=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/vc_consent_2.nib</key>
 		<data>
-		dcqeE3NcckVmSj5frszJQmC+h04=
+		mqTZmVlTZzzkuT3Qjg+Xk/NFZvk=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/vc_consent_3.nib</key>
 		<data>
-		qLyxdnJYOZLQUcWcMXeV+kTJxAk=
+		JukQ8WO5wQDcxwkM59ZG4uVOVmk=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/vc_create_account.nib</key>
 		<data>
-		ZYKu2omZ0BZzNDuTU0V+wdRFAdw=
+		Cz2qpwb9sYJrS5nTtxnQjtxbtgw=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/vc_login.nib</key>
 		<data>
-		MNBtd5hUf7hURhVZsJmac1+Badc=
+		BPkBCqPXkvZFubWP6z5TFZblEW0=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/vc_select_deck.nib</key>
 		<data>
-		PbprjTPLk1/t+JXU0XBvLxcufUQ=
+		RLsI5bPtqxGjzf1wcXHELnmA4EM=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/xC0-Fl-bMT-view-UqG-bP-PSw.nib</key>
 		<data>
-		d+WYCwH2K+2CfgN8aprtyMQDTXk=
+		cpYioBdEGIZB7K8cI+lGG9t0kcU=
 		</data>
 		<key>Base.lproj/story_main.storyboardc/ypJ-GJ-O0I-view-J7y-7I-D2X.nib</key>
 		<data>
-		37Nyk2f2dNMxGw34L7EOuHfwD1Y=
+		QyRR31Z1fFDDhcOijH5CF4c+rhA=
 		</data>
-		<key>Frameworks/GRPCClient.framework/GRPCClient</key>
+		<key>Frameworks/AWSAuthCore.framework/AWSAuthCore</key>
 		<data>
-		eqecsxJSxL/GwAJrv6FAN12X5r4=
+		Z++umoKtlX8V4EPtH8raICl78sU=
 		</data>
-		<key>Frameworks/GRPCClient.framework/Info.plist</key>
+		<key>Frameworks/AWSAuthCore.framework/Info.plist</key>
 		<data>
-		4milZGXFqx7o0IJO/cYzhyS8o/s=
+		pCFeZrccLOjtooOIOmtgw0dv5oE=
 		</data>
-		<key>Frameworks/GRPCClient.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSAuthCore.framework/_CodeSignature/CodeResources</key>
 		<data>
-		SO//888JbNEoL71RZVQWmj/Je6w=
+		FasFORV66VT0LHwFd4pQM5XSAEs=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/Info.plist</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI</key>
 		<data>
-		mMOfG2nCguO6WDUjyvwlcJQAclE=
+		t6NFg9iQbiYnZndEajjQt2gxSws=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeDirectory</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/Assets.car</key>
 		<data>
-		YQEdjvGiqmDsPP75TkARdSHH/CQ=
+		EaesKPnTXmVu1HVhvhZG9vrk07o=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeRequirements</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/Info.plist</key>
 		<data>
-		OnX22wWFKRSOFN1+obRynMCeyXM=
+		dzs1YewNSzrIVM8pQqyfMy7kOvc=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeRequirements-1</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/SignIn.storyboardc/Info.plist</key>
 		<data>
-		ELBM/kWEx0Kfl7v6w5f5c8cDOAs=
+		2jmIZxUpMFRJSNEaRj4530+eyn4=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/SignIn.storyboardc/SignIn.nib</key>
 		<data>
-		nRkhFFJcB3/nEM6bhInN5BZqonA=
+		KcUKgF0zm8D7rjrQ2psMLLpnovo=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeSignature</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/SignIn.storyboardc/xc1-Jg-Y5t-view-n6k-Ut-fuw.nib</key>
 		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		fZOvrn2KNg3jSywm1NB4dJFoMl8=
 		</data>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/roots.pem</key>
+		<key>Frameworks/AWSAuthUI.framework/Info.plist</key>
 		<data>
-		ADi3FE9UV7SQ1xy70pVBi6BhJ9E=
+		wXhi/iLr06vmKCOy45Nfmk+AQY0=
 		</data>
-		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
+		<key>Frameworks/AWSAuthUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		FvFWeXtPIs7mnoGB7TAzBi+Ix8Q=
+		EariVdLP1CDeCglv0oZt7DgR1ds=
 		</data>
-		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
+		<key>Frameworks/AWSCognitoIdentityProvider.framework/AWSCognitoIdentityProvider</key>
 		<data>
-		GrkgJaL7IoX0etf/ZHqMcbuhsPE=
+		RN63udIxwLCqy1yluUctDmEuTC0=
 		</data>
-		<key>Frameworks/GTMSessionFetcher.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSCognitoIdentityProvider.framework/Info.plist</key>
 		<data>
-		+QWpRPsUhd7XcxyyE3siONCPpkw=
+		TFn7KKiya7mh6V81eVRSc1cLYbA=
 		</data>
-		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
+		<key>Frameworks/AWSCognitoIdentityProvider.framework/_CodeSignature/CodeResources</key>
 		<data>
-		K/eHH9O89qvtEKL0+2uUNiQuhjY=
+		FvOf3gIQht6gGHW24PDsntMc3Ug=
 		</data>
-		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
+		<key>Frameworks/AWSCognitoIdentityProviderASF.framework/AWSCognitoIdentityProviderASF</key>
 		<data>
-		BL5xQo7dCLmkI7HhZreyZ7Pu4P4=
+		QYc/SiV1KCjj4TsI2nIHXxSGOEY=
 		</data>
-		<key>Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSCognitoIdentityProviderASF.framework/Info.plist</key>
 		<data>
-		+BY2GZnqO0Mn46ZOGYkygeg2qMI=
+		TGEJ6uRHC5afteDqpzdRsezhcaQ=
 		</data>
-		<key>Frameworks/ProtoRPC.framework/Info.plist</key>
+		<key>Frameworks/AWSCognitoIdentityProviderASF.framework/_CodeSignature/CodeResources</key>
 		<data>
-		RRUO6fSv9OUJhwGHQoQxAMB95Yw=
+		vfUH0XZlRsZa5BYfQYU1Eseevmc=
 		</data>
-		<key>Frameworks/ProtoRPC.framework/ProtoRPC</key>
+		<key>Frameworks/AWSCore.framework/AWSCore</key>
 		<data>
-		UKm5ZaOCl2gvsG326xjNiuFZxvM=
+		AZNKNOs/M0jXdCgW/z9MCS5de7k=
 		</data>
-		<key>Frameworks/ProtoRPC.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSCore.framework/Info.plist</key>
 		<data>
-		hMqK2Rp9+lfv19BzVw/GghohGEc=
+		Pq8TpGnhn3JWZ8NisYqOoyvxPvc=
 		</data>
-		<key>Frameworks/Protobuf.framework/Info.plist</key>
+		<key>Frameworks/AWSCore.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Dl/s4+U6RXMA6JCO4kZU5OGRs4M=
+		WcmSpcqz/btkqA9dy8PnbEY/AMs=
 		</data>
-		<key>Frameworks/Protobuf.framework/Protobuf</key>
+		<key>Frameworks/AWSMobileClient.framework/AWSMobileClient</key>
 		<data>
-		fefXRR0DUgum27v1uXPBkqImURQ=
+		GwgjM/HFDZfKolz/wsjjyAdtWVs=
 		</data>
-		<key>Frameworks/Protobuf.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSMobileClient.framework/Info.plist</key>
 		<data>
-		u4iqPSJG2V2KBAxQpQYoXyi7Plg=
+		A2C/Iq0HX2AChSdCR9FlgIAS8wg=
 		</data>
-		<key>Frameworks/RxLibrary.framework/Info.plist</key>
+		<key>Frameworks/AWSMobileClient.framework/_CodeSignature/CodeResources</key>
 		<data>
-		rdi4yYLt1RdC5gE4W3mbPR5TNH0=
+		e97Eo9dnhV9gVCR57Y8LmqVpu8A=
 		</data>
-		<key>Frameworks/RxLibrary.framework/RxLibrary</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn</key>
 		<data>
-		q17AiYVVdaPZS8QIyCXshjAZaRo=
+		KB4IctRL4mwxcx6mZZfb+KhOkO4=
 		</data>
-		<key>Frameworks/RxLibrary.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/Fee-Hn-G0A-view-3Ww-qO-xXn.nib</key>
 		<data>
-		q8b28Zq3gEeCz/vcp28Jz4DvIP4=
+		FGGXfDY+BJQd/Q9X2LVm9V/NE1M=
 		</data>
-		<key>Frameworks/grpc.framework/Info.plist</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/ForgotPassword.nib</key>
 		<data>
-		Kx1VDimCB6RxuyTvvj2dhuOsxDc=
+		RfhbJiTeE4fHe1OycB0vFtiuJlc=
 		</data>
-		<key>Frameworks/grpc.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/Info.plist</key>
 		<data>
-		rQ0RszGi33YtkIMO1WJ65zRxZUQ=
+		yoa26vvJ0+hD8mOlfSmnZe17wU4=
 		</data>
-		<key>Frameworks/grpc.framework/grpc</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/MFA.nib</key>
 		<data>
-		xXjwZPvxgITABCenA4FG0W+vN1U=
+		6I0l8Tazd5mixCIWiqAwCqmkBmg=
 		</data>
-		<key>Frameworks/leveldb.framework/Info.plist</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/P72-4o-dGU-view-mvy-xA-fuB.nib</key>
 		<data>
-		TmYE8bjk8zlO3f+HygeMtTeE6Ng=
+		ute8MMQPVQ/tZePKB6s4zYRKyaU=
 		</data>
-		<key>Frameworks/leveldb.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/SignUp.nib</key>
 		<data>
-		51KgbJwBVVJarE9RfAcTp9Gl6a0=
+		KwfFK/gV+bZhK+QsJvXxQXoY9Ak=
 		</data>
-		<key>Frameworks/leveldb.framework/leveldb</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/SignUpConfirmation.nib</key>
 		<data>
-		wh7B7oBeAT9ALbGOgynedl4HMlA=
+		w/ByZtJ+NntYWgCMaaL13CSVIU0=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/UINavigationController-SfA-Z0-41u.nib</key>
+		<data>
+		q54qrYM8na1vpeitg+J+69avZJ4=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/UIViewController-Wwt-zD-yTe.nib</key>
+		<data>
+		uYvAkr32mCBMV3PrzVuOY62ZgWE=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/Wwt-zD-yTe-view-sSU-fu-YjH.nib</key>
+		<data>
+		zH8KcfQk5trQeEj7sJoNtokCQYI=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/oYn-kQ-Tog-view-bRf-kC-3Qf.nib</key>
+		<data>
+		Ygd/TLIHhKLqELhDv5vfyc8Lbok=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/tBM-jZ-I7y-view-Z83-6q-CAy.nib</key>
+		<data>
+		zbLWBiNGuAF13lV1nW1qtb0fGLw=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/Info.plist</key>
+		<data>
+		kKRBr+DGofGQ8EJ2MPf/4e3+b+k=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/Info.plist</key>
+		<data>
+		prPb1/JyQ4sJTQHWg+vFYwaCdLk=
+		</data>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/_CodeSignature/CodeResources</key>
+		<data>
+		eEHCVHMB6ygykrf6QA8hApkP8w4=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		1pRNakhgejaU8ed7rOdbRrt+Kjc=
+		</data>
+		<key>Frameworks/libswiftCoreData.dylib</key>
+		<data>
+		yjLd52oBwnTuDpUWtapvrFfV8+g=
 		</data>
 		<key>Frameworks/libswiftCoreFoundation.dylib</key>
 		<data>
@@ -243,34 +279,6 @@
 		<key>Frameworks/libswiftos.dylib</key>
 		<data>
 		T3zzbEwfwYkcqYUG6YBDlWMNEjE=
-		</data>
-		<key>Frameworks/nanopb.framework/Info.plist</key>
-		<data>
-		pmMSMCHEb+ede+cot+NyAsQLUGo=
-		</data>
-		<key>Frameworks/nanopb.framework/_CodeSignature/CodeResources</key>
-		<data>
-		KQ0PjHKFWLs3ectQZLRV8h7UEk8=
-		</data>
-		<key>Frameworks/nanopb.framework/nanopb</key>
-		<data>
-		amxMKi/KRsOGCP5Dc+Dsc8YOlYE=
-		</data>
-		<key>Frameworks/openssl.framework/Info.plist</key>
-		<data>
-		bHEnaVYiMeOO/wqeNERglVH/q2U=
-		</data>
-		<key>Frameworks/openssl.framework/_CodeSignature/CodeResources</key>
-		<data>
-		m5oM0jTxqkFsQR6tSor0jnzQdl8=
-		</data>
-		<key>Frameworks/openssl.framework/openssl</key>
-		<data>
-		TC+S6nlIt4E4+LbJmOFoelclzkw=
-		</data>
-		<key>GoogleService-Info.plist</key>
-		<data>
-		VCTfiKYIl0vyvBmfXlqaZKbl2VE=
 		</data>
 		<key>ImageClock.png</key>
 		<data>
@@ -351,6 +359,10 @@
 		<key>a9_cry.png</key>
 		<data>
 		RpjklPw1863sxveOYQppbFscYCQ=
+		</data>
+		<key>awsconfiguration.json</key>
+		<data>
+		JT1VUSYoO/dJp2yoq5bTSJbDUQI=
 		</data>
 		<key>b1_happy.png</key>
 		<data>
@@ -650,23 +662,23 @@
 		</data>
 		<key>story_pageview.storyboardc/uCN-9C-Itd-view-waB-sN-4nQ.nib</key>
 		<data>
-		7ixCK8Z8kuQEo9cJK/r0JDW6q5s=
+		nIlgo685aYpi9WkRnaR+Fa6W5lA=
 		</data>
 		<key>story_pageview.storyboardc/vc_countdown.nib</key>
 		<data>
-		NSZNIxOfdt5BOD/aeYV1/xquBPw=
+		955ncyWcUUrJ/GwUIe8JRM8/Hdo=
 		</data>
 		<key>story_survey.storyboardc/0Tp-qR-WHO-view-YuP-6D-vzq.nib</key>
 		<data>
-		4e22d7owVp9A2vVv7GKYD7pQMsw=
+		Pe0oH5xzVqZNbDl26VLyAPXccbs=
 		</data>
 		<key>story_survey.storyboardc/2S8-wE-Q0J-view-Re9-ob-Im9.nib</key>
 		<data>
-		yYz4Y/zrc5kEsQYuN2rpg/9chOw=
+		pUe214KxUwCpLZ91SgRhQXuinBA=
 		</data>
 		<key>story_survey.storyboardc/4w9-Ny-7bc-view-k6y-8x-QuJ.nib</key>
 		<data>
-		G4hFeoivmsGy9OoW0kQP854KBD8=
+		YrpWChsvUSWRVEZ9xp9jSmCyDBc=
 		</data>
 		<key>story_survey.storyboardc/Info.plist</key>
 		<data>
@@ -674,39 +686,39 @@
 		</data>
 		<key>story_survey.storyboardc/MqV-Y5-HYC-view-mMv-Cm-IzV.nib</key>
 		<data>
-		QlseNRrbLXIJYS35O/kyLv3RHR0=
+		Aw2V2VBJ0CM87nzBB8nqc0L5Ug4=
 		</data>
 		<key>story_survey.storyboardc/Ubw-kt-UYP-view-afO-M9-YfX.nib</key>
 		<data>
-		1qP/AgAWQKA/diJG5S9U9RX3bQA=
+		vleWcBIYtMTclhuse2ba7izQtbE=
 		</data>
 		<key>story_survey.storyboardc/vc_survey1.nib</key>
 		<data>
-		lUCA3aW5r+Sjfs0+d0KK87qLuiY=
+		TNxuSOs+3vp2Qs0vga0NLzRl9BI=
 		</data>
 		<key>story_survey.storyboardc/vc_survey2.nib</key>
 		<data>
-		0Pe3DM1rEhe8fDhKOmypJwiWMiM=
+		wzU32+Si+res4AnwepD/iTlT6Ak=
 		</data>
 		<key>story_survey.storyboardc/vc_survey3.nib</key>
 		<data>
-		kZTSb5mdARSohhUHquzGuEp7WS4=
+		Y68A0DJQ1ZY5u4i2/I5rmhsTTp0=
 		</data>
 		<key>story_survey.storyboardc/vc_survey4.nib</key>
 		<data>
-		bDmK8PL0aFYbQset4PfMhWuGWR8=
+		B4FCOLlh7+8sj4tUiApgNrQEtJQ=
 		</data>
 		<key>story_survey.storyboardc/vc_survey5.nib</key>
 		<data>
-		X867WxIdUwGKR2FVe4m0Q5XPl9c=
+		QvT8aQmuVpRLCOIatEIe423LPfI=
 		</data>
 		<key>story_survey.storyboardc/vc_survey6.nib</key>
 		<data>
-		q3GzW1SPQvnd5fJCi2BiS9T83Mo=
+		oBFm4hb06+cdcuf4FYYUfUm/4r0=
 		</data>
 		<key>story_survey.storyboardc/w1t-xT-VKe-view-MJf-qG-3rx.nib</key>
 		<data>
-		M8C8YpBbSC9wfRTgc2DhjyJXBo0=
+		Z1+jgU/Csb1vK0j7dx7R682kyq4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -726,506 +738,594 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mLarhcPvXSa+gAoiDLEnXPX0UBs=
+			5Pkkw5/FLmKMjPPhrauHyztTl1M=
 			</data>
 			<key>hash2</key>
 			<data>
-			b2C1mH9vwP6WG2jZ7aLUzF8Q7QfqpuKn8YV6CiAopEY=
+			zmpXdEoaKCkHi1/YKx4OPQbyZrb7O2pJbPnu0TpCoig=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MJoaulHmwUWyAv6z1s1xkjSwlss=
+			leVp/xQL+hGSokFPx/n5t6vmvK4=
 			</data>
 			<key>hash2</key>
 			<data>
-			QLBl2fTUkcTUtdZ1hn87+noJVimMipN6VMqZ4aSIhHI=
+			qEdsFX4KSxhnR7I0vX4m4MaMOWeDyfJVtAfwXcu27jA=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/JAG-K3-TGH-view-1vC-IY-G5G.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			znbOai9kPlb2cBkvFVVFe2IF9TU=
+			D6M+1JjDri67sA5tDRrMCAojEsI=
 			</data>
 			<key>hash2</key>
 			<data>
-			yWzckGQ7JTBbxGwQMhYGuqECDQAIwYoqwePcfpHl6tI=
+			adT+ovWI5m+31U19xt4woE71KTak5dyixP4RJBHJnBE=
 			</data>
 		</dict>
-		<key>Base.lproj/story_main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/story_main.storyboardc/UINavigationController-4k5-wY-x1f.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NN9GmA/No9QzlPV1vva0A36KmH8=
+			upoVEOeLLAcZ57fMehFvYEfLYsc=
 			</data>
 			<key>hash2</key>
 			<data>
-			khkb8BYbaCoh5b2qAZMGp7cGlxpr2omcCyPESSugII0=
+			++chcFfCdmWax5LVtBjl2A297jUYqKQBybJ5A5XwdCo=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/dvs-Iq-Hb4-view-z8r-3v-6Yg.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			acdL+gzVBrs3KcMGMIAW+R5/7bI=
+			a523Mif01fwsi36JyCC3HzSL30c=
 			</data>
 			<key>hash2</key>
 			<data>
-			qJm76iuJob+k67Dh1p2fm7cVZJwl4W9iok2oOhnt8OI=
+			KfpEXfQSjvTa7PPlTouMq2cEbi2YCyKZvB8r9lmuJAA=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/sZB-NZ-jo7-view-e3e-0Y-CXZ.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MYXyvw64EmCrK/sBw9+s88M/7mA=
+			arzu1cfSfF/i5jGfGTdlEEMShjc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ug0zEU8ZGq68m9S57mJhB9ugiWDdc288PPuPYYBPApc=
+			Msy3SpgVdgfPfRu/bGMMJIpRtkSz0myZ7a2zmiekNNI=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/tNA-PW-8yv-view-bF9-nL-vvw.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cg7R5rvlwDVrq5sTRx9SQeNONbA=
+			K0wqLldOW+7eY/oioMorqs9lcXU=
 			</data>
 			<key>hash2</key>
 			<data>
-			G4DoQ51aY64ES7tyFOkiNHpDm8ACVznzS0qSyExGPqE=
+			kTbZH1XXmSPSgESeRzCSu9CDY8W8bLxcxmHc4DASCCA=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/vc_consent_1.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZPDZv/C1exc3jS64wN2qS4B8Zq0=
+			TqvmUw08ZkYOlAZhGLqHczTO3Xw=
 			</data>
 			<key>hash2</key>
 			<data>
-			DwZdz9JBEGwLMi9hxpV4nX2ReCFUUUNaSlx0B5dBE8A=
+			3mLNBgYtWUUJPawZc3VdtR7CuvA1H3yhYoszMCrbDkA=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/vc_consent_2.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dcqeE3NcckVmSj5frszJQmC+h04=
+			mqTZmVlTZzzkuT3Qjg+Xk/NFZvk=
 			</data>
 			<key>hash2</key>
 			<data>
-			CIdspFS7kq2crCdKuGWOhiZrtlNCutfRUsQzmV8BhsE=
+			ps06uJDrcWTyOARw+7XY+uibFvt0FX9hFBwR3Evhfic=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/vc_consent_3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qLyxdnJYOZLQUcWcMXeV+kTJxAk=
+			JukQ8WO5wQDcxwkM59ZG4uVOVmk=
 			</data>
 			<key>hash2</key>
 			<data>
-			iKGsOmmKYV0idpPlwNkwEZwZuTN3gOUY1XkwZNKUzGo=
+			rRBoCfh7YFZKrkpmXiqaPi3i7KQOhFFu9b8Z44TFdPc=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/vc_create_account.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZYKu2omZ0BZzNDuTU0V+wdRFAdw=
+			Cz2qpwb9sYJrS5nTtxnQjtxbtgw=
 			</data>
 			<key>hash2</key>
 			<data>
-			xwakX4ytEo82CMM82Q55KQE1bOXq06DgzBm2FjbwpN0=
+			p/P38lXbjcWqBI8eDeiISyIUT70FGq4hLvQBWyUnNgk=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/vc_login.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MNBtd5hUf7hURhVZsJmac1+Badc=
+			BPkBCqPXkvZFubWP6z5TFZblEW0=
 			</data>
 			<key>hash2</key>
 			<data>
-			b80h0AedAxHXL/5Pq1h9TzK0eImH4EGLUi9H6lF1P1s=
+			1VkjPQymKJ68fU9QlZAVQ4qtLeyIOh8OSWIPtLRIUQo=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/vc_select_deck.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PbprjTPLk1/t+JXU0XBvLxcufUQ=
+			RLsI5bPtqxGjzf1wcXHELnmA4EM=
 			</data>
 			<key>hash2</key>
 			<data>
-			QDj7uqonsKOObGeaQcddamSDyihRpxL/b/07wWjLlDE=
+			FdzI4U8UlutPwzLJ80fqRKnabzG2gbutYFtvWqxvIqw=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/xC0-Fl-bMT-view-UqG-bP-PSw.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			d+WYCwH2K+2CfgN8aprtyMQDTXk=
+			cpYioBdEGIZB7K8cI+lGG9t0kcU=
 			</data>
 			<key>hash2</key>
 			<data>
-			6FkgK6T6NayjBU3sBqqUYVB+qg1Si3GH0hvuh9skInU=
+			xMmekCTyv73vx5nrZm5jFqh5mg5co5ckS70gRUuDYiQ=
 			</data>
 		</dict>
 		<key>Base.lproj/story_main.storyboardc/ypJ-GJ-O0I-view-J7y-7I-D2X.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			37Nyk2f2dNMxGw34L7EOuHfwD1Y=
+			QyRR31Z1fFDDhcOijH5CF4c+rhA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ALs8kNUp9kLGfC8dytdtlJ3HIBfqMldffHOxTt0yFJ8=
+			XDeoinIhZk3ZdGdZTYaTJafVIIph4WX0JEQ6jBGyuUw=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/GRPCClient</key>
+		<key>Frameworks/AWSAuthCore.framework/AWSAuthCore</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eqecsxJSxL/GwAJrv6FAN12X5r4=
+			Z++umoKtlX8V4EPtH8raICl78sU=
 			</data>
 			<key>hash2</key>
 			<data>
-			dHB/Pr4ymXuaX3UqmssnYYqKwXT0iNdUNi+gzgxqfqA=
+			tS62BvEGNBqfI4QOF23w4O53wcVfBkJ31+sX2fSHVbc=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/Info.plist</key>
+		<key>Frameworks/AWSAuthCore.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4milZGXFqx7o0IJO/cYzhyS8o/s=
+			pCFeZrccLOjtooOIOmtgw0dv5oE=
 			</data>
 			<key>hash2</key>
 			<data>
-			cVyDA/qh+52bpLCHdbu6BvI7HgpRL/fKcN3Dzo3gIjU=
+			BOWUkomVvLob1/sd7rvV08OrPZqeSM1Mpi5LrTAMCAc=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSAuthCore.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SO//888JbNEoL71RZVQWmj/Je6w=
+			FasFORV66VT0LHwFd4pQM5XSAEs=
 			</data>
 			<key>hash2</key>
 			<data>
-			8vZgcjiZgo4Y/y9SnF3P+JuPXPjTWrc/OiWfgwIANMc=
+			41uY78JZl3Nmi75HgQAFWuIjsr4D0Wv5UNslPtJwdz4=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/Info.plist</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mMOfG2nCguO6WDUjyvwlcJQAclE=
+			t6NFg9iQbiYnZndEajjQt2gxSws=
 			</data>
 			<key>hash2</key>
 			<data>
-			skNFB/yKfr5oJ1u7EVElpT6kdUE1mZFnj/Mno83CyWQ=
+			gbWUHNEmHOz/MekQHvrwR+urS0+j/9ouhHULebY5qyA=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeDirectory</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YQEdjvGiqmDsPP75TkARdSHH/CQ=
+			EaesKPnTXmVu1HVhvhZG9vrk07o=
 			</data>
 			<key>hash2</key>
 			<data>
-			K/GWkXciyYL8gJlHAvCzOP0IELgNhxNGEHqbii7xqx4=
+			i8MSbYWc/1RqtdwtDyNnAJlfHUKOdYxv4t+XqwlgZw4=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeRequirements</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OnX22wWFKRSOFN1+obRynMCeyXM=
+			dzs1YewNSzrIVM8pQqyfMy7kOvc=
 			</data>
 			<key>hash2</key>
 			<data>
-			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			NttOe9CMTkZoVwt0NaHc817fJHENMrERaspLknQQVYU=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeRequirements-1</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/SignIn.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ELBM/kWEx0Kfl7v6w5f5c8cDOAs=
+			2jmIZxUpMFRJSNEaRj4530+eyn4=
 			</data>
 			<key>hash2</key>
 			<data>
-			5gdyPNL0uXiC3MBuUDWB/KCoiUdUoV3/GyNa69pm85M=
+			/5kfkEvs+pAVRkGM5Z6NJAxwGPVUVr9A8BU16sRtFYY=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/SignIn.storyboardc/SignIn.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nRkhFFJcB3/nEM6bhInN5BZqonA=
+			KcUKgF0zm8D7rjrQ2psMLLpnovo=
 			</data>
 			<key>hash2</key>
 			<data>
-			O+lP2vnHe/QaSwJ99TQe3n8yvBq0FqHs1W1UwfbfjV4=
+			8Eqz0wgN1WWCe9rX9JgBBLr8a9HQQS6Gw9jTJPIEbaM=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/_CodeSignature/CodeSignature</key>
+		<key>Frameworks/AWSAuthUI.framework/AWSAuthUI.bundle/SignIn.storyboardc/xc1-Jg-Y5t-view-n6k-Ut-fuw.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+			fZOvrn2KNg3jSywm1NB4dJFoMl8=
 			</data>
 			<key>hash2</key>
 			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			HRk3bkw3F3o7M04uG+OLsJnFShUzoXCOCr32hzdSq3I=
 			</data>
 		</dict>
-		<key>Frameworks/GRPCClient.framework/gRPCCertificates.bundle/roots.pem</key>
+		<key>Frameworks/AWSAuthUI.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ADi3FE9UV7SQ1xy70pVBi6BhJ9E=
+			wXhi/iLr06vmKCOy45Nfmk+AQY0=
 			</data>
 			<key>hash2</key>
 			<data>
-			550mkhcQt+gzL5LzhbfzutLuiU5HywyFy6cibK0rydY=
+			AdhOBUeur7UaolObIh82qtmK0k8hZOZnLWiyiiBastI=
 			</data>
 		</dict>
-		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
+		<key>Frameworks/AWSAuthUI.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FvFWeXtPIs7mnoGB7TAzBi+Ix8Q=
+			EariVdLP1CDeCglv0oZt7DgR1ds=
 			</data>
 			<key>hash2</key>
 			<data>
-			7ELbZmgbqgaW2OQlw+/e4KDrWdCvfRpwbj00P+mEvR8=
+			mIgd3OxtWKPXpWRnZqMdw55xH9UwEFgWhGy6Q7o36ZI=
 			</data>
 		</dict>
-		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
+		<key>Frameworks/AWSCognitoIdentityProvider.framework/AWSCognitoIdentityProvider</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GrkgJaL7IoX0etf/ZHqMcbuhsPE=
+			RN63udIxwLCqy1yluUctDmEuTC0=
 			</data>
 			<key>hash2</key>
 			<data>
-			sDOKpwDHlqTKhmTsDULS0otMIcRgy1aTsd3M1PkhGVA=
+			LhlpJxYYE6IidWd5Z+J01mS7vVbHoyScCnDiVwBaqHg=
 			</data>
 		</dict>
-		<key>Frameworks/GTMSessionFetcher.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSCognitoIdentityProvider.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+QWpRPsUhd7XcxyyE3siONCPpkw=
+			TFn7KKiya7mh6V81eVRSc1cLYbA=
 			</data>
 			<key>hash2</key>
 			<data>
-			gdsJQ2FYjYqVnoTOo4w2E7zu21bIsyehUO7KJQrXl04=
+			oTdi2SGYZWYRQyPWwtyPOIMulDaEDXLLIfBCV7BpF3Y=
 			</data>
 		</dict>
-		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
+		<key>Frameworks/AWSCognitoIdentityProvider.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K/eHH9O89qvtEKL0+2uUNiQuhjY=
+			FvOf3gIQht6gGHW24PDsntMc3Ug=
 			</data>
 			<key>hash2</key>
 			<data>
-			F9NnXGOlTm7a5s+L5ZUathYeT+mG8t3jkzXurjRLId0=
+			rn6+sAojUcV44dFXBC7eBpFeaMqUf6sztPVAZQ/vYGQ=
 			</data>
 		</dict>
-		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
+		<key>Frameworks/AWSCognitoIdentityProviderASF.framework/AWSCognitoIdentityProviderASF</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BL5xQo7dCLmkI7HhZreyZ7Pu4P4=
+			QYc/SiV1KCjj4TsI2nIHXxSGOEY=
 			</data>
 			<key>hash2</key>
 			<data>
-			qOX0cNZj7/dShtXM0GgjZucH8OxFJHS3X5j+8B/wkwQ=
+			SwVDpy0u1T1t2tEMpusN/rqhN91VwhBdp/FZWHlEtGQ=
 			</data>
 		</dict>
-		<key>Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSCognitoIdentityProviderASF.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+BY2GZnqO0Mn46ZOGYkygeg2qMI=
+			TGEJ6uRHC5afteDqpzdRsezhcaQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			X0bW4c/UmtRm1X+XH7ChMx1pKbHBxVUUDpFC/z8EkwE=
+			2Nr1slu6D0NCWLfkOhdYRPdwM26GgLAJEYuh3k0E9Ys=
 			</data>
 		</dict>
-		<key>Frameworks/ProtoRPC.framework/Info.plist</key>
+		<key>Frameworks/AWSCognitoIdentityProviderASF.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RRUO6fSv9OUJhwGHQoQxAMB95Yw=
+			vfUH0XZlRsZa5BYfQYU1Eseevmc=
 			</data>
 			<key>hash2</key>
 			<data>
-			10kmyLc6/Rfy7+7xtVdbL6kQhhqPoLECg9nKPKj1o6Y=
+			KiX1Imx0sQtK6Iz1ZUhCrUbfo4AdAYI+gBwBAWTRa9s=
 			</data>
 		</dict>
-		<key>Frameworks/ProtoRPC.framework/ProtoRPC</key>
+		<key>Frameworks/AWSCore.framework/AWSCore</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UKm5ZaOCl2gvsG326xjNiuFZxvM=
+			AZNKNOs/M0jXdCgW/z9MCS5de7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			bvXth/I41y1ooAeEB+U3fDNyyO2QcjtPz8QJ6bPCBeE=
+			oiC8czxk0OyGcvQ5QY69AiaOlr28vKgnajdlyopXsJg=
 			</data>
 		</dict>
-		<key>Frameworks/ProtoRPC.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSCore.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hMqK2Rp9+lfv19BzVw/GghohGEc=
+			Pq8TpGnhn3JWZ8NisYqOoyvxPvc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ghQ2U9Bnmlicwp4bJMaa4/7RV2ShRbl4RV3vSMGBQEE=
+			PQKnk6sSjo/9z//odEL/n3/zddCha4wtUc+iEjjK0sE=
 			</data>
 		</dict>
-		<key>Frameworks/Protobuf.framework/Info.plist</key>
+		<key>Frameworks/AWSCore.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dl/s4+U6RXMA6JCO4kZU5OGRs4M=
+			WcmSpcqz/btkqA9dy8PnbEY/AMs=
 			</data>
 			<key>hash2</key>
 			<data>
-			wDbjognA6b2s9usLPJcHdd3B29tibBB70FRt0YrAACc=
+			SxQygAxGFHW4sUB9zyshcARATZ5zdZ00XMr9DGXmtSQ=
 			</data>
 		</dict>
-		<key>Frameworks/Protobuf.framework/Protobuf</key>
+		<key>Frameworks/AWSMobileClient.framework/AWSMobileClient</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fefXRR0DUgum27v1uXPBkqImURQ=
+			GwgjM/HFDZfKolz/wsjjyAdtWVs=
 			</data>
 			<key>hash2</key>
 			<data>
-			jFWVY4oSTQpItmRbYju35GP04oCQN67oaITFD7su6TY=
+			JrDbLgpWKcm1XAhmMmI3Hx5DS69kpkFDWYX/6L89aT4=
 			</data>
 		</dict>
-		<key>Frameworks/Protobuf.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSMobileClient.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u4iqPSJG2V2KBAxQpQYoXyi7Plg=
+			A2C/Iq0HX2AChSdCR9FlgIAS8wg=
 			</data>
 			<key>hash2</key>
 			<data>
-			3fXJcd1QnE0tledX1qcLr0mMrwKxrwewDQ6a8OtZqeE=
+			fVDFlwZ79zYZ3aUoikwvAz6AWGD058o7Rb6UItTgIZ0=
 			</data>
 		</dict>
-		<key>Frameworks/RxLibrary.framework/Info.plist</key>
+		<key>Frameworks/AWSMobileClient.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rdi4yYLt1RdC5gE4W3mbPR5TNH0=
+			e97Eo9dnhV9gVCR57Y8LmqVpu8A=
 			</data>
 			<key>hash2</key>
 			<data>
-			48fbu3wmxlUUfUuPE8Uru63fX99gj3P8uz3L7GUWVsM=
+			Wjsze8phaOM2diHrgYW+87JFhjZqKSvKf7KlFJ89T4s=
 			</data>
 		</dict>
-		<key>Frameworks/RxLibrary.framework/RxLibrary</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			q17AiYVVdaPZS8QIyCXshjAZaRo=
+			KB4IctRL4mwxcx6mZZfb+KhOkO4=
 			</data>
 			<key>hash2</key>
 			<data>
-			x+4cOQGzmSFXarp2OsZNqb4I4Qu/dgVr4zbEldw94C0=
+			7fooTzOuUxZr73p3b3OcnU5UTlNMd+P7Y3GouW+zRGA=
 			</data>
 		</dict>
-		<key>Frameworks/RxLibrary.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/Fee-Hn-G0A-view-3Ww-qO-xXn.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			q8b28Zq3gEeCz/vcp28Jz4DvIP4=
+			FGGXfDY+BJQd/Q9X2LVm9V/NE1M=
 			</data>
 			<key>hash2</key>
 			<data>
-			txjqnTgNJQxkRM7104j2XpA/4mfe+Sz63ZMv5YEZ4cg=
+			N+IuFGZxsn7AEQnGRAAJXmZ3kcz/aC/syN50IofYx4Q=
 			</data>
 		</dict>
-		<key>Frameworks/grpc.framework/Info.plist</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/ForgotPassword.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kx1VDimCB6RxuyTvvj2dhuOsxDc=
+			RfhbJiTeE4fHe1OycB0vFtiuJlc=
 			</data>
 			<key>hash2</key>
 			<data>
-			wAdEbT3/Iy+Sqdv3rDS9/Q/C2uUvXvWykbePiUFJRVU=
+			UkPADa7O4PT/9b0iZwJy7HHqbQKGCiI8pcWq1C7d+UM=
 			</data>
 		</dict>
-		<key>Frameworks/grpc.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rQ0RszGi33YtkIMO1WJ65zRxZUQ=
+			yoa26vvJ0+hD8mOlfSmnZe17wU4=
 			</data>
 			<key>hash2</key>
 			<data>
-			FgVe0hYR+3wjjqMNMaAYbjF7I5+hAdqAGqY54Mnubq8=
+			jb6upJOfQ+F0toWEs1j4TSRGr8zG3h2mJmMnvi9zpFM=
 			</data>
 		</dict>
-		<key>Frameworks/grpc.framework/grpc</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/MFA.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xXjwZPvxgITABCenA4FG0W+vN1U=
+			6I0l8Tazd5mixCIWiqAwCqmkBmg=
 			</data>
 			<key>hash2</key>
 			<data>
-			M02dgdp3JuWzAMd43uoHLdEml5M5nHhTVJGPTEws0qM=
+			P+2+T1ix2yb5QXqQ927kSN/oGrhEBZ/ibtMg4ho+Q78=
 			</data>
 		</dict>
-		<key>Frameworks/leveldb.framework/Info.plist</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/P72-4o-dGU-view-mvy-xA-fuB.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TmYE8bjk8zlO3f+HygeMtTeE6Ng=
+			ute8MMQPVQ/tZePKB6s4zYRKyaU=
 			</data>
 			<key>hash2</key>
 			<data>
-			6hA5T4eBLHQlLHWLe+uxyL/PYKKBpzSASqP+vbt/fzg=
+			iipWF2vc/ssto16XTbuohE38aZCwxg/DFlPQUKncF4w=
 			</data>
 		</dict>
-		<key>Frameworks/leveldb.framework/_CodeSignature/CodeResources</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/SignUp.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			51KgbJwBVVJarE9RfAcTp9Gl6a0=
+			KwfFK/gV+bZhK+QsJvXxQXoY9Ak=
 			</data>
 			<key>hash2</key>
 			<data>
-			lCOdooEplZlY/ccNLUkZgbHcJ/poqAtH96UwthstDzM=
+			G0hYPY1m+u8O7lkloZlZO3W/zsld96BEs2Hv025RoyA=
 			</data>
 		</dict>
-		<key>Frameworks/leveldb.framework/leveldb</key>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/SignUpConfirmation.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wh7B7oBeAT9ALbGOgynedl4HMlA=
+			w/ByZtJ+NntYWgCMaaL13CSVIU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xkcA6+shKhrqBLuiPKMUJs/+/NmWBtknxCwx+kbcFRU=
+			ctSTIWwxjMPHiS0cx6N/meo8RpaBf+aos2ALY0OUfiM=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/UINavigationController-SfA-Z0-41u.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q54qrYM8na1vpeitg+J+69avZJ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			wUPYKcVwP1BDxrgDHhsB6a7gU1e6hRisqgFHKqN+JkA=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/UIViewController-Wwt-zD-yTe.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uYvAkr32mCBMV3PrzVuOY62ZgWE=
+			</data>
+			<key>hash2</key>
+			<data>
+			rd0Cwo2pK37rSmVYLkwsvKfho1BdUPT0vmDNNK+U0J4=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/Wwt-zD-yTe-view-sSU-fu-YjH.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zH8KcfQk5trQeEj7sJoNtokCQYI=
+			</data>
+			<key>hash2</key>
+			<data>
+			cmWmPMuiJ+da6wWw7S8MZKAFN82EzM7BBqvX+Viipss=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/oYn-kQ-Tog-view-bRf-kC-3Qf.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ygd/TLIHhKLqELhDv5vfyc8Lbok=
+			</data>
+			<key>hash2</key>
+			<data>
+			oi9TG8Eg0b/tVzkSiwVin6/IqmAGULes4jwUgQ3GVlI=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/AWSUserPools.storyboardc/tBM-jZ-I7y-view-Z83-6q-CAy.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zbLWBiNGuAF13lV1nW1qtb0fGLw=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZX8gJbFR1Nr7zdkhNPV1qsdg99fW2ikVHdFnKPbWrUs=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/AWSUserPoolsSignIn.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kKRBr+DGofGQ8EJ2MPf/4e3+b+k=
+			</data>
+			<key>hash2</key>
+			<data>
+			+TK8zU4ItD/Uin0C7BifuYk/gAVNo3hdGAf4YMyZvls=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			prPb1/JyQ4sJTQHWg+vFYwaCdLk=
+			</data>
+			<key>hash2</key>
+			<data>
+			EK186eZpQhT39n/e4JaZ5to3Yyy2r6+FaMuzPt/1b8A=
+			</data>
+		</dict>
+		<key>Frameworks/AWSUserPoolsSignIn.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eEHCVHMB6ygykrf6QA8hApkP8w4=
+			</data>
+			<key>hash2</key>
+			<data>
+			OrdFUTaZSsXxOTumqBhRlQgCQIAWTrnS0NK/a9Ygq9s=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -1237,6 +1337,17 @@
 			<key>hash2</key>
 			<data>
 			Vw/4dwB7XZ9Qyw5bIQC+dNwydELsXL0m6EZ3QHh5xNg=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreData.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yjLd52oBwnTuDpUWtapvrFfV8+g=
+			</data>
+			<key>hash2</key>
+			<data>
+			tE++r+NP14JJqR+MzS1CFS+3rgs65oShrSk+IWFChmw=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCoreFoundation.dylib</key>
@@ -1369,83 +1480,6 @@
 			<key>hash2</key>
 			<data>
 			VNTyunnJmSZsBYB0ONJOzL0s5ovd+Qfkjrr9AQctlNk=
-			</data>
-		</dict>
-		<key>Frameworks/nanopb.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pmMSMCHEb+ede+cot+NyAsQLUGo=
-			</data>
-			<key>hash2</key>
-			<data>
-			Uafew5T9iu9S5jHc7h2qPW0v59xsQonGOqAk8QclVgM=
-			</data>
-		</dict>
-		<key>Frameworks/nanopb.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KQ0PjHKFWLs3ectQZLRV8h7UEk8=
-			</data>
-			<key>hash2</key>
-			<data>
-			nNZkAAs6SA3YUlSxoc3pEhPsUxLoizmJwRzPM2aXLz8=
-			</data>
-		</dict>
-		<key>Frameworks/nanopb.framework/nanopb</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			amxMKi/KRsOGCP5Dc+Dsc8YOlYE=
-			</data>
-			<key>hash2</key>
-			<data>
-			nYUMeWKUUTxin2w+CnkpoIvnnfm8dHNTC6MujEK1e2w=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			bHEnaVYiMeOO/wqeNERglVH/q2U=
-			</data>
-			<key>hash2</key>
-			<data>
-			PDcg3yATqIB3hBxlA0WNCDWOD2bWOL7DhDsHVukq4QY=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			m5oM0jTxqkFsQR6tSor0jnzQdl8=
-			</data>
-			<key>hash2</key>
-			<data>
-			wDzBpH04Z3iI2NSJ1ha8P5lLn3e3/6WFDidB4DxCYoc=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/openssl</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TC+S6nlIt4E4+LbJmOFoelclzkw=
-			</data>
-			<key>hash2</key>
-			<data>
-			A6BaKG2wHOaQKYsm6GYe2XhMEQHVlQS4+x4HeqC6R6o=
-			</data>
-		</dict>
-		<key>GoogleService-Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VCTfiKYIl0vyvBmfXlqaZKbl2VE=
-			</data>
-			<key>hash2</key>
-			<data>
-			Jjy8IPyvEZS08FICAZThk7fzLtpps/kuqlMvfQDwB/k=
 			</data>
 		</dict>
 		<key>ImageClock.png</key>
@@ -1644,6 +1678,17 @@
 			<key>hash2</key>
 			<data>
 			L5TAVXGXJslGuBptPe3UzOULYZwa3C/9dro2id+kJMU=
+			</data>
+		</dict>
+		<key>awsconfiguration.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JT1VUSYoO/dJp2yoq5bTSJbDUQI=
+			</data>
+			<key>hash2</key>
+			<data>
+			gY53axGRRY/PwXOD5idkcw/tECgD2vY8Y/FQ4REsKbo=
 			</data>
 		</dict>
 		<key>b1_happy.png</key>
@@ -2464,55 +2509,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7ixCK8Z8kuQEo9cJK/r0JDW6q5s=
+			nIlgo685aYpi9WkRnaR+Fa6W5lA=
 			</data>
 			<key>hash2</key>
 			<data>
-			C38tAXuNkkjl1HNEjJT8BclTdGmfpGMICvqjSKicV1I=
+			cSESdun7SVV7RyqNUDTovRHtZ99JALvPkar1yq2fQos=
 			</data>
 		</dict>
 		<key>story_pageview.storyboardc/vc_countdown.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NSZNIxOfdt5BOD/aeYV1/xquBPw=
+			955ncyWcUUrJ/GwUIe8JRM8/Hdo=
 			</data>
 			<key>hash2</key>
 			<data>
-			A7EeS8WSPu0LPSvMCVZbRVwqJIkCsVy3d1AatDP4HXY=
+			uBYV06qIKT+lZVygtt5Kup090CEcDz7JSU6x5rBzsS8=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/0Tp-qR-WHO-view-YuP-6D-vzq.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4e22d7owVp9A2vVv7GKYD7pQMsw=
+			Pe0oH5xzVqZNbDl26VLyAPXccbs=
 			</data>
 			<key>hash2</key>
 			<data>
-			thtxO6xYZZ/HGeEE19Ta/JUmJ7cnICm0gbYhtgD503I=
+			1aZw5n/YjNneQqvgepqShvAlrAV+MNSivrNmJiC1Dw4=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/2S8-wE-Q0J-view-Re9-ob-Im9.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yYz4Y/zrc5kEsQYuN2rpg/9chOw=
+			pUe214KxUwCpLZ91SgRhQXuinBA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WrwBoSegKPh+4HZRkzBtdVnKWUxHlKFQmt+LA0cmoL4=
+			Z9QEG70qLvsFkz+LatG/0VVM/7tWFg/QcgiSjWXgx7k=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/4w9-Ny-7bc-view-k6y-8x-QuJ.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G4hFeoivmsGy9OoW0kQP854KBD8=
+			YrpWChsvUSWRVEZ9xp9jSmCyDBc=
 			</data>
 			<key>hash2</key>
 			<data>
-			A42aAy+d1+tzad0EA7ba3Eu7D02TteFnLWCfbTLmyEQ=
+			B/jRKdFpttgcBhvz6ADowcJVlE5rDAs2aDnEKtZ6iQY=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/Info.plist</key>
@@ -2530,99 +2575,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QlseNRrbLXIJYS35O/kyLv3RHR0=
+			Aw2V2VBJ0CM87nzBB8nqc0L5Ug4=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Un2EBy9sepX2YcbU8lEIN2tCfr3+GHvMw83IGMg6MQ=
+			fl0aPFBkt239xq81nYpZGYWv1HU/DpLegjj5/nSapXo=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/Ubw-kt-UYP-view-afO-M9-YfX.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1qP/AgAWQKA/diJG5S9U9RX3bQA=
+			vleWcBIYtMTclhuse2ba7izQtbE=
 			</data>
 			<key>hash2</key>
 			<data>
-			XbSt77ETU3AH/aCJ0HGW7PnDyJbxyjbhGAQtF9xttxE=
+			72askWRL9fFTikC6H0Z51d9Xj2NCYK6ppVORvqyBmlI=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/vc_survey1.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lUCA3aW5r+Sjfs0+d0KK87qLuiY=
+			TNxuSOs+3vp2Qs0vga0NLzRl9BI=
 			</data>
 			<key>hash2</key>
 			<data>
-			bm0jKsbqMQfnGsHnrcCqNS3RPOgXh0fTfML4vXjXhGo=
+			gBsIIeeb5fTA1psRXCUnWMGlyZeGGE36zwt90/zlQ7M=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/vc_survey2.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0Pe3DM1rEhe8fDhKOmypJwiWMiM=
+			wzU32+Si+res4AnwepD/iTlT6Ak=
 			</data>
 			<key>hash2</key>
 			<data>
-			8uryUtaHme/xOjIZBSEg6gcyk+RX1OrNy2dS1T4t5hM=
+			L4xvxMqqqHbVkjtY0WWtJgYVNoKHd2/CfEgxe297EQs=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/vc_survey3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kZTSb5mdARSohhUHquzGuEp7WS4=
+			Y68A0DJQ1ZY5u4i2/I5rmhsTTp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			3P82vwyAFMgSpLmg4ZENDtenS0wTNKPmQ63k3PBCf/s=
+			ZDeEEk5e7aUwarRRgYzVtWKXfLmka5EK175mnmaPRMc=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/vc_survey4.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bDmK8PL0aFYbQset4PfMhWuGWR8=
+			B4FCOLlh7+8sj4tUiApgNrQEtJQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			prB+MSrYSwSGoLnjYJ6uj4Sd52NmIW60seik+zGGfwE=
+			1tWj52vd98bTsx39gtrnkyhX8btTp2NB/QwXjsA+jXw=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/vc_survey5.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			X867WxIdUwGKR2FVe4m0Q5XPl9c=
+			QvT8aQmuVpRLCOIatEIe423LPfI=
 			</data>
 			<key>hash2</key>
 			<data>
-			VILSPMW+WdqdludLBD2tVSPWx8yiCOyIwDIJENgev2s=
+			gP7iCgOrZwT2zOflvB80Intdu4G2aWQY1PTYLoveK80=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/vc_survey6.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			q3GzW1SPQvnd5fJCi2BiS9T83Mo=
+			oBFm4hb06+cdcuf4FYYUfUm/4r0=
 			</data>
 			<key>hash2</key>
 			<data>
-			j7xbqfGpnD0nitDKDTmvIt5/vF5d4tTC/q0d3A4R9Eo=
+			U71PZTdiEnHSh03SZAtG2vTLgm4B3grbA2EIDTPIIfA=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/w1t-xT-VKe-view-MJf-qG-3rx.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M8C8YpBbSC9wfRTgc2DhjyJXBo0=
+			Z1+jgU/Csb1vK0j7dx7R682kyq4=
 			</data>
 			<key>hash2</key>
 			<data>
-			FJPsHY/Mspf+Yu/oaq6PjC6ndpBTXNIJJ5NiHuZvI9k=
+			fFRogkzjpCHSMUC26tB/oNRbRyNrQ2/yRd2dQQwa7l8=
 			</data>
 		</dict>
 	</dict>
