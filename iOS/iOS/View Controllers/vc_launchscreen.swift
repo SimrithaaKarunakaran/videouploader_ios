@@ -68,6 +68,7 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
 
         print("\n[HK] Presenting AuthUIViewController.")
 
+        
         AWSAuthUIViewController
             .presentViewController(with: self.navigationController!,
                                    configuration: nil,

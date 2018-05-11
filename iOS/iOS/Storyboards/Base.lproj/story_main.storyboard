@@ -20,10 +20,14 @@
         <!--MainNavigation-->
         <scene sceneID="2yJ-W7-iuY">
             <objects>
-                <navigationController title="MainNavigation" navigationBarHidden="YES" id="4k5-wY-x1f" sceneMemberID="viewController">
+                <navigationController autoresizesArchivedViewToFullSize="NO" title="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="4k5-wY-x1f" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJP-oe-ttD">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eTs-6Y-yhs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZQv-BQ-xAj"/>
                     </connections>
