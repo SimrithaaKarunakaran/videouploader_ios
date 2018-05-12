@@ -59,43 +59,7 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
         
         if(SecondsTillTransition == 0){
             timer.invalidate();
-
-            
-            // Settings for UserPool (login)
-            let cognitoRegion            = AWSRegionType.USWest2
-            let cognitoIdentityPoolId    = "us-west-2_bB7kdaf7g";
-            let AppClientID              = "6arguf9m5ecvbgulsei89ketnm";
-            let AppClientSecret          = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
-            
-            // Information for S3 bucket
-            let  IdentityPoolID          = "us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4";
-            let  BucketName              = "headsup-du1r3b78fy";
            
-            
-            
-            /*
-            let credentialsProvider = AWSCognitoCredentialsProvider(regionType: cognitoRegion,
-                                                                    identityPoolId: cognitoIdentityPoolId,
-                                                                    identityProviderManager: customIdentityProvider)
-            let configuration = AWSServiceConfiguration(region: cognitoRegion,
-                                                        credentialsProvider: credentialsProvider)
-            AWSServiceManager.default().defaultServiceConfiguration = configuration
-            
-            credentialsProvider.getIdentityId().continue({ (task) in
-                guard task.error == nil else {
-                    print(task.error)
-                    return nil
-                }
-                // We've got a session and now we can access AWS service via default()
-                // e.g.: let cognito = AWSCognito.default()
-                return task
-            })*/
-
-            
-            
-            
-            
-            
             print("[HK] Timer is up: transitioning.")
 
             // If we are logged in, lets go to "Select Deck" for now.

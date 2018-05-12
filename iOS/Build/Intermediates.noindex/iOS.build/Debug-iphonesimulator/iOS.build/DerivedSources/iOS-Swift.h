@@ -293,10 +293,7 @@ SWIFT_CLASS("_TtC3iOS8vc_login")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextViewPassword;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ButtonLogin;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextSignUpLink;
-/// <#Description#>
-/// Windows, alt, slash
-/// \param sender <#sender description#>
-///
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextViewError;
 - (IBAction)ButtonLoginClick:(id _Nonnull)sender;
 - (void)TextSignUpClickHandlerWithSender:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)viewDidLoad;

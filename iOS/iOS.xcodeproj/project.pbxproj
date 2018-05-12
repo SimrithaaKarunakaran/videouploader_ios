@@ -11,7 +11,6 @@
 		22207F1D2057553100D447F2 /* vc_launchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22207F1C2057553100D447F2 /* vc_launchscreen.swift */; };
 		22207F202057553100D447F2 /* story_main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22207F1E2057553100D447F2 /* story_main.storyboard */; };
 		22207F222057553100D447F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22207F212057553100D447F2 /* Assets.xcassets */; };
-		224CF92120A538A40070F7A7 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 224CF92020A538A40070F7A7 /* awsconfiguration.json */; };
 		224CF92320A61C410070F7A7 /* vc_wifi_warn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */; };
 		2265BB3B208FD1D20096CCAE /* story_pageview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265BB3A208FD1D20096CCAE /* story_pageview.storyboard */; };
 		228C1E50205AE46500DD9F63 /* StateUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */; };
@@ -128,7 +127,6 @@
 		22207F1F2057553100D447F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/story_main.storyboard; sourceTree = "<group>"; };
 		22207F212057553100D447F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22207F262057553200D447F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		224CF92020A538A40070F7A7 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Desktop/awsconfiguration.json; sourceTree = "<group>"; };
 		224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_wifi_warn.swift; sourceTree = "<group>"; };
 		2265BB3A208FD1D20096CCAE /* story_pageview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = story_pageview.storyboard; sourceTree = "<group>"; };
 		228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateUserInfo.swift; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 				2265BB38208FB7F30096CCAE /* Storyboards */,
 				228C1E4E2059BB9000DD9F63 /* Logic */,
 				22207F1A2057553100D447F2 /* AppDelegate.swift */,
-				224CF92020A538A40070F7A7 /* awsconfiguration.json */,
 				22207F212057553100D447F2 /* Assets.xcassets */,
 				22207F262057553200D447F2 /* Info.plist */,
 			);
@@ -573,7 +570,6 @@
 				22908DB1209CF85C007CDA7F /* e12_musician.png in Resources */,
 				22908DA8209CF85C007CDA7F /* a12_sad.png in Resources */,
 				22908DC520A0C875007CDA7F /* story_survey.storyboard in Resources */,
-				224CF92120A538A40070F7A7 /* awsconfiguration.json in Resources */,
 				22908DBE209CF85C007CDA7F /* e2_firefighter.png in Resources */,
 				22908D9D209CF85C007CDA7F /* f_happy2.png in Resources */,
 				22908DA5209CF85C007CDA7F /* d14_ping.png in Resources */,
