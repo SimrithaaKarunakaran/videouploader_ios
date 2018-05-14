@@ -72,8 +72,5 @@ class vc_countdown: UIViewController {
         self.present(newViewController, animated: true, completion: nil)
         
     }
-   
-    
-    
 }
 

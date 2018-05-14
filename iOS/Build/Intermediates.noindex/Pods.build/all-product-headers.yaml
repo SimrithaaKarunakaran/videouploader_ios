@@ -139,6 +139,157 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognito-Swift.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/Headers/AWSCognito-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognito-umbrella.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Target Support Files/AWSCognito/AWSCognito-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognito.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/AWSCognito.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoConflict.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/AWSCognitoConflict.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoDataset.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/AWSCognitoDataset.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoHandlers.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/AWSCognitoHandlers.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoRecord.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/AWSCognitoRecord.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoService.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/AWSCognitoService.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoSyncModel.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/CognitoSync/AWSCognitoSyncModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoSyncResources.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/CognitoSync/AWSCognitoSyncResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoSyncService.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/CognitoSync/AWSCognitoSyncService.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCognito.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognitoConflict_Internal.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/Internal/AWSCognitoConflict_Internal.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoConstants.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/Internal/AWSCognitoConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoDataset_Internal.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/Internal/AWSCognitoDataset_Internal.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoRecord_Internal.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/Internal/AWSCognitoRecord_Internal.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoSQLiteManager.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/Internal/AWSCognitoSQLiteManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoUtil.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognito/AWSCognito/Internal/AWSCognitoUtil.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognitoAuth-Swift.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/Headers/AWSCognitoAuth-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoAuth-umbrella.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Target Support Files/AWSCognitoAuth/AWSCognitoAuth-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSCognitoAuth.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognitoAuth/AWSCognitoAuth/AWSCognitoAuth.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCognitoAuth.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSCognitoAuth_Internal.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSCognitoAuth/AWSCognitoAuth/Internal/AWSCognitoAuth_Internal.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers",
       'contents': [
         {
@@ -743,6 +894,63 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSDynamoDB-Swift.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDB-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDB-umbrella.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Target Support Files/AWSDynamoDB/AWSDynamoDB-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDB.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSDynamoDB/AWSDynamoDB/AWSDynamoDB.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDBModel.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSDynamoDB/AWSDynamoDB/AWSDynamoDBModel.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDBObjectMapper.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSDynamoDB/AWSDynamoDB/AWSDynamoDBObjectMapper.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDBRequestRetryHandler.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSDynamoDB/AWSDynamoDB/AWSDynamoDBRequestRetryHandler.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDBResources.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSDynamoDB/AWSDynamoDB/AWSDynamoDBResources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSDynamoDBService.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSDynamoDB/AWSDynamoDB/AWSDynamoDBService.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSDynamoDB.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Headers",
       'contents': [
         {
@@ -770,6 +978,83 @@
           'type': 'file',
           'name': "module.modulemap",
           'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSMobileClient.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AWSS3-Swift.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework/Headers/AWSS3-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3-umbrella.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Target Support Files/AWSS3/AWSS3-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Model.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3Model.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3PreSignedURL.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3PreSignedURL.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3RequestRetryHandler.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3RequestRetryHandler.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Resources.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3Resources.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Serializer.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3Serializer.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3Service.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3Service.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3TransferManager.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3TransferManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3TransferUtility+Validation.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3TransferUtility+Validation.h"
+        },
+        {
+          'type': 'file',
+          'name': "AWSS3TransferUtility.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/AWSS3/AWSS3/AWSS3TransferUtility.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSS3.build/module.modulemap"
         }
       ]
     },

@@ -20,51 +20,69 @@ class vc_login: UIViewController {
     @IBOutlet weak var TextSignUpLink:   UILabel!
     @IBOutlet weak var TextViewError:    UILabel!
     
-    let cognitoRegion           = AWSRegionType.USWest2
     
     let UserPoolID              = "us-west-2_bB7kdaf7g"
     let Region                  = "us-west-2"
     let IdentityPoolID          = "us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4"
     
-    let AppClientID             = "4fr7e4oqt2e7apdvi4tibseu77";
-    let AppClientSecret         = "141oakhoer4bbslv42ognobpmp5blce9sbcmqnroaqbrh9pn5m94";
+    let AppClientID             = "6arguf9m5ecvbgulsei89ketnm";
+    let AppClientSecret         = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
     
-
     var aws_config  : AWSServiceConfiguration!
     var pool_config : AWSCognitoIdentityUserPoolConfiguration!
     var awsUserPool : AWSCognitoIdentityUserPool!
 
     
+    var LastUsername : String = ""
+    var LastPassword : String = ""
+    
     @IBAction func ButtonLoginClick(_ sender: Any) {
         
-        let Username = String(TextViewUsername.text!)
-        let Password = String(TextViewPassword.text!)
+        LastUsername = String(TextViewUsername.text!)
+        LastPassword = String(TextViewPassword.text!)
         
+        
+        aws_config  = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: nil)
+        pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: AppClientID, clientSecret: AppClientSecret, poolId: UserPoolID)
+        AWSCognitoIdentityUserPool.register(with: aws_config, userPoolConfiguration: pool_config, forKey: self.UserPoolID)
+        awsUserPool = AWSCognitoIdentityUserPool(forKey: self.UserPoolID)
 
         
-        
-        
-        login(email: Username, password: Password) { (Success, Result) in
+        login(email: LastUsername, password: LastPassword) { (Success, Result) in
             let ResultUnwrapped = Result!
 
             print("[HK]: Login process complete: \(ResultUnwrapped)" + "(Done Printing)")
             
+            
             if(Success){
-                let COGNITO_USERPOOL_PROVIDER = "cognito-idp.\(self.Region).amazonaws.com/\(self.UserPoolID)"
-                let tokens = [COGNITO_USERPOOL_PROVIDER: ResultUnwrapped]
+                
+                // PACKAGE OUR TOKEN FROM IDENTITY POOL
+                let COGNITO_USERPOOL_PROVIDER = "cognito-idp.us-west-2.amazonaws.com/us-west-2_bB7kdaf7g"
+                let tokens                    = [COGNITO_USERPOOL_PROVIDER: ResultUnwrapped]
                 let customIdentityProvider = CustomIdentityProvider(tokens: tokens)
                 
-                let credentialsProvider = AWSCognitoCredentialsProvider(regionType: self.cognitoRegion,                                                                       identityPoolId: self.IdentityPoolID,identityProviderManager: customIdentityProvider)
                 
-                let configuration = AWSServiceConfiguration(region: self.cognitoRegion, credentialsProvider: credentialsProvider)
+               // let pool = AWSCognitoIdentityUserPool(forKey: "UserPool")
+
+                // PASS THE TOKEN FROM USERPOOL TO AWS
+                let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USWest2, identityPoolId: self.IdentityPoolID, identityProviderManager: customIdentityProvider)
+                
+                let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
                 AWSServiceManager.default().defaultServiceConfiguration = configuration
                 
             }
             
+            
+            
             // Update UI seperatley.
             DispatchQueue.main.async { // Correct
                 if(Success){
-                    self.TextViewError.text = "Success!"
+                    //self.TextViewError.text = "Success!"
+                    
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                    self.present(newViewController, animated: true, completion: nil)
+                    
                 } else {
                     if ResultUnwrapped.range(of:"error 20") != nil {
                         self.TextViewError.text="Incorrect password!"
@@ -183,27 +201,14 @@ class vc_login: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))
         TextSignUpLink.isUserInteractionEnabled = true
         TextSignUpLink.addGestureRecognizer(tap)
-        
-        
-        aws_config = AWSServiceConfiguration(region: self.cognitoRegion, credentialsProvider: nil)
-        
-        pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: AppClientID, clientSecret: AppClientSecret, poolId: UserPoolID)
-        
-        AWSCognitoIdentityUserPool.register(with: aws_config, userPoolConfiguration: pool_config, forKey: "userpool")
-        
-        awsUserPool = AWSCognitoIdentityUserPool(forKey: "userpool")
-        
-        
-        
-        
-        
-        
+
+ 
+        /*
         restoreSession(completion: { (Email) in
             let EmailUnwrapped = Email!
             print("[HK]: Restored user with email:")
             print(Email)
-            print("Done restoring")
-        })
+        }) */
     }
         
         

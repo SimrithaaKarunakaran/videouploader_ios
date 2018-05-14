@@ -174,6 +174,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import Foundation;
+@import AWSDynamoDB;
 @import CoreGraphics;
 #endif
 
@@ -202,9 +203,23 @@ SWIFT_CLASS("_TtC3iOS11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC3iOS11DDBTableRow")
+@interface DDBTableRow : AWSDynamoDBObjectModel <AWSDynamoDBModeling>
++ (NSString * _Nonnull)dynamoDBTableName SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nonnull)hashKeyAttribute SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nonnull)rangeKeyAttribute SWIFT_WARN_UNUSED_RESULT;
++ (NSArray<NSString *> * _Nonnull)ignoreAttributes SWIFT_WARN_UNUSED_RESULT;
+- (null_unspecified instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithDictionary:(NSDictionary * _Null_unspecified)dictionaryValue error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (null_unspecified instancetype)initWithCoder:(NSCoder * _Null_unspecified)coder OBJC_DESIGNATED_INITIALIZER;
+- (null_unspecified instancetype)initWithDictionary:(NSDictionary * _Null_unspecified)dictionaryValue OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED;
+- (null_unspecified instancetype)initWithExternalRepresentation:(NSDictionary * _Null_unspecified)externalRepresentation OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED;
+@end
+
 @class UILabel;
 @class UIImageView;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC3iOS32SelectDeckCellCollectionViewCell")
 @interface SelectDeckCellCollectionViewCell : UICollectionViewCell
@@ -309,6 +324,15 @@ SWIFT_CLASS("_TtC3iOS14vc_select_deck")
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS16vc_select_player")
+@interface vc_select_player : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

@@ -26,7 +26,7 @@ depends-top-level:
 - "AWSCognitoIdentityUserPool"
 - "AWSCognitoIdentityUserPoolConfiguration"
 - !private "AWSIdentityProviderManager"
-- "AWSRegionType"
+- !private "AWSRegionType"
 - "AWSServiceConfiguration"
 - !private "AWSServiceManager"
 - "AWSTask"
@@ -97,7 +97,7 @@ depends-member:
 - !private ["So8AWSModelC", "userAttributes"]
 - !private ["So8AWSModelC", "value"]
 - !private ["So26AWSNetworkingConfigurationC", "init"]
-- ["SC13AWSRegionTypeO", "USWest2"]
+- !private ["SC13AWSRegionTypeO", "USWest2"]
 - !private ["So23AWSServiceConfigurationC", "init"]
 - !private ["So17AWSServiceManagerC", "default"]
 - !private ["So17AWSServiceManagerC", "defaultServiceConfiguration"]
@@ -115,7 +115,7 @@ depends-member:
 - !private ["s7CVarArgP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["s7CVarArgP", "AWSCognitoIdentityUserPool"]
 - !private ["s7CVarArgP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["s7CVarArgP", "AWSRegionType"]
+- !private ["s7CVarArgP", "AWSRegionType"]
 - !private ["s7CVarArgP", "AWSServiceConfiguration"]
 - !private ["s7CVarArgP", "AWSServiceManager"]
 - !private ["s7CVarArgP", "AWSTask"]
@@ -123,8 +123,9 @@ depends-member:
 - !private ["s7CVarArgP", "AppClientSecret"]
 - !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "IdentityPoolID"]
+- !private ["s7CVarArgP", "LastPassword"]
+- !private ["s7CVarArgP", "LastUsername"]
 - !private ["s7CVarArgP", "NSDictionary"]
-- !private ["s7CVarArgP", "Region"]
 - !private ["s7CVarArgP", "String"]
 - !private ["s7CVarArgP", "TextSignUpClickHandler"]
 - !private ["s7CVarArgP", "TextSignUpLink"]
@@ -138,7 +139,6 @@ depends-member:
 - !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "awsUserPool"]
 - !private ["s7CVarArgP", "aws_config"]
-- !private ["s7CVarArgP", "cognitoRegion"]
 - !private ["s7CVarArgP", "continueWith"]
 - !private ["s7CVarArgP", "currentUser"]
 - !private ["s7CVarArgP", "customRoleArn"]
@@ -163,7 +163,6 @@ depends-member:
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "range"]
 - !private ["s7CVarArgP", "register"]
-- !private ["s7CVarArgP", "restoreSession"]
 - !private ["s7CVarArgP", "result"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "tokenString"]
@@ -182,7 +181,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSCognitoIdentityUserPool"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["s28CustomDebugStringConvertibleP", "AWSRegionType"]
+- !private ["s28CustomDebugStringConvertibleP", "AWSRegionType"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSServiceConfiguration"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSServiceManager"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSTask"]
@@ -190,8 +189,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "AppClientSecret"]
 - !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "IdentityPoolID"]
+- !private ["s28CustomDebugStringConvertibleP", "LastPassword"]
+- !private ["s28CustomDebugStringConvertibleP", "LastUsername"]
 - !private ["s28CustomDebugStringConvertibleP", "NSDictionary"]
-- !private ["s28CustomDebugStringConvertibleP", "Region"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
 - !private ["s28CustomDebugStringConvertibleP", "TextSignUpClickHandler"]
 - !private ["s28CustomDebugStringConvertibleP", "TextSignUpLink"]
@@ -205,7 +205,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "awsUserPool"]
 - !private ["s28CustomDebugStringConvertibleP", "aws_config"]
-- !private ["s28CustomDebugStringConvertibleP", "cognitoRegion"]
 - !private ["s28CustomDebugStringConvertibleP", "continueWith"]
 - !private ["s28CustomDebugStringConvertibleP", "currentUser"]
 - !private ["s28CustomDebugStringConvertibleP", "customRoleArn"]
@@ -230,7 +229,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "range"]
 - !private ["s28CustomDebugStringConvertibleP", "register"]
-- !private ["s28CustomDebugStringConvertibleP", "restoreSession"]
 - !private ["s28CustomDebugStringConvertibleP", "result"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "tokenString"]
@@ -251,7 +249,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["s23CustomStringConvertibleP", "AWSCognitoIdentityUserPool"]
 - !private ["s23CustomStringConvertibleP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["s23CustomStringConvertibleP", "AWSRegionType"]
+- !private ["s23CustomStringConvertibleP", "AWSRegionType"]
 - !private ["s23CustomStringConvertibleP", "AWSServiceConfiguration"]
 - !private ["s23CustomStringConvertibleP", "AWSServiceManager"]
 - !private ["s23CustomStringConvertibleP", "AWSTask"]
@@ -259,8 +257,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "AppClientSecret"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "IdentityPoolID"]
+- !private ["s23CustomStringConvertibleP", "LastPassword"]
+- !private ["s23CustomStringConvertibleP", "LastUsername"]
 - !private ["s23CustomStringConvertibleP", "NSDictionary"]
-- !private ["s23CustomStringConvertibleP", "Region"]
 - !private ["s23CustomStringConvertibleP", "String"]
 - !private ["s23CustomStringConvertibleP", "TextSignUpClickHandler"]
 - !private ["s23CustomStringConvertibleP", "TextSignUpLink"]
@@ -275,7 +274,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "awsUserPool"]
 - !private ["s23CustomStringConvertibleP", "aws_config"]
-- !private ["s23CustomStringConvertibleP", "cognitoRegion"]
 - !private ["s23CustomStringConvertibleP", "continueWith"]
 - !private ["s23CustomStringConvertibleP", "currentUser"]
 - !private ["s23CustomStringConvertibleP", "customRoleArn"]
@@ -300,7 +298,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "range"]
 - !private ["s23CustomStringConvertibleP", "register"]
-- !private ["s23CustomStringConvertibleP", "restoreSession"]
 - !private ["s23CustomStringConvertibleP", "result"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "tokenString"]
@@ -325,7 +322,7 @@ depends-member:
 - !private ["s9EquatableP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["s9EquatableP", "AWSCognitoIdentityUserPool"]
 - !private ["s9EquatableP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["s9EquatableP", "AWSRegionType"]
+- !private ["s9EquatableP", "AWSRegionType"]
 - !private ["s9EquatableP", "AWSServiceConfiguration"]
 - !private ["s9EquatableP", "AWSServiceManager"]
 - !private ["s9EquatableP", "AWSTask"]
@@ -333,8 +330,9 @@ depends-member:
 - !private ["s9EquatableP", "AppClientSecret"]
 - !private ["s9EquatableP", "DispatchQueue"]
 - !private ["s9EquatableP", "IdentityPoolID"]
+- !private ["s9EquatableP", "LastPassword"]
+- !private ["s9EquatableP", "LastUsername"]
 - !private ["s9EquatableP", "NSDictionary"]
-- !private ["s9EquatableP", "Region"]
 - !private ["s9EquatableP", "String"]
 - !private ["s9EquatableP", "TextSignUpClickHandler"]
 - !private ["s9EquatableP", "TextSignUpLink"]
@@ -343,14 +341,13 @@ depends-member:
 - !private ["s9EquatableP", "TextViewUsername"]
 - !private ["s9EquatableP", "UIStoryboard"]
 - !private ["s9EquatableP", "UITapGestureRecognizer"]
-- ["s9EquatableP", "USWest2"]
+- !private ["s9EquatableP", "USWest2"]
 - !private ["s9EquatableP", "UserPoolID"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "addGestureRecognizer"]
 - !private ["s9EquatableP", "async"]
 - !private ["s9EquatableP", "awsUserPool"]
 - !private ["s9EquatableP", "aws_config"]
-- !private ["s9EquatableP", "cognitoRegion"]
 - !private ["s9EquatableP", "continueWith"]
 - !private ["s9EquatableP", "currentUser"]
 - !private ["s9EquatableP", "customRoleArn"]
@@ -375,7 +372,6 @@ depends-member:
 - !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "range"]
 - !private ["s9EquatableP", "register"]
-- !private ["s9EquatableP", "restoreSession"]
 - !private ["s9EquatableP", "result"]
 - !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "tokenString"]
@@ -399,7 +395,7 @@ depends-member:
 - !private ["s8HashableP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["s8HashableP", "AWSCognitoIdentityUserPool"]
 - !private ["s8HashableP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["s8HashableP", "AWSRegionType"]
+- !private ["s8HashableP", "AWSRegionType"]
 - !private ["s8HashableP", "AWSServiceConfiguration"]
 - !private ["s8HashableP", "AWSServiceManager"]
 - !private ["s8HashableP", "AWSTask"]
@@ -407,8 +403,9 @@ depends-member:
 - !private ["s8HashableP", "AppClientSecret"]
 - !private ["s8HashableP", "DispatchQueue"]
 - !private ["s8HashableP", "IdentityPoolID"]
+- !private ["s8HashableP", "LastPassword"]
+- !private ["s8HashableP", "LastUsername"]
 - !private ["s8HashableP", "NSDictionary"]
-- !private ["s8HashableP", "Region"]
 - !private ["s8HashableP", "String"]
 - !private ["s8HashableP", "TextSignUpClickHandler"]
 - !private ["s8HashableP", "TextSignUpLink"]
@@ -417,14 +414,13 @@ depends-member:
 - !private ["s8HashableP", "TextViewUsername"]
 - !private ["s8HashableP", "UIStoryboard"]
 - !private ["s8HashableP", "UITapGestureRecognizer"]
-- ["s8HashableP", "USWest2"]
+- !private ["s8HashableP", "USWest2"]
 - !private ["s8HashableP", "UserPoolID"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "addGestureRecognizer"]
 - !private ["s8HashableP", "async"]
 - !private ["s8HashableP", "awsUserPool"]
 - !private ["s8HashableP", "aws_config"]
-- !private ["s8HashableP", "cognitoRegion"]
 - !private ["s8HashableP", "continueWith"]
 - !private ["s8HashableP", "currentUser"]
 - !private ["s8HashableP", "customRoleArn"]
@@ -449,7 +445,6 @@ depends-member:
 - !private ["s8HashableP", "print"]
 - !private ["s8HashableP", "range"]
 - !private ["s8HashableP", "register"]
-- !private ["s8HashableP", "restoreSession"]
 - !private ["s8HashableP", "result"]
 - !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "tokenString"]
@@ -469,7 +464,7 @@ depends-member:
 - !private ["So8NSCodingP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So8NSCodingP", "AWSCognitoIdentityUserPool"]
 - !private ["So8NSCodingP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So8NSCodingP", "AWSRegionType"]
+- !private ["So8NSCodingP", "AWSRegionType"]
 - !private ["So8NSCodingP", "AWSServiceConfiguration"]
 - !private ["So8NSCodingP", "AWSServiceManager"]
 - !private ["So8NSCodingP", "AWSTask"]
@@ -477,8 +472,9 @@ depends-member:
 - !private ["So8NSCodingP", "AppClientSecret"]
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "IdentityPoolID"]
+- !private ["So8NSCodingP", "LastPassword"]
+- !private ["So8NSCodingP", "LastUsername"]
 - !private ["So8NSCodingP", "NSDictionary"]
-- !private ["So8NSCodingP", "Region"]
 - !private ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "TextSignUpClickHandler"]
 - !private ["So8NSCodingP", "TextSignUpLink"]
@@ -491,7 +487,6 @@ depends-member:
 - !private ["So8NSCodingP", "addGestureRecognizer"]
 - !private ["So8NSCodingP", "awsUserPool"]
 - !private ["So8NSCodingP", "aws_config"]
-- !private ["So8NSCodingP", "cognitoRegion"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "getUserDetails"]
 - ["So8NSCodingP", "init"]
@@ -502,7 +497,6 @@ depends-member:
 - !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "range"]
-- !private ["So8NSCodingP", "restoreSession"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "userAttributes"]
 - !private ["So8NSCodingP", "value"]
@@ -519,7 +513,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So26NSExtensionRequestHandlingP", "AWSCognitoIdentityUserPool"]
 - !private ["So26NSExtensionRequestHandlingP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So26NSExtensionRequestHandlingP", "AWSRegionType"]
+- !private ["So26NSExtensionRequestHandlingP", "AWSRegionType"]
 - !private ["So26NSExtensionRequestHandlingP", "AWSServiceConfiguration"]
 - !private ["So26NSExtensionRequestHandlingP", "AWSServiceManager"]
 - !private ["So26NSExtensionRequestHandlingP", "AWSTask"]
@@ -527,8 +521,9 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "AppClientSecret"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "IdentityPoolID"]
+- !private ["So26NSExtensionRequestHandlingP", "LastPassword"]
+- !private ["So26NSExtensionRequestHandlingP", "LastUsername"]
 - !private ["So26NSExtensionRequestHandlingP", "NSDictionary"]
-- !private ["So26NSExtensionRequestHandlingP", "Region"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
 - !private ["So26NSExtensionRequestHandlingP", "TextSignUpClickHandler"]
 - !private ["So26NSExtensionRequestHandlingP", "TextSignUpLink"]
@@ -540,7 +535,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UserPoolID"]
 - !private ["So26NSExtensionRequestHandlingP", "awsUserPool"]
 - !private ["So26NSExtensionRequestHandlingP", "aws_config"]
-- !private ["So26NSExtensionRequestHandlingP", "cognitoRegion"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "getUserDetails"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
@@ -548,7 +542,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "pool_config"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
-- !private ["So26NSExtensionRequestHandlingP", "restoreSession"]
 - !private ["So26NSExtensionRequestHandlingP", "vc_login"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -566,7 +559,7 @@ depends-member:
 - ["So8NSObjectC", "AWSCognitoIdentityUserPool"]
 - ["So8NSObjectC", "AWSCognitoIdentityUserPoolConfiguration"]
 - !private ["So8NSObjectC", "AWSIdentityProviderManager"]
-- ["So8NSObjectC", "AWSRegionType"]
+- !private ["So8NSObjectC", "AWSRegionType"]
 - ["So8NSObjectC", "AWSServiceConfiguration"]
 - !private ["So8NSObjectC", "AWSServiceManager"]
 - ["So8NSObjectC", "AWSTask"]
@@ -577,6 +570,8 @@ depends-member:
 - ["So8NSObjectC", "ButtonLoginClick"]
 - !private ["So8NSObjectC", "DispatchQueue"]
 - ["So8NSObjectC", "IdentityPoolID"]
+- ["So8NSObjectC", "LastPassword"]
+- ["So8NSObjectC", "LastUsername"]
 - ["So8NSObjectC", "NSDictionary"]
 - !private ["So8NSObjectC", "NSObject"]
 - ["So8NSObjectC", "Region"]
@@ -596,7 +591,6 @@ depends-member:
 - !private ["So8NSObjectC", "async"]
 - ["So8NSObjectC", "awsUserPool"]
 - ["So8NSObjectC", "aws_config"]
-- ["So8NSObjectC", "cognitoRegion"]
 - !private ["So8NSObjectC", "continueWith"]
 - !private ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "customRoleArn"]
@@ -636,7 +630,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So16NSObjectProtocolP", "AWSCognitoIdentityUserPool"]
 - !private ["So16NSObjectProtocolP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So16NSObjectProtocolP", "AWSRegionType"]
+- !private ["So16NSObjectProtocolP", "AWSRegionType"]
 - !private ["So16NSObjectProtocolP", "AWSServiceConfiguration"]
 - !private ["So16NSObjectProtocolP", "AWSServiceManager"]
 - !private ["So16NSObjectProtocolP", "AWSTask"]
@@ -644,8 +638,9 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "AppClientSecret"]
 - !private ["So16NSObjectProtocolP", "DispatchQueue"]
 - !private ["So16NSObjectProtocolP", "IdentityPoolID"]
+- !private ["So16NSObjectProtocolP", "LastPassword"]
+- !private ["So16NSObjectProtocolP", "LastUsername"]
 - !private ["So16NSObjectProtocolP", "NSDictionary"]
-- !private ["So16NSObjectProtocolP", "Region"]
 - !private ["So16NSObjectProtocolP", "String"]
 - !private ["So16NSObjectProtocolP", "TextSignUpClickHandler"]
 - !private ["So16NSObjectProtocolP", "TextSignUpLink"]
@@ -659,7 +654,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "async"]
 - !private ["So16NSObjectProtocolP", "awsUserPool"]
 - !private ["So16NSObjectProtocolP", "aws_config"]
-- !private ["So16NSObjectProtocolP", "cognitoRegion"]
 - !private ["So16NSObjectProtocolP", "continueWith"]
 - !private ["So16NSObjectProtocolP", "currentUser"]
 - !private ["So16NSObjectProtocolP", "customRoleArn"]
@@ -684,7 +678,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "print"]
 - !private ["So16NSObjectProtocolP", "range"]
 - !private ["So16NSObjectProtocolP", "register"]
-- !private ["So16NSObjectProtocolP", "restoreSession"]
 - !private ["So16NSObjectProtocolP", "result"]
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "tokenString"]
@@ -703,7 +696,7 @@ depends-member:
 - !private ["So9OS_objectC", "main"]
 - ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s26RangeReplaceableCollectionP", "range"]
-- ["s16RawRepresentableP", "USWest2"]
+- !private ["s16RawRepresentableP", "USWest2"]
 - ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "range"]
 - !private ["s12StaticStringV", "init"]
@@ -725,7 +718,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So21UIAppearanceContainerP", "AWSCognitoIdentityUserPool"]
 - !private ["So21UIAppearanceContainerP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So21UIAppearanceContainerP", "AWSRegionType"]
+- !private ["So21UIAppearanceContainerP", "AWSRegionType"]
 - !private ["So21UIAppearanceContainerP", "AWSServiceConfiguration"]
 - !private ["So21UIAppearanceContainerP", "AWSServiceManager"]
 - !private ["So21UIAppearanceContainerP", "AWSTask"]
@@ -733,8 +726,9 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "AppClientSecret"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "IdentityPoolID"]
+- !private ["So21UIAppearanceContainerP", "LastPassword"]
+- !private ["So21UIAppearanceContainerP", "LastUsername"]
 - !private ["So21UIAppearanceContainerP", "NSDictionary"]
-- !private ["So21UIAppearanceContainerP", "Region"]
 - !private ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "TextSignUpClickHandler"]
 - !private ["So21UIAppearanceContainerP", "TextSignUpLink"]
@@ -747,7 +741,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "addGestureRecognizer"]
 - !private ["So21UIAppearanceContainerP", "awsUserPool"]
 - !private ["So21UIAppearanceContainerP", "aws_config"]
-- !private ["So21UIAppearanceContainerP", "cognitoRegion"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "getUserDetails"]
 - !private ["So21UIAppearanceContainerP", "init"]
@@ -756,7 +749,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "pool_config"]
 - !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
-- !private ["So21UIAppearanceContainerP", "restoreSession"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "vc_login"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
@@ -765,7 +757,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So18UIContentContainerP", "AWSCognitoIdentityUserPool"]
 - !private ["So18UIContentContainerP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So18UIContentContainerP", "AWSRegionType"]
+- !private ["So18UIContentContainerP", "AWSRegionType"]
 - !private ["So18UIContentContainerP", "AWSServiceConfiguration"]
 - !private ["So18UIContentContainerP", "AWSServiceManager"]
 - !private ["So18UIContentContainerP", "AWSTask"]
@@ -773,8 +765,9 @@ depends-member:
 - !private ["So18UIContentContainerP", "AppClientSecret"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "IdentityPoolID"]
+- !private ["So18UIContentContainerP", "LastPassword"]
+- !private ["So18UIContentContainerP", "LastUsername"]
 - !private ["So18UIContentContainerP", "NSDictionary"]
-- !private ["So18UIContentContainerP", "Region"]
 - !private ["So18UIContentContainerP", "String"]
 - !private ["So18UIContentContainerP", "TextSignUpClickHandler"]
 - !private ["So18UIContentContainerP", "TextSignUpLink"]
@@ -786,7 +779,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "UserPoolID"]
 - !private ["So18UIContentContainerP", "awsUserPool"]
 - !private ["So18UIContentContainerP", "aws_config"]
-- !private ["So18UIContentContainerP", "cognitoRegion"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "getUserDetails"]
 - !private ["So18UIContentContainerP", "init"]
@@ -794,7 +786,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "pool_config"]
 - !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "print"]
-- !private ["So18UIContentContainerP", "restoreSession"]
 - !private ["So18UIContentContainerP", "vc_login"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", ""]
@@ -812,7 +803,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So18UIFocusEnvironmentP", "AWSCognitoIdentityUserPool"]
 - !private ["So18UIFocusEnvironmentP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So18UIFocusEnvironmentP", "AWSRegionType"]
+- !private ["So18UIFocusEnvironmentP", "AWSRegionType"]
 - !private ["So18UIFocusEnvironmentP", "AWSServiceConfiguration"]
 - !private ["So18UIFocusEnvironmentP", "AWSServiceManager"]
 - !private ["So18UIFocusEnvironmentP", "AWSTask"]
@@ -820,8 +811,9 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "AppClientSecret"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "IdentityPoolID"]
+- !private ["So18UIFocusEnvironmentP", "LastPassword"]
+- !private ["So18UIFocusEnvironmentP", "LastUsername"]
 - !private ["So18UIFocusEnvironmentP", "NSDictionary"]
-- !private ["So18UIFocusEnvironmentP", "Region"]
 - !private ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "TextSignUpClickHandler"]
 - !private ["So18UIFocusEnvironmentP", "TextSignUpLink"]
@@ -834,7 +826,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "addGestureRecognizer"]
 - !private ["So18UIFocusEnvironmentP", "awsUserPool"]
 - !private ["So18UIFocusEnvironmentP", "aws_config"]
-- !private ["So18UIFocusEnvironmentP", "cognitoRegion"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "getUserDetails"]
 - !private ["So18UIFocusEnvironmentP", "init"]
@@ -843,7 +834,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "pool_config"]
 - !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
-- !private ["So18UIFocusEnvironmentP", "restoreSession"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "vc_login"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
@@ -860,7 +850,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So30UIPasteConfigurationSupportingP", "AWSCognitoIdentityUserPool"]
 - !private ["So30UIPasteConfigurationSupportingP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So30UIPasteConfigurationSupportingP", "AWSRegionType"]
+- !private ["So30UIPasteConfigurationSupportingP", "AWSRegionType"]
 - !private ["So30UIPasteConfigurationSupportingP", "AWSServiceConfiguration"]
 - !private ["So30UIPasteConfigurationSupportingP", "AWSServiceManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "AWSTask"]
@@ -868,8 +858,9 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "AppClientSecret"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "IdentityPoolID"]
+- !private ["So30UIPasteConfigurationSupportingP", "LastPassword"]
+- !private ["So30UIPasteConfigurationSupportingP", "LastUsername"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSDictionary"]
-- !private ["So30UIPasteConfigurationSupportingP", "Region"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "TextSignUpClickHandler"]
 - !private ["So30UIPasteConfigurationSupportingP", "TextSignUpLink"]
@@ -882,7 +873,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "addGestureRecognizer"]
 - !private ["So30UIPasteConfigurationSupportingP", "awsUserPool"]
 - !private ["So30UIPasteConfigurationSupportingP", "aws_config"]
-- !private ["So30UIPasteConfigurationSupportingP", "cognitoRegion"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "getUserDetails"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
@@ -891,7 +881,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "pool_config"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
-- !private ["So30UIPasteConfigurationSupportingP", "restoreSession"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "vc_login"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
@@ -902,7 +891,7 @@ depends-member:
 - ["So11UIResponderC", "AWSCognitoIdentityUserPool"]
 - ["So11UIResponderC", "AWSCognitoIdentityUserPoolConfiguration"]
 - !private ["So11UIResponderC", "AWSIdentityProviderManager"]
-- ["So11UIResponderC", "AWSRegionType"]
+- !private ["So11UIResponderC", "AWSRegionType"]
 - ["So11UIResponderC", "AWSServiceConfiguration"]
 - !private ["So11UIResponderC", "AWSServiceManager"]
 - ["So11UIResponderC", "AWSTask"]
@@ -913,6 +902,8 @@ depends-member:
 - ["So11UIResponderC", "ButtonLoginClick"]
 - !private ["So11UIResponderC", "DispatchQueue"]
 - ["So11UIResponderC", "IdentityPoolID"]
+- ["So11UIResponderC", "LastPassword"]
+- ["So11UIResponderC", "LastUsername"]
 - ["So11UIResponderC", "NSDictionary"]
 - !private ["So11UIResponderC", "NSObject"]
 - ["So11UIResponderC", "Region"]
@@ -931,7 +922,6 @@ depends-member:
 - !private ["So11UIResponderC", "addGestureRecognizer"]
 - ["So11UIResponderC", "awsUserPool"]
 - ["So11UIResponderC", "aws_config"]
-- ["So11UIResponderC", "cognitoRegion"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "getUserDetails"]
 - ["So11UIResponderC", "init"]
@@ -948,7 +938,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So30UIResponderStandardEditActionsP", "AWSCognitoIdentityUserPool"]
 - !private ["So30UIResponderStandardEditActionsP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So30UIResponderStandardEditActionsP", "AWSRegionType"]
+- !private ["So30UIResponderStandardEditActionsP", "AWSRegionType"]
 - !private ["So30UIResponderStandardEditActionsP", "AWSServiceConfiguration"]
 - !private ["So30UIResponderStandardEditActionsP", "AWSServiceManager"]
 - !private ["So30UIResponderStandardEditActionsP", "AWSTask"]
@@ -956,8 +946,9 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "AppClientSecret"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "IdentityPoolID"]
+- !private ["So30UIResponderStandardEditActionsP", "LastPassword"]
+- !private ["So30UIResponderStandardEditActionsP", "LastUsername"]
 - !private ["So30UIResponderStandardEditActionsP", "NSDictionary"]
-- !private ["So30UIResponderStandardEditActionsP", "Region"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "TextSignUpClickHandler"]
 - !private ["So30UIResponderStandardEditActionsP", "TextSignUpLink"]
@@ -970,7 +961,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "addGestureRecognizer"]
 - !private ["So30UIResponderStandardEditActionsP", "awsUserPool"]
 - !private ["So30UIResponderStandardEditActionsP", "aws_config"]
-- !private ["So30UIResponderStandardEditActionsP", "cognitoRegion"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "getUserDetails"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
@@ -979,7 +969,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "pool_config"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
-- !private ["So30UIResponderStandardEditActionsP", "restoreSession"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "vc_login"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
@@ -988,7 +977,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So16UIStateRestoringP", "AWSCognitoIdentityUserPool"]
 - !private ["So16UIStateRestoringP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So16UIStateRestoringP", "AWSRegionType"]
+- !private ["So16UIStateRestoringP", "AWSRegionType"]
 - !private ["So16UIStateRestoringP", "AWSServiceConfiguration"]
 - !private ["So16UIStateRestoringP", "AWSServiceManager"]
 - !private ["So16UIStateRestoringP", "AWSTask"]
@@ -996,8 +985,9 @@ depends-member:
 - !private ["So16UIStateRestoringP", "AppClientSecret"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "IdentityPoolID"]
+- !private ["So16UIStateRestoringP", "LastPassword"]
+- !private ["So16UIStateRestoringP", "LastUsername"]
 - !private ["So16UIStateRestoringP", "NSDictionary"]
-- !private ["So16UIStateRestoringP", "Region"]
 - !private ["So16UIStateRestoringP", "String"]
 - !private ["So16UIStateRestoringP", "TextSignUpClickHandler"]
 - !private ["So16UIStateRestoringP", "TextSignUpLink"]
@@ -1009,7 +999,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UserPoolID"]
 - !private ["So16UIStateRestoringP", "awsUserPool"]
 - !private ["So16UIStateRestoringP", "aws_config"]
-- !private ["So16UIStateRestoringP", "cognitoRegion"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "getUserDetails"]
 - !private ["So16UIStateRestoringP", "init"]
@@ -1017,7 +1006,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "pool_config"]
 - !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "print"]
-- !private ["So16UIStateRestoringP", "restoreSession"]
 - !private ["So16UIStateRestoringP", "vc_login"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", ""]
@@ -1034,7 +1022,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["So18UITraitEnvironmentP", "AWSCognitoIdentityUserPool"]
 - !private ["So18UITraitEnvironmentP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["So18UITraitEnvironmentP", "AWSRegionType"]
+- !private ["So18UITraitEnvironmentP", "AWSRegionType"]
 - !private ["So18UITraitEnvironmentP", "AWSServiceConfiguration"]
 - !private ["So18UITraitEnvironmentP", "AWSServiceManager"]
 - !private ["So18UITraitEnvironmentP", "AWSTask"]
@@ -1042,8 +1030,9 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "AppClientSecret"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "IdentityPoolID"]
+- !private ["So18UITraitEnvironmentP", "LastPassword"]
+- !private ["So18UITraitEnvironmentP", "LastUsername"]
 - !private ["So18UITraitEnvironmentP", "NSDictionary"]
-- !private ["So18UITraitEnvironmentP", "Region"]
 - !private ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "TextSignUpClickHandler"]
 - !private ["So18UITraitEnvironmentP", "TextSignUpLink"]
@@ -1056,7 +1045,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "addGestureRecognizer"]
 - !private ["So18UITraitEnvironmentP", "awsUserPool"]
 - !private ["So18UITraitEnvironmentP", "aws_config"]
-- !private ["So18UITraitEnvironmentP", "cognitoRegion"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "getUserDetails"]
 - !private ["So18UITraitEnvironmentP", "init"]
@@ -1065,7 +1053,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "pool_config"]
 - !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
-- !private ["So18UITraitEnvironmentP", "restoreSession"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "vc_login"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
@@ -1079,7 +1066,7 @@ depends-member:
 - ["So16UIViewControllerC", "AWSCognitoIdentityUserPool"]
 - ["So16UIViewControllerC", "AWSCognitoIdentityUserPoolConfiguration"]
 - !private ["So16UIViewControllerC", "AWSIdentityProviderManager"]
-- ["So16UIViewControllerC", "AWSRegionType"]
+- !private ["So16UIViewControllerC", "AWSRegionType"]
 - ["So16UIViewControllerC", "AWSServiceConfiguration"]
 - !private ["So16UIViewControllerC", "AWSServiceManager"]
 - ["So16UIViewControllerC", "AWSTask"]
@@ -1090,6 +1077,8 @@ depends-member:
 - ["So16UIViewControllerC", "ButtonLoginClick"]
 - !private ["So16UIViewControllerC", "DispatchQueue"]
 - ["So16UIViewControllerC", "IdentityPoolID"]
+- ["So16UIViewControllerC", "LastPassword"]
+- ["So16UIViewControllerC", "LastUsername"]
 - ["So16UIViewControllerC", "NSDictionary"]
 - !private ["So16UIViewControllerC", "NSObject"]
 - ["So16UIViewControllerC", "Region"]
@@ -1107,7 +1096,6 @@ depends-member:
 - ["So16UIViewControllerC", "UserPoolID"]
 - ["So16UIViewControllerC", "awsUserPool"]
 - ["So16UIViewControllerC", "aws_config"]
-- ["So16UIViewControllerC", "cognitoRegion"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "getUserDetails"]
 - ["So16UIViewControllerC", "init"]
@@ -1145,7 +1133,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSCognitoIdentityUserAttributeType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSCognitoIdentityUserPool"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSCognitoIdentityUserPoolConfiguration"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "AWSRegionType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSRegionType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSServiceConfiguration"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSServiceManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSTask"]
@@ -1153,8 +1141,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AppClientSecret"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IdentityPoolID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "LastPassword"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "LastUsername"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDictionary"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Region"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TextSignUpClickHandler"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TextSignUpLink"]
@@ -1168,7 +1157,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "awsUserPool"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "aws_config"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "cognitoRegion"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "continueWith"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "customRoleArn"]
@@ -1193,7 +1181,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "range"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "register"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "restoreSession"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "result"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tokenString"]
@@ -1217,7 +1204,7 @@ depends-member:
 - ["3iOS8vc_loginC", "AWSCognitoIdentityUserPool"]
 - ["3iOS8vc_loginC", "AWSCognitoIdentityUserPoolConfiguration"]
 - !private ["3iOS8vc_loginC", "AWSIdentityProviderManager"]
-- ["3iOS8vc_loginC", "AWSRegionType"]
+- !private ["3iOS8vc_loginC", "AWSRegionType"]
 - ["3iOS8vc_loginC", "AWSServiceConfiguration"]
 - !private ["3iOS8vc_loginC", "AWSServiceManager"]
 - ["3iOS8vc_loginC", "AWSTask"]
@@ -1228,6 +1215,8 @@ depends-member:
 - ["3iOS8vc_loginC", "ButtonLoginClick"]
 - !private ["3iOS8vc_loginC", "DispatchQueue"]
 - ["3iOS8vc_loginC", "IdentityPoolID"]
+- ["3iOS8vc_loginC", "LastPassword"]
+- ["3iOS8vc_loginC", "LastUsername"]
 - ["3iOS8vc_loginC", "NSDictionary"]
 - !private ["3iOS8vc_loginC", "NSObject"]
 - ["3iOS8vc_loginC", "Region"]
@@ -1245,7 +1234,6 @@ depends-member:
 - ["3iOS8vc_loginC", "UserPoolID"]
 - ["3iOS8vc_loginC", "awsUserPool"]
 - ["3iOS8vc_loginC", "aws_config"]
-- ["3iOS8vc_loginC", "cognitoRegion"]
 - ["3iOS8vc_loginC", "deinit"]
 - ["3iOS8vc_loginC", "didReceiveMemoryWarning"]
 - ["3iOS8vc_loginC", "getUserDetails"]
@@ -1275,7 +1263,7 @@ depends-nominal:
 - !private "So11AWSMTLModelC"
 - !private "So8AWSModelC"
 - !private "So26AWSNetworkingConfigurationC"
-- "SC13AWSRegionTypeO"
+- !private "SC13AWSRegionTypeO"
 - !private "So23AWSServiceConfigurationC"
 - !private "So17AWSServiceManagerC"
 - !private "So7AWSTaskC"
@@ -1318,7 +1306,7 @@ depends-nominal:
 - "So8NSStringC"
 - !private "So9OS_objectC"
 - "s26RangeReplaceableCollectionP"
-- "s16RawRepresentableP"
+- !private "s16RawRepresentableP"
 - "s8SequenceP"
 - !private "s12StaticStringV"
 - "SS"
@@ -1388,10 +1376,12 @@ depends-external:
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Users/haik/Desktop/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSFMDB.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDB.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Headers/AWSAuthUI.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSGZIP.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTS.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDLog+LOGV.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDB-umbrella.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Headers/AWSAuthUI-umbrella.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCore-umbrella.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSAuthCore-umbrella.h"
@@ -1399,6 +1389,7 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers/AWSCognitoIdentityProvider-umbrella.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Headers/AWSMobileClient-umbrella.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSGeneric.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDBService.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTSService.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSService.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers/AWSCognitoIdentityProviderService.h"
@@ -1422,6 +1413,7 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDLog.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCocoaLumberjack.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSTask.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDBModel.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLModel.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTSModel.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSModel.h"
@@ -1456,9 +1448,11 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDTTYLogger.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDFileLogger.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDAbstractDatabaseLogger.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDBRequestRetryHandler.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSURLRequestRetryHandler.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Headers/AWSAuthUIViewController.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLValueTransformer.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDBObjectMapper.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers/AWSCognitoIdentityUser.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLJSONAdapter.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSMTLManagedObjectAdapter.h"
@@ -1466,6 +1460,7 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDContextFilterLogFormatter.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSDDMultiFormatter.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSExecutor.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDBResources.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSSTSResources.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers/AWSCognitoIdentityProviderResources.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCognitoIdentityResources.h"
@@ -1489,10 +1484,11 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCategory.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSKSReachability.h"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCognitoIdentity.h"
+- "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
-interface-hash: "d304fbaf6a0d57806d1d36cdfd6ef471"
+interface-hash: "34d49c84584323a17883f1ddac33ac14"
