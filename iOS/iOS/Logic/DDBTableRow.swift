@@ -4,7 +4,7 @@ import AWSDynamoDB
 
 let AWSSampleDynamoDBTableName = "HeadsUpSurveys"
 
-
+@objcMembers
 class DDBTableRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     
     

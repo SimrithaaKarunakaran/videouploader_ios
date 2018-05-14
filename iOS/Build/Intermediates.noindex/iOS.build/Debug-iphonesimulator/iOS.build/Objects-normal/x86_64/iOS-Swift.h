@@ -207,6 +207,18 @@ SWIFT_CLASS("_TtC3iOS11AppDelegate")
 
 SWIFT_CLASS("_TtC3iOS11DDBTableRow")
 @interface DDBTableRow : AWSDynamoDBObjectModel <AWSDynamoDBModeling>
+@property (nonatomic, copy) NSString * _Nullable email;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable Answers;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable NotApplicableChecked;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable Gender;
+@property (nonatomic, copy) NSString * _Nullable DOB;
+@property (nonatomic, copy) NSString * _Nullable Country;
+@property (nonatomic, copy) NSString * _Nullable City;
+@property (nonatomic, copy) NSString * _Nullable State;
+@property (nonatomic, copy) NSString * _Nullable ZIP;
+@property (nonatomic, copy) NSString * _Nullable AutismDiagnosis;
+@property (nonatomic, copy) NSString * _Nullable OtherDiagnoses;
 + (NSString * _Nonnull)dynamoDBTableName SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)hashKeyAttribute SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)rangeKeyAttribute SWIFT_WARN_UNUSED_RESULT;

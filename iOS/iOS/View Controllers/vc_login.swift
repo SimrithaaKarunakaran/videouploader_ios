@@ -55,21 +55,29 @@ class vc_login: UIViewController {
             
             
             if(Success){
-                
                 // PACKAGE OUR TOKEN FROM IDENTITY POOL
                 let COGNITO_USERPOOL_PROVIDER = "cognito-idp.us-west-2.amazonaws.com/us-west-2_bB7kdaf7g"
+
                 let tokens                    = [COGNITO_USERPOOL_PROVIDER: ResultUnwrapped]
+
                 let customIdentityProvider = CustomIdentityProvider(tokens: tokens)
-                
-                
-               // let pool = AWSCognitoIdentityUserPool(forKey: "UserPool")
 
                 // PASS THE TOKEN FROM USERPOOL TO AWS
                 let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USWest2, identityPoolId: self.IdentityPoolID, identityProviderManager: customIdentityProvider)
                 
                 let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
                 AWSServiceManager.default().defaultServiceConfiguration = configuration
-                
+              
+                credentialsProvider.getIdentityId().continueWith(block:{ (task) in
+                    guard task.error == nil else {
+                        print(task.error)
+                        return nil
+                    }
+                    // We've got a session and now we can access AWS service via default()
+                    // e.g.: let cognito = AWSCognito.default()
+                    print("[HK] Fully authenticated.")
+                    return task
+                })
             }
             
             
@@ -120,7 +128,6 @@ class vc_login: UIViewController {
         emailAttr?.name = "email"
         emailAttr?.value = email
         let user = awsUserPool.getUser(email)
-        // Having a user created we can now login with this credentials
         
         user.getSession(email, password: password, validationData: [emailAttr!])
             .continueWith(block: {[weak self] (task) -> Any? in
