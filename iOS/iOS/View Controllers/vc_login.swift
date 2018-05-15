@@ -50,21 +50,24 @@ class vc_login: UIViewController {
                     // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
                     print("[HK] Fully authenticated.")
                     BackendManager?.initializeDynamo()
-                    UserEmailValidated = LastUsername
+                    UserEmailValidated = LastUsername.replacingOccurrences(of: ".", with: "")
+                    
+                    
+                    BackendManager.downloadUserData(email: UserEmailValidated!, completion: { (Success) in
+                        
+                        DispatchQueue.main.async { // Correct
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                            self.present(newViewController, animated: true, completion: nil)
+                        }
+                    })
                     return task
                 })
             }
             
             // Update UI separately..
             DispatchQueue.main.async { // Correct
-                if(Success){
-                    //self.TextViewError.text = "Success!"
-                    
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-                    self.present(newViewController, animated: true, completion: nil)
-                    
-                } else {
+                if(!Success){
                     if BackendManager?.accessToken?.range(of:"error 20") != nil {
                         self.TextViewError.text="Incorrect password!"
                     } else if BackendManager?.accessToken?.range(of:"error 34") != nil {

@@ -19,8 +19,13 @@ class DBManager {
     // An instance of the dynamo DB that we can use for queries. Set to US EAST region as required.
     var dynamoDBCustom : AWSDynamoDB?
     
-    var accessToken     : String?
+    var accessToken    : String?
     
+    // The data structure that holds dictionaries of all entries associated with our email address.
+    // This is an array of dictionaries.
+    var UserDBResults  : [[String : AWSDynamoDBAttributeValue]]?
+    
+
     init() {
         // Configuration (for Cognito)
         let GlobalAWSConfig  = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: nil)
@@ -41,7 +46,18 @@ class DBManager {
     }
     
     
-    // Get a token, then use it for full authentication.
+    // Get a token, then use it for full authentications
+    
+
+    
+    /// This function attempts to log in the user. The callback returns true if the login
+    /// was successful, and false otherwise. If true, the second callback variable
+    /// contains the authentication token from the Identity Pool.
+    ///
+    /// - Parameters:
+    ///   - email: The email address of the user, with no post-processing
+    ///   - password: The password that the user has filled out.
+    ///   - completion: The callback for when login is complete.
     func login(email: String, password: String, completion: @escaping ((Bool, String?) -> ())) {
         let emailAttr = AWSCognitoIdentityUserAttributeType()
         emailAttr?.name = "email"
@@ -74,7 +90,7 @@ class DBManager {
                 print("Restoration successful.")
                 
                 self!.accessToken = session.accessToken?.tokenString
-                                
+                
                 self!.getUserDetails()
                 
                 completion(true, user.username)
@@ -108,6 +124,45 @@ class DBManager {
         }
         
         return
+    }
+    
+    
+    func downloadUserData(email:String, completion: @escaping ((Bool) -> ())){
+        let atVal = AWSDynamoDBAttributeValue()!
+        atVal.s = "haikkalantarian1@gmail.com"
+        
+        let condition = AWSDynamoDBCondition()!
+        condition.comparisonOperator = AWSDynamoDBComparisonOperator.EQ
+        condition.attributeValueList = [atVal]
+        
+        let myDic: [String: AWSDynamoDBCondition] = ["email": condition]
+        let query = AWSDynamoDBQueryInput()!
+        
+        query.tableName = "HeadsUpSurveys"
+        query.keyConditions = myDic
+        
+        BackendManager.dynamoDBCustom?.query(query).continueWith(block: { (task) in
+            guard task.error == nil else {
+                print(task.error)
+                completion(false)
+                return nil
+            }
+            
+            let results = task.result as AWSDynamoDBQueryOutput!
+            
+            self.UserDBResults = results!.items!
+            
+            // For each user (e.g. child)
+            for item in self.UserDBResults{
+                print("Printing item name: ")
+                
+                var val = item["name"]
+                print(val?.s)
+            }
+            
+            //https://stackoverflow.com/questions/26958637/best-way-to-make-amazon-aws-dynamodb-queries-using-swift
+            return nil
+        })
     }
     
     
