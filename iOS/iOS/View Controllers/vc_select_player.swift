@@ -58,27 +58,25 @@ class vc_select_player: UIViewController {
             let results = task.result as AWSDynamoDBQueryOutput!
             
             let myResults = results!.items!
-            print("[HK] Query callback.")
-            print("object: \(myResults.description)")
-            //https://stackoverflow.com/questions/26958637/best-way-to-make-amazon-aws-dynamodb-queries-using-swift
-            
-            let data = myResults.description.data(using: String.Encoding.utf8)
-            
-            do {
+
+            for item in myResults{
+                print("Printing item \n")
+                print(item)
                 
-                let JsonDict = try JSONSerialization.jsonObject(with: data!, options: [])
-                // you can now use t with the right type
-                if let dictFromJSON = JsonDict as? [String:AWSDynamoDBAttributeValue]{
-                    // use dictFromJSON
-                    print(dictFromJSON["name"]?.description())
-                    print("Finished printing name")
+                print("Printing item name: ")
+                
+                var val = item["name"]
+                print(val?.s)
+                
+                /*
+                for subItem in item{
+                    print("Printing subitem \n")
+                    print(subItem)
                 }
-            } catch let error as NSError {
-                print(error)
-                print("Entered catch")
+                */
             }
-            
-            
+        
+            //https://stackoverflow.com/questions/26958637/best-way-to-make-amazon-aws-dynamodb-queries-using-swift
             return nil
         })
     }
