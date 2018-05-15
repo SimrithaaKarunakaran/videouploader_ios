@@ -54,7 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         let GlobalAWSConfig  = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: nil)
         
-        let GlobalPoolConfig = AWSCognitoIdentityUserPoolConfiguration(clientId: GlobalAppClientID, clientSecret: GlobalAppClientSecret, poolId: GlobalUserPoolID)
+        let GlobalPoolConfig = AWSCognitoIdentityUserPoolConfiguration(clientId: GlobalAppClientID,
+                                                                       clientSecret: GlobalAppClientSecret, poolId: GlobalUserPoolID)
         
         AWSCognitoIdentityUserPool.register(with: GlobalAWSConfig, userPoolConfiguration: GlobalPoolConfig, forKey: GlobalUserPoolID)
         GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)

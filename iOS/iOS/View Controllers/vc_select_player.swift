@@ -49,7 +49,6 @@ class vc_select_player: UIViewController {
         query.tableName = "HeadsUpSurveys"
         query.keyConditions = myDic
         
-        
         dynamoDBCustom.query(query).continueWith(block: { (task) in
             guard task.error == nil else {
                 print(task.error)
@@ -62,6 +61,24 @@ class vc_select_player: UIViewController {
             print("[HK] Query callback.")
             print("object: \(myResults.description)")
             //https://stackoverflow.com/questions/26958637/best-way-to-make-amazon-aws-dynamodb-queries-using-swift
+            
+            let data = myResults.description.data(using: String.Encoding.utf8)
+            
+            do {
+                
+                let JsonDict = try JSONSerialization.jsonObject(with: data!, options: [])
+                // you can now use t with the right type
+                if let dictFromJSON = JsonDict as? [String:AWSDynamoDBAttributeValue]{
+                    // use dictFromJSON
+                    print(dictFromJSON["name"]?.description())
+                    print("Finished printing name")
+                }
+            } catch let error as NSError {
+                print(error)
+                print("Entered catch")
+            }
+            
+            
             return nil
         })
     }

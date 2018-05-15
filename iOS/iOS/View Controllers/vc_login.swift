@@ -96,7 +96,7 @@ class vc_login: UIViewController {
         TextSignUpLink.addGestureRecognizer(tap)
 
         /*
-        restoreSession(completion: { (Email) in
+        restoreSession(completion: { (Success, Email) in
             let EmailUnwrapped = Email!
             print("[HK]: Restored user with email:")
             print(Email)

@@ -39,30 +39,29 @@ class DBManager {
     }
     
     
-    func restoreSession(completion: @escaping ((String?) -> ())) {
+    func restoreSession(completion: @escaping ((Bool, String?) -> ())) {
         if let user = GlobalUserPool.currentUser() {
             // Try to restore prev. session
             user.getSession().continueWith(block: { [weak self] (task) in
                 guard let session = task.result, task.error == nil else {
                     print("Restoration failed.")
-                    completion("")
+                    completion(false, "")
                     return nil
                 }
                 print("Restoration successful.")
                 self!.getUserDetails()
                 
-                completion(user.username)
+                completion(true, user.username)
                 return nil
             })
         } else {
             print("Restoration failed.")
-            completion("")
+            completion(false, "")
         }
     }
     
     func getUserDetails() {
         // Update UI seperatley.
-        
         if let user = GlobalUserPool.currentUser() {
             user.getDetails().continueWith(block: { (task) in
                 if task.error != nil {  // some sort of error
@@ -84,13 +83,6 @@ class DBManager {
         
         return
     }
-    
-    
-    // Each entry in logins represents a single login with an identity provider. The key is the domain of the login provider (e.g. 'graph.facebook.com')
-    // and the value is the OAuth/OpenId Connect token that results from an authentication with that login provider.
- //   func logins() -> AWSTask<NSDictionary> {
- //       let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
-  //      return AWSTask(result: logins)
- //   }
+
 }
 
