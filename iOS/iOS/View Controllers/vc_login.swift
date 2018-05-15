@@ -26,34 +26,18 @@ class vc_login: UIViewController {
         
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
-        
        
         BackendManager?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
             BackendManager?.accessToken     = Result!
 
             if(Success){
-                // PACKAGE OUR TOKEN FROM IDENTITY POOL
-                GlobalTokens             = [GlobalCognitoUserpoolProvider: BackendManager.accessToken!]
-                GlobalIdentityProvider   = CustomIdentityProvider(tokens: GlobalTokens)
-
-                // PASS THE TOKEN FROM USERPOOL TO AWS
-                GlobalCredentialsProvider = AWSCognitoCredentialsProvider(regionType: GlobalRegionObject, identityPoolId: GlobalIdentityPoolID, identityProviderManager: GlobalIdentityProvider)
                 
-                let configuration = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: GlobalCredentialsProvider)
-                AWSServiceManager.default().defaultServiceConfiguration = configuration
-              
-                GlobalCredentialsProvider.getIdentityId().continueWith(block:{ (task) in
-                    guard task.error == nil else {
-                        print(task.error)
-                        return nil
-                    }
+                BackendManager.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
                     // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
                     print("[HK] Fully authenticated.")
-                    BackendManager?.initializeDynamo()
-                    UserEmailValidated = LastUsername.replacingOccurrences(of: ".", with: "")
                     
-                    
-                    BackendManager.downloadUserData(email: UserEmailValidated!, completion: { (Success) in
+                    BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                        print("[HK] DownloadUserData callback: \(Success)")
                         
                         DispatchQueue.main.async { // Correct
                             let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
@@ -61,28 +45,27 @@ class vc_login: UIViewController {
                             self.present(newViewController, animated: true, completion: nil)
                         }
                     })
-                    return task
                 })
+                
             }
-            
-            // Update UI separately..
-            DispatchQueue.main.async { // Correct
-                if(!Success){
-                    if BackendManager?.accessToken?.range(of:"error 20") != nil {
-                        self.TextViewError.text="Incorrect password!"
-                    } else if BackendManager?.accessToken?.range(of:"error 34") != nil {
-                        self.TextViewError.text="Username not found!"
-                    } else  {
-                        self.TextViewError.text = BackendManager.accessToken
+            else {
+                // Update UI separately..
+                DispatchQueue.main.async { // Correct
+                    if(!Success){
+                        if BackendManager?.accessToken?.range(of:"error 20") != nil {
+                            self.TextViewError.text="Incorrect password!"
+                        } else if BackendManager?.accessToken?.range(of:"error 34") != nil {
+                            self.TextViewError.text="Username not found!"
+                        } else  {
+                            self.TextViewError.text = BackendManager.accessToken
+                        }
                     }
                 }
             }
         }
     }
     
-    
 
-    
     @objc func TextSignUpClickHandler(sender:UITapGestureRecognizer) {
         // Direct user to screen where they can create an account.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)

@@ -1,16 +1,16 @@
 version: "Apple Swift version 4.0.3 (swiftlang-900.0.72 clang-900.0.38)"
 options: "1ff63e580257f8d640acdd8a2ab0b687"
-build_time: [1526416169, 636354000]
+build_time: [1526422860, 490148000]
 inputs:
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/UIElements/SelectDeckCellCollectionViewCell.swift": [1525481882, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_survey2.swift": [1525893699, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_launchscreen.swift": [1526346398, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_launchscreen.swift": [1526422844, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_2.swift": [1525720413, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_3.swift": [1525720481, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_select_player.swift": [1526414949, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_select_player.swift": [1526420963, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/StateUserInfo.swift": [1521135160, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_survey5.swift": [1525900112, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_login.swift": [1526415959, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_login.swift": [1526422820, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/DDBTableRow.swift": [1526347137, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_survey6.swift": [1525900179, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_1.swift": [1526323439, 0]
@@ -21,5 +21,5 @@ inputs:
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_create_account.swift": [1525720189, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_select_deck.swift": [1526343366, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_survey1.swift": [1525985407, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/DBManager.swift": !dirty [1526416168, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/AppDelegate.swift": [1526414512, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/DBManager.swift": [1526422858, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/AppDelegate.swift": [1526420163, 0]

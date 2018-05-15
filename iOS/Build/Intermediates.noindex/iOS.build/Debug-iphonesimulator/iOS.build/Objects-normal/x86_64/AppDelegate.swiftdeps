@@ -14,7 +14,6 @@ provides-top-level:
 - "GlobalIdentityProvider"
 - "GlobalCredentialsProvider"
 - "BackendManager"
-- "UserEmailValidated"
 - "AppDelegate"
 - "CustomIdentityProvider"
 provides-nominal:
@@ -72,7 +71,6 @@ depends-top-level:
 - "UIResponder"
 - "UIWindow"
 - "URL"
-- "UserEmailValidated"
 depends-member:
 - !private ["So26AWSIdentityProviderManagerP", "AWSTask"]
 - !private ["So26AWSIdentityProviderManagerP", "NSDictionary"]
@@ -645,4 +643,4 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
-interface-hash: "ca1e4977a0bddc59b095e6eef47d33c4"
+interface-hash: "4f6d6063a68b2999e85b2bd0fdd0fb0c"

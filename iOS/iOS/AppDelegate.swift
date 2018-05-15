@@ -42,8 +42,6 @@ var BackendManager : DBManager!
  User's state management.
  */
 
-var UserEmailValidated : String?
-
 
 // Check info.plist for details.
 @UIApplicationMain

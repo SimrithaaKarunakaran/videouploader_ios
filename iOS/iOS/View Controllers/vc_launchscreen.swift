@@ -25,6 +25,8 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
     var SecondsTillTransition = 2;
     
+    
+    /// Start a timer that will show the user our game logo for three seconds before transitioning away.
     func runTimer() {
         if(isTimerRunning == false){
             timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(vc_launchscreen.updateTimer)), userInfo: nil, repeats: true)
@@ -32,21 +34,7 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    final class CustomIdentityProvider: NSObject, AWSIdentityProviderManager {
-        var tokens: [String : String]?
-        
-        init(tokens: [String : String]?) {
-            self.tokens = tokens
-        }
-        
-        func logins() -> AWSTask<NSDictionary> {
-            let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
-            return AWSTask(result: logins)
-        }
-    }
-    
-    
+    /// Timer callback.
     @objc func updateTimer() {
         
         // Decrement number of seconds left.
@@ -55,13 +43,39 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
         if(SecondsTillTransition == 0){
             timer.invalidate();
            
-            print("[HK] Timer is up: transitioning.")
+            //First, lets check if the user is already signed in from a previous session.
+            BackendManager.restoreSession(sessionCompletion: { (Success, Email) in
+                if(Success){
+                    // Restored the user's session from last time?
+                    // No reason to make them log in. Download full user data and proceed.
 
-            // If we are logged in, lets go to "Select Deck" for now.
-            let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
-            self.present(newViewController, animated: true, completion: nil)
+                    BackendManager.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
+                        // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
+                        print("[HK] Fully authenticated.")
+                        
+                        BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                            print("[HK] DownloadUserData callback: \(Success)")
+                            
+                            DispatchQueue.main.async { // Correct
+                                let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                                let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                                self.present(newViewController, animated: true, completion: nil)
+                            }
+                        })
+                    })
+                    
+                } else {
+                    // Failed to restore the user? Take them to the login screen
+                    // That way, they can login the "normal" way.
+                    DispatchQueue.main.async {
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
+                        self.present(newViewController, animated: true, completion: nil)
+                    }
+                }
+            }); // End RestoreSession
             
+            print("[HK] Timer is up: transitioning.")
         }
     }
     

@@ -329,6 +329,7 @@ SWIFT_CLASS("_TtC3iOS17vc_create_account")
 
 SWIFT_CLASS("_TtC3iOS15vc_launchscreen")
 @interface vc_launchscreen : UIViewController <UITextFieldDelegate>
+/// Timer callback.
 - (void)updateTimer;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
