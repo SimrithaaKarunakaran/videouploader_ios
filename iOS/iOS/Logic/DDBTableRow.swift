@@ -1,34 +1,55 @@
-
 import AWSDynamoDB
 
 
-let AWSSampleDynamoDBTableName = "HeadsUpSurveys"
-
-@objcMembers
 class DDBTableRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     
     
     
     
-    var email       :String? = ""
-    var ConsentPlay :Bool?   = false
-    var ConsentView :Bool?   = false
-    var ConsentShare:Bool?   = false
- 
-    var Answers : [Int]?
-    var NotApplicableChecked : [Bool]?
+    // Has the full survey information been filled out for this child?
     
+    
+    
+    @objc var email                : String     = "NA"
+    @objc var name                 : String = "NA"
+    @objc var Gender               : String = "NA"
+    @objc var DOB                  : String = "NA"
+    @objc var Country              : String = "NA"
+    @objc var City                 : String = "NA"
+    @objc var State                : String = "NA"
+    @objc var ZIP                  : String = "NA"
+    @objc var AutismDiagnosis      : String = "NA"
+    @objc var OtherDiagnoses       : String = "NA"
+    
+
+ 
+    @objc var Answers              : NSArray = [0,3]
+    @objc var NotApplicableChecked : NSArray = [1,2]
+ 
     
     // Has the full survey information been filled out for this child?
-    var ChildSurveyCompleted:Bool? = false;
+    @objc var ChildSurveyCompleted : NSNumber = 0
+    @objc var Hispanic             : NSNumber = 0
+    @objc var African              : NSNumber = 0
+    @objc var EastAsian            : NSNumber = 0
+    @objc var Arab                 : NSNumber = 0
+    @objc var NativeAmerican       : NSNumber = 0
+    @objc var PacificIslander      : NSNumber = 0
+    @objc var SoutheastAsian       : NSNumber = 0
+    @objc var SouthAsian           : NSNumber = 0
+    @objc var Caucasian            : NSNumber = 0
+    @objc var Unknown              : NSNumber = 0
     
-    var name, Gender, DOB, Country, City, State, ZIP, AutismDiagnosis, OtherDiagnoses : String?
-    var Hispanic, African, EastAsian, Arab, NativeAmerican, PacificIslander, SoutheastAsian,SouthAsian, Caucasian, Unknown : Bool?
+    @objc var ConsentPlay          : NSNumber = 0
+    @objc var ConsentView          : NSNumber = 0
+    @objc var ConsentShare         : NSNumber = 0
+    
+
     
     
     
     class func dynamoDBTableName() -> String {
-        return AWSSampleDynamoDBTableName
+        return "HeadsUpSurveys"
     }
     
     class func hashKeyAttribute() -> String {

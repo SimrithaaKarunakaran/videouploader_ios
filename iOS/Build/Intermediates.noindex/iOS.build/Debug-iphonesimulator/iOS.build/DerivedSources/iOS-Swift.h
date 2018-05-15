@@ -203,22 +203,38 @@ SWIFT_CLASS("_TtC3iOS11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSArray;
+@class NSNumber;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC3iOS11DDBTableRow")
 @interface DDBTableRow : AWSDynamoDBObjectModel <AWSDynamoDBModeling>
-@property (nonatomic, copy) NSString * _Nullable email;
-@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable Answers;
-@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable NotApplicableChecked;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable Gender;
-@property (nonatomic, copy) NSString * _Nullable DOB;
-@property (nonatomic, copy) NSString * _Nullable Country;
-@property (nonatomic, copy) NSString * _Nullable City;
-@property (nonatomic, copy) NSString * _Nullable State;
-@property (nonatomic, copy) NSString * _Nullable ZIP;
-@property (nonatomic, copy) NSString * _Nullable AutismDiagnosis;
-@property (nonatomic, copy) NSString * _Nullable OtherDiagnoses;
+@property (nonatomic, copy) NSString * _Nonnull email;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull Gender;
+@property (nonatomic, copy) NSString * _Nonnull DOB;
+@property (nonatomic, copy) NSString * _Nonnull Country;
+@property (nonatomic, copy) NSString * _Nonnull City;
+@property (nonatomic, copy) NSString * _Nonnull State;
+@property (nonatomic, copy) NSString * _Nonnull ZIP;
+@property (nonatomic, copy) NSString * _Nonnull AutismDiagnosis;
+@property (nonatomic, copy) NSString * _Nonnull OtherDiagnoses;
+@property (nonatomic, strong) NSArray * _Nonnull Answers;
+@property (nonatomic, strong) NSArray * _Nonnull NotApplicableChecked;
+@property (nonatomic, strong) NSNumber * _Nonnull ChildSurveyCompleted;
+@property (nonatomic, strong) NSNumber * _Nonnull Hispanic;
+@property (nonatomic, strong) NSNumber * _Nonnull African;
+@property (nonatomic, strong) NSNumber * _Nonnull EastAsian;
+@property (nonatomic, strong) NSNumber * _Nonnull Arab;
+@property (nonatomic, strong) NSNumber * _Nonnull NativeAmerican;
+@property (nonatomic, strong) NSNumber * _Nonnull PacificIslander;
+@property (nonatomic, strong) NSNumber * _Nonnull SoutheastAsian;
+@property (nonatomic, strong) NSNumber * _Nonnull SouthAsian;
+@property (nonatomic, strong) NSNumber * _Nonnull Caucasian;
+@property (nonatomic, strong) NSNumber * _Nonnull Unknown;
+@property (nonatomic, strong) NSNumber * _Nonnull ConsentPlay;
+@property (nonatomic, strong) NSNumber * _Nonnull ConsentView;
+@property (nonatomic, strong) NSNumber * _Nonnull ConsentShare;
 + (NSString * _Nonnull)dynamoDBTableName SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)hashKeyAttribute SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)rangeKeyAttribute SWIFT_WARN_UNUSED_RESULT;

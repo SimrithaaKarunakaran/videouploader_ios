@@ -28,10 +28,7 @@ class vc_login: UIViewController {
     let AppClientID             = "6arguf9m5ecvbgulsei89ketnm";
     let AppClientSecret         = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
     
-    var aws_config  : AWSServiceConfiguration!
-    var pool_config : AWSCognitoIdentityUserPoolConfiguration!
     var awsUserPool : AWSCognitoIdentityUserPool!
-
     
     var LastUsername : String = ""
     var LastPassword : String = ""
@@ -41,9 +38,9 @@ class vc_login: UIViewController {
         LastUsername = String(TextViewUsername.text!)
         LastPassword = String(TextViewPassword.text!)
         
-        
-        aws_config  = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: nil)
-        pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: AppClientID, clientSecret: AppClientSecret, poolId: UserPoolID)
+    
+        let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: nil)
+        let pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: AppClientID, clientSecret: AppClientSecret, poolId: UserPoolID)
         AWSCognitoIdentityUserPool.register(with: aws_config, userPoolConfiguration: pool_config, forKey: self.UserPoolID)
         awsUserPool = AWSCognitoIdentityUserPool(forKey: self.UserPoolID)
 
@@ -65,6 +62,8 @@ class vc_login: UIViewController {
                 // PASS THE TOKEN FROM USERPOOL TO AWS
                 let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USWest2, identityPoolId: self.IdentityPoolID, identityProviderManager: customIdentityProvider)
                 
+               // let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,   identityPoolId:"us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4")
+
                 let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
                 AWSServiceManager.default().defaultServiceConfiguration = configuration
               
