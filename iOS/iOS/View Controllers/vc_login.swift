@@ -13,7 +13,6 @@ import AWSCognitoIdentityProvider
 import AWSUserPoolsSignIn
 
 
-var UserToken : String = ""
 
 class vc_login: UIViewController {
     
@@ -22,74 +21,40 @@ class vc_login: UIViewController {
     @IBOutlet weak var ButtonLogin:      UIButton!
     @IBOutlet weak var TextSignUpLink:   UILabel!
     @IBOutlet weak var TextViewError:    UILabel!
-    
-    
-    let UserPoolID              = "us-west-2_bB7kdaf7g"
-    let Region                  = "us-west-2"
-    let IdentityPoolID          = "us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4"
-    
-    let AppClientID             = "6arguf9m5ecvbgulsei89ketnm";
-    let AppClientSecret         = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
-    
-    var awsUserPool : AWSCognitoIdentityUserPool!
-    
-    var LastUsername : String = ""
-    var LastPassword : String = ""
-    
-    var RegionObject = AWSRegionType.USWest2
-    
-    
-    
+
     @IBAction func ButtonLoginClick(_ sender: Any) {
         
-        LastUsername = String(TextViewUsername.text!)
-        LastPassword = String(TextViewPassword.text!)
+        let LastUsername = String(TextViewUsername.text!)
+        let LastPassword = String(TextViewPassword.text!)
         
-    
-        let aws_config  = AWSServiceConfiguration(region: RegionObject, credentialsProvider: nil)
-        let pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: AppClientID, clientSecret: AppClientSecret, poolId: UserPoolID)
-        AWSCognitoIdentityUserPool.register(with: aws_config, userPoolConfiguration: pool_config, forKey: self.UserPoolID)
-        awsUserPool = AWSCognitoIdentityUserPool(forKey: self.UserPoolID)
-
-        
+       
         login(email: LastUsername, password: LastPassword) { (Success, Result) in
-            let ResultUnwrapped = Result!
-            let UserToken       = Result!
+            GlobalUserToken     = Result!
 
-            print("[HK]: Login process complete: \(ResultUnwrapped)" + "(Done Printing)")
-            
-            
             if(Success){
                 // PACKAGE OUR TOKEN FROM IDENTITY POOL
-                let COGNITO_USERPOOL_PROVIDER = "cognito-idp.us-west-2.amazonaws.com/us-west-2_bB7kdaf7g"
-
-                let tokens                    = [COGNITO_USERPOOL_PROVIDER: ResultUnwrapped]
-
-                let customIdentityProvider = CustomIdentityProvider(tokens: tokens)
+                GlobalTokens             = [GlobalCognitoUserpoolProvider: GlobalUserToken]
+                GlobalIdentityProvider   = CustomIdentityProvider(tokens: GlobalTokens)
 
                 // PASS THE TOKEN FROM USERPOOL TO AWS
-                var credentialsProvider = AWSCognitoCredentialsProvider(regionType: self.RegionObject, identityPoolId: self.IdentityPoolID, identityProviderManager: customIdentityProvider)
+                GlobalCredentialsProvider = AWSCognitoCredentialsProvider(regionType: GlobalRegionObject, identityPoolId: GlobalIdentityPoolID, identityProviderManager: GlobalIdentityProvider)
                 
-               // let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,   identityPoolId:"us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4")
-
-                let configuration = AWSServiceConfiguration(region: self.RegionObject, credentialsProvider: credentialsProvider)
+                let configuration = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: GlobalCredentialsProvider)
                 AWSServiceManager.default().defaultServiceConfiguration = configuration
               
-                credentialsProvider.getIdentityId().continueWith(block:{ (task) in
+                GlobalCredentialsProvider.getIdentityId().continueWith(block:{ (task) in
                     guard task.error == nil else {
                         print(task.error)
                         return nil
                     }
-                    // We've got a session and now we can access AWS service via default()
-                    // e.g.: let cognito = AWSCognito.default()
+                    // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
                     print("[HK] Fully authenticated.")
+                    UserEmailValidated = LastUsername
                     return task
                 })
             }
             
-            
-            
-            // Update UI seperatley.
+            // Update UI separately..
             DispatchQueue.main.async { // Correct
                 if(Success){
                     //self.TextViewError.text = "Success!"
@@ -99,34 +64,16 @@ class vc_login: UIViewController {
                     self.present(newViewController, animated: true, completion: nil)
                     
                 } else {
-                    if ResultUnwrapped.range(of:"error 20") != nil {
+                    if GlobalUserToken.range(of:"error 20") != nil {
                         self.TextViewError.text="Incorrect password!"
-                    } else if ResultUnwrapped.range(of:"error 34") != nil {
+                    } else if GlobalUserToken.range(of:"error 34") != nil {
                         self.TextViewError.text="Username not found!"
                     } else  {
-                        self.TextViewError.text = ResultUnwrapped
+                        self.TextViewError.text = GlobalUserToken
                     }
                 }
             }
         }
-      
-        
-        // Todo: move this to a seperate file eventually.
-        final class CustomIdentityProvider: NSObject, AWSIdentityProviderManager {
-            var tokens: [String : String]?
-            
-            init(tokens: [String : String]?) {
-                self.tokens = tokens
-            }
-            
-             // Each entry in logins represents a single login with an identity provider. The key is the domain of the login provider (e.g. 'graph.facebook.com')
-             // and the value is the OAuth/OpenId Connect token that results from an authentication with that login provider.
-            func logins() -> AWSTask<NSDictionary> {
-                let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
-                return AWSTask(result: logins)
-            }
-        }
-    
     }
     
     // Get a token, then use it for full authentication.
@@ -134,7 +81,7 @@ class vc_login: UIViewController {
         let emailAttr = AWSCognitoIdentityUserAttributeType()
         emailAttr?.name = "email"
         emailAttr?.value = email
-        let user = awsUserPool.getUser(email)
+        let user = GlobalUserPool.getUser(email)
         
         user.getSession(email, password: password, validationData: [emailAttr!])
             .continueWith(block: {[weak self] (task) -> Any? in
@@ -144,9 +91,6 @@ class vc_login: UIViewController {
                     return nil
                 }
 
-                // We can use this token for CustomIdentityProvider
-                // COGNITO_USERPOOL_PROVIDER = "cognito-idp.\(<COGNITO_REGION>).amazonaws.com/\(<COGNITO_USERPOOL_ID>)"
-                // [COGNITO_USERPOOL_PROVIDER: session.idToken?.tokenString]
                 completion(true, AWSSession.idToken?.tokenString)
                 return nil
             })
@@ -154,11 +98,12 @@ class vc_login: UIViewController {
     
     
     func restoreSession(completion: @escaping ((String?) -> ())) {
-        if let user = awsUserPool.currentUser() {
+        if let user = GlobalUserPool.currentUser() {
             // Try to restore prev. session
             user.getSession().continueWith(block: { [weak self] (task) in
                 guard let session = task.result, task.error == nil else {
                     print("Restoration failed.")
+                    completion("")
                     return nil
                 }
                 print("Restoration successful.")
@@ -177,7 +122,7 @@ class vc_login: UIViewController {
     func getUserDetails() {
         // Update UI seperatley.
         
-        if let user = awsUserPool.currentUser() {
+        if let user = GlobalUserPool.currentUser() {
             user.getDetails().continueWith(block: { (task) in
                     if task.error != nil {  // some sort of error
                         print("Error!")
@@ -216,7 +161,6 @@ class vc_login: UIViewController {
         TextSignUpLink.isUserInteractionEnabled = true
         TextSignUpLink.addGestureRecognizer(tap)
 
- 
         /*
         restoreSession(completion: { (Email) in
             let EmailUnwrapped = Email!
@@ -225,15 +169,11 @@ class vc_login: UIViewController {
         }) */
     }
         
-        
-   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
 
 

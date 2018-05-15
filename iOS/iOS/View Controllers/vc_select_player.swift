@@ -1,22 +1,11 @@
-//
-//  vc_select_player.swift
-//  iOS
-//
-//  Created by Haik Kalantarian on 5/14/18.
-//  Copyright © 2018 Haik Kalantarian. All rights reserved.
-//
+
+
+
 
 import UIKit
 import AWSDynamoDB
 
-
-
-let IdentityPoolID          = "us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4"
-
-
-
 class vc_select_player: UIViewController {
-
     // Todo: move this to a seperate file eventually.
     final class CustomIdentityProvider: NSObject, AWSIdentityProviderManager {
         var tokens: [String : String]?
@@ -25,8 +14,6 @@ class vc_select_player: UIViewController {
             self.tokens = tokens
         }
         
-        // Each entry in logins represents a single login with an identity provider. The key is the domain of the login provider (e.g. 'graph.facebook.com')
-        // and the value is the OAuth/OpenId Connect token that results from an authentication with that login provider.
         func logins() -> AWSTask<NSDictionary> {
             let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
             return AWSTask(result: logins)
@@ -35,26 +22,19 @@ class vc_select_player: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
         
-        let COGNITO_USERPOOL_PROVIDER = "cognito-idp.us-west-2.amazonaws.com/us-west-2_bB7kdaf7g"
+        /*
+        We are signed in with Cognito on US_WEST_2.
+        Unfortunately, our DynamoDBTable is on US_EAST_1. Therefore,
+        we have to switch regions.
+        */
         
-        let tokens                    = [COGNITO_USERPOOL_PROVIDER: UserToken]
-        let customIdentityProvider = CustomIdentityProvider(tokens: tokens)
-        var credentialsProvider = AWSCognitoCredentialsProvider(regionType: AWSRegionType.USWest2, identityPoolId: IdentityPoolID, identityProviderManager: customIdentityProvider)
-    
-        let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: credentialsProvider)
+        let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: GlobalCredentialsProvider)
         AWSDynamoDB.register(with: aws_config!, forKey: "USEAST1Dynamo");
         let dynamoDBCustom = AWSDynamoDB(forKey: "USEAST1Dynamo")
         
-
-        
-        
-        
         let tableRow = DDBTableRow()!
         tableRow.email = "haik.kalantarian1@gmail.com"
-
-        let dynamoDB    = AWSDynamoDB.default()
         
         let atVal = AWSDynamoDBAttributeValue()!
         atVal.s = "haikkalantarian1@gmail.com"

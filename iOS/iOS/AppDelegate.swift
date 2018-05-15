@@ -9,19 +9,56 @@
 import UIKit
 import AWSMobileClient
 import AWSCore
+import AWSCore
+import AWSCognitoIdentityProvider
+import AWSUserPoolsSignIn
 
-// This designates the AppDeligate class as the entry point.
+
+
+// Global variables for managing AWS Dynamo/Cognito
+let GlobalUserPoolID              = "us-west-2_bB7kdaf7g"
+let GlobalRegion                  = "us-west-2"
+let GlobalIdentityPoolID          = "us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4"
+let GlobalAppClientID             = "6arguf9m5ecvbgulsei89ketnm";
+let GlobalAppClientSecret         = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
+let GlobalCognitoUserpoolProvider = "cognito-idp.us-west-2.amazonaws.com/us-west-2_bB7kdaf7g"
+
+var GlobalRegionObject        = AWSRegionType.USWest2
+var GlobalUserPool            : AWSCognitoIdentityUserPool!
+var GlobalPoolConfig          : AWSCognitoIdentityUserPoolConfiguration!
+var GlobalAWSConfig           : AWSServiceConfiguration!
+var GlobalUserToken           : String = ""
+var GlobalTokens              = [GlobalCognitoUserpoolProvider: GlobalUserToken]
+var GlobalIdentityProvider    : CustomIdentityProvider!
+var GlobalCredentialsProvider : AWSCognitoCredentialsProvider!
+
+/*
+ User's state management.
+ */
+
+var UserEmailValidated : String?
+
+
 // Check info.plist for details.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         UIApplication.shared.isStatusBarHidden = true
 
+        /*
+        Configure AWS
+        */
+        let GlobalAWSConfig  = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: nil)
+        
+        let GlobalPoolConfig = AWSCognitoIdentityUserPoolConfiguration(clientId: GlobalAppClientID, clientSecret: GlobalAppClientSecret, poolId: GlobalUserPoolID)
+        
+        AWSCognitoIdentityUserPool.register(with: GlobalAWSConfig, userPoolConfiguration: GlobalPoolConfig, forKey: GlobalUserPoolID)
+        
+        GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)
         
         return true
     }
@@ -61,7 +98,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+// Todo: move this to a seperate file eventually.
+final class CustomIdentityProvider: NSObject, AWSIdentityProviderManager {
+    var tokens: [String : String]?
+    
+    init(tokens: [String : String]?) {
+        self.tokens = tokens
+    }
+    
+    // Each entry in logins represents a single login with an identity provider. The key is the domain of the login provider (e.g. 'graph.facebook.com')
+    // and the value is the OAuth/OpenId Connect token that results from an authentication with that login provider.
+    func logins() -> AWSTask<NSDictionary> {
+        let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
+        return AWSTask(result: logins)
+    }
 }
 

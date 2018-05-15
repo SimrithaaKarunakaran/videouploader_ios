@@ -174,6 +174,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import Foundation;
+@import ObjectiveC;
+@import AWSCore;
 @import AWSDynamoDB;
 @import CoreGraphics;
 #endif
@@ -201,6 +203,14 @@ SWIFT_CLASS("_TtC3iOS11AppDelegate")
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSDictionary;
+
+SWIFT_CLASS("_TtC3iOS22CustomIdentityProvider")
+@interface CustomIdentityProvider : NSObject <AWSIdentityProviderManager>
+- (AWSTask<NSDictionary *> * _Nonnull)logins SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 @class NSArray;
