@@ -57,9 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let GlobalPoolConfig = AWSCognitoIdentityUserPoolConfiguration(clientId: GlobalAppClientID, clientSecret: GlobalAppClientSecret, poolId: GlobalUserPoolID)
         
         AWSCognitoIdentityUserPool.register(with: GlobalAWSConfig, userPoolConfiguration: GlobalPoolConfig, forKey: GlobalUserPoolID)
-        
         GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)
-        
         return true
     }
     
@@ -73,7 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      sourceApplication: String?, annotation: Any) -> Bool {
         
         return true
-        
     }
     
 
