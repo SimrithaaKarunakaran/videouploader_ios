@@ -12,6 +12,9 @@ import AWSCore
 import AWSCognitoIdentityProvider
 import AWSUserPoolsSignIn
 
+
+var UserToken : String = ""
+
 class vc_login: UIViewController {
     
     @IBOutlet weak var TextViewUsername: UITextField!
@@ -33,13 +36,17 @@ class vc_login: UIViewController {
     var LastUsername : String = ""
     var LastPassword : String = ""
     
+    var RegionObject = AWSRegionType.USWest2
+    
+    
+    
     @IBAction func ButtonLoginClick(_ sender: Any) {
         
         LastUsername = String(TextViewUsername.text!)
         LastPassword = String(TextViewPassword.text!)
         
     
-        let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: nil)
+        let aws_config  = AWSServiceConfiguration(region: RegionObject, credentialsProvider: nil)
         let pool_config = AWSCognitoIdentityUserPoolConfiguration(clientId: AppClientID, clientSecret: AppClientSecret, poolId: UserPoolID)
         AWSCognitoIdentityUserPool.register(with: aws_config, userPoolConfiguration: pool_config, forKey: self.UserPoolID)
         awsUserPool = AWSCognitoIdentityUserPool(forKey: self.UserPoolID)
@@ -47,6 +54,7 @@ class vc_login: UIViewController {
         
         login(email: LastUsername, password: LastPassword) { (Success, Result) in
             let ResultUnwrapped = Result!
+            let UserToken       = Result!
 
             print("[HK]: Login process complete: \(ResultUnwrapped)" + "(Done Printing)")
             
@@ -60,11 +68,11 @@ class vc_login: UIViewController {
                 let customIdentityProvider = CustomIdentityProvider(tokens: tokens)
 
                 // PASS THE TOKEN FROM USERPOOL TO AWS
-                let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USWest2, identityPoolId: self.IdentityPoolID, identityProviderManager: customIdentityProvider)
+                var credentialsProvider = AWSCognitoCredentialsProvider(regionType: self.RegionObject, identityPoolId: self.IdentityPoolID, identityProviderManager: customIdentityProvider)
                 
                // let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,   identityPoolId:"us-west-2:371ad080-60d9-4623-aefd-f50e3bbd0cb4")
 
-                let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
+                let configuration = AWSServiceConfiguration(region: self.RegionObject, credentialsProvider: credentialsProvider)
                 AWSServiceManager.default().defaultServiceConfiguration = configuration
               
                 credentialsProvider.getIdentityId().continueWith(block:{ (task) in
