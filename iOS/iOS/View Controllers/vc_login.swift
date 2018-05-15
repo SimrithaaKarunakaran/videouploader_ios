@@ -28,12 +28,12 @@ class vc_login: UIViewController {
         let LastPassword = String(TextViewPassword.text!)
         
        
-        DBManager().login(email: LastUsername, password: LastPassword) { (Success, Result) in
-            GlobalUserToken     = Result!
+        BackendManager?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
+            BackendManager?.accessToken     = Result!
 
             if(Success){
                 // PACKAGE OUR TOKEN FROM IDENTITY POOL
-                GlobalTokens             = [GlobalCognitoUserpoolProvider: GlobalUserToken]
+                GlobalTokens             = [GlobalCognitoUserpoolProvider: BackendManager.accessToken!]
                 GlobalIdentityProvider   = CustomIdentityProvider(tokens: GlobalTokens)
 
                 // PASS THE TOKEN FROM USERPOOL TO AWS
@@ -49,6 +49,7 @@ class vc_login: UIViewController {
                     }
                     // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
                     print("[HK] Fully authenticated.")
+                    BackendManager?.initializeDynamo()
                     UserEmailValidated = LastUsername
                     return task
                 })
@@ -64,12 +65,12 @@ class vc_login: UIViewController {
                     self.present(newViewController, animated: true, completion: nil)
                     
                 } else {
-                    if GlobalUserToken.range(of:"error 20") != nil {
+                    if BackendManager?.accessToken?.range(of:"error 20") != nil {
                         self.TextViewError.text="Incorrect password!"
-                    } else if GlobalUserToken.range(of:"error 34") != nil {
+                    } else if BackendManager?.accessToken?.range(of:"error 34") != nil {
                         self.TextViewError.text="Username not found!"
                     } else  {
-                        self.TextViewError.text = GlobalUserToken
+                        self.TextViewError.text = BackendManager.accessToken
                     }
                 }
             }

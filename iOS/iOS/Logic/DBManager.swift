@@ -10,11 +10,34 @@ import Foundation
 import AWSCore
 import AWSCognitoIdentityProvider
 import AWSUserPoolsSignIn
+import AWSDynamoDB
+
 
 
 class DBManager {
     
+    // An instance of the dynamo DB that we can use for queries. Set to US EAST region as required.
+    var dynamoDBCustom : AWSDynamoDB?
+    
+    var accessToken     : String?
+    
     init() {
+        // Configuration (for Cognito)
+        let GlobalAWSConfig  = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: nil)
+        
+        let GlobalPoolConfig = AWSCognitoIdentityUserPoolConfiguration(clientId: GlobalAppClientID, clientSecret: GlobalAppClientSecret, poolId: GlobalUserPoolID)
+        
+        AWSCognitoIdentityUserPool.register(with: GlobalAWSConfig, userPoolConfiguration: GlobalPoolConfig, forKey: GlobalUserPoolID)
+        
+        GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)
+    }
+    
+    
+    // Call this function AFTER login is complete and we have a token.
+    func initializeDynamo() {
+        let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: GlobalCredentialsProvider)
+        AWSDynamoDB.register(with: aws_config!, forKey: "USEAST1Dynamo");
+        dynamoDBCustom = AWSDynamoDB(forKey: "USEAST1Dynamo")
     }
     
     
@@ -49,6 +72,9 @@ class DBManager {
                     return nil
                 }
                 print("Restoration successful.")
+                
+                self!.accessToken = session.accessToken?.tokenString
+                                
                 self!.getUserDetails()
                 
                 completion(true, user.username)
@@ -83,6 +109,9 @@ class DBManager {
         
         return
     }
+    
+    
+    
 
 }
 

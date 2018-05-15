@@ -27,10 +27,16 @@ var GlobalRegionObject        = AWSRegionType.USWest2
 var GlobalUserPool            : AWSCognitoIdentityUserPool!
 var GlobalPoolConfig          : AWSCognitoIdentityUserPoolConfiguration!
 var GlobalAWSConfig           : AWSServiceConfiguration!
-var GlobalUserToken           : String = ""
-var GlobalTokens              = [GlobalCognitoUserpoolProvider: GlobalUserToken]
+var GlobalTokens              : [String: String]!
 var GlobalIdentityProvider    : CustomIdentityProvider!
 var GlobalCredentialsProvider : AWSCognitoCredentialsProvider!
+
+
+/*
+ Database management
+ */
+
+var BackendManager : DBManager!
 
 /*
  User's state management.
@@ -48,17 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         UIApplication.shared.isStatusBarHidden = true
+        
+        BackendManager = DBManager()
 
-        /*
-        Configure AWS
-        */
-        let GlobalAWSConfig  = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: nil)
-        
-        let GlobalPoolConfig = AWSCognitoIdentityUserPoolConfiguration(clientId: GlobalAppClientID,
-                                                                       clientSecret: GlobalAppClientSecret, poolId: GlobalUserPoolID)
-        
-        AWSCognitoIdentityUserPool.register(with: GlobalAWSConfig, userPoolConfiguration: GlobalPoolConfig, forKey: GlobalUserPoolID)
-        GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)
         return true
     }
     
@@ -66,7 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /*
     Add code to create an instance of AWSMobileClient in the application:open url function of your AppDelegate.swift, to resume a previously signed-in authenticated session.
     */
- 
 
     func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {

@@ -28,13 +28,7 @@ class vc_select_player: UIViewController {
         Unfortunately, our DynamoDBTable is on US_EAST_1. Therefore,
         we have to switch regions.
         */
-        
-        let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: GlobalCredentialsProvider)
-        AWSDynamoDB.register(with: aws_config!, forKey: "USEAST1Dynamo");
-        let dynamoDBCustom = AWSDynamoDB(forKey: "USEAST1Dynamo")
-        
-        let tableRow = DDBTableRow()!
-        tableRow.email = "haik.kalantarian1@gmail.com"
+    
         
         let atVal = AWSDynamoDBAttributeValue()!
         atVal.s = "haikkalantarian1@gmail.com"
@@ -49,7 +43,7 @@ class vc_select_player: UIViewController {
         query.tableName = "HeadsUpSurveys"
         query.keyConditions = myDic
         
-        dynamoDBCustom.query(query).continueWith(block: { (task) in
+        BackendManager.dynamoDBCustom?.query(query).continueWith(block: { (task) in
             guard task.error == nil else {
                 print(task.error)
                 return nil

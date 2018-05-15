@@ -10,10 +10,10 @@ provides-top-level:
 - "GlobalUserPool"
 - "GlobalPoolConfig"
 - "GlobalAWSConfig"
-- "GlobalUserToken"
 - "GlobalTokens"
 - "GlobalIdentityProvider"
 - "GlobalCredentialsProvider"
+- "BackendManager"
 - "UserEmailValidated"
 - "AppDelegate"
 - "CustomIdentityProvider"
@@ -43,10 +43,12 @@ depends-top-level:
 - "AWSTask"
 - "AppDelegate"
 - "AssignmentPrecedence"
+- "BackendManager"
 - "Bool"
 - !private "BooleanLiteralType"
 - "CustomIdentityProvider"
-- "Dictionary"
+- "DBManager"
+- !private "Dictionary"
 - "GlobalAWSConfig"
 - "GlobalAppClientID"
 - "GlobalAppClientSecret"
@@ -60,7 +62,6 @@ depends-top-level:
 - "GlobalTokens"
 - "GlobalUserPool"
 - "GlobalUserPoolID"
-- "GlobalUserToken"
 - "NSDictionary"
 - "NSObject"
 - "String"
@@ -73,32 +74,17 @@ depends-top-level:
 - "URL"
 - "UserEmailValidated"
 depends-member:
-- !private ["So26AWSCognitoIdentityUserPoolC", "init"]
-- !private ["So26AWSCognitoIdentityUserPoolC", "register"]
-- !private ["So39AWSCognitoIdentityUserPoolConfigurationC", "init"]
-- !private ["So19AWSIdentityProviderP", "init"]
-- !private ["So19AWSIdentityProviderP", "register"]
 - !private ["So26AWSIdentityProviderManagerP", "AWSTask"]
 - !private ["So26AWSIdentityProviderManagerP", "NSDictionary"]
 - ["So26AWSIdentityProviderManagerP", "customRoleArn"]
-- !private ["So26AWSIdentityProviderManagerP", "init"]
 - ["So26AWSIdentityProviderManagerP", "logins"]
-- !private ["So26AWSIdentityProviderManagerP", "register"]
 - !private ["So26AWSIdentityProviderManagerP", "tokens"]
 - ["So26AWSIdentityProviderManagerP", ""]
-- !private ["So26AWSNetworkingConfigurationC", "init"]
 - ["SC13AWSRegionTypeO", "USWest2"]
-- !private ["So23AWSServiceConfigurationC", "init"]
 - !private ["So7AWSTaskC", "init"]
-- !private ["3iOS11AppDelegateC", "AWSCognitoIdentityUserPool"]
-- !private ["3iOS11AppDelegateC", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["3iOS11AppDelegateC", "AWSServiceConfiguration"]
+- !private ["3iOS11AppDelegateC", "BackendManager"]
 - ["3iOS11AppDelegateC", "Bool"]
-- !private ["3iOS11AppDelegateC", "GlobalAppClientID"]
-- !private ["3iOS11AppDelegateC", "GlobalAppClientSecret"]
-- !private ["3iOS11AppDelegateC", "GlobalRegionObject"]
-- !private ["3iOS11AppDelegateC", "GlobalUserPool"]
-- !private ["3iOS11AppDelegateC", "GlobalUserPoolID"]
+- !private ["3iOS11AppDelegateC", "DBManager"]
 - ["3iOS11AppDelegateC", "String"]
 - ["3iOS11AppDelegateC", "UIApplication"]
 - ["3iOS11AppDelegateC", "UIApplicationLaunchOptionsKey"]
@@ -120,15 +106,9 @@ depends-member:
 - ["3iOS11AppDelegateC", "init"]
 - ["3iOS11AppDelegateC", "window"]
 - ["s23BidirectionalCollectionP", "init"]
-- !private ["s7CVarArgP", "AWSCognitoIdentityUserPool"]
-- !private ["s7CVarArgP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["s7CVarArgP", "AWSServiceConfiguration"]
 - !private ["s7CVarArgP", "AWSTask"]
-- !private ["s7CVarArgP", "GlobalAppClientID"]
-- !private ["s7CVarArgP", "GlobalAppClientSecret"]
-- !private ["s7CVarArgP", "GlobalRegionObject"]
-- !private ["s7CVarArgP", "GlobalUserPool"]
-- !private ["s7CVarArgP", "GlobalUserPoolID"]
+- !private ["s7CVarArgP", "BackendManager"]
+- !private ["s7CVarArgP", "DBManager"]
 - !private ["s7CVarArgP", "NSDictionary"]
 - !private ["s7CVarArgP", "UIApplication"]
 - ["s7CVarArgP", "application"]
@@ -147,22 +127,15 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isStatusBarHidden"]
 - ["s7CVarArgP", "logins"]
-- !private ["s7CVarArgP", "register"]
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "tokens"]
 - ["s7CVarArgP", "window"]
 - ["s7CVarArgP", ""]
 - ["s10CollectionP", "init"]
 - ["s10ComparableP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "AWSCognitoIdentityUserPool"]
-- !private ["s28CustomDebugStringConvertibleP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["s28CustomDebugStringConvertibleP", "AWSServiceConfiguration"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSTask"]
-- !private ["s28CustomDebugStringConvertibleP", "GlobalAppClientID"]
-- !private ["s28CustomDebugStringConvertibleP", "GlobalAppClientSecret"]
-- !private ["s28CustomDebugStringConvertibleP", "GlobalRegionObject"]
-- !private ["s28CustomDebugStringConvertibleP", "GlobalUserPool"]
-- !private ["s28CustomDebugStringConvertibleP", "GlobalUserPoolID"]
+- !private ["s28CustomDebugStringConvertibleP", "BackendManager"]
+- !private ["s28CustomDebugStringConvertibleP", "DBManager"]
 - !private ["s28CustomDebugStringConvertibleP", "NSDictionary"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - ["s28CustomDebugStringConvertibleP", "application"]
@@ -181,7 +154,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isStatusBarHidden"]
 - ["s28CustomDebugStringConvertibleP", "logins"]
-- !private ["s28CustomDebugStringConvertibleP", "register"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "tokens"]
 - ["s28CustomDebugStringConvertibleP", "window"]
@@ -196,15 +168,9 @@ depends-member:
 - ["3iOS22CustomIdentityProviderC", "tokens"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - ["s17CustomReflectableP", "init"]
-- !private ["s23CustomStringConvertibleP", "AWSCognitoIdentityUserPool"]
-- !private ["s23CustomStringConvertibleP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["s23CustomStringConvertibleP", "AWSServiceConfiguration"]
 - !private ["s23CustomStringConvertibleP", "AWSTask"]
-- !private ["s23CustomStringConvertibleP", "GlobalAppClientID"]
-- !private ["s23CustomStringConvertibleP", "GlobalAppClientSecret"]
-- !private ["s23CustomStringConvertibleP", "GlobalRegionObject"]
-- !private ["s23CustomStringConvertibleP", "GlobalUserPool"]
-- !private ["s23CustomStringConvertibleP", "GlobalUserPoolID"]
+- !private ["s23CustomStringConvertibleP", "BackendManager"]
+- !private ["s23CustomStringConvertibleP", "DBManager"]
 - !private ["s23CustomStringConvertibleP", "NSDictionary"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - ["s23CustomStringConvertibleP", "application"]
@@ -223,22 +189,16 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isStatusBarHidden"]
 - ["s23CustomStringConvertibleP", "logins"]
-- !private ["s23CustomStringConvertibleP", "register"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "tokens"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["3iOS9DBManagerC", "init"]
 - ["s9DecodableP", "init"]
 - ["s9EncodableP", "init"]
-- !private ["s9EquatableP", "AWSCognitoIdentityUserPool"]
-- !private ["s9EquatableP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["s9EquatableP", "AWSServiceConfiguration"]
 - !private ["s9EquatableP", "AWSTask"]
-- !private ["s9EquatableP", "GlobalAppClientID"]
-- !private ["s9EquatableP", "GlobalAppClientSecret"]
-- !private ["s9EquatableP", "GlobalRegionObject"]
-- !private ["s9EquatableP", "GlobalUserPool"]
-- !private ["s9EquatableP", "GlobalUserPoolID"]
+- !private ["s9EquatableP", "BackendManager"]
+- !private ["s9EquatableP", "DBManager"]
 - !private ["s9EquatableP", "NSDictionary"]
 - !private ["s9EquatableP", "UIApplication"]
 - ["s9EquatableP", "USWest2"]
@@ -258,7 +218,6 @@ depends-member:
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "isStatusBarHidden"]
 - ["s9EquatableP", "logins"]
-- !private ["s9EquatableP", "register"]
 - !private ["s9EquatableP", "shared"]
 - !private ["s9EquatableP", "tokens"]
 - ["s9EquatableP", "window"]
@@ -267,15 +226,9 @@ depends-member:
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "AWSCognitoIdentityUserPool"]
-- !private ["s8HashableP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["s8HashableP", "AWSServiceConfiguration"]
 - !private ["s8HashableP", "AWSTask"]
-- !private ["s8HashableP", "GlobalAppClientID"]
-- !private ["s8HashableP", "GlobalAppClientSecret"]
-- !private ["s8HashableP", "GlobalRegionObject"]
-- !private ["s8HashableP", "GlobalUserPool"]
-- !private ["s8HashableP", "GlobalUserPoolID"]
+- !private ["s8HashableP", "BackendManager"]
+- !private ["s8HashableP", "DBManager"]
 - !private ["s8HashableP", "NSDictionary"]
 - !private ["s8HashableP", "UIApplication"]
 - ["s8HashableP", "USWest2"]
@@ -295,7 +248,6 @@ depends-member:
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "isStatusBarHidden"]
 - ["s8HashableP", "logins"]
-- !private ["s8HashableP", "register"]
 - !private ["s8HashableP", "shared"]
 - !private ["s8HashableP", "tokens"]
 - ["s8HashableP", "window"]
@@ -310,16 +262,10 @@ depends-member:
 - ["So21NSItemProviderReadingP", "init"]
 - ["So21NSItemProviderWritingP", "init"]
 - ["So16NSMutableCopyingP", "init"]
-- !private ["So8NSObjectC", "AWSCognitoIdentityUserPool"]
-- !private ["So8NSObjectC", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["So8NSObjectC", "AWSServiceConfiguration"]
 - ["So8NSObjectC", "AWSTask"]
+- !private ["So8NSObjectC", "BackendManager"]
 - ["So8NSObjectC", "Bool"]
-- !private ["So8NSObjectC", "GlobalAppClientID"]
-- !private ["So8NSObjectC", "GlobalAppClientSecret"]
-- !private ["So8NSObjectC", "GlobalRegionObject"]
-- !private ["So8NSObjectC", "GlobalUserPool"]
-- !private ["So8NSObjectC", "GlobalUserPoolID"]
+- !private ["So8NSObjectC", "DBManager"]
 - ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIApplication"]
@@ -342,20 +288,13 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isStatusBarHidden"]
 - ["So8NSObjectC", "logins"]
-- !private ["So8NSObjectC", "register"]
 - !private ["So8NSObjectC", "shared"]
 - ["So8NSObjectC", "tokens"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", ""]
-- !private ["So16NSObjectProtocolP", "AWSCognitoIdentityUserPool"]
-- !private ["So16NSObjectProtocolP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["So16NSObjectProtocolP", "AWSServiceConfiguration"]
 - !private ["So16NSObjectProtocolP", "AWSTask"]
-- !private ["So16NSObjectProtocolP", "GlobalAppClientID"]
-- !private ["So16NSObjectProtocolP", "GlobalAppClientSecret"]
-- !private ["So16NSObjectProtocolP", "GlobalRegionObject"]
-- !private ["So16NSObjectProtocolP", "GlobalUserPool"]
-- !private ["So16NSObjectProtocolP", "GlobalUserPoolID"]
+- !private ["So16NSObjectProtocolP", "BackendManager"]
+- !private ["So16NSObjectProtocolP", "DBManager"]
 - !private ["So16NSObjectProtocolP", "NSDictionary"]
 - !private ["So16NSObjectProtocolP", "UIApplication"]
 - ["So16NSObjectProtocolP", "application"]
@@ -374,7 +313,6 @@ depends-member:
 - ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "isStatusBarHidden"]
 - ["So16NSObjectProtocolP", "logins"]
-- !private ["So16NSObjectProtocolP", "register"]
 - !private ["So16NSObjectProtocolP", "shared"]
 - !private ["So16NSObjectProtocolP", "tokens"]
 - ["So16NSObjectProtocolP", "window"]
@@ -391,14 +329,8 @@ depends-member:
 - ["s20TextOutputStreamableP", "init"]
 - !private ["So13UIApplicationC", "isStatusBarHidden"]
 - !private ["So13UIApplicationC", "shared"]
-- !private ["So21UIApplicationDelegateP", "AWSCognitoIdentityUserPool"]
-- !private ["So21UIApplicationDelegateP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["So21UIApplicationDelegateP", "AWSServiceConfiguration"]
-- !private ["So21UIApplicationDelegateP", "GlobalAppClientID"]
-- !private ["So21UIApplicationDelegateP", "GlobalAppClientSecret"]
-- !private ["So21UIApplicationDelegateP", "GlobalRegionObject"]
-- !private ["So21UIApplicationDelegateP", "GlobalUserPool"]
-- !private ["So21UIApplicationDelegateP", "GlobalUserPoolID"]
+- !private ["So21UIApplicationDelegateP", "BackendManager"]
+- !private ["So21UIApplicationDelegateP", "DBManager"]
 - !private ["So21UIApplicationDelegateP", "UIApplication"]
 - ["So21UIApplicationDelegateP", "application"]
 - ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
@@ -414,14 +346,8 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - ["So21UIApplicationDelegateP", "window"]
 - ["So21UIApplicationDelegateP", ""]
-- !private ["So30UIPasteConfigurationSupportingP", "AWSCognitoIdentityUserPool"]
-- !private ["So30UIPasteConfigurationSupportingP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["So30UIPasteConfigurationSupportingP", "AWSServiceConfiguration"]
-- !private ["So30UIPasteConfigurationSupportingP", "GlobalAppClientID"]
-- !private ["So30UIPasteConfigurationSupportingP", "GlobalAppClientSecret"]
-- !private ["So30UIPasteConfigurationSupportingP", "GlobalRegionObject"]
-- !private ["So30UIPasteConfigurationSupportingP", "GlobalUserPool"]
-- !private ["So30UIPasteConfigurationSupportingP", "GlobalUserPoolID"]
+- !private ["So30UIPasteConfigurationSupportingP", "BackendManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "DBManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "application"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
@@ -440,15 +366,9 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So30UIPasteConfigurationSupportingP", ""]
-- !private ["So11UIResponderC", "AWSCognitoIdentityUserPool"]
-- !private ["So11UIResponderC", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["So11UIResponderC", "AWSServiceConfiguration"]
+- !private ["So11UIResponderC", "BackendManager"]
 - ["So11UIResponderC", "Bool"]
-- !private ["So11UIResponderC", "GlobalAppClientID"]
-- !private ["So11UIResponderC", "GlobalAppClientSecret"]
-- !private ["So11UIResponderC", "GlobalRegionObject"]
-- !private ["So11UIResponderC", "GlobalUserPool"]
-- !private ["So11UIResponderC", "GlobalUserPoolID"]
+- !private ["So11UIResponderC", "DBManager"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIApplicationLaunchOptionsKey"]
@@ -471,14 +391,8 @@ depends-member:
 - !private ["So11UIResponderC", "shared"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", ""]
-- !private ["So30UIResponderStandardEditActionsP", "AWSCognitoIdentityUserPool"]
-- !private ["So30UIResponderStandardEditActionsP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["So30UIResponderStandardEditActionsP", "AWSServiceConfiguration"]
-- !private ["So30UIResponderStandardEditActionsP", "GlobalAppClientID"]
-- !private ["So30UIResponderStandardEditActionsP", "GlobalAppClientSecret"]
-- !private ["So30UIResponderStandardEditActionsP", "GlobalRegionObject"]
-- !private ["So30UIResponderStandardEditActionsP", "GlobalUserPool"]
-- !private ["So30UIResponderStandardEditActionsP", "GlobalUserPoolID"]
+- !private ["So30UIResponderStandardEditActionsP", "BackendManager"]
+- !private ["So30UIResponderStandardEditActionsP", "DBManager"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "application"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
@@ -506,15 +420,9 @@ depends-member:
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - ["s10_IndexableP", "init"]
 - ["s14_IndexableBaseP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSCognitoIdentityUserPool"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSCognitoIdentityUserPoolConfiguration"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSServiceConfiguration"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSTask"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "GlobalAppClientID"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "GlobalAppClientSecret"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "GlobalRegionObject"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "GlobalUserPool"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "GlobalUserPoolID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "BackendManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DBManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDictionary"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
@@ -533,7 +441,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isStatusBarHidden"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "logins"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "register"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tokens"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
@@ -542,13 +449,8 @@ depends-member:
 - ["s26_RangeReplaceableIndexableP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "So26AWSCognitoIdentityUserPoolC"
-- !private "So39AWSCognitoIdentityUserPoolConfigurationC"
-- !private "So19AWSIdentityProviderP"
 - "So26AWSIdentityProviderManagerP"
-- !private "So26AWSNetworkingConfigurationC"
 - "SC13AWSRegionTypeO"
-- !private "So23AWSServiceConfigurationC"
 - !private "So7AWSTaskC"
 - "3iOS11AppDelegateC"
 - "s23BidirectionalCollectionP"
@@ -560,6 +462,7 @@ depends-nominal:
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "3iOS9DBManagerC"
 - "s9DecodableP"
 - "s9EncodableP"
 - "s9EquatableP"
@@ -742,4 +645,4 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
-interface-hash: "18669c1dfd11de625c5be9aed6906666"
+interface-hash: "ca1e4977a0bddc59b095e6eef47d33c4"
