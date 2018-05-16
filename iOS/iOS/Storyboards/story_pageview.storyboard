@@ -89,8 +89,11 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-ut-8eQ">
-                                <rect key="frame" x="20" y="81" width="280" height="375"/>
+                                <rect key="frame" x="20" y="133" width="280" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bH3-ZS-qj0" userLabel="LabelCell">
                                         <rect key="frame" x="0.0" y="28" width="280" height="44"/>
@@ -111,19 +114,21 @@
                             <constraint firstItem="6ig-Ku-vOv" firstAttribute="top" secondItem="GS2-hG-Eea" secondAttribute="top" id="VwY-Ul-0oh"/>
                             <constraint firstItem="pu5-ut-8eQ" firstAttribute="width" secondItem="E7x-8r-7j7" secondAttribute="width" constant="-40" id="cwQ-yK-T6z"/>
                             <constraint firstItem="GS2-hG-Eea" firstAttribute="bottom" secondItem="ykw-F6-wR8" secondAttribute="bottom" id="fbW-fP-gci"/>
-                            <constraint firstItem="ykw-F6-wR8" firstAttribute="top" secondItem="pu5-ut-8eQ" secondAttribute="bottom" constant="8" id="ftR-1D-n3n"/>
+                            <constraint firstItem="ykw-F6-wR8" firstAttribute="top" secondItem="pu5-ut-8eQ" secondAttribute="bottom" constant="52" id="ftR-1D-n3n"/>
                             <constraint firstItem="6ig-Ku-vOv" firstAttribute="centerX" secondItem="GS2-hG-Eea" secondAttribute="centerX" id="iP4-4W-pVq"/>
-                            <constraint firstItem="pu5-ut-8eQ" firstAttribute="top" secondItem="6ig-Ku-vOv" secondAttribute="bottom" constant="8" id="t7s-3B-xXT"/>
+                            <constraint firstItem="pu5-ut-8eQ" firstAttribute="top" secondItem="6ig-Ku-vOv" secondAttribute="bottom" constant="60" id="t7s-3B-xXT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GS2-hG-Eea"/>
                     </view>
                     <connections>
+                        <outlet property="AddPlayerImage" destination="M1K-Ph-RQV" id="idB-GQ-9IO"/>
+                        <outlet property="AddPlayerText" destination="p99-Jn-Scd" id="l9l-Lk-C1U"/>
                         <outlet property="UITableViewInstance" destination="pu5-ut-8eQ" id="Zn1-F4-cRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dg-LF-p1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.799999999999997" y="173.16341829085459"/>
+            <point key="canvasLocation" x="63.75" y="172.18309859154931"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hSD-fy-z4s">

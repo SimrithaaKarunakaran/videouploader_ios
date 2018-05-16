@@ -26,7 +26,7 @@ class vc_login: UIViewController {
         
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
-       
+      
         BackendManager?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
             BackendManager?.accessToken     = Result!
 
@@ -81,13 +81,6 @@ class vc_login: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))
         TextSignUpLink.isUserInteractionEnabled = true
         TextSignUpLink.addGestureRecognizer(tap)
-
-        /*
-        restoreSession(completion: { (Success, Email) in
-            let EmailUnwrapped = Email!
-            print("[HK]: Restored user with email:")
-            print(Email)
-        }) */
     }
         
     

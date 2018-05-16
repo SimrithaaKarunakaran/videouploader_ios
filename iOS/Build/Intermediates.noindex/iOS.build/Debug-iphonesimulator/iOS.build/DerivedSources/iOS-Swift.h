@@ -376,7 +376,10 @@ SWIFT_CLASS("_TtC3iOS14vc_select_deck")
 SWIFT_CLASS("_TtC3iOS16vc_select_player")
 @interface vc_select_player : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified UITableViewInstance;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified AddPlayerText;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified AddPlayerImage;
 - (void)viewDidLoad;
+- (void)AddNewPlayerClickHandlerWithSender:(UITapGestureRecognizer * _Nonnull)sender;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;

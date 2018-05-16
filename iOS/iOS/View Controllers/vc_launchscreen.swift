@@ -22,9 +22,8 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
     
 
     
-    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
-    var SecondsTillTransition = 2;
-    
+    var isTimerRunning        = false //This will be used to make sure only one timer is created at a time.
+    var SecondsTillTransition = 1;
     
     /// Start a timer that will show the user our game logo for three seconds before transitioning away.
     func runTimer() {
@@ -52,13 +51,17 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
                     BackendManager.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
                         if(Success){
                             // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
-                            print("[HK] Fully authenticated.")
                             // Download all user data associated with this account, and redirect when we're done.
                             BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
-                                DispatchQueue.main.async { // Correct
-                                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-                                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-                                    self.present(newViewController, animated: true, completion: nil)
+                                if(Success){
+                                    DispatchQueue.main.async { // Correct
+                                        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                                        self.present(newViewController, animated: true, completion: nil)
+                                    }
+                                } else {
+                                    // The login token is still bad: so we redirect to login screen.
+                                    self.RedirectToLoginScreenMainThread()
                                 }
                             })
                         } else {

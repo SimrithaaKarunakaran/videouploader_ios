@@ -11,27 +11,35 @@ import AWSDynamoDB
 class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var UITableViewInstance: UITableView!
+    @IBOutlet weak var AddPlayerText: UILabel!
+    @IBOutlet weak var AddPlayerImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Iterate through each child associated with this account, and add to the table.
-     
-        
-        /*for item in BackendManager.UserDBResults!{
-            print("Printing item name: ")
-            
-            let val = item["name"]
-            print(val?.s)
-            
-        } */
-        
-        
         UITableViewInstance.delegate = self
         UITableViewInstance.dataSource = self
 
+        // Setup the onclick handler when user presses the "Add A Player" link.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(vc_select_player.AddNewPlayerClickHandler))
+        AddPlayerText.isUserInteractionEnabled = true
+        AddPlayerText.addGestureRecognizer(tap)
+        
+        AddPlayerImage.isUserInteractionEnabled = true
+        AddPlayerImage.addGestureRecognizer(tap)
+        
+        
+        UITableViewInstance.tableFooterView = UIView(frame: .zero)
+
     }
+    
+    @objc func AddNewPlayerClickHandler(sender:UITapGestureRecognizer) {
+        // Direct user to screen where they can add a new player.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey1")
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,6 +61,8 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
         var RelevantUser = BackendManager.UserDBResults![idx]
         
         cell.textLabel!.text = RelevantUser["name"]?.s
+        cell.textLabel!.font = cell.textLabel!.font.withSize(24)
+
         return cell
     }
     

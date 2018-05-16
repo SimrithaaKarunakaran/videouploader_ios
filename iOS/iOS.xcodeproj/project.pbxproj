@@ -311,8 +311,8 @@
 		2265BB39208FB8110096CCAE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				22908DBF209D1F5B007CDA7F /* vc_select_deck.swift */,
 				22207F1C2057553100D447F2 /* vc_launchscreen.swift */,
+				22908DBF209D1F5B007CDA7F /* vc_select_deck.swift */,
 				22FE7DC020913C4300883AE9 /* vc_countdown.swift */,
 				22908D0B2097EF11007CDA7F /* vc_login.swift */,
 				22908DC620A0D703007CDA7F /* vc_create_account.swift */,

@@ -191,7 +191,7 @@ class DBManager {
         
         var FinalEmail = P1 + "@" + P2
 
-        print("Downloading user data with Final Email: \(FinalEmail)")
+        print("Downloading user data with email: \(FinalEmail)")
         let atVal = AWSDynamoDBAttributeValue()!
         atVal.s = FinalEmail
         

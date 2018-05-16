@@ -54,6 +54,37 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     
     @IBAction func ContinueClick(_ sender: Any) {
+        
+        // First, we validate the inputs.
+        
+        // Handles to ethnicity switches
+        @IBOutlet weak var LatinoSwitch: UISwitch!
+        @IBOutlet weak var AsianSwitch: UISwitch!
+        @IBOutlet weak var NativeAmericanSwitch: UISwitch!
+        @IBOutlet weak var SoutheastSwitch: UISwitch!
+        @IBOutlet weak var WhiteSwitch: UISwitch!
+        @IBOutlet weak var CaribbeanSwitch: UISwitch!
+        @IBOutlet weak var ArabSwitch: UISwitch!
+        @IBOutlet weak var PacificSwitch: UISwitch!
+        @IBOutlet weak var SouthAsianSwitch: UISwitch!
+        @IBOutlet weak var OtherSwitch: UISwitch!
+        
+        // Handles to text-based fields.
+        @IBOutlet weak var textName: UITextField!
+        @IBOutlet weak var textGender: UITextField!
+        @IBOutlet weak var textDOB: UITextField!
+        @IBOutlet weak var textCountry: UITextField!
+        @IBOutlet weak var textState: UITextField!
+        @IBOutlet weak var textZIP: UITextField!
+        @IBOutlet weak var textOtherDiagnosis: UITextField!
+        @IBOutlet weak var textAutism: UITextField!
+        @IBOutlet weak var textCity: UITextField!
+        
+        
+        
+        
+        
+        
         // Move to the next viewpager: the second survey
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey2")
@@ -61,6 +92,10 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     @IBAction func BackClick(_ sender: Any) {
+        // Move to the next viewpager: the second survey
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     
