@@ -415,6 +415,7 @@ SWIFT_CLASS("_TtC3iOS10vc_survey1")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textOtherDiagnosis;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textAutism;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textCity;
+- (IBAction)ResignResponder:(UITextField * _Nonnull)sender;
 - (IBAction)ContinueClick:(id _Nonnull)sender;
 - (IBAction)BackClick:(id _Nonnull)sender;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;

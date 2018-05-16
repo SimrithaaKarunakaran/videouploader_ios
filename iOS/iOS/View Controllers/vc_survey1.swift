@@ -9,9 +9,9 @@
 import UIKit
 
 
-class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
-    
+
     @IBOutlet weak var ButtonBack: UIButton!
     @IBOutlet weak var ButtonContinue: UIButton!
     
@@ -53,37 +53,121 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var textCity: UITextField!
     
     
+    
+    @IBAction func ResignResponder(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
+    var LatinoSwitchOn         : Bool?
+    var AsianSwitchOn          : Bool?
+    var NativeAmericanSwitchOn : Bool?
+    var SoutheastSwitchOn      : Bool?
+    var WhiteSwitchOn          : Bool?
+    var CaribbeanSwitchOn      : Bool?
+    var ArabSwitchOn           : Bool?
+    var PacificSwitchOn        : Bool?
+    var SouthAsianSwitchOn     : Bool?
+    var OtherSwitchOn          : Bool?
+    
+    var StringName    : String?
+    var StringGender  : String?
+    var StringDOB     : String?
+    var StringCountry : String?
+    var StringState   : String?
+    var StringZIP     : String?
+    var StringAutism  : String?
+    var StringCity    : String?
+    
+    func ShowError(error: String){
+        let alert = UIAlertController(title: "Form Incomplete", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     @IBAction func ContinueClick(_ sender: Any) {
         
+        LatinoSwitchOn         = LatinoSwitch.isOn
+        AsianSwitchOn          = AsianSwitch.isOn
+        NativeAmericanSwitchOn = NativeAmericanSwitch.isOn
+        SoutheastSwitchOn      = SoutheastSwitch.isOn
+        WhiteSwitchOn          = WhiteSwitch.isOn
+        CaribbeanSwitchOn      = CaribbeanSwitch.isOn
+        ArabSwitchOn           = ArabSwitch.isOn
+        PacificSwitchOn        = PacificSwitch.isOn
+        SouthAsianSwitchOn     = SouthAsianSwitch.isOn
+        OtherSwitchOn          = OtherSwitch.isOn
+        
         // First, we validate the inputs.
+        if(!LatinoSwitch.isOn && !AsianSwitch.isOn && !NativeAmericanSwitch.isOn && !SoutheastSwitch.isOn
+            && !WhiteSwitch.isOn && !CaribbeanSwitch.isOn && !ArabSwitch.isOn && !PacificSwitch.isOn && !SouthAsianSwitch.isOn && !OtherSwitch.isOn){
+            ShowError(error: "Please select an ethnicity to proceed.")
+            return;
+        }
         
-        // Handles to ethnicity switches
-        @IBOutlet weak var LatinoSwitch: UISwitch!
-        @IBOutlet weak var AsianSwitch: UISwitch!
-        @IBOutlet weak var NativeAmericanSwitch: UISwitch!
-        @IBOutlet weak var SoutheastSwitch: UISwitch!
-        @IBOutlet weak var WhiteSwitch: UISwitch!
-        @IBOutlet weak var CaribbeanSwitch: UISwitch!
-        @IBOutlet weak var ArabSwitch: UISwitch!
-        @IBOutlet weak var PacificSwitch: UISwitch!
-        @IBOutlet weak var SouthAsianSwitch: UISwitch!
-        @IBOutlet weak var OtherSwitch: UISwitch!
+        StringName    = textName.text!
+        StringGender  = textGender.text!
+        StringDOB     = textDOB.text!
+        StringCountry = textCountry.text!
+        StringState   = textState.text!
+        StringZIP     = textZIP.text!
+        StringAutism  = textAutism.text!
+        StringCity    = textCity.text!
         
-        // Handles to text-based fields.
-        @IBOutlet weak var textName: UITextField!
-        @IBOutlet weak var textGender: UITextField!
-        @IBOutlet weak var textDOB: UITextField!
-        @IBOutlet weak var textCountry: UITextField!
-        @IBOutlet weak var textState: UITextField!
-        @IBOutlet weak var textZIP: UITextField!
-        @IBOutlet weak var textOtherDiagnosis: UITextField!
-        @IBOutlet weak var textAutism: UITextField!
-        @IBOutlet weak var textCity: UITextField!
+        /*
+        
+        textName    .delegate = self
+        textGender  .delegate = self
+        textDOB     .delegate = self
+        textCountry .delegate = self
+        textState   .delegate = self
+        textZIP     .delegate = self
+        textAutism  .delegate = self
+        textCity    .delegate = self
+        */
         
         
+        if(StringName!.count < 4){
+            ShowError(error: "Please enter your name to proceed.")
+            return;
+        }
+        if(StringZIP!.count != 5){
+            ShowError(error: "Please complete the ZIP field proceed.")
+            return;
+        }
         
+        if(StringGender!.count < 4){
+            ShowError(error: "Please enter your child's gender to proceed.")
+            return;
+        }
         
+        if(StringDOB!.count < 4){
+            ShowError(error: "Please enter your child's DOB to proceed.")
+            return;
+        }
         
+        if(StringCountry!.count < 4){
+            ShowError(error: "Please complete the Country field to proceed.")
+            return;
+        }
+        
+        if(StringState!.count < 2){
+            ShowError(error: "Please complete the State field to proceed.")
+            return;
+        }
+        
+        if(StringAutism!.count < 4){
+            ShowError(error: "Please enter your child's autism diagnosis to proceed.")
+            return;
+        }
+        
+        if(StringCity!.count < 4){
+            ShowError(error: "Please complete the city field to proceed.")
+            return;
+        }
         
         // Move to the next viewpager: the second survey
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)

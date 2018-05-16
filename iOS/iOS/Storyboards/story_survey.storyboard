@@ -110,6 +110,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ResignResponder:" destination="0Tp-qR-WHO" eventType="primaryActionTriggered" id="3e1-X9-A9t"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIb-aa-53c" userLabel="TextCountry">
                                 <rect key="frame" x="10" y="133" width="160" height="30"/>
@@ -135,6 +138,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ResignResponder:" destination="0Tp-qR-WHO" eventType="primaryActionTriggered" id="gGE-5M-oMv"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="ZIP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvv-Ry-wYE" userLabel="TextZIP">
                                 <rect key="frame" x="178" y="178" width="132" height="30"/>
@@ -142,6 +148,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ResignResponder:" destination="0Tp-qR-WHO" eventType="primaryActionTriggered" id="2x2-K6-2gn"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Other Diagnoses" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R31-5Y-mk3" userLabel="TextOtherDiagnosis">
                                 <rect key="frame" x="178" y="223" width="132" height="30"/>
@@ -149,6 +158,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ResignResponder:" destination="0Tp-qR-WHO" eventType="primaryActionTriggered" id="rSM-ho-bTF"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="DOB" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgZ-Oe-ogf" userLabel="TextDOB">
                                 <rect key="frame" x="259" y="88" width="51" height="30"/>
@@ -159,6 +171,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ResignResponder:" destination="0Tp-qR-WHO" eventType="primaryActionTriggered" id="xtA-Cm-WOU"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethnicity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBn-km-QtY">
                                 <rect key="frame" x="10" y="263" width="85" height="20.5"/>
