@@ -64,13 +64,15 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     var LatinoSwitchOn         : Bool?
     var AsianSwitchOn          : Bool?
-    var NativeAmericanSwitchOn : Bool?
     var SoutheastSwitchOn      : Bool?
+    var SouthAsianSwitchOn     : Bool?
+
+    var NativeAmericanSwitchOn : Bool?
+
     var WhiteSwitchOn          : Bool?
     var CaribbeanSwitchOn      : Bool?
     var ArabSwitchOn           : Bool?
     var PacificSwitchOn        : Bool?
-    var SouthAsianSwitchOn     : Bool?
     var OtherSwitchOn          : Bool?
     
     var StringName    : String?
@@ -81,6 +83,7 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     var StringZIP     : String?
     var StringAutism  : String?
     var StringCity    : String?
+    var StringOtherDiagnosis : String?
     
     func ShowError(error: String){
         let alert = UIAlertController(title: "Form Incomplete", message: error, preferredStyle: .alert)
@@ -116,20 +119,8 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         StringZIP     = textZIP.text!
         StringAutism  = textAutism.text!
         StringCity    = textCity.text!
-        
-        /*
-        
-        textName    .delegate = self
-        textGender  .delegate = self
-        textDOB     .delegate = self
-        textCountry .delegate = self
-        textState   .delegate = self
-        textZIP     .delegate = self
-        textAutism  .delegate = self
-        textCity    .delegate = self
-        */
-        
-        
+        StringOtherDiagnosis = textOtherDiagnosis.text!
+    
         if(StringName!.count < 4){
             ShowError(error: "Please enter your name to proceed.")
             return;
@@ -146,6 +137,11 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
         if(StringDOB!.count < 4){
             ShowError(error: "Please enter your child's DOB to proceed.")
+            return;
+        }
+        
+        if(StringDOB!.range(of:"/") == nil){
+            ShowError(error: "Please include the DOB in format MM/YY")
             return;
         }
         
@@ -169,10 +165,54 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             return;
         }
         
-        // Move to the next viewpager: the second survey
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey2")
-        self.present(newViewController, animated: true, completion: nil)
+        /*
+        Now that the user has made it this far, lets create a new record in the database.
+        */
+        
+        var NewEntry = DDBTableRow()
+        NewEntry?.email  = BackendManager.UserEmail!
+        NewEntry?.name   = StringName!
+        NewEntry?.Gender = StringGender!
+        NewEntry?.DOB    = StringDOB!
+        NewEntry?.Country = StringCountry!
+        NewEntry?.City = StringCity!
+        NewEntry?.State = StringState!
+        NewEntry?.ZIP = StringZIP!
+        NewEntry?.AutismDiagnosis = StringAutism!
+        NewEntry?.OtherDiagnoses = StringOtherDiagnosis!
+        
+
+        NewEntry?.ChildSurveyCompleted = 0
+        
+        //////////////////////////////////////////
+        // IMPORTANT: FIX THIS LATER /////////////
+        NewEntry?.ConsentPlay = 1
+        NewEntry?.ConsentView = 1
+        NewEntry?.ConsentShare = 1
+        //////////////////////////////////////////
+        //////////////////////////////////////////
+
+        NewEntry?.ChildSurveyCompleted = 0
+        
+        NewEntry?.Hispanic = LatinoSwitchOn! ? 1 : 0
+        NewEntry?.African   = CaribbeanSwitchOn! ? 1 : 0
+        NewEntry?.EastAsian = AsianSwitchOn! ? 1 : 0
+        NewEntry?.Arab = ArabSwitchOn! ? 1 : 0
+        NewEntry?.NativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
+        NewEntry?.PacificIslander = PacificSwitchOn! ? 1 : 0
+        NewEntry?.SoutheastAsian = SoutheastSwitchOn! ? 1 : 0
+        NewEntry?.SouthAsian = SouthAsianSwitchOn! ? 1 : 0
+        NewEntry?.Caucasian = WhiteSwitchOn! ? 1 : 0
+        NewEntry?.Unknown = OtherSwitchOn! ? 1 : 0
+        
+        BackendManager.AddUserToDynamo(row: NewEntry!) { (Success) in
+            // Move to the next viewpager: the second survey
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+            self.present(newViewController, animated: true, completion: nil)
+        }
+
+
     }
     
     @IBAction func BackClick(_ sender: Any) {

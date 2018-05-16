@@ -47,8 +47,46 @@ class DBManager {
         let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: GlobalCredentialsProvider)
         AWSDynamoDB.register(with: aws_config!, forKey: "USEAST1Dynamo");
         dynamoDBCustom = AWSDynamoDB(forKey: "USEAST1Dynamo")
+        
+        // Setup object mapper for use later.
+        let ObjectMapperConfig = AWSDynamoDBObjectMapperConfiguration()
+        AWSDynamoDBObjectMapper.register(with: aws_config!, objectMapperConfiguration: ObjectMapperConfig, forKey: "USEAST1_MAPPER")
     }
     
+    
+    
+    
+    /// This object mapper will help us read from, and write-to, the database.
+    /// We have to get it in a non-standard way (see initializeDynamo) because it is in a different region
+    /// Compared to the Cognito User pool of our default AWS configuration.
+    ///
+    /// - Returns: <#return value description#>
+    func getDynamoObjectMapper() -> AWSDynamoDBObjectMapper {
+        return AWSDynamoDBObjectMapper(forKey: "USEAST1_MAPPER")
+    }
+    
+    
+    
+    /// When user decides to 'add a child' to the game, we use this function
+    /// toa dd the prepopulated DDBTableRow to DynamoDB.
+    /// - Parameter row: The completed DDBTableRow object containing user data.
+    func AddUserToDynamo(row: DDBTableRow, completion: @escaping ((Bool) -> ())){
+        
+        print("[HK] Attempting to save entry to DynamoDB with email and name: \(row.email) , \(row.name)")
+
+        getDynamoObjectMapper().save(row, completionHandler: {
+            (error: Error?) -> Void in
+            
+            if let error = error {
+                print("[HK] Amazon DynamoDB Save Error: \(error)")
+                completion(false)
+                return
+            }
+        
+            print("[HK] Saved an entry to DynamoDB.")
+            completion(true)
+        })
+    }
     
    
 

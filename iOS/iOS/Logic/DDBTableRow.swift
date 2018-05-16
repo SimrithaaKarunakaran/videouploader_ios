@@ -10,7 +10,7 @@ class DDBTableRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     
     
     
-    @objc var email                : String     = "NA"
+    @objc var email                : String = "NA"
     @objc var name                 : String = "NA"
     @objc var Gender               : String = "NA"
     @objc var DOB                  : String = "NA"
@@ -23,8 +23,8 @@ class DDBTableRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     
 
  
-    @objc var Answers              : NSArray = [0,3]
-    @objc var NotApplicableChecked : NSArray = [1,2]
+    @objc var Answers              : NSArray = [0,0]
+    @objc var NotApplicableChecked : NSArray = [0,0]
  
     
     // Has the full survey information been filled out for this child?
