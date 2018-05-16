@@ -382,13 +382,19 @@ SWIFT_CLASS("_TtC3iOS14vc_select_deck")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITableViewCell;
 
 /// The user selects which child is about to play, on this screen.
 SWIFT_CLASS("_TtC3iOS16vc_select_player")
-@interface vc_select_player : UIViewController
-@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified TableView;
+@interface vc_select_player : UITableViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified UITableViewInstance;
 - (void)viewDidLoad;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
