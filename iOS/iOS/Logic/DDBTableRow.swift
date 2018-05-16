@@ -12,37 +12,37 @@ class DDBTableRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     
     @objc var email                : String = "NA"
     @objc var name                 : String = "NA"
-    @objc var Gender               : String = "NA"
-    @objc var DOB                  : String = "NA"
-    @objc var Country              : String = "NA"
-    @objc var City                 : String = "NA"
-    @objc var State                : String = "NA"
-    @objc var ZIP                  : String = "NA"
-    @objc var AutismDiagnosis      : String = "NA"
-    @objc var OtherDiagnoses       : String = "NA"
+    @objc var gender               : String = "NA"
+    @objc var dOB                  : String = "NA"
+    @objc var country              : String = "NA"
+    @objc var city                 : String = "NA"
+    @objc var state                : String = "NA"
+    @objc var zIP                  : String = "NA"
+    @objc var autismDiagnosis      : String = "NA"
+    @objc var otherDiagnoses       : String = "NA"
     
 
  
-    @objc var Answers              : NSArray = [0,0]
-    @objc var NotApplicableChecked : NSArray = [0,0]
+    @objc var answers              : NSArray = [0,0]
+    @objc var notApplicableChecked : NSArray = [0,0]
  
     
     // Has the full survey information been filled out for this child?
-    @objc var ChildSurveyCompleted : NSNumber = 0
-    @objc var Hispanic             : NSNumber = 0
-    @objc var African              : NSNumber = 0
-    @objc var EastAsian            : NSNumber = 0
-    @objc var Arab                 : NSNumber = 0
-    @objc var NativeAmerican       : NSNumber = 0
-    @objc var PacificIslander      : NSNumber = 0
-    @objc var SoutheastAsian       : NSNumber = 0
-    @objc var SouthAsian           : NSNumber = 0
-    @objc var Caucasian            : NSNumber = 0
-    @objc var Unknown              : NSNumber = 0
+    @objc var childSurveyCompleted : NSNumber = 0
+    @objc var hispanic             : NSNumber = 0
+    @objc var african              : NSNumber = 0
+    @objc var eastAsian            : NSNumber = 0
+    @objc var arab                 : NSNumber = 0
+    @objc var nativeAmerican       : NSNumber = 0
+    @objc var pacificIslander      : NSNumber = 0
+    @objc var southeastAsian       : NSNumber = 0
+    @objc var southAsian           : NSNumber = 0
+    @objc var caucasian            : NSNumber = 0
+    @objc var unknown              : NSNumber = 0
     
-    @objc var ConsentPlay          : NSNumber = 0
-    @objc var ConsentView          : NSNumber = 0
-    @objc var ConsentShare         : NSNumber = 0
+    @objc var consentPlay          : NSNumber = 0
+    @objc var consentView          : NSNumber = 0
+    @objc var consentShare         : NSNumber = 0
     
 
     

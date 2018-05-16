@@ -169,50 +169,56 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         Now that the user has made it this far, lets create a new record in the database.
         */
         
-        var NewEntry = DDBTableRow()
-        NewEntry?.email  = BackendManager.UserEmail!
+        let NewEntry = DDBTableRow()
+        NewEntry?.email  = BackendManager.getDBFriendlyEmail(email: BackendManager.UserEmail!)
         NewEntry?.name   = StringName!
-        NewEntry?.Gender = StringGender!
-        NewEntry?.DOB    = StringDOB!
-        NewEntry?.Country = StringCountry!
-        NewEntry?.City = StringCity!
-        NewEntry?.State = StringState!
-        NewEntry?.ZIP = StringZIP!
-        NewEntry?.AutismDiagnosis = StringAutism!
-        NewEntry?.OtherDiagnoses = StringOtherDiagnosis!
+        NewEntry?.gender = StringGender!
+        NewEntry?.dOB    = StringDOB!
+        NewEntry?.country = StringCountry!
+        NewEntry?.city = StringCity!
+        NewEntry?.state = StringState!
+        NewEntry?.zIP = StringZIP!
+        NewEntry?.autismDiagnosis = StringAutism!
+        NewEntry?.otherDiagnoses = StringOtherDiagnosis!
         
 
-        NewEntry?.ChildSurveyCompleted = 0
+        NewEntry?.childSurveyCompleted = 0
         
         //////////////////////////////////////////
         // IMPORTANT: FIX THIS LATER /////////////
-        NewEntry?.ConsentPlay = 1
-        NewEntry?.ConsentView = 1
-        NewEntry?.ConsentShare = 1
+        NewEntry?.consentPlay = 1
+        NewEntry?.consentView = 1
+        NewEntry?.consentShare = 1
         //////////////////////////////////////////
         //////////////////////////////////////////
 
-        NewEntry?.ChildSurveyCompleted = 0
+        NewEntry?.childSurveyCompleted = 0
         
-        NewEntry?.Hispanic = LatinoSwitchOn! ? 1 : 0
-        NewEntry?.African   = CaribbeanSwitchOn! ? 1 : 0
-        NewEntry?.EastAsian = AsianSwitchOn! ? 1 : 0
-        NewEntry?.Arab = ArabSwitchOn! ? 1 : 0
-        NewEntry?.NativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
-        NewEntry?.PacificIslander = PacificSwitchOn! ? 1 : 0
-        NewEntry?.SoutheastAsian = SoutheastSwitchOn! ? 1 : 0
-        NewEntry?.SouthAsian = SouthAsianSwitchOn! ? 1 : 0
-        NewEntry?.Caucasian = WhiteSwitchOn! ? 1 : 0
-        NewEntry?.Unknown = OtherSwitchOn! ? 1 : 0
+        NewEntry?.hispanic = LatinoSwitchOn! ? 1 : 0
+        NewEntry?.african   = CaribbeanSwitchOn! ? 1 : 0
+        NewEntry?.eastAsian = AsianSwitchOn! ? 1 : 0
+        NewEntry?.arab = ArabSwitchOn! ? 1 : 0
+        NewEntry?.nativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
+        NewEntry?.pacificIslander = PacificSwitchOn! ? 1 : 0
+        NewEntry?.southeastAsian = SoutheastSwitchOn! ? 1 : 0
+        NewEntry?.southAsian = SouthAsianSwitchOn! ? 1 : 0
+        NewEntry?.caucasian = WhiteSwitchOn! ? 1 : 0
+        NewEntry?.unknown = OtherSwitchOn! ? 1 : 0
         
         BackendManager.AddUserToDynamo(row: NewEntry!) { (Success) in
-            // Move to the next viewpager: the second survey
-            let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-            self.present(newViewController, animated: true, completion: nil)
+            print("[HK] Finished adding a user to DynamoDB.")
+            // After we added the player, lets re-download all user players associated with our account.
+            // Then, we can redirect the user to the screen where they can select it...
+            BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                DispatchQueue.main.async { // Correct
+                    print("[HK] Finished downloading user data.")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                    self.present(newViewController, animated: true, completion: nil)
+                }
+               
+            })
         }
-
-
     }
     
     @IBAction func BackClick(_ sender: Any) {

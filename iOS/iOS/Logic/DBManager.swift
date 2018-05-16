@@ -51,6 +51,7 @@ class DBManager {
         // Setup object mapper for use later.
         let ObjectMapperConfig = AWSDynamoDBObjectMapperConfiguration()
         AWSDynamoDBObjectMapper.register(with: aws_config!, objectMapperConfiguration: ObjectMapperConfig, forKey: "USEAST1_MAPPER")
+        print("[HK] DynamoDB successfully initialized.")
     }
     
     
@@ -74,15 +75,14 @@ class DBManager {
         
         print("[HK] Attempting to save entry to DynamoDB with email and name: \(row.email) , \(row.name)")
 
-        getDynamoObjectMapper().save(row, completionHandler: {
-            (error: Error?) -> Void in
+        getDynamoObjectMapper().save(row, completionHandler: { (error: Error?) -> Void in
             
-            if let error = error {
+            guard error == nil else {
                 print("[HK] Amazon DynamoDB Save Error: \(error)")
                 completion(false)
                 return
             }
-        
+            
             print("[HK] Saved an entry to DynamoDB.")
             completion(true)
         })
@@ -173,7 +173,7 @@ class DBManager {
         
         GlobalCredentialsProvider.getIdentityId().continueWith(block:{ (task) in
             guard task.error == nil else {
-                print("[HK] fullyAuthenticateWithToken returning false...")
+                print("[HK] fullyAuthenticateWithToken returning false: \(task.error)")
                 print(task.error)
                 sessionCompletion(false)
                 return nil
@@ -217,17 +217,18 @@ class DBManager {
     }
     
     
-    func downloadUserData(email:String, completion: @escaping ((Bool) -> ())){
-
-        // Pre-process email: removing any dots (period) in the first half of the email before the "@".
+    func getDBFriendlyEmail(email: String) -> String {
         let emailArr = email.components(separatedBy: "@")
-        
         var P1 = emailArr[0]
-        var P2 = emailArr[1]
-        
+    
         P1 = P1.replacingOccurrences(of: ".", with: "")
         
-        var FinalEmail = P1 + "@" + P2
+        return (P1 + "@" + emailArr[1])
+    }
+    
+    func downloadUserData(email:String, completion: @escaping ((Bool) -> ())){
+
+        let FinalEmail = getDBFriendlyEmail(email: email)
 
         print("Downloading user data with email: \(FinalEmail)")
         let atVal = AWSDynamoDBAttributeValue()!
@@ -253,14 +254,10 @@ class DBManager {
             let results = task.result as AWSDynamoDBQueryOutput!
             self.UserDBResults = results!.items!
             
-            print("Entered downloadUserData query callback.")
-            
             // For each user (e.g. child)
             for item in self.UserDBResults!{
-                print("Printing item name: ")
-                
                 var val = item["name"]
-                print(val?.s)
+                //print("Printing item name: \(val?.s)")
             }
             
             completion(true)
