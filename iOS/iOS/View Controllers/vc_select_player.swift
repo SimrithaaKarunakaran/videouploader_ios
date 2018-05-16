@@ -5,28 +5,25 @@
 import UIKit
 import AWSDynamoDB
 
+
+
+/// The user selects which child is about to play, on this screen.
 class vc_select_player: UIViewController {
-    // Todo: move this to a seperate file eventually.
-    final class CustomIdentityProvider: NSObject, AWSIdentityProviderManager {
-        var tokens: [String : String]?
-        
-        init(tokens: [String : String]?) {
-            self.tokens = tokens
-        }
-        
-        func logins() -> AWSTask<NSDictionary> {
-            let logins: NSDictionary = NSDictionary(dictionary: tokens ?? [:])
-            return AWSTask(result: logins)
-        }
-    }
+
+    @IBOutlet weak var TableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        We are signed in with Cognito on US_WEST_2.  Unfortunately, our DynamoDBTable is on US_EAST_1.
-        Therefore, we have to switch regions.
-        */
+        
+        // Iterate through each child associated with this account, and add to the table.
+        for item in BackendManager.UserDBResults!{
+            print("Printing item name: ")
+            
+            let val = item["name"]
+            print(val?.s)
+            
+        }
     
 
     }

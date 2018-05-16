@@ -256,6 +256,20 @@ SWIFT_CLASS("_TtC3iOS11DDBTableRow")
 - (null_unspecified instancetype)initWithExternalRepresentation:(NSDictionary * _Null_unspecified)externalRepresentation OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED;
 @end
 
+@class UITableView;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC3iOS17PickUserTableView")
+@interface PickUserTableView : UITableViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UILabel;
 @class UIImageView;
 
@@ -268,7 +282,6 @@ SWIFT_CLASS("_TtC3iOS32SelectDeckCellCollectionViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
 
 SWIFT_CLASS("_TtC3iOS12vc_consent_1")
 @interface vc_consent_1 : UIViewController
@@ -370,8 +383,10 @@ SWIFT_CLASS("_TtC3iOS14vc_select_deck")
 @end
 
 
+/// The user selects which child is about to play, on this screen.
 SWIFT_CLASS("_TtC3iOS16vc_select_player")
 @interface vc_select_player : UIViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified TableView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

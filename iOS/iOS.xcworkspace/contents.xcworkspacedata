@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/haik/Documents/guesswhat_ios/iOS/iOS/Logic/PickUserTableView.swift">
+   </FileRef>
+   <FileRef
       location = "group:iOS.xcodeproj">
    </FileRef>
    <FileRef

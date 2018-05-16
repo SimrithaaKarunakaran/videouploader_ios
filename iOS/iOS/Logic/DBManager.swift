@@ -19,10 +19,10 @@ class DBManager {
     // An instance of the dynamo DB that we can use for queries. Set to US EAST region as required.
     var dynamoDBCustom : AWSDynamoDB?
     
+    // The accessToken is obtained from the IdentityProvider on AWS when the user logs in, and grants the user access to Dynamo and S3.
     var accessToken    : String?
     
-    // The data structure that holds dictionaries of all entries associated with our email address.
-    // This is an array of dictionaries.
+    // The array that holds dictionaries of all entries associated with our email address.
     var UserDBResults  : [[String : AWSDynamoDBAttributeValue]]?
     
     var UserEmail      : String?
@@ -40,7 +40,9 @@ class DBManager {
     }
     
     
-    // Call this function AFTER login is complete and we have a token.
+    /// This function initializes DynamoDB, which stores survey/user information./
+    /// These steps are necessasry because DynamoDB table is in a different region than our Cognito User Pool.
+    /// Make sure you call this function AFTER login / restoration is complete, and we have a token.
     func initializeDynamo() {
         let aws_config  = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: GlobalCredentialsProvider)
         AWSDynamoDB.register(with: aws_config!, forKey: "USEAST1Dynamo");
@@ -48,8 +50,7 @@ class DBManager {
     }
     
     
-    // Get a token, then use it for full authentications
-    
+   
 
     
     /// This function attempts to log in the user. The callback returns true if the login
@@ -93,20 +94,23 @@ class DBManager {
             // Try to restore prev. session
             user.getSession().continueWith(block: { [weak self] (task) in
                 guard let session = task.result, task.error == nil else {
+                    print("[HK] RestoreSession returning false (1).")
                     sessionCompletion(false, "")
                     return nil
                 }
-                
+            
                 // Save the access token for authentication of other AWS services.
                 self!.accessToken = session.accessToken?.tokenString
-            
+                print("[HK] RestoreSession returned with access token: \(self!.accessToken)")
+
                 BackendManager.getUserEmail(completion: { (Success, Email) in
                     sessionCompletion(Success, Email)
                 })
-    
+                
                 return nil
             })
         } else {
+            print("[HK] RestoreSession returning false (2).")
             sessionCompletion(false, "")
         }
     }
@@ -131,11 +135,12 @@ class DBManager {
         
         GlobalCredentialsProvider.getIdentityId().continueWith(block:{ (task) in
             guard task.error == nil else {
+                print("[HK] fullyAuthenticateWithToken returning false...")
                 print(task.error)
                 sessionCompletion(false)
                 return nil
             }
-           
+            print("[HK] fullyAuthenticateWithToken returning true...")
             // Initialize dynamo now that we have access.
             self.initializeDynamo()
             sessionCompletion(true)
@@ -228,8 +233,5 @@ class DBManager {
         })
     }
     
-    
-    
-
 }
 

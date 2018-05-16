@@ -41,41 +41,52 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
         SecondsTillTransition -= 1
         
         if(SecondsTillTransition == 0){
+            // Cancel the timer, since now its "up"- we have shown the logo long enough.
             timer.invalidate();
            
             //First, lets check if the user is already signed in from a previous session.
             BackendManager.restoreSession(sessionCompletion: { (Success, Email) in
                 if(Success){
-                    // Restored the user's session from last time?
-                    // No reason to make them log in. Download full user data and proceed.
-
+                    // It seems we have a token from a previous login. Lets try to authenticate with this token.
+                    // If it succeeds, we may be able to skip the login process.
                     BackendManager.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
-                        // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
-                        print("[HK] Fully authenticated.")
-                        
-                        BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
-                            print("[HK] DownloadUserData callback: \(Success)")
-                            
-                            DispatchQueue.main.async { // Correct
-                                let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-                                let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-                                self.present(newViewController, animated: true, completion: nil)
-                            }
-                        })
+                        if(Success){
+                            // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
+                            print("[HK] Fully authenticated.")
+                            // Download all user data associated with this account, and redirect when we're done.
+                            BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                                DispatchQueue.main.async { // Correct
+                                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                                    self.present(newViewController, animated: true, completion: nil)
+                                }
+                            })
+                        } else {
+                            // Failed to fully authenticate with the token. This means the token has probably expired.
+                            // Lets redirect them to signon-screen.
+                            self.RedirectToLoginScreenMainThread()
+                        }
                     })
                     
                 } else {
                     // Failed to restore the user? Take them to the login screen
                     // That way, they can login the "normal" way.
-                    DispatchQueue.main.async {
-                        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
-                        self.present(newViewController, animated: true, completion: nil)
-                    }
+                    self.RedirectToLoginScreenMainThread()
+
                 }
             }); // End RestoreSession
             
             print("[HK] Timer is up: transitioning.")
+        }
+    }
+    
+    /// This function is called whenever one of our asynchronous callbacks indicate
+    /// That the user's session cannot be restored: lets redirect them to the login screen.
+    func RedirectToLoginScreenMainThread(){
+        DispatchQueue.main.async {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
+            self.present(newViewController, animated: true, completion: nil)
         }
     }
     
@@ -93,22 +104,6 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    @IBAction func ButtonClickNext(_ sender: UIButton) {
-        performSegue(withIdentifier: "FirstToSecond", sender: self)
-    }
-    
-    @IBAction func ButtonClickNextStoryboard(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "story_pageview", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "story_one_viewcontroller") as UIViewController
-        present(vc, animated: true, completion: nil)
-    }
- */
-    
-    
+    }    
 }
 

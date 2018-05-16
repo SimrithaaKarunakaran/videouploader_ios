@@ -47,7 +47,7 @@
         <!--vc_select_player-->
         <scene sceneID="ueC-OS-zFS">
             <objects>
-                <viewController storyboardIdentifier="vc_select_player" id="cyG-v3-OLs" userLabel="vc_select_player" customClass="vc_select_player" customModule="iOS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_select_player" id="cyG-v3-OLs" userLabel="vc_select_player" customClass="vc_select_player" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7x-8r-7j7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +107,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GS2-hG-Eea"/>
                     </view>
+                    <connections>
+                        <outlet property="TableView" destination="pu5-ut-8eQ" id="JeG-zP-11K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dg-LF-p1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
