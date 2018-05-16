@@ -8,7 +8,7 @@ import AWSDynamoDB
 
 
 /// The user selects which child is about to play, on this screen.
-class vc_select_player: UITableViewController {
+class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var UITableViewInstance: UITableView!
     
@@ -17,33 +17,42 @@ class vc_select_player: UITableViewController {
         
         
         // Iterate through each child associated with this account, and add to the table.
-        for item in BackendManager.UserDBResults!{
+     
+        
+        /*for item in BackendManager.UserDBResults!{
             print("Printing item name: ")
             
             let val = item["name"]
             print(val?.s)
             
-        }
+        } */
+        
+        
+        UITableViewInstance.delegate = self
+        UITableViewInstance.dataSource = self
+
     }
 
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return BackendManager.UserDBResults!.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return ""
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
+        var idx = indexPath[1]
+        var RelevantUser = BackendManager.UserDBResults![idx]
         
+        cell.textLabel!.text = RelevantUser["name"]?.s
         return cell
     }
     

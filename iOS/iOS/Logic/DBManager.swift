@@ -189,7 +189,7 @@ class DBManager {
         
         P1 = P1.replacingOccurrences(of: ".", with: "")
         
-        var FinalEmail = P1 + P2
+        var FinalEmail = P1 + "@" + P2
 
         print("Downloading user data with Final Email: \(FinalEmail)")
         let atVal = AWSDynamoDBAttributeValue()!
@@ -204,8 +204,6 @@ class DBManager {
         
         query.tableName = "HeadsUpSurveys"
         query.keyConditions = myDic
-        
-        print("Entered downloadUserData with email: \(email)")
         
         BackendManager.dynamoDBCustom?.query(query).continueWith(block: { (task) in
             guard task.error == nil else {
