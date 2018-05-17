@@ -24,21 +24,26 @@ class vc_consent_1: UIViewController {
     }
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
+        // This is found at the top of vc_consent_1 (outside class)
+        BackendManager.NewEntry?.consentPlay = true
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_2")
         self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
+        // User can't play without accepting the first agreement.
+        ShowError(error: "You must accept the agreement to create an account.")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    /// Show a popup that indicates user has entered an invalid username or password.
+    ///
+    /// - Parameter error: The exact error message to display.
+    func ShowError(error: String){
+        let alert = UIAlertController(title: "Error!", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
-    */
-
 }

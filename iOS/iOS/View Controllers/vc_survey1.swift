@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
 
@@ -58,10 +59,7 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         sender.resignFirstResponder()
     }
     
-    
-    
-    
-    
+
     var LatinoSwitchOn         : Bool?
     var AsianSwitchOn          : Bool?
     var SoutheastSwitchOn      : Bool?
@@ -84,6 +82,10 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     var StringAutism  : String?
     var StringCity    : String?
     var StringOtherDiagnosis : String?
+    
+    
+    
+    
     
     func ShowError(error: String){
         let alert = UIAlertController(title: "Form Incomplete", message: error, preferredStyle: .alert)
@@ -169,42 +171,48 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         Now that the user has made it this far, lets create a new record in the database.
         */
         
-        let NewEntry = DDBTableRow()
-        NewEntry?.email  = BackendManager.getDBFriendlyEmail(email: BackendManager.UserEmail!)
-        NewEntry?.name   = StringName!
-        NewEntry?.gender = StringGender!
-        NewEntry?.dOB    = StringDOB!
-        NewEntry?.country = StringCountry!
-        NewEntry?.city = StringCity!
-        NewEntry?.state = StringState!
-        NewEntry?.zIP = StringZIP!
-        NewEntry?.autismDiagnosis = StringAutism!
-        NewEntry?.otherDiagnoses = StringOtherDiagnosis!
+        
+        BackendManager.NewEntry = DDBTableRow()
+        BackendManager.NewEntry?.email  = BackendManager.getDBFriendlyEmail(email: BackendManager.UserEmail!)
+        BackendManager.NewEntry?.name   = StringName!
+        BackendManager.NewEntry?.gender = StringGender!
+        BackendManager.NewEntry?.dOB    = StringDOB!
+        BackendManager.NewEntry?.country = StringCountry!
+        BackendManager.NewEntry?.city = StringCity!
+        BackendManager.NewEntry?.state = StringState!
+        BackendManager.NewEntry?.zIP = StringZIP!
+        BackendManager.NewEntry?.autismDiagnosis = StringAutism!
+        BackendManager.NewEntry?.otherDiagnoses = StringOtherDiagnosis!
         
 
-        NewEntry?.childSurveyCompleted = 0
+        BackendManager.NewEntry?.childSurveyCompleted = 0
         
         //////////////////////////////////////////
         // IMPORTANT: FIX THIS LATER /////////////
-        NewEntry?.consentPlay = 1
-        NewEntry?.consentView = 1
-        NewEntry?.consentShare = 1
+        BackendManager.NewEntry?.consentPlay = 1
+        BackendManager.NewEntry?.consentView = 1
+        BackendManager.NewEntry?.consentShare = 1
         //////////////////////////////////////////
         //////////////////////////////////////////
 
-        NewEntry?.childSurveyCompleted = 0
+        BackendManager.NewEntry?.childSurveyCompleted = 0
         
-        NewEntry?.hispanic = LatinoSwitchOn! ? 1 : 0
-        NewEntry?.african   = CaribbeanSwitchOn! ? 1 : 0
-        NewEntry?.eastAsian = AsianSwitchOn! ? 1 : 0
-        NewEntry?.arab = ArabSwitchOn! ? 1 : 0
-        NewEntry?.nativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
-        NewEntry?.pacificIslander = PacificSwitchOn! ? 1 : 0
-        NewEntry?.southeastAsian = SoutheastSwitchOn! ? 1 : 0
-        NewEntry?.southAsian = SouthAsianSwitchOn! ? 1 : 0
-        NewEntry?.caucasian = WhiteSwitchOn! ? 1 : 0
-        NewEntry?.unknown = OtherSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.hispanic = LatinoSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.african   = CaribbeanSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.eastAsian = AsianSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.arab = ArabSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.nativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.pacificIslander = PacificSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.southeastAsian = SoutheastSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.southAsian = SouthAsianSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.caucasian = WhiteSwitchOn! ? 1 : 0
+        BackendManager.NewEntry?.unknown = OtherSwitchOn! ? 1 : 0
         
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_1")
+        self.present(newViewController, animated: true, completion: nil)
+        
+        /*
         BackendManager.AddUserToDynamo(row: NewEntry!) { (Success) in
             print("[HK] Finished adding a user to DynamoDB.")
             // After we added the player, lets re-download all user players associated with our account.
@@ -216,9 +224,10 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
                     self.present(newViewController, animated: true, completion: nil)
                 }
-               
+ 
             })
         }
+        */
     }
     
     @IBAction func BackClick(_ sender: Any) {

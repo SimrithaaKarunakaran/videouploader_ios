@@ -27,7 +27,11 @@ class DBManager {
     
     var UserEmail      : String?
     
-
+    // This is a container that will store information about the child as it is filled out in survey 1,
+    // as well as the consent forms.
+    var NewEntry : DDBTableRow?
+    
+    
     init() {
         // Configuration (for Cognito)
         let GlobalAWSConfig  = AWSServiceConfiguration(region: GlobalRegionObject, credentialsProvider: nil)
@@ -120,6 +124,31 @@ class DBManager {
                 return nil
             })
     }
+    
+    
+    
+    func signup(email: String, password: String, completition: @escaping ((Bool?) -> ())) {
+        let emailAttr = AWSCognitoIdentityUserAttributeType()
+        emailAttr?.name = "email"
+        emailAttr?.value = email
+        
+        GlobalUserPool.signUp(email, password: password, userAttributes: [emailAttr!], validationData: nil)
+            .continueWith(block: {[weak self] (task) -> Any? in
+                
+                guard task.error == nil else {
+                    print("[HK] Failed to create a user account: \(task.error)")
+                    completition(false)
+                    return nil
+                }
+                
+                print("[HK] Successfully created a user account")
+                completition(true)
+                return nil
+            })
+        //user = GlobalUserPool.getUser(email),
+    }
+    
+    
     
     
     /// Instead of logging in with a username-password, this function will
@@ -226,6 +255,12 @@ class DBManager {
         return (P1 + "@" + emailArr[1])
     }
     
+    
+    /// Pull user data associated with the given email address.
+    /// Then, store it locally and notify the caller that it is ready.
+    /// - Parameters:
+    ///   - email: Email addres (raw) of the user in question.
+    ///   - completion: Callback with boolean value representing if operation was successful.
     func downloadUserData(email:String, completion: @escaping ((Bool) -> ())){
 
         let FinalEmail = getDBFriendlyEmail(email: email)

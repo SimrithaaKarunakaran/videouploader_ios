@@ -57,7 +57,7 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        var idx = indexPath[1]
+        var idx  = indexPath[1]
         var RelevantUser = BackendManager.UserDBResults![idx]
         
         cell.textLabel!.text = RelevantUser["name"]?.s

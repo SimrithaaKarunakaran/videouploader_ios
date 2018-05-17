@@ -22,10 +22,36 @@ class vc_consent_3: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
+        BackendManager.NewEntry?.consentView = false
+
+        self.CreatePlayerProfileAndRedirect()
     }
     
     @IBAction func ConsentClickNext(_ sender: Any) {
+        BackendManager.NewEntry?.consentView = false
+
+        self.CreatePlayerProfileAndRedirect()
     }
+    
+    
+    
+    func CreatePlayerProfileAndRedirect(){
+        BackendManager.AddUserToDynamo(row: BackendManager.NewEntry!) { (Success) in
+            print("[HK] Finished adding a user to DynamoDB.")
+            // After we added the player, lets re-download all user players associated with our account.
+            // Then, we can redirect the user to the screen where they can select it...
+            BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                DispatchQueue.main.async { // Correct
+                    print("[HK] Finished downloading user data.")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                    self.present(newViewController, animated: true, completion: nil)
+                }
+                
+            })
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

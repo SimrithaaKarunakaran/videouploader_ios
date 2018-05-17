@@ -22,7 +22,14 @@ class vc_login: UIViewController {
     @IBOutlet weak var TextSignUpLink:   UILabel!
     @IBOutlet weak var TextViewError:    UILabel!
 
+    
+    @IBAction func ActionTrigger(_ sender: UITextView) {
+        sender.resignFirstResponder()
+    }
+    
     @IBAction func ButtonLoginClick(_ sender: Any) {
+        
+        
         
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)

@@ -71,6 +71,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ActionTrigger:" destination="ypJ-GJ-O0I" eventType="primaryActionTriggered" id="pch-SF-lL0"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-OH-vci">
                                 <rect key="frame" x="16" y="269" width="284" height="45"/>
@@ -80,6 +83,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="ActionTrigger:" destination="ypJ-GJ-O0I" eventType="primaryActionTriggered" id="a2Q-Ln-Yh6"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-DH-PhF">
                                 <rect key="frame" x="16" y="235" width="88" height="26"/>
@@ -406,8 +412,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QkN-f8-IbB">
-                                <rect key="frame" x="16" y="147" width="273" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QkN-f8-IbB">
+                                <rect key="frame" x="16" y="146" width="273" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="9cP-6x-wcp"/>
                                 </constraints>
@@ -497,6 +503,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d01-NO-hQe"/>
                     </view>
+                    <connections>
+                        <outlet property="TextPassword" destination="It6-PM-qeS" id="H2e-nG-Cfr"/>
+                        <outlet property="TextUsername" destination="QkN-f8-IbB" id="HZP-m9-IS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2t-wb-N9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -851,10 +861,10 @@ By clicking the “Yes” button below, you are consenting to participate and th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-Wb-9GL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="341"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="360"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-eQ-W5q" userLabel="TextBlock">
-                                        <rect key="frame" x="5" y="0.0" width="320" height="5517.5"/>
+                                        <rect key="frame" x="5" y="20" width="320" height="5517.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Optionally, you can choose to opt in to view videos of other participants and answer several questions. If you are interested, please read the information below carefully.
 
@@ -929,14 +939,14 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                     <constraint firstAttribute="trailing" secondItem="Ssm-eQ-W5q" secondAttribute="trailing" id="JeL-eh-hOu"/>
                                     <constraint firstAttribute="bottom" secondItem="Ssm-eQ-W5q" secondAttribute="bottom" id="NXE-QL-5ss"/>
                                     <constraint firstItem="Ssm-eQ-W5q" firstAttribute="width" secondItem="dUf-Wb-9GL" secondAttribute="width" id="Ptw-ri-T4J"/>
-                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="top" secondItem="dUf-Wb-9GL" secondAttribute="top" id="z5b-iZ-Hyc"/>
+                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="top" secondItem="dUf-Wb-9GL" secondAttribute="top" constant="20" id="z5b-iZ-Hyc"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-XM-VR2" userLabel="NoButton">
-                                <rect key="frame" x="10" y="463" width="300" height="95"/>
+                                <rect key="frame" x="10" y="468" width="300" height="90"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="6e8-ae-F5Z"/>
+                                    <constraint firstAttribute="height" constant="90" id="6e8-ae-F5Z"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
@@ -945,22 +955,21 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                             <string key="content">No! I do not wish to opt-in to analyzing other participants. (You can still participate without analyzing the data your data; only the research staff will review and analyze your data.</string>
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="ButtonLoginClick:" destination="ypJ-GJ-O0I" eventType="touchUpInside" id="Jiw-eU-WcH"/>
-                                    <action selector="ConsentClickBack:" destination="xC0-Fl-bMT" eventType="touchDragOutside" id="154-W8-AFv"/>
+                                    <action selector="ConsentClickBack:" destination="xC0-Fl-bMT" eventType="touchUpInside" id="TPY-ae-cUy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-Iz-wie" userLabel="YesButton">
-                                <rect key="frame" x="10" y="351" width="300" height="104"/>
+                                <rect key="frame" x="10" y="370" width="300" height="90"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="104" id="o7S-ag-uoP"/>
+                                    <constraint firstAttribute="height" constant="90" id="o7S-ag-uoP"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
@@ -969,14 +978,14 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                             <string key="content">Yes! I agree to analyze other participants’ home videos. I also consent that I will not discuss anything about the videos with anyone else. If I have any questions regarding a video, I will only contact the research team about my question.</string>
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="ConsentClickContinue:" destination="xC0-Fl-bMT" eventType="touchUpInside" id="oCS-lu-alp"/>
+                                    <action selector="ConsentClickNext:" destination="xC0-Fl-bMT" eventType="touchUpInside" id="4co-xJ-ZRw"/>
                                 </connections>
                             </button>
                         </subviews>

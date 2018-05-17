@@ -42,8 +42,6 @@ var BackendManager : DBManager!
  User's state management.
  */
 
-
-// Check info.plist for details.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

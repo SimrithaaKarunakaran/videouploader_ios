@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["3iOS8vc_loginC", ""]
 provides-dynamic-lookup:
+- "ActionTrigger"
 - "ButtonLogin"
 - "ButtonLoginClick"
 - "TextSignUpClickHandler"
@@ -29,6 +30,7 @@ depends-top-level:
 - !private "UIStoryboard"
 - "UITapGestureRecognizer"
 - "UITextField"
+- "UITextView"
 - "UIViewController"
 - !private "print"
 - "vc_login"
@@ -38,6 +40,7 @@ depends-member:
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
 - !private ["So15CALayerDelegateP", "isUserInteractionEnabled"]
+- !private ["So15CALayerDelegateP", "resignFirstResponder"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["s7CVarArgP", "BackendManager"]
 - !private ["s7CVarArgP", "DispatchQueue"]
@@ -59,6 +62,7 @@ depends-member:
 - !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "range"]
+- !private ["s7CVarArgP", "resignFirstResponder"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "vc_login"]
 - !private ["s7CVarArgP", "viewDidLoad"]
@@ -87,6 +91,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "range"]
+- !private ["s28CustomDebugStringConvertibleP", "resignFirstResponder"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "vc_login"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
@@ -118,6 +123,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "range"]
+- !private ["s23CustomStringConvertibleP", "resignFirstResponder"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "vc_login"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
@@ -158,6 +164,7 @@ depends-member:
 - !private ["s9EquatableP", "present"]
 - !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "range"]
+- !private ["s9EquatableP", "resignFirstResponder"]
 - !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "vc_login"]
 - !private ["s9EquatableP", "viewDidLoad"]
@@ -190,6 +197,7 @@ depends-member:
 - !private ["s8HashableP", "present"]
 - !private ["s8HashableP", "print"]
 - !private ["s8HashableP", "range"]
+- !private ["s8HashableP", "resignFirstResponder"]
 - !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "vc_login"]
 - !private ["s8HashableP", "viewDidLoad"]
@@ -216,6 +224,7 @@ depends-member:
 - !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "range"]
+- !private ["So8NSCodingP", "resignFirstResponder"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "vc_login"]
 - !private ["So8NSCodingP", "viewDidLoad"]
@@ -245,6 +254,7 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "range"]
 - !private ["So16NSMutableCopyingP", "init"]
 - !private ["So16NSMutableCopyingP", "range"]
+- ["So8NSObjectC", "ActionTrigger"]
 - !private ["So8NSObjectC", "BackendManager"]
 - ["So8NSObjectC", "ButtonLogin"]
 - ["So8NSObjectC", "ButtonLoginClick"]
@@ -260,6 +270,7 @@ depends-member:
 - !private ["So8NSObjectC", "UIStoryboard"]
 - ["So8NSObjectC", "UITapGestureRecognizer"]
 - ["So8NSObjectC", "UITextField"]
+- ["So8NSObjectC", "UITextView"]
 - !private ["So8NSObjectC", "addGestureRecognizer"]
 - !private ["So8NSObjectC", "async"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
@@ -270,6 +281,7 @@ depends-member:
 - !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "range"]
+- !private ["So8NSObjectC", "resignFirstResponder"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "vc_login"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -293,6 +305,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "present"]
 - !private ["So16NSObjectProtocolP", "print"]
 - !private ["So16NSObjectProtocolP", "range"]
+- !private ["So16NSObjectProtocolP", "resignFirstResponder"]
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "vc_login"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
@@ -317,9 +330,11 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "range"]
 - !private ["So29UIAccessibilityIdentificationP", "addGestureRecognizer"]
 - !private ["So29UIAccessibilityIdentificationP", "isUserInteractionEnabled"]
+- !private ["So29UIAccessibilityIdentificationP", "resignFirstResponder"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So12UIAppearanceP", "addGestureRecognizer"]
 - !private ["So12UIAppearanceP", "isUserInteractionEnabled"]
+- !private ["So12UIAppearanceP", "resignFirstResponder"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So21UIAppearanceContainerP", "BackendManager"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
@@ -337,6 +352,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "isUserInteractionEnabled"]
 - !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "resignFirstResponder"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "vc_login"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
@@ -360,13 +376,16 @@ depends-member:
 - ["So18UIContentContainerP", ""]
 - !private ["So30UIContentSizeCategoryAdjustingP", "addGestureRecognizer"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "isUserInteractionEnabled"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "resignFirstResponder"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So9UIControlC", "text"]
 - !private ["So17UICoordinateSpaceP", "addGestureRecognizer"]
 - !private ["So17UICoordinateSpaceP", "isUserInteractionEnabled"]
+- !private ["So17UICoordinateSpaceP", "resignFirstResponder"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So13UIDynamicItemP", "addGestureRecognizer"]
 - !private ["So13UIDynamicItemP", "isUserInteractionEnabled"]
+- !private ["So13UIDynamicItemP", "resignFirstResponder"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So18UIFocusEnvironmentP", "BackendManager"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
@@ -384,14 +403,17 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "isUserInteractionEnabled"]
 - !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "resignFirstResponder"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "vc_login"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So11UIFocusItemP", "addGestureRecognizer"]
 - !private ["So11UIFocusItemP", "isUserInteractionEnabled"]
+- !private ["So11UIFocusItemP", "resignFirstResponder"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So19UIGestureRecognizerC", "init"]
+- !private ["So10UIKeyInputP", "resignFirstResponder"]
 - !private ["So10UIKeyInputP", "text"]
 - !private ["So7UILabelC", "addGestureRecognizer"]
 - !private ["So7UILabelC", "isUserInteractionEnabled"]
@@ -412,10 +434,12 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "isUserInteractionEnabled"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "resignFirstResponder"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "vc_login"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "ActionTrigger"]
 - !private ["So11UIResponderC", "BackendManager"]
 - ["So11UIResponderC", "ButtonLogin"]
 - ["So11UIResponderC", "ButtonLoginClick"]
@@ -431,12 +455,14 @@ depends-member:
 - !private ["So11UIResponderC", "UIStoryboard"]
 - ["So11UIResponderC", "UITapGestureRecognizer"]
 - ["So11UIResponderC", "UITextField"]
+- ["So11UIResponderC", "UITextView"]
 - !private ["So11UIResponderC", "addGestureRecognizer"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isUserInteractionEnabled"]
 - !private ["So11UIResponderC", "present"]
 - !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "resignFirstResponder"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "vc_login"]
 - ["So11UIResponderC", "viewDidLoad"]
@@ -456,10 +482,12 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "isUserInteractionEnabled"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "resignFirstResponder"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "vc_login"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So12UIScrollViewC", "resignFirstResponder"]
 - !private ["So16UIStateRestoringP", "BackendManager"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "String"]
@@ -480,12 +508,18 @@ depends-member:
 - !private ["So12UIStoryboardC", "init"]
 - !private ["So12UIStoryboardC", "instantiateViewController"]
 - !private ["So22UITapGestureRecognizerC", "init"]
+- !private ["So15UITextDraggableP", "resignFirstResponder"]
 - !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "resignFirstResponder"]
 - !private ["So15UITextDroppableP", "text"]
 - !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "resignFirstResponder"]
 - !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "resignFirstResponder"]
 - !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "resignFirstResponder"]
 - !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So10UITextViewC", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "BackendManager"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "String"]
@@ -502,13 +536,16 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "isUserInteractionEnabled"]
 - !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "resignFirstResponder"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "vc_login"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So6UIViewC", "addGestureRecognizer"]
 - !private ["So6UIViewC", "isUserInteractionEnabled"]
+- !private ["So6UIViewC", "resignFirstResponder"]
 - !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "ActionTrigger"]
 - !private ["So16UIViewControllerC", "BackendManager"]
 - ["So16UIViewControllerC", "ButtonLogin"]
 - ["So16UIViewControllerC", "ButtonLoginClick"]
@@ -524,6 +561,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "UIStoryboard"]
 - ["So16UIViewControllerC", "UITapGestureRecognizer"]
 - ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", "UITextView"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "present"]
@@ -535,6 +573,7 @@ depends-member:
 - !private ["s23_BidirectionalIndexableP", "range"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addGestureRecognizer"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isUserInteractionEnabled"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "resignFirstResponder"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -573,6 +612,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "range"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resignFirstResponder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "vc_login"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
@@ -584,6 +624,7 @@ depends-member:
 - !private ["s26_RangeReplaceableIndexableP", "range"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "range"]
+- ["3iOS8vc_loginC", "ActionTrigger"]
 - !private ["3iOS8vc_loginC", "BackendManager"]
 - ["3iOS8vc_loginC", "ButtonLogin"]
 - ["3iOS8vc_loginC", "ButtonLoginClick"]
@@ -599,6 +640,7 @@ depends-member:
 - !private ["3iOS8vc_loginC", "UIStoryboard"]
 - ["3iOS8vc_loginC", "UITapGestureRecognizer"]
 - ["3iOS8vc_loginC", "UITextField"]
+- ["3iOS8vc_loginC", "UITextView"]
 - ["3iOS8vc_loginC", "deinit"]
 - ["3iOS8vc_loginC", "didReceiveMemoryWarning"]
 - ["3iOS8vc_loginC", "init"]
@@ -663,6 +705,7 @@ depends-nominal:
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
 - "So16UIStateRestoringP"
 - !private "So12UIStoryboardC"
 - !private "So22UITapGestureRecognizerC"
@@ -672,6 +715,7 @@ depends-nominal:
 - !private "So11UITextInputP"
 - !private "So17UITextInputTraitsP"
 - !private "So34UITextPasteConfigurationSupportingP"
+- !private "So10UITextViewC"
 - "So18UITraitEnvironmentP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
@@ -825,4 +869,4 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
-interface-hash: "874781c8f316333d0b1466a3a7231ef2"
+interface-hash: "b868de0597bc03f6e836892b7481dc3c"

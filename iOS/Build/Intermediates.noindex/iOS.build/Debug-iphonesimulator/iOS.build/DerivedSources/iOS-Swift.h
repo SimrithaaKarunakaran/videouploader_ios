@@ -316,9 +316,12 @@ SWIFT_CLASS("_TtC3iOS12vc_countdown")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextField;
 
 SWIFT_CLASS("_TtC3iOS17vc_create_account")
 @interface vc_create_account : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextUsername;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TextPassword;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)CreateAccountNextClick:(id _Nonnull)sender;
@@ -338,7 +341,7 @@ SWIFT_CLASS("_TtC3iOS15vc_launchscreen")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
+@class UITextView;
 @class UITapGestureRecognizer;
 
 SWIFT_CLASS("_TtC3iOS8vc_login")
@@ -348,6 +351,7 @@ SWIFT_CLASS("_TtC3iOS8vc_login")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ButtonLogin;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextSignUpLink;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextViewError;
+- (IBAction)ActionTrigger:(UITextView * _Nonnull)sender;
 - (IBAction)ButtonLoginClick:(id _Nonnull)sender;
 - (void)TextSignUpClickHandlerWithSender:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)viewDidLoad;
