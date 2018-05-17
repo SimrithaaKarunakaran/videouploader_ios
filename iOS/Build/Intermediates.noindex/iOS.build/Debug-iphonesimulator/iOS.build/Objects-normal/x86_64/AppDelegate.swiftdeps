@@ -46,8 +46,8 @@ depends-top-level:
 - "Bool"
 - !private "BooleanLiteralType"
 - "CustomIdentityProvider"
-- "DBManager"
 - !private "Dictionary"
+- "GameEngine"
 - "GlobalAWSConfig"
 - "GlobalAppClientID"
 - "GlobalAppClientSecret"
@@ -82,7 +82,7 @@ depends-member:
 - !private ["So7AWSTaskC", "init"]
 - !private ["3iOS11AppDelegateC", "BackendManager"]
 - ["3iOS11AppDelegateC", "Bool"]
-- !private ["3iOS11AppDelegateC", "DBManager"]
+- !private ["3iOS11AppDelegateC", "GameEngine"]
 - ["3iOS11AppDelegateC", "String"]
 - ["3iOS11AppDelegateC", "UIApplication"]
 - ["3iOS11AppDelegateC", "UIApplicationLaunchOptionsKey"]
@@ -106,7 +106,7 @@ depends-member:
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s7CVarArgP", "AWSTask"]
 - !private ["s7CVarArgP", "BackendManager"]
-- !private ["s7CVarArgP", "DBManager"]
+- !private ["s7CVarArgP", "GameEngine"]
 - !private ["s7CVarArgP", "NSDictionary"]
 - !private ["s7CVarArgP", "UIApplication"]
 - ["s7CVarArgP", "application"]
@@ -133,7 +133,7 @@ depends-member:
 - ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSTask"]
 - !private ["s28CustomDebugStringConvertibleP", "BackendManager"]
-- !private ["s28CustomDebugStringConvertibleP", "DBManager"]
+- !private ["s28CustomDebugStringConvertibleP", "GameEngine"]
 - !private ["s28CustomDebugStringConvertibleP", "NSDictionary"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - ["s28CustomDebugStringConvertibleP", "application"]
@@ -168,7 +168,7 @@ depends-member:
 - ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "AWSTask"]
 - !private ["s23CustomStringConvertibleP", "BackendManager"]
-- !private ["s23CustomStringConvertibleP", "DBManager"]
+- !private ["s23CustomStringConvertibleP", "GameEngine"]
 - !private ["s23CustomStringConvertibleP", "NSDictionary"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - ["s23CustomStringConvertibleP", "application"]
@@ -191,12 +191,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tokens"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["3iOS9DBManagerC", "init"]
 - ["s9DecodableP", "init"]
 - ["s9EncodableP", "init"]
 - !private ["s9EquatableP", "AWSTask"]
 - !private ["s9EquatableP", "BackendManager"]
-- !private ["s9EquatableP", "DBManager"]
+- !private ["s9EquatableP", "GameEngine"]
 - !private ["s9EquatableP", "NSDictionary"]
 - !private ["s9EquatableP", "UIApplication"]
 - ["s9EquatableP", "USWest2"]
@@ -224,9 +223,10 @@ depends-member:
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["3iOS10GameEngineC", "init"]
 - !private ["s8HashableP", "AWSTask"]
 - !private ["s8HashableP", "BackendManager"]
-- !private ["s8HashableP", "DBManager"]
+- !private ["s8HashableP", "GameEngine"]
 - !private ["s8HashableP", "NSDictionary"]
 - !private ["s8HashableP", "UIApplication"]
 - ["s8HashableP", "USWest2"]
@@ -263,7 +263,7 @@ depends-member:
 - ["So8NSObjectC", "AWSTask"]
 - !private ["So8NSObjectC", "BackendManager"]
 - ["So8NSObjectC", "Bool"]
-- !private ["So8NSObjectC", "DBManager"]
+- !private ["So8NSObjectC", "GameEngine"]
 - ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIApplication"]
@@ -292,7 +292,7 @@ depends-member:
 - ["So8NSObjectC", ""]
 - !private ["So16NSObjectProtocolP", "AWSTask"]
 - !private ["So16NSObjectProtocolP", "BackendManager"]
-- !private ["So16NSObjectProtocolP", "DBManager"]
+- !private ["So16NSObjectProtocolP", "GameEngine"]
 - !private ["So16NSObjectProtocolP", "NSDictionary"]
 - !private ["So16NSObjectProtocolP", "UIApplication"]
 - ["So16NSObjectProtocolP", "application"]
@@ -328,7 +328,7 @@ depends-member:
 - !private ["So13UIApplicationC", "isStatusBarHidden"]
 - !private ["So13UIApplicationC", "shared"]
 - !private ["So21UIApplicationDelegateP", "BackendManager"]
-- !private ["So21UIApplicationDelegateP", "DBManager"]
+- !private ["So21UIApplicationDelegateP", "GameEngine"]
 - !private ["So21UIApplicationDelegateP", "UIApplication"]
 - ["So21UIApplicationDelegateP", "application"]
 - ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
@@ -345,7 +345,7 @@ depends-member:
 - ["So21UIApplicationDelegateP", "window"]
 - ["So21UIApplicationDelegateP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "BackendManager"]
-- !private ["So30UIPasteConfigurationSupportingP", "DBManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "GameEngine"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "application"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
@@ -366,7 +366,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So11UIResponderC", "BackendManager"]
 - ["So11UIResponderC", "Bool"]
-- !private ["So11UIResponderC", "DBManager"]
+- !private ["So11UIResponderC", "GameEngine"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIApplicationLaunchOptionsKey"]
@@ -390,7 +390,7 @@ depends-member:
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", ""]
 - !private ["So30UIResponderStandardEditActionsP", "BackendManager"]
-- !private ["So30UIResponderStandardEditActionsP", "DBManager"]
+- !private ["So30UIResponderStandardEditActionsP", "GameEngine"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "application"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
@@ -420,7 +420,7 @@ depends-member:
 - ["s14_IndexableBaseP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSTask"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BackendManager"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "DBManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GameEngine"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDictionary"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
@@ -460,7 +460,6 @@ depends-nominal:
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "3iOS9DBManagerC"
 - "s9DecodableP"
 - "s9EncodableP"
 - "s9EquatableP"
@@ -468,6 +467,7 @@ depends-nominal:
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "3iOS10GameEngineC"
 - "s8HashableP"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
@@ -643,4 +643,4 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
-interface-hash: "4f6d6063a68b2999e85b2bd0fdd0fb0c"
+interface-hash: "65ea96612e0ae4429d08f321b7659925"

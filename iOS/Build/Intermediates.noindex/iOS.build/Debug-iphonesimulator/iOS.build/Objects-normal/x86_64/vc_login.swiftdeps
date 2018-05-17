@@ -128,11 +128,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "vc_login"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["3iOS9DBManagerC", "UserEmail"]
-- !private ["3iOS9DBManagerC", "accessToken"]
-- !private ["3iOS9DBManagerC", "downloadUserData"]
-- !private ["3iOS9DBManagerC", "fullyAuthenticateWithToken"]
-- !private ["3iOS9DBManagerC", "login"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "range"]
@@ -176,6 +171,11 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "range"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "range"]
+- !private ["3iOS10GameEngineC", "UserEmail"]
+- !private ["3iOS10GameEngineC", "accessToken"]
+- !private ["3iOS10GameEngineC", "downloadUserData"]
+- !private ["3iOS10GameEngineC", "fullyAuthenticateWithToken"]
+- !private ["3iOS10GameEngineC", "login"]
 - !private ["s8HashableP", "BackendManager"]
 - !private ["s8HashableP", "DispatchQueue"]
 - !private ["s8HashableP", "String"]
@@ -659,7 +659,6 @@ depends-nominal:
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "3iOS9DBManagerC"
 - !private "s9DecodableP"
 - !private "So14DispatchObjectC"
 - !private "So13DispatchQueueC"
@@ -669,6 +668,7 @@ depends-nominal:
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "3iOS10GameEngineC"
 - "s8HashableP"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"

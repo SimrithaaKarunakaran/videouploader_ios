@@ -299,6 +299,9 @@
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="ClickBack:" destination="dvs-Iq-Hb4" eventType="touchUpInside" id="NWk-fn-XmJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSL-kB-1fe">
                                         <rect key="frame" x="140" y="0.0" width="120" height="50"/>
@@ -309,6 +312,9 @@
                                         <state key="normal" title="Continue">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="ClickNext:" destination="dvs-Iq-Hb4" eventType="touchUpInside" id="RHc-DI-C8l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

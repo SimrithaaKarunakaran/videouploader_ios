@@ -20,8 +20,20 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     var ArraySelected = [false, false, false, false, false, false];
 
     
-
+    @IBAction func ClickNext(_ sender: Any) {
+        // Direct user to screen where they can add a new player.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey1")
+        self.present(newViewController, animated: true, completion: nil)
+    }
     
+    
+    @IBAction func ClickBack(_ sender: Any) {
+        // Direct user to screen where they can add a new player.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        self.present(newViewController, animated: true, completion: nil)
+    }
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

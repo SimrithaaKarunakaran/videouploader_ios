@@ -14,7 +14,7 @@ import AWSDynamoDB
 
 
 
-class DBManager {
+class GameEngine {
     
     // An instance of the dynamo DB that we can use for queries. Set to US EAST region as required.
     var dynamoDBCustom : AWSDynamoDB?
@@ -25,10 +25,13 @@ class DBManager {
     // The array that holds dictionaries of all entries associated with our email address.
     var UserDBResults  : [[String : AWSDynamoDBAttributeValue]]?
     
+    // The name of the child that the user has elected to play with.
+    var SelectedChildIndex : Int?
+    
+    // The email address of the user currently signed in.
     var UserEmail      : String?
     
-    // This is a container that will store information about the child as it is filled out in survey 1,
-    // as well as the consent forms.
+    // This is a container that will store information about the child as it is filled out in survey 1, as well as the consent forms.
     var NewEntry : DDBTableRow?
     
     
@@ -278,7 +281,7 @@ class DBManager {
         
         query.tableName = "HeadsUpSurveys"
         query.keyConditions = myDic
-        
+  
         BackendManager.dynamoDBCustom?.query(query).continueWith(block: { (task) in
             guard task.error == nil else {
                 print(task.error)

@@ -28,7 +28,7 @@ class vc_consent_3: UIViewController {
     }
     
     @IBAction func ConsentClickNext(_ sender: Any) {
-        BackendManager.NewEntry?.consentView = false
+        BackendManager.NewEntry?.consentView = true
 
         self.CreatePlayerProfileAndRedirect()
     }

@@ -11,7 +11,7 @@
 		22207F1D2057553100D447F2 /* vc_launchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22207F1C2057553100D447F2 /* vc_launchscreen.swift */; };
 		22207F202057553100D447F2 /* story_main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22207F1E2057553100D447F2 /* story_main.storyboard */; };
 		22207F222057553100D447F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22207F212057553100D447F2 /* Assets.xcassets */; };
-		2229565820AA0C7800182CE9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565720AA0C7800182CE9 /* DBManager.swift */; };
+		2229565820AA0C7800182CE9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565720AA0C7800182CE9 /* GameEngine.swift */; };
 		2229565C20AA185D00182CE9 /* vc_select_player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565B20AA185D00182CE9 /* vc_select_player.swift */; };
 		2229565E20AA260800182CE9 /* DDBTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565D20AA260800182CE9 /* DDBTableRow.swift */; };
 		224CF92320A61C410070F7A7 /* vc_wifi_warn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */; };
@@ -130,7 +130,7 @@
 		22207F1F2057553100D447F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/story_main.storyboard; sourceTree = "<group>"; };
 		22207F212057553100D447F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22207F262057553200D447F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2229565720AA0C7800182CE9 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		2229565720AA0C7800182CE9 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		2229565B20AA185D00182CE9 /* vc_select_player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_select_player.swift; sourceTree = "<group>"; };
 		2229565D20AA260800182CE9 /* DDBTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBTableRow.swift; sourceTree = "<group>"; };
 		224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_wifi_warn.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				228C1E4F205AE46500DD9F63 /* StateUserInfo.swift */,
-				2229565720AA0C7800182CE9 /* DBManager.swift */,
+				2229565720AA0C7800182CE9 /* GameEngine.swift */,
 				2229565D20AA260800182CE9 /* DDBTableRow.swift */,
 			);
 			path = Logic;
@@ -709,7 +709,7 @@
 				22908DC720A0D703007CDA7F /* vc_create_account.swift in Sources */,
 				22908DC0209D1F5B007CDA7F /* vc_select_deck.swift in Sources */,
 				22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */,
-				2229565820AA0C7800182CE9 /* DBManager.swift in Sources */,
+				2229565820AA0C7800182CE9 /* GameEngine.swift in Sources */,
 				22207F1B2057553100D447F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

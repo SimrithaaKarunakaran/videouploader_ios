@@ -10,21 +10,21 @@ import AWSDynamoDB
 /// The user selects which child is about to play, on this screen.
 class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet weak var UITableViewInstance: UITableView!
-    @IBOutlet weak var AddPlayerText: UILabel!
-    @IBOutlet weak var AddPlayerImage: UIImageView!
+    @IBOutlet weak var UITableViewInstance : UITableView!
+    @IBOutlet weak var AddPlayerText       : UILabel!
+    @IBOutlet weak var AddPlayerImage      : UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UITableViewInstance.delegate = self
+        UITableViewInstance.delegate   = self
         UITableViewInstance.dataSource = self
 
         // Setup the onclick handler when user presses the "Add A Player" link.
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_select_player.AddNewPlayerClickHandler))
+        
         AddPlayerText.isUserInteractionEnabled = true
         AddPlayerText.addGestureRecognizer(tap)
-        
         AddPlayerImage.isUserInteractionEnabled = true
         AddPlayerImage.addGestureRecognizer(tap)
         
@@ -50,14 +50,20 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
         return BackendManager.UserDBResults!.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
         return ""
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        var idx  = indexPath[1]
+        let idx  = indexPath[1]
         var RelevantUser = BackendManager.UserDBResults![idx]
         
         cell.textLabel!.text = RelevantUser["name"]?.s
