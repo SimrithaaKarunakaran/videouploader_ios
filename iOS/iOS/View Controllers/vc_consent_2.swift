@@ -22,7 +22,7 @@ class vc_consent_2: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
-        BackendManager.NewEntry?.consentShare = false
+        GameEngineObject.NewEntry?.consentShare = false
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_3")
@@ -30,7 +30,7 @@ class vc_consent_2: UIViewController {
     }
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
-        BackendManager.NewEntry?.consentShare = true
+        GameEngineObject.NewEntry?.consentShare = true
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_3")

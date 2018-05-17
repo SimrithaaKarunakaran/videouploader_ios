@@ -13,7 +13,7 @@ provides-top-level:
 - "GlobalTokens"
 - "GlobalIdentityProvider"
 - "GlobalCredentialsProvider"
-- "BackendManager"
+- "GameEngineObject"
 - "AppDelegate"
 - "CustomIdentityProvider"
 provides-nominal:
@@ -42,12 +42,12 @@ depends-top-level:
 - "AWSTask"
 - "AppDelegate"
 - "AssignmentPrecedence"
-- "BackendManager"
 - "Bool"
 - !private "BooleanLiteralType"
 - "CustomIdentityProvider"
 - !private "Dictionary"
 - "GameEngine"
+- "GameEngineObject"
 - "GlobalAWSConfig"
 - "GlobalAppClientID"
 - "GlobalAppClientSecret"
@@ -80,9 +80,9 @@ depends-member:
 - ["So26AWSIdentityProviderManagerP", ""]
 - ["SC13AWSRegionTypeO", "USWest2"]
 - !private ["So7AWSTaskC", "init"]
-- !private ["3iOS11AppDelegateC", "BackendManager"]
 - ["3iOS11AppDelegateC", "Bool"]
 - !private ["3iOS11AppDelegateC", "GameEngine"]
+- !private ["3iOS11AppDelegateC", "GameEngineObject"]
 - ["3iOS11AppDelegateC", "String"]
 - ["3iOS11AppDelegateC", "UIApplication"]
 - ["3iOS11AppDelegateC", "UIApplicationLaunchOptionsKey"]
@@ -105,8 +105,8 @@ depends-member:
 - ["3iOS11AppDelegateC", "window"]
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s7CVarArgP", "AWSTask"]
-- !private ["s7CVarArgP", "BackendManager"]
 - !private ["s7CVarArgP", "GameEngine"]
+- !private ["s7CVarArgP", "GameEngineObject"]
 - !private ["s7CVarArgP", "NSDictionary"]
 - !private ["s7CVarArgP", "UIApplication"]
 - ["s7CVarArgP", "application"]
@@ -132,8 +132,8 @@ depends-member:
 - ["s10CollectionP", "init"]
 - ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "AWSTask"]
-- !private ["s28CustomDebugStringConvertibleP", "BackendManager"]
 - !private ["s28CustomDebugStringConvertibleP", "GameEngine"]
+- !private ["s28CustomDebugStringConvertibleP", "GameEngineObject"]
 - !private ["s28CustomDebugStringConvertibleP", "NSDictionary"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - ["s28CustomDebugStringConvertibleP", "application"]
@@ -167,8 +167,8 @@ depends-member:
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "AWSTask"]
-- !private ["s23CustomStringConvertibleP", "BackendManager"]
 - !private ["s23CustomStringConvertibleP", "GameEngine"]
+- !private ["s23CustomStringConvertibleP", "GameEngineObject"]
 - !private ["s23CustomStringConvertibleP", "NSDictionary"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - ["s23CustomStringConvertibleP", "application"]
@@ -194,8 +194,8 @@ depends-member:
 - ["s9DecodableP", "init"]
 - ["s9EncodableP", "init"]
 - !private ["s9EquatableP", "AWSTask"]
-- !private ["s9EquatableP", "BackendManager"]
 - !private ["s9EquatableP", "GameEngine"]
+- !private ["s9EquatableP", "GameEngineObject"]
 - !private ["s9EquatableP", "NSDictionary"]
 - !private ["s9EquatableP", "UIApplication"]
 - ["s9EquatableP", "USWest2"]
@@ -225,8 +225,8 @@ depends-member:
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["3iOS10GameEngineC", "init"]
 - !private ["s8HashableP", "AWSTask"]
-- !private ["s8HashableP", "BackendManager"]
 - !private ["s8HashableP", "GameEngine"]
+- !private ["s8HashableP", "GameEngineObject"]
 - !private ["s8HashableP", "NSDictionary"]
 - !private ["s8HashableP", "UIApplication"]
 - ["s8HashableP", "USWest2"]
@@ -261,9 +261,9 @@ depends-member:
 - ["So21NSItemProviderWritingP", "init"]
 - ["So16NSMutableCopyingP", "init"]
 - ["So8NSObjectC", "AWSTask"]
-- !private ["So8NSObjectC", "BackendManager"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "GameEngine"]
+- !private ["So8NSObjectC", "GameEngineObject"]
 - ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIApplication"]
@@ -291,8 +291,8 @@ depends-member:
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", ""]
 - !private ["So16NSObjectProtocolP", "AWSTask"]
-- !private ["So16NSObjectProtocolP", "BackendManager"]
 - !private ["So16NSObjectProtocolP", "GameEngine"]
+- !private ["So16NSObjectProtocolP", "GameEngineObject"]
 - !private ["So16NSObjectProtocolP", "NSDictionary"]
 - !private ["So16NSObjectProtocolP", "UIApplication"]
 - ["So16NSObjectProtocolP", "application"]
@@ -327,8 +327,8 @@ depends-member:
 - ["s20TextOutputStreamableP", "init"]
 - !private ["So13UIApplicationC", "isStatusBarHidden"]
 - !private ["So13UIApplicationC", "shared"]
-- !private ["So21UIApplicationDelegateP", "BackendManager"]
 - !private ["So21UIApplicationDelegateP", "GameEngine"]
+- !private ["So21UIApplicationDelegateP", "GameEngineObject"]
 - !private ["So21UIApplicationDelegateP", "UIApplication"]
 - ["So21UIApplicationDelegateP", "application"]
 - ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
@@ -344,8 +344,8 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - ["So21UIApplicationDelegateP", "window"]
 - ["So21UIApplicationDelegateP", ""]
-- !private ["So30UIPasteConfigurationSupportingP", "BackendManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "GameEngine"]
+- !private ["So30UIPasteConfigurationSupportingP", "GameEngineObject"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "application"]
 - ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
@@ -364,9 +364,9 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So30UIPasteConfigurationSupportingP", ""]
-- !private ["So11UIResponderC", "BackendManager"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "GameEngine"]
+- !private ["So11UIResponderC", "GameEngineObject"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIApplicationLaunchOptionsKey"]
@@ -389,8 +389,8 @@ depends-member:
 - !private ["So11UIResponderC", "shared"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", ""]
-- !private ["So30UIResponderStandardEditActionsP", "BackendManager"]
 - !private ["So30UIResponderStandardEditActionsP", "GameEngine"]
+- !private ["So30UIResponderStandardEditActionsP", "GameEngineObject"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "application"]
 - ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
@@ -419,8 +419,8 @@ depends-member:
 - ["s10_IndexableP", "init"]
 - ["s14_IndexableBaseP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AWSTask"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "BackendManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "GameEngine"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GameEngineObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDictionary"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
@@ -643,4 +643,4 @@ depends-external:
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules/module.modulemap"
 - "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules/module.modulemap"
-interface-hash: "65ea96612e0ae4429d08f321b7659925"
+interface-hash: "76b0c5f94ff05c4be78788f5d6935c19"

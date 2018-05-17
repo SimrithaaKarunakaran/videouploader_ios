@@ -34,16 +34,16 @@ class vc_login: UIViewController {
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
       
-        BackendManager?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
-            BackendManager?.accessToken     = Result!
+        GameEngineObject?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
+            GameEngineObject?.accessToken     = Result!
 
             if(Success){
                 
-                BackendManager.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
+                GameEngineObject.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
                     // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
                     print("[HK] Fully authenticated.")
                     
-                    BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                    GameEngineObject.downloadUserData(email: GameEngineObject.UserEmail!, completion: { (Success) in
                         print("[HK] DownloadUserData callback: \(Success)")
                         
                         DispatchQueue.main.async { // Correct
@@ -59,12 +59,12 @@ class vc_login: UIViewController {
                 // Update UI separately..
                 DispatchQueue.main.async { // Correct
                     if(!Success){
-                        if BackendManager?.accessToken?.range(of:"error 20") != nil {
+                        if GameEngineObject?.accessToken?.range(of:"error 20") != nil {
                             self.TextViewError.text="Incorrect password!"
-                        } else if BackendManager?.accessToken?.range(of:"error 34") != nil {
+                        } else if GameEngineObject?.accessToken?.range(of:"error 34") != nil {
                             self.TextViewError.text="Username not found!"
                         } else  {
-                            self.TextViewError.text = BackendManager.accessToken
+                            self.TextViewError.text = GameEngineObject.accessToken
                         }
                     }
                 }

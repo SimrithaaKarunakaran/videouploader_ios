@@ -172,41 +172,41 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         */
         
         
-        BackendManager.NewEntry = DDBTableRow()
-        BackendManager.NewEntry?.email  = BackendManager.getDBFriendlyEmail(email: BackendManager.UserEmail!)
-        BackendManager.NewEntry?.name   = StringName!
-        BackendManager.NewEntry?.gender = StringGender!
-        BackendManager.NewEntry?.dOB    = StringDOB!
-        BackendManager.NewEntry?.country = StringCountry!
-        BackendManager.NewEntry?.city = StringCity!
-        BackendManager.NewEntry?.state = StringState!
-        BackendManager.NewEntry?.zIP = StringZIP!
-        BackendManager.NewEntry?.autismDiagnosis = StringAutism!
-        BackendManager.NewEntry?.otherDiagnoses = StringOtherDiagnosis!
+        GameEngineObject.NewEntry = DDBTableRow()
+        GameEngineObject.NewEntry?.email  = GameEngineObject.getDBFriendlyEmail(email: GameEngineObject.UserEmail!)
+        GameEngineObject.NewEntry?.name   = StringName!
+        GameEngineObject.NewEntry?.gender = StringGender!
+        GameEngineObject.NewEntry?.dOB    = StringDOB!
+        GameEngineObject.NewEntry?.country = StringCountry!
+        GameEngineObject.NewEntry?.city = StringCity!
+        GameEngineObject.NewEntry?.state = StringState!
+        GameEngineObject.NewEntry?.zIP = StringZIP!
+        GameEngineObject.NewEntry?.autismDiagnosis = StringAutism!
+        GameEngineObject.NewEntry?.otherDiagnoses = StringOtherDiagnosis!
         
 
-        BackendManager.NewEntry?.childSurveyCompleted = 0
+        GameEngineObject.NewEntry?.childSurveyCompleted = 0
         
         //////////////////////////////////////////
         // IMPORTANT: FIX THIS LATER /////////////
-        BackendManager.NewEntry?.consentPlay = 1
-        BackendManager.NewEntry?.consentView = 1
-        BackendManager.NewEntry?.consentShare = 1
+        GameEngineObject.NewEntry?.consentPlay = 1
+        GameEngineObject.NewEntry?.consentView = 1
+        GameEngineObject.NewEntry?.consentShare = 1
         //////////////////////////////////////////
         //////////////////////////////////////////
 
-        BackendManager.NewEntry?.childSurveyCompleted = 0
+        GameEngineObject.NewEntry?.childSurveyCompleted = 0
         
-        BackendManager.NewEntry?.hispanic = LatinoSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.african   = CaribbeanSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.eastAsian = AsianSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.arab = ArabSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.nativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.pacificIslander = PacificSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.southeastAsian = SoutheastSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.southAsian = SouthAsianSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.caucasian = WhiteSwitchOn! ? 1 : 0
-        BackendManager.NewEntry?.unknown = OtherSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.hispanic = LatinoSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.african   = CaribbeanSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.eastAsian = AsianSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.arab = ArabSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.nativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.pacificIslander = PacificSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.southeastAsian = SoutheastSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.southAsian = SouthAsianSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.caucasian = WhiteSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.unknown = OtherSwitchOn! ? 1 : 0
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_1")

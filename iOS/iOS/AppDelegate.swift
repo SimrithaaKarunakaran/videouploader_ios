@@ -36,7 +36,7 @@ var GlobalCredentialsProvider : AWSCognitoCredentialsProvider!
  Database management
  */
 
-var BackendManager : GameEngine!
+var GameEngineObject : GameEngine!
 
 /*
  User's state management.
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIApplication.shared.isStatusBarHidden = true
         
-        BackendManager = GameEngine()
+        GameEngineObject = GameEngine()
 
         return true
     }

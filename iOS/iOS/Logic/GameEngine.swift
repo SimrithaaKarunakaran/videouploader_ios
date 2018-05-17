@@ -173,7 +173,7 @@ class GameEngine {
                 self!.accessToken = session.accessToken?.tokenString
                 print("[HK] RestoreSession returned with access token: \(self!.accessToken)")
 
-                BackendManager.getUserEmail(completion: { (Success, Email) in
+                GameEngineObject.getUserEmail(completion: { (Success, Email) in
                     sessionCompletion(Success, Email)
                 })
                 
@@ -194,7 +194,7 @@ class GameEngine {
     /// - Parameter sessionCompletion: True if this was successful, and false if otherwise.
     func fullyAuthenticateWithToken(sessionCompletion: @escaping ((Bool) -> ())){
         // PACKAGE OUR TOKEN FROM IDENTITY POOL
-        GlobalTokens             = [GlobalCognitoUserpoolProvider: BackendManager.accessToken!]
+        GlobalTokens             = [GlobalCognitoUserpoolProvider: GameEngineObject.accessToken!]
         GlobalIdentityProvider   = CustomIdentityProvider(tokens: GlobalTokens)
         
         // PASS THE TOKEN FROM USERPOOL TO AWS
@@ -282,7 +282,7 @@ class GameEngine {
         query.tableName = "HeadsUpSurveys"
         query.keyConditions = myDic
   
-        BackendManager.dynamoDBCustom?.query(query).continueWith(block: { (task) in
+        GameEngineObject.dynamoDBCustom?.query(query).continueWith(block: { (task) in
             guard task.error == nil else {
                 print(task.error)
                 completion(false)

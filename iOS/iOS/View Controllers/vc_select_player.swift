@@ -47,7 +47,7 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BackendManager.UserDBResults!.count
+        return GameEngineObject.UserDBResults!.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
@@ -55,16 +55,34 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
-        self.present(newViewController, animated: true, completion: nil)
+        // Save which child was selected.
+        GameEngineObject.SelectedChildIndex = indexPath[1]
+        var RelevantUser = GameEngineObject.UserDBResults![indexPath[1]]
+
+        var SurveyCompleted2 = Int((RelevantUser["childSurveyCompleted"]?.n!)!)!
+
+
+        print("Printing out childSurveyCompleted: \(SurveyCompleted2)")
+
+        if(SurveyCompleted2 == 0){
+            print("[HK] Survey not completed.")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_request_survey")
+            self.present(newViewController, animated: true, completion: nil)
+        } else {
+            // The survey has been completed.
+            print("[HK] Survey was completed.")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
+            self.present(newViewController, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
         let idx  = indexPath[1]
-        var RelevantUser = BackendManager.UserDBResults![idx]
+        var RelevantUser = GameEngineObject.UserDBResults![idx]
         
         cell.textLabel!.text = RelevantUser["name"]?.s
         cell.textLabel!.font = cell.textLabel!.font.withSize(24)

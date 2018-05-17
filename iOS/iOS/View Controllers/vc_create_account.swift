@@ -71,17 +71,17 @@ class vc_create_account: UIViewController {
             return;
         }
         
-        BackendManager.signup(email: Username, password: Password) { (SuccessRegister) in
+        GameEngineObject.signup(email: Username, password: Password) { (SuccessRegister) in
             
             if(SuccessRegister!){
                 // Successfully created account. Now lets finish authentication and proceed.
-                BackendManager?.login(email: Username, password: Password) { (Success, Result) in
-                    BackendManager?.accessToken     = Result!
+                GameEngineObject?.login(email: Username, password: Password) { (Success, Result) in
+                    GameEngineObject?.accessToken     = Result!
                     if(Success){
-                        BackendManager.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
+                        GameEngineObject.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
                             // We've got a session and now we can access AWS service via default() e.g.: let cognito = AWSCognito.default()
                             print("[HK] Fully authenticated.")
-                            BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
+                            GameEngineObject.downloadUserData(email: GameEngineObject.UserEmail!, completion: { (Success) in
                                 print("[HK] DownloadUserData callback: \(Success)")
                                 
                                 DispatchQueue.main.async { // Correct
