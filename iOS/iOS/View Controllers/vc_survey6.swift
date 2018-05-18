@@ -20,9 +20,15 @@ class vc_survey6: UIViewController {
     @IBOutlet weak var Q18: UISlider!
     
     @IBAction func ButtonBack(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey5")
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func ButtonNext(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SurveyThankYou")
+        self.present(newViewController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -365,6 +365,8 @@ SWIFT_CLASS("_TtC3iOS17vc_request_survey")
 @interface vc_request_survey : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)BackButtonClick:(id _Nonnull)sender;
+- (IBAction)ContinueButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -444,11 +446,20 @@ SWIFT_CLASS("_TtC3iOS10vc_survey1")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UISlider;
 
 SWIFT_CLASS("_TtC3iOS10vc_survey2")
 @interface vc_survey2 : UIViewController
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q1;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q2;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q3;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA1;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA3;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA2;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)BackButtonClick:(id _Nonnull)sender;
+- (IBAction)NextButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -458,6 +469,16 @@ SWIFT_CLASS("_TtC3iOS10vc_survey3")
 @interface vc_survey3 : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA4;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA5;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA6;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA7;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified A4;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified A5;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified A6;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified A7;
+- (IBAction)BackButtonClick:(id _Nonnull)sender;
+- (IBAction)NextButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -467,6 +488,16 @@ SWIFT_CLASS("_TtC3iOS10vc_survey4")
 @interface vc_survey4 : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified SW8;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified SW9;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified SW10;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified SW11;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q8;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q9;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q10;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q11;
+- (IBAction)NextButtonClick:(id _Nonnull)sender;
+- (IBAction)BackButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -474,7 +505,17 @@ SWIFT_CLASS("_TtC3iOS10vc_survey4")
 
 SWIFT_CLASS("_TtC3iOS10vc_survey5")
 @interface vc_survey5 : UIViewController
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA12;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA13;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA14;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA15;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q12;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q13;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q14;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q15;
 - (void)viewDidLoad;
+- (IBAction)BackClick:(id _Nonnull)sender;
+- (IBAction)NextClick:(id _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -483,6 +524,14 @@ SWIFT_CLASS("_TtC3iOS10vc_survey5")
 
 SWIFT_CLASS("_TtC3iOS10vc_survey6")
 @interface vc_survey6 : UIViewController
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA16;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA17;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA18;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q16;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q17;
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q18;
+- (IBAction)ButtonBack:(id _Nonnull)sender;
+- (IBAction)ButtonNext:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

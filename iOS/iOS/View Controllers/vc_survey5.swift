@@ -27,12 +27,23 @@ class vc_survey5: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func BackClick(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey4")
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func NextClick(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey6")
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
