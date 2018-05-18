@@ -21,7 +21,15 @@ class vc_survey3: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBOutlet weak var NA4: UISwitch!
+    @IBOutlet weak var NA5: UISwitch!
+    @IBOutlet weak var NA6: UISwitch!
+    @IBOutlet weak var NA7: UISwitch!
+    
+    @IBOutlet weak var A4: UISlider!
+    @IBOutlet weak var A5: UISlider!
+    @IBOutlet weak var A6: UISlider!
+    @IBOutlet weak var A7: UISlider!
     /*
     // MARK: - Navigation
 
@@ -31,5 +39,9 @@ class vc_survey3: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func BackButtonClick(_ sender: Any) {
+    }
+    
+    @IBAction func NextButtonClick(_ sender: Any) {
+    }
 }

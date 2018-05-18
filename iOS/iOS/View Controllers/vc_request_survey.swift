@@ -1,4 +1,4 @@
-//
+    //
 //  vc_request_survey.swift
 //  iOS
 //
@@ -21,7 +21,11 @@ class vc_request_survey: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func BackButtonClick(_ sender: Any) {
+    }
+    
+    @IBAction func ContinueButtonClick(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

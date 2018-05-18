@@ -100,11 +100,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9P-CO-jJy">
-                                <rect key="frame" x="125.5" y="25" width="69" height="53"/>
+                                <rect key="frame" x="122.5" y="25" width="75" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="zV9-oM-wUD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -279,7 +279,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Choose your decks!">
                                         <attributes>
-                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <font key="NSFont" size="32" name="Noteworthy-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -449,11 +449,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create An Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWo-Lw-L0U">
-                                <rect key="frame" x="54.5" y="20" width="211" height="53"/>
+                                <rect key="frame" x="43.5" y="20" width="233" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="R5M-Hf-Puk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

@@ -21,7 +21,17 @@ class vc_survey4: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBOutlet weak var SW8: UISwitch!
+    @IBOutlet weak var SW9: UISwitch!
+    @IBOutlet weak var SW10: UISwitch!
+    @IBOutlet weak var SW11: UISwitch!
+    
+    @IBOutlet weak var Q8: UISlider!
+    @IBOutlet weak var Q9: UISlider!
+    @IBOutlet weak var Q10: UISlider!
+    @IBOutlet weak var Q11: UISlider!
+    
+    
     /*
     // MARK: - Navigation
 
@@ -32,4 +42,8 @@ class vc_survey4: UIViewController {
     }
     */
 
+    @IBAction func NextButtonClick(_ sender: Any) {
+    }
+    @IBAction func BackButtonClick(_ sender: Any) {
+    }
 }

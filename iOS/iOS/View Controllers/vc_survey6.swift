@@ -10,6 +10,20 @@ import UIKit
 
 class vc_survey6: UIViewController {
 
+    
+    @IBOutlet weak var NA16: UISwitch!
+    @IBOutlet weak var NA17: UISwitch!
+    @IBOutlet weak var NA18: UISwitch!
+    
+    @IBOutlet weak var Q16: UISlider!
+    @IBOutlet weak var Q17: UISlider!
+    @IBOutlet weak var Q18: UISlider!
+    
+    @IBAction func ButtonBack(_ sender: Any) {
+    }
+    
+    @IBAction func ButtonNext(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
