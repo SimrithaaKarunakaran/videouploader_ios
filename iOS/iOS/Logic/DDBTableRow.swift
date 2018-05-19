@@ -21,13 +21,9 @@ class DDBTableRow :AWSDynamoDBObjectModel ,AWSDynamoDBModeling  {
     @objc var autismDiagnosis      : String = "NA"
     @objc var otherDiagnoses       : String = "NA"
     
-
+    @objc var answers              : [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    @objc var notApplicableChecked : [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
  
-    @objc var answers              : NSArray = [0,0]
-    @objc var notApplicableChecked : NSArray = [0,0]
- 
-    
-    // Has the full survey information been filled out for this child?
     @objc var childSurveyCompleted : NSNumber = 0
     @objc var hispanic             : NSNumber = 0
     @objc var african              : NSNumber = 0

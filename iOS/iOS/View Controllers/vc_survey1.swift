@@ -212,31 +212,12 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_1")
         self.present(newViewController, animated: true, completion: nil)
         
-        /*
-        BackendManager.AddUserToDynamo(row: NewEntry!) { (Success) in
-            print("[HK] Finished adding a user to DynamoDB.")
-            // After we added the player, lets re-download all user players associated with our account.
-            // Then, we can redirect the user to the screen where they can select it...
-            BackendManager.downloadUserData(email: BackendManager.UserEmail!, completion: { (Success) in
-                DispatchQueue.main.async { // Correct
-                    print("[HK] Finished downloading user data.")
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-                    self.present(newViewController, animated: true, completion: nil)
-                }
- 
-            })
-        }
-        */
     }
     
-    @IBAction func BackClick(_ sender: Any) {
-        // Move to the next viewpager: the second survey
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-        self.present(newViewController, animated: true, completion: nil)
+    @IBAction func BackClickNew(_ sender: Any) {
+        ShowError(error: "You must accept the consent form to proceed!")
     }
-    
+   
     
     // returns the number of 'columns' to display.
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {

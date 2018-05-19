@@ -18,7 +18,6 @@ class vc_survey6: UIViewController {
     @IBOutlet weak var Q16: UISlider!
     @IBOutlet weak var Q17: UISlider!
     @IBOutlet weak var Q18: UISlider!
-    
     @IBAction func ButtonBack(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey5")
@@ -26,30 +25,35 @@ class vc_survey6: UIViewController {
     }
     
     @IBAction func ButtonNext(_ sender: Any) {
+        
+        GameEngineObject.NewEntry?.answers[15]  = Int(round(Q16.value))
+        GameEngineObject.NewEntry?.answers[16]  = Int(round(Q17.value))
+        GameEngineObject.NewEntry?.answers[17]  = Int(round(Q18.value))
+        
+        GameEngineObject.NewEntry?.notApplicableChecked[15]  = NA16.isOn ? 1 : 0
+        GameEngineObject.NewEntry?.notApplicableChecked[16]  = NA17.isOn ? 1 : 0
+        GameEngineObject.NewEntry?.notApplicableChecked[17]  = NA18.isOn ? 1 : 0
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "SurveyThankYou")
         self.present(newViewController, animated: true, completion: nil)
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        Q16.value = Float((GameEngineObject.NewEntry?.answers[15])!)
+        Q17.value = Float((GameEngineObject.NewEntry?.answers[16])!)
+        Q18.value = Float((GameEngineObject.NewEntry?.answers[17])!)
+        
+        NA16.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[15] == 0) ? false : true
+        NA17.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[16] == 0) ? false : true
+        NA18.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[17] == 0) ? false : true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

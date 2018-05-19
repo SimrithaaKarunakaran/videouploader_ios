@@ -44,8 +44,13 @@ class GameEngine {
         AWSCognitoIdentityUserPool.register(with: GlobalAWSConfig, userPoolConfiguration: GlobalPoolConfig, forKey: GlobalUserPoolID)
         
         GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)
+        
+        NewEntry = DDBTableRow()
     }
     
+    func getTempUser() -> DDBTableRow {
+        return NewEntry!
+    }
     
     /// This function initializes DynamoDB, which stores survey/user information./
     /// These steps are necessasry because DynamoDB table is in a different region than our Cognito User Pool.

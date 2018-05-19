@@ -22,13 +22,13 @@ class vc_consent_3: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentView = false
+        GameEngineObject.NewEntry?.consentView = 0
 
         self.CreatePlayerProfileAndRedirect()
     }
     
     @IBAction func ConsentClickNext(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentView = true
+        GameEngineObject.NewEntry?.consentView = 1
 
         self.CreatePlayerProfileAndRedirect()
     }

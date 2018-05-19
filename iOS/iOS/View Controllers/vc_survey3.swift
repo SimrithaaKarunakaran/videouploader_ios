@@ -13,7 +13,15 @@ class vc_survey3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        A4.value = Float((GameEngineObject.NewEntry?.answers[3])!)
+        A5.value = Float((GameEngineObject.NewEntry?.answers[4])!)
+        A6.value = Float((GameEngineObject.NewEntry?.answers[5])!)
+        A7.value = Float((GameEngineObject.NewEntry?.answers[6])!)
+
+        NA4.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[3] == 0) ? false : true
+        NA5.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[4] == 0) ? false : true
+        NA6.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[5] == 0) ? false : true
+        NA7.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[6] == 0) ? false : true
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,15 +38,8 @@ class vc_survey3: UIViewController {
     @IBOutlet weak var A5: UISlider!
     @IBOutlet weak var A6: UISlider!
     @IBOutlet weak var A7: UISlider!
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     @IBAction func BackButtonClick(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey2")
@@ -46,6 +47,17 @@ class vc_survey3: UIViewController {
     }
     
     @IBAction func NextButtonClick(_ sender: Any) {
+        
+        GameEngineObject.NewEntry?.answers[3] = Int(round(A4.value))
+        GameEngineObject.NewEntry?.answers[4] = Int(round(A5.value))
+        GameEngineObject.NewEntry?.answers[5] = Int(round(A6.value))
+        GameEngineObject.NewEntry?.answers[6] = Int(round(A7.value))
+
+        GameEngineObject.NewEntry?.notApplicableChecked[3] = NA4.isOn ? 1 : 0
+        GameEngineObject.NewEntry?.notApplicableChecked[4] = NA5.isOn ? 1 : 0
+        GameEngineObject.NewEntry?.notApplicableChecked[5] = NA6.isOn ? 1 : 0
+        GameEngineObject.NewEntry?.notApplicableChecked[6] = NA6.isOn ? 1 : 0
+
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey4")
         self.present(newViewController, animated: true, completion: nil)

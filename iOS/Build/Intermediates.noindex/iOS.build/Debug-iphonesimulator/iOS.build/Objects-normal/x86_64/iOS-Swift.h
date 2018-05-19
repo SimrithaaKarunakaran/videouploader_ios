@@ -213,7 +213,6 @@ SWIFT_CLASS("_TtC3iOS22CustomIdentityProvider")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
-@class NSArray;
 @class NSNumber;
 @class NSCoder;
 
@@ -229,8 +228,8 @@ SWIFT_CLASS("_TtC3iOS11DDBTableRow")
 @property (nonatomic, copy) NSString * _Nonnull zIP;
 @property (nonatomic, copy) NSString * _Nonnull autismDiagnosis;
 @property (nonatomic, copy) NSString * _Nonnull otherDiagnoses;
-@property (nonatomic, strong) NSArray * _Nonnull answers;
-@property (nonatomic, strong) NSArray * _Nonnull notApplicableChecked;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull answers;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull notApplicableChecked;
 @property (nonatomic, strong) NSNumber * _Nonnull childSurveyCompleted;
 @property (nonatomic, strong) NSNumber * _Nonnull hispanic;
 @property (nonatomic, strong) NSNumber * _Nonnull african;
@@ -435,7 +434,7 @@ SWIFT_CLASS("_TtC3iOS10vc_survey1")
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified textCity;
 - (IBAction)ResignResponder:(UITextField * _Nonnull)sender;
 - (IBAction)ContinueClick:(id _Nonnull)sender;
-- (IBAction)BackClick:(id _Nonnull)sender;
+- (IBAction)BackClickNew:(id _Nonnull)sender;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
@@ -454,8 +453,8 @@ SWIFT_CLASS("_TtC3iOS10vc_survey2")
 @property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q2;
 @property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified Q3;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA1;
-@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA3;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA2;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified NA3;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)BackButtonClick:(id _Nonnull)sender;
@@ -533,6 +532,16 @@ SWIFT_CLASS("_TtC3iOS10vc_survey6")
 - (IBAction)ButtonBack:(id _Nonnull)sender;
 - (IBAction)ButtonNext:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS15vc_thank_player")
+@interface vc_thank_player : UIViewController
+- (void)viewDidLoad;
+- (IBAction)ClickNext:(id _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
