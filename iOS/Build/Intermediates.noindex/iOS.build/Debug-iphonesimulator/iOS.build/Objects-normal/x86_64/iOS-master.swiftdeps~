@@ -1,10 +1,10 @@
 version: "Apple Swift version 4.0.3 (swiftlang-900.0.72 clang-900.0.38)"
 options: "1ff63e580257f8d640acdd8a2ab0b687"
-build_time: [1526697637, 470995000]
+build_time: [1526698015, 243816000]
 inputs:
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/UIElements/SelectDeckCellCollectionViewCell.swift": [1525481882, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_survey2.swift": [1526697508, 0]
-  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_thank_player.swift": [1526697042, 0]
+  "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_thank_player.swift": [1526698014, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_launchscreen.swift": [1526598548, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_consent_2.swift": [1526697203, 0]
   "/Users/haik/Documents/guesswhat_ios/iOS/iOS/View Controllers/vc_request_survey.swift": [1526605021, 0]

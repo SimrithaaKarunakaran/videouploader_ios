@@ -18,6 +18,7 @@ class vc_survey6: UIViewController {
     @IBOutlet weak var Q16: UISlider!
     @IBOutlet weak var Q17: UISlider!
     @IBOutlet weak var Q18: UISlider!
+    
     @IBAction func ButtonBack(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey5")

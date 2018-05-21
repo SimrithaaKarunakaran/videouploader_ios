@@ -60,29 +60,26 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
 
-    var LatinoSwitchOn         : Bool?
-    var AsianSwitchOn          : Bool?
-    var SoutheastSwitchOn      : Bool?
-    var SouthAsianSwitchOn     : Bool?
-
-    var NativeAmericanSwitchOn : Bool?
-
-    var WhiteSwitchOn          : Bool?
-    var CaribbeanSwitchOn      : Bool?
-    var ArabSwitchOn           : Bool?
-    var PacificSwitchOn        : Bool?
-    var OtherSwitchOn          : Bool?
+    var LatinoSwitchOn         = false;
+    var AsianSwitchOn          = false;
+    var SoutheastSwitchOn      = false;
+    var SouthAsianSwitchOn     = false;
+    var NativeAmericanSwitchOn = false;
+    var WhiteSwitchOn          = false;
+    var CaribbeanSwitchOn      = false;
+    var ArabSwitchOn           = false;
+    var PacificSwitchOn        = false;
+    var OtherSwitchOn          = false;
     
-    var StringName    : String?
-    var StringGender  : String?
-    var StringDOB     : String?
-    var StringCountry : String?
-    var StringState   : String?
-    var StringZIP     : String?
-    var StringAutism  : String?
-    var StringCity    : String?
-    var StringOtherDiagnosis : String?
-    
+    var StringName    = "";
+    var StringGender  = "";
+    var StringDOB     = "";
+    var StringCountry = "";
+    var StringState   = "";
+    var StringZIP     = "";
+    var StringAutism  = "";
+    var StringCity    = "";
+    var StringOtherDiagnosis = "";
     
     
     
@@ -123,46 +120,46 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         StringCity    = textCity.text!
         StringOtherDiagnosis = textOtherDiagnosis.text!
     
-        if(StringName!.count < 4){
+        if(StringName.count < 4){
             ShowError(error: "Please enter your name to proceed.")
             return;
         }
-        if(StringZIP!.count != 5){
+        if(StringZIP.count != 5){
             ShowError(error: "Please complete the ZIP field proceed.")
             return;
         }
         
-        if(StringGender!.count < 4){
+        if(StringGender.count < 4){
             ShowError(error: "Please enter your child's gender to proceed.")
             return;
         }
         
-        if(StringDOB!.count < 4){
+        if(StringDOB.count < 4){
             ShowError(error: "Please enter your child's DOB to proceed.")
             return;
         }
         
-        if(StringDOB!.range(of:"/") == nil){
+        if(StringDOB.range(of:"/") == nil){
             ShowError(error: "Please include the DOB in format MM/YY")
             return;
         }
         
-        if(StringCountry!.count < 4){
+        if(StringCountry.count < 4){
             ShowError(error: "Please complete the Country field to proceed.")
             return;
         }
         
-        if(StringState!.count < 2){
+        if(StringState.count < 2){
             ShowError(error: "Please complete the State field to proceed.")
             return;
         }
         
-        if(StringAutism!.count < 4){
+        if(StringAutism.count < 4){
             ShowError(error: "Please enter your child's autism diagnosis to proceed.")
             return;
         }
         
-        if(StringCity!.count < 4){
+        if(StringCity.count < 4){
             ShowError(error: "Please complete the city field to proceed.")
             return;
         }
@@ -171,18 +168,17 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         Now that the user has made it this far, lets create a new record in the database.
         */
         
-        
         GameEngineObject.NewEntry = DDBTableRow()
-        GameEngineObject.NewEntry?.email  = GameEngineObject.getDBFriendlyEmail(email: GameEngineObject.UserEmail!)
-        GameEngineObject.NewEntry?.name   = StringName!
-        GameEngineObject.NewEntry?.gender = StringGender!
-        GameEngineObject.NewEntry?.dOB    = StringDOB!
-        GameEngineObject.NewEntry?.country = StringCountry!
-        GameEngineObject.NewEntry?.city = StringCity!
-        GameEngineObject.NewEntry?.state = StringState!
-        GameEngineObject.NewEntry?.zIP = StringZIP!
-        GameEngineObject.NewEntry?.autismDiagnosis = StringAutism!
-        GameEngineObject.NewEntry?.otherDiagnoses = StringOtherDiagnosis!
+        GameEngineObject.NewEntry?.email   = GameEngineObject.getDBFriendlyEmail(email: GameEngineObject.UserEmail!)
+        GameEngineObject.NewEntry?.name    = StringName
+        GameEngineObject.NewEntry?.gender  = StringGender
+        GameEngineObject.NewEntry?.dOB     = StringDOB
+        GameEngineObject.NewEntry?.country = StringCountry
+        GameEngineObject.NewEntry?.city    = StringCity
+        GameEngineObject.NewEntry?.state   = StringState
+        GameEngineObject.NewEntry?.zIP     = StringZIP
+        GameEngineObject.NewEntry?.autismDiagnosis = StringAutism
+        GameEngineObject.NewEntry?.otherDiagnoses  = StringOtherDiagnosis
         
 
         GameEngineObject.NewEntry?.childSurveyCompleted = 0
@@ -197,16 +193,16 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 
         GameEngineObject.NewEntry?.childSurveyCompleted = 0
         
-        GameEngineObject.NewEntry?.hispanic = LatinoSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.african   = CaribbeanSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.eastAsian = AsianSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.arab = ArabSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.nativeAmerican = NativeAmericanSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.pacificIslander = PacificSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.southeastAsian = SoutheastSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.southAsian = SouthAsianSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.caucasian = WhiteSwitchOn! ? 1 : 0
-        GameEngineObject.NewEntry?.unknown = OtherSwitchOn! ? 1 : 0
+        GameEngineObject.NewEntry?.hispanic = LatinoSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.african   = CaribbeanSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.eastAsian = AsianSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.arab = ArabSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.nativeAmerican = NativeAmericanSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.pacificIslander = PacificSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.southeastAsian = SoutheastSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.southAsian = SouthAsianSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.caucasian = WhiteSwitchOn ? 1 : 0
+        GameEngineObject.NewEntry?.unknown = OtherSwitchOn ? 1 : 0
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_1")

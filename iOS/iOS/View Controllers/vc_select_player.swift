@@ -59,7 +59,7 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
         GameEngineObject.SelectedChildIndex = indexPath[1]
         var RelevantUser = GameEngineObject.UserDBResults![indexPath[1]]
 
-        var SurveyCompleted2 = Int((RelevantUser["childSurveyCompleted"]?.n!)!)!
+        let SurveyCompleted2 = Int((RelevantUser["childSurveyCompleted"]?.n!)!)!
 
 
         print("Printing out childSurveyCompleted: \(SurveyCompleted2)")
