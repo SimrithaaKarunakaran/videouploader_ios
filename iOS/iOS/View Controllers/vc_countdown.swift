@@ -13,7 +13,7 @@ class vc_countdown: UIViewController {
 
     
     var seconds        = 3 //This variable will hold a starting value of seconds. It could be any amount above 0.
-    var timer          = Timer()
+    var timer          : Timer?
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
     
     @IBOutlet weak var TextTimeRemaining: UILabel!
@@ -33,6 +33,7 @@ class vc_countdown: UIViewController {
         
     }
     
+    
      @objc func updateTimer() {
         
         // Decrement number of seconds left.
@@ -43,12 +44,12 @@ class vc_countdown: UIViewController {
             TextTimeRemaining.text = "Go!";
         } else if(seconds <= -1){
             // Cancel this timer
-            timer.invalidate();
+            timer?.invalidate();
     
-            // Move to the next viewpager.
-        //    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-        //    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_play")
-        //    self.present(newViewController, animated: false, completion: nil)
+             //Move to the next viewpager.
+            let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_play")
+            self.present(newViewController, animated: false, completion: nil)
         } else {
             // Update the number of seconds remaining.
             TextTimeRemaining.text = "\(seconds)";
@@ -63,7 +64,7 @@ class vc_countdown: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // Start the timer.
-       // runTimer();
+        runTimer();
     }
     
     override func didReceiveMemoryWarning() {

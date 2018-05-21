@@ -23,7 +23,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func ClickNext(_ sender: Any) {
         
         // Direct user to screen where they can add a new player.
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_instructions")
         self.present(newViewController, animated: false, completion: nil)
     }
@@ -31,7 +31,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func ClickBack(_ sender: Any) {
         // Direct user to screen where they can add a new player.
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
         self.present(newViewController, animated: false, completion: nil)
     }

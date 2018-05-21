@@ -43,7 +43,7 @@ class vc_consent_3: UIViewController {
             GameEngineObject.downloadUserData(email: GameEngineObject.UserEmail!, completion: { (Success) in
                 DispatchQueue.main.async { // Correct
                     print("[HK] Finished downloading user data.")
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
                     self.present(newViewController, animated: false, completion: nil)
                 }

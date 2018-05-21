@@ -55,7 +55,7 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
                             GameEngineObject.downloadUserData(email: GameEngineObject.UserEmail!, completion: { (Success) in
                                 if(Success){
                                     DispatchQueue.main.async { // Correct
-                                        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+                                        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
                                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
                                         self.present(newViewController, animated: true, completion: nil)
                                     }

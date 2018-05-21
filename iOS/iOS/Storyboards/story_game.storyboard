@@ -16,33 +16,34 @@
     </customFonts>
     <scenes>
         <!--vc_countdown-->
-        <scene sceneID="1SJ-2E-fGc">
+        <scene sceneID="lqz-7R-kLd">
             <objects>
-                <viewController storyboardIdentifier="vc_countdown" title="vc_countdown" id="uCN-9C-Itd" userLabel="vc_countdown" customClass="vc_countdown" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="waB-sN-4nQ">
+                <viewController storyboardIdentifier="vc_countdown" id="bDg-CZ-DZM" userLabel="vc_countdown" customClass="vc_countdown" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ik-aS-IKg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-mk-h3u">
-                                <rect key="frame" x="144.5" y="223" width="31" height="62.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-Gq-Eph">
+                                <rect key="frame" x="150.5" y="265" width="19" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TIc-mk-h3u" firstAttribute="centerX" secondItem="waB-sN-4nQ" secondAttribute="centerX" id="WbT-IF-YtT"/>
-                            <constraint firstItem="TIc-mk-h3u" firstAttribute="centerY" secondItem="waB-sN-4nQ" secondAttribute="centerY" constant="-30" id="eoh-LT-ohm"/>
+                            <constraint firstItem="W74-Gq-Eph" firstAttribute="centerX" secondItem="8Ik-aS-IKg" secondAttribute="centerX" id="MIA-8N-H8g"/>
+                            <constraint firstItem="W74-Gq-Eph" firstAttribute="centerY" secondItem="8Ik-aS-IKg" secondAttribute="centerY" id="zEc-ds-R4D"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="yNa-d9-wSH"/>
+                        <viewLayoutGuide key="safeArea" id="ycB-28-dsT"/>
                     </view>
                     <connections>
-                        <outlet property="TextTimeRemaining" destination="TIc-mk-h3u" id="lVi-bt-WPq"/>
+                        <outlet property="TextTimeRemaining" destination="W74-Gq-Eph" id="in9-et-KDU"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ulI-3P-iOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1w-d9-1DY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706.39999999999998" y="177.66116941529236"/>
+            <point key="canvasLocation" x="-718" y="176"/>
         </scene>
         <!--Vc select player-->
         <scene sceneID="ueC-OS-zFS">
