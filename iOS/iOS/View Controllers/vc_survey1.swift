@@ -135,7 +135,7 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         }
         
         if(StringDOB.count < 4){
-            ShowError(error: "Please enter your child's DOB to proceed.")
+            ShowError(error: "Please enter your child's DOB in MM/YY format to proceed.")
             return;
         }
         
@@ -211,7 +211,9 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     @IBAction func BackClickNew(_ sender: Any) {
-        ShowError(error: "You must accept the consent form to proceed!")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        self.present(newViewController, animated: true, completion: nil)
     }
    
     

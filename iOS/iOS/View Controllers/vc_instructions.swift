@@ -1,14 +1,14 @@
 //
-//  vc_consent_2.swift
+//  vc_instructions.swift
 //  iOS
 //
-//  Created by Haik Kalantarian on 5/7/18.
+//  Created by Haik Kalantarian on 5/21/18.
 //  Copyright © 2018 Haik Kalantarian. All rights reserved.
 //
 
 import UIKit
 
-class vc_consent_2: UIViewController {
+class vc_instructions: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,21 +21,13 @@ class vc_consent_2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func ConsentClickBack(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentShare = 0
 
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+    @IBAction func ButtonClick(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_wifi_warn")
         self.present(newViewController, animated: true, completion: nil)
     }
     
-    @IBAction func ConsentClickContinue(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentShare = 1
-
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_3")
-        self.present(newViewController, animated: true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 

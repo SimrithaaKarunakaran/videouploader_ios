@@ -13,7 +13,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var ArrayTitles       = ["Emoji", "Animals", "Faces", "Sports", "Jobs", "All Decks"]
     var ArrayDifficulties = ["Medium", "Easy", "Easy", "Hard", "Hard", "Variety"]
-    var ArrayImages       = [#imageLiteral(resourceName: "a2_grin.png"),#imageLiteral(resourceName: "c3_horse.png"),#imageLiteral(resourceName: "f_angry3.png"),#imageLiteral(resourceName: "d2_soccer.png"),#imageLiteral(resourceName: "e3_doctor.png"),#imageLiteral(resourceName: "a13_confused.png")]
+    var ArrayImages       = [#imageLiteral(resourceName: "a2_grin.png"),#imageLiteral(resourceName: "c3_horse.png"),#imageLiteral(resourceName: "f_angry3.png"),#imageLiteral(resourceName: "d2_soccer.png"),#imageLiteral(resourceName: "e1_scientist.png"),#imageLiteral(resourceName: "a13_confused.png")]
     
     
     // Keep track of what game modes are selected
@@ -21,9 +21,10 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
 
     
     @IBAction func ClickNext(_ sender: Any) {
+        
         // Direct user to screen where they can add a new player.
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey1")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_instructions")
         self.present(newViewController, animated: true, completion: nil)
     }
     
@@ -69,7 +70,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
             
             if(ArraySelected[Index] == true){
                 // "Selected" state
-                cell.backgroundColor = UIColor.cyan
+                cell.backgroundColor = UIColor.lightGray
             } else {
                 // "Not Selected" state
                 cell.backgroundColor = UIColor.white

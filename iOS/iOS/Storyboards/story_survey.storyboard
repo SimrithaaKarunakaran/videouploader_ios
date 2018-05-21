@@ -275,7 +275,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="BackClick:" destination="0Tp-qR-WHO" eventType="touchUpInside" id="KjU-1m-iQB"/>
+                                            <action selector="BackClickNew:" destination="0Tp-qR-WHO" eventType="touchUpInside" id="lIG-mk-0e0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDX-Es-6Pt">

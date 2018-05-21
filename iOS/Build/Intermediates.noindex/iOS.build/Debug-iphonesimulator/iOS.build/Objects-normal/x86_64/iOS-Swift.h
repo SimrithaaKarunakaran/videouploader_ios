@@ -329,6 +329,16 @@ SWIFT_CLASS("_TtC3iOS17vc_create_account")
 @end
 
 
+SWIFT_CLASS("_TtC3iOS15vc_instructions")
+@interface vc_instructions : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)ButtonClick:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC3iOS15vc_launchscreen")
 @interface vc_launchscreen : UIViewController <UITextFieldDelegate>
 /// Timer callback.
