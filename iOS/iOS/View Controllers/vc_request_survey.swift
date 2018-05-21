@@ -24,13 +24,13 @@ class vc_request_survey: UIViewController {
     @IBAction func BackButtonClick(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     @IBAction func ContinueButtonClick(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey2")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     /*
     // MARK: - Navigation

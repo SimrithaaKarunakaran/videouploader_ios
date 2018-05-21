@@ -29,7 +29,7 @@ class vc_consent_1: UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_2")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {

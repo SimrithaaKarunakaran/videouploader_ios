@@ -1,14 +1,14 @@
 //
-//  vc_wifi_warn.swift
+//  vc_play.swift
 //  iOS
 //
-//  Created by Haik Kalantarian on 5/11/18.
+//  Created by Haik Kalantarian on 5/21/18.
 //  Copyright © 2018 Haik Kalantarian. All rights reserved.
 //
 
 import UIKit
 
-class vc_wifi_warn: UIViewController {
+class vc_play: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,9 @@ class vc_wifi_warn: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func ButtonClick(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_countdown")
-        self.present(newViewController, animated: false, completion: nil)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
     }
     /*
     // MARK: - Navigation

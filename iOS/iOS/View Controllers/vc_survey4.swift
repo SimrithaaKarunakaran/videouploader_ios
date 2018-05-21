@@ -56,11 +56,11 @@ class vc_survey4: UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey5")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     @IBAction func BackButtonClick(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey3")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
 }

@@ -65,7 +65,7 @@ class vc_thank_player: UIViewController {
     @IBAction func ClickNext(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

@@ -352,7 +352,7 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="501"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The video upload process uses a lot of data. Please consider enabling WiFi. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFM-mh-Em5">
-                                <rect key="frame" x="0.0" y="110" width="375" height="134.5"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="134.5"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -373,9 +373,12 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ButtonClick:" destination="Px0-PO-gqO" eventType="touchUpInside" id="ioY-LW-rV9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a34-bi-chI">
-                                <rect key="frame" x="10" y="284.5" width="355" height="134.5"/>
+                                <rect key="frame" x="10" y="299.5" width="355" height="134.5"/>
                                 <string key="text">Your video will be uploaded and shared after the game.
 </string>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
@@ -393,7 +396,7 @@
                             <constraint firstItem="aFM-mh-Em5" firstAttribute="leading" secondItem="Map-Dj-aQi" secondAttribute="leading" id="MJa-hl-5ni"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="trailing" secondItem="PMt-1D-qc4" secondAttribute="trailing" constant="20" id="Ncl-VB-jhF"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="top" secondItem="PMt-1D-qc4" secondAttribute="top" id="XPM-06-wPB"/>
-                            <constraint firstItem="aFM-mh-Em5" firstAttribute="top" secondItem="PMt-1D-qc4" secondAttribute="bottom" constant="10" id="YXB-L5-hC0"/>
+                            <constraint firstItem="aFM-mh-Em5" firstAttribute="top" secondItem="PMt-1D-qc4" secondAttribute="bottom" constant="25" id="YXB-L5-hC0"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="trailing" secondItem="Map-Dj-aQi" secondAttribute="trailing" id="ahl-hQ-ThZ"/>
                             <constraint firstItem="a34-bi-chI" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" constant="-20" id="eXG-tu-5c5"/>
                             <constraint firstItem="aFM-mh-Em5" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" id="htr-G2-enh"/>

@@ -49,7 +49,7 @@ class vc_login: UIViewController {
                         DispatchQueue.main.async { // Correct
                             let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
                             let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-                            self.present(newViewController, animated: true, completion: nil)
+                            self.present(newViewController, animated: false, completion: nil)
                         }
                     })
                 })
@@ -77,7 +77,7 @@ class vc_login: UIViewController {
         // Direct user to screen where they can create an account.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_create_account")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
 

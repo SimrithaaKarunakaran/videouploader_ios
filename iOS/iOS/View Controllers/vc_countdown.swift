@@ -12,10 +12,17 @@ import os.log
 class vc_countdown: UIViewController {
 
     
-    @IBOutlet weak var LabelTimeLeft: UILabel!
     var seconds        = 3 //This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer          = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
+    
+    @IBOutlet weak var TextTimeRemaining: UILabel!
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+    //    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
+    }
     
     
     func runTimer() {
@@ -33,30 +40,30 @@ class vc_countdown: UIViewController {
         
         if(seconds == 0){
             // Instead of time = 0, we write "go!"
-            LabelTimeLeft.text = "Go!";
+            TextTimeRemaining.text = "Go!";
         } else if(seconds <= -1){
             // Cancel this timer
             timer.invalidate();
     
             // Move to the next viewpager.
-            let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_pageviewctrl") as! UIPageViewController
-            self.present(newViewController, animated: true, completion: nil)
+        //    let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
+        //    let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_play")
+        //    self.present(newViewController, animated: false, completion: nil)
         } else {
             // Update the number of seconds remaining.
-            LabelTimeLeft.text = "\(seconds)";
+            TextTimeRemaining.text = "\(seconds)";
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Start the timer.
-        runTimer();
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        // Start the timer.
+       // runTimer();
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,13 +71,5 @@ class vc_countdown: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func ButtonClickStartPager(_ sender: UIButton) {
-       // Navigate to View Pager.
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
-
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_pageviewctrl") as! UIPageViewController
-        self.present(newViewController, animated: true, completion: nil)
-        
-    }
 }
 

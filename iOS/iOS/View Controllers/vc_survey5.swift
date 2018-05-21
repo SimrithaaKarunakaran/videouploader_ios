@@ -38,7 +38,7 @@ class vc_survey5: UIViewController {
     @IBAction func BackClick(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey4")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     @IBAction func NextClick(_ sender: Any) {
@@ -55,7 +55,7 @@ class vc_survey5: UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey6")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

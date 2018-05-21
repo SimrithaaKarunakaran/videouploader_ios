@@ -202,6 +202,7 @@ SWIFT_CLASS("_TtC3iOS11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
+- (UIInterfaceOrientationMask)application:(UIApplication * _Nonnull)application supportedInterfaceOrientationsForWindow:(UIWindow * _Nullable)window SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -301,16 +302,15 @@ SWIFT_CLASS("_TtC3iOS12vc_consent_3")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIButton;
 
 SWIFT_CLASS("_TtC3iOS12vc_countdown")
 @interface vc_countdown : UIViewController
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LabelTimeLeft;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextTimeRemaining;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)updateTimer;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
-- (IBAction)ButtonClickStartPager:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -332,6 +332,8 @@ SWIFT_CLASS("_TtC3iOS17vc_create_account")
 SWIFT_CLASS("_TtC3iOS15vc_instructions")
 @interface vc_instructions : UIViewController
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)ButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -350,6 +352,7 @@ SWIFT_CLASS("_TtC3iOS15vc_launchscreen")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 @class UITextView;
 @class UITapGestureRecognizer;
 
@@ -365,6 +368,16 @@ SWIFT_CLASS("_TtC3iOS8vc_login")
 - (void)TextSignUpClickHandlerWithSender:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS7vc_play")
+@interface vc_play : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -562,6 +575,7 @@ SWIFT_CLASS("_TtC3iOS12vc_wifi_warn")
 @interface vc_wifi_warn : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)ButtonClick:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -213,7 +213,7 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBAction func BackClickNew(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
    
     

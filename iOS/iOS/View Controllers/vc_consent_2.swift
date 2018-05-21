@@ -26,7 +26,7 @@ class vc_consent_2: UIViewController {
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_wifi_warn")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
@@ -34,7 +34,7 @@ class vc_consent_2: UIViewController {
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_3")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     /*
     // MARK: - Navigation

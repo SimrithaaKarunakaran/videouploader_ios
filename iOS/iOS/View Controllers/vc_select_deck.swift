@@ -25,7 +25,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_instructions")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     
@@ -33,7 +33,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     // tell the collection view how many cells to make

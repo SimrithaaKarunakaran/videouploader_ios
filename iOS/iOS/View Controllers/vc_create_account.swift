@@ -87,7 +87,7 @@ class vc_create_account: UIViewController {
                                 DispatchQueue.main.async { // Correct
                                     let storyBoard: UIStoryboard = UIStoryboard(name: "story_pageview", bundle: nil)
                                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-                                    self.present(newViewController, animated: true, completion: nil)
+                                    self.present(newViewController, animated: false, completion: nil)
                                 }
                             })
                         })
