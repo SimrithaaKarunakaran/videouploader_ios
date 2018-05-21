@@ -15,4 +15,5 @@ target 'iOS' do
     pod 'AWSCognitoIdentityProviderASF'
     pod 'AWSDynamoDB'
     pod 'AWSS3'
+    pod 'ReachabilitySwift'
 end

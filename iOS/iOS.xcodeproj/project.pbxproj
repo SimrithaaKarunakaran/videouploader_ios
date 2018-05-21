@@ -114,6 +114,7 @@
 		22908DCD20A0D8D1007CDA7F /* vc_consent_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22908DCC20A0D8D1007CDA7F /* vc_consent_3.swift */; };
 		22919A3620B33CE4003993AF /* vc_instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22919A3520B33CE4003993AF /* vc_instructions.swift */; };
 		22919A3820B35686003993AF /* vc_play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22919A3720B35686003993AF /* vc_play.swift */; };
+		22919A3F20B36D81003993AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22919A3E20B36D81003993AF /* NetworkManager.swift */; };
 		22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810B220A23BA50052CCB9 /* vc_survey1.swift */; };
 		22B810B520A381C10052CCB9 /* vc_survey2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810B420A381C10052CCB9 /* vc_survey2.swift */; };
 		22B810B720A39AA80052CCB9 /* vc_survey3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B810B620A39AA80052CCB9 /* vc_survey3.swift */; };
@@ -236,6 +237,7 @@
 		22908DCC20A0D8D1007CDA7F /* vc_consent_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_consent_3.swift; sourceTree = "<group>"; };
 		22919A3520B33CE4003993AF /* vc_instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_instructions.swift; sourceTree = "<group>"; };
 		22919A3720B35686003993AF /* vc_play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_play.swift; sourceTree = "<group>"; };
+		22919A3E20B36D81003993AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		22B810B220A23BA50052CCB9 /* vc_survey1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey1.swift; sourceTree = "<group>"; };
 		22B810B420A381C10052CCB9 /* vc_survey2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey2.swift; sourceTree = "<group>"; };
 		22B810B620A39AA80052CCB9 /* vc_survey3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_survey3.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			children = (
 				2229565720AA0C7800182CE9 /* GameEngine.swift */,
 				2229565D20AA260800182CE9 /* DDBTableRow.swift */,
+				22919A3E20B36D81003993AF /* NetworkManager.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -686,6 +690,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -721,6 +726,7 @@
 				22908DC0209D1F5B007CDA7F /* vc_select_deck.swift in Sources */,
 				22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */,
 				2229565820AA0C7800182CE9 /* GameEngine.swift in Sources */,
+				22919A3F20B36D81003993AF /* NetworkManager.swift in Sources */,
 				22919A3820B35686003993AF /* vc_play.swift in Sources */,
 				22207F1B2057553100D447F2 /* AppDelegate.swift in Sources */,
 			);

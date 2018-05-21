@@ -22,6 +22,7 @@ PODS:
   - AWSUserPoolsSignIn (2.6.18):
     - AWSAuthCore (= 2.6.18)
     - AWSCognitoIdentityProvider (= 2.6.18)
+  - ReachabilitySwift (4.1.0)
 
 DEPENDENCIES:
   - AWSAuthUI (~> 2.6.13)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AWSMobileClient (~> 2.6.13)
   - AWSS3
   - AWSUserPoolsSignIn (~> 2.6.13)
+  - ReachabilitySwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -47,6 +49,7 @@ SPEC REPOS:
     - AWSMobileClient
     - AWSS3
     - AWSUserPoolsSignIn
+    - ReachabilitySwift
 
 SPEC CHECKSUMS:
   AWSAuthCore: 32c8b728338fb54b0b1723f4be5be3777d5ca0ae
@@ -60,7 +63,8 @@ SPEC CHECKSUMS:
   AWSMobileClient: 7e6786ec708698aa3b25f12376464db1820afaed
   AWSS3: 659953f91bf85f62b6290625e86c45e3b9dd8dee
   AWSUserPoolsSignIn: 1e2b1bdb841802b697be489acd5050cc6b6d2301
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
 
-PODFILE CHECKSUM: 76e84dcfa2c7d36940e1f3d0bc08c55bb8984c74
+PODFILE CHECKSUM: 9f00a07eab431fd694d79c3618d078ff0bd92464
 
 COCOAPODS: 1.5.2

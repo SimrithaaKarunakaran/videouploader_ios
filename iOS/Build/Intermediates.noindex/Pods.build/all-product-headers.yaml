@@ -1167,6 +1167,33 @@
           'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-iOS.build/module.modulemap"
         }
       ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Reachability-Swift.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ReachabilitySwift-umbrella.h",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Pods/Target Support Files/ReachabilitySwift/ReachabilitySwift-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/ReachabilitySwift.build/module.modulemap"
+        }
+      ]
     }
   ]
 }

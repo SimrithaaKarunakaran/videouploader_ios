@@ -256,6 +256,13 @@ SWIFT_CLASS("_TtC3iOS11DDBTableRow")
 - (null_unspecified instancetype)initWithExternalRepresentation:(NSDictionary * _Null_unspecified)externalRepresentation OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED;
 @end
 
+
+SWIFT_CLASS("_TtC3iOS14NetworkManager")
+@interface NetworkManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)networkStatusChanged:(NSNotification * _Nonnull)notification;
+@end
+
 @class UILabel;
 @class UIImageView;
 
