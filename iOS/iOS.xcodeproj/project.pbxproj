@@ -125,6 +125,7 @@
 		22B810C120A4BF270052CCB9 /* ImageClock.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B810C020A4BF270052CCB9 /* ImageClock.png */; };
 		22EBC9FE20B49D1200C21120 /* PromptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBC9FD20B49D1200C21120 /* PromptManager.swift */; };
 		22EBCA0020B4B8E800C21120 /* EmojiEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBC9FF20B4B8E800C21120 /* EmojiEntry.swift */; };
+		22EBCA0420B4D10400C21120 /* vc_confirm_video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBCA0320B4D10400C21120 /* vc_confirm_video.swift */; };
 		22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE7DC020913C4300883AE9 /* vc_countdown.swift */; };
 		7D41C41477A8F109ECE0673F /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F22C9EA96EC1CB311D235B1 /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -250,6 +251,7 @@
 		22B810C020A4BF270052CCB9 /* ImageClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageClock.png; sourceTree = "<group>"; };
 		22EBC9FD20B49D1200C21120 /* PromptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptManager.swift; sourceTree = "<group>"; };
 		22EBC9FF20B4B8E800C21120 /* EmojiEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiEntry.swift; sourceTree = "<group>"; };
+		22EBCA0320B4D10400C21120 /* vc_confirm_video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_confirm_video.swift; sourceTree = "<group>"; };
 		22FE7DC020913C4300883AE9 /* vc_countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_countdown.swift; sourceTree = "<group>"; };
 		26FF3EE95720A99AE021AF88 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7E209C5EFA10721AF8752391 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				2247C8D220AFBAB0000187CC /* vc_thank_player.swift */,
 				22919A3520B33CE4003993AF /* vc_instructions.swift */,
 				22919A3720B35686003993AF /* vc_play.swift */,
+				22EBCA0320B4D10400C21120 /* vc_confirm_video.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				22B810B920A39AB30052CCB9 /* vc_survey4.swift in Sources */,
 				224CF92320A61C410070F7A7 /* vc_wifi_warn.swift in Sources */,
 				22908DC720A0D703007CDA7F /* vc_create_account.swift in Sources */,
+				22EBCA0420B4D10400C21120 /* vc_confirm_video.swift in Sources */,
 				22908DC0209D1F5B007CDA7F /* vc_select_deck.swift in Sources */,
 				22B810B320A23BA50052CCB9 /* vc_survey1.swift in Sources */,
 				2229565820AA0C7800182CE9 /* GameEngine.swift in Sources */,

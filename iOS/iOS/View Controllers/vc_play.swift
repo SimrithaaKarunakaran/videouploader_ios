@@ -48,7 +48,7 @@ class vc_play: UIViewController {
         if(seconds == 0){
             //Move to the next viewpager.
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_play")
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_confirm_video")
             self.present(newViewController, animated: false, completion: nil)
         } else {
 

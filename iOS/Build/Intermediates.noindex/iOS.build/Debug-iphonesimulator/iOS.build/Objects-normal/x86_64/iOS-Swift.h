@@ -289,6 +289,15 @@ SWIFT_CLASS("_TtC3iOS32SelectDeckCellCollectionViewCell")
 
 @class NSBundle;
 
+SWIFT_CLASS("_TtC3iOS16vc_confirm_video")
+@interface vc_confirm_video : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC3iOS12vc_consent_1")
 @interface vc_consent_1 : UIViewController
 - (void)viewDidLoad;
