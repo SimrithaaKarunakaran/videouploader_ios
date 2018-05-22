@@ -34,6 +34,9 @@ class GameEngine {
     // This is a container that will store information about the child as it is filled out in survey 1, as well as the consent forms.
     var NewEntry : DDBTableRow?
     
+    // Keep track of what game modes are selected
+                        // ["Emoji", "Animals", "Faces", "Sports", "Jobs", "All Decks"]
+    var ArraySelected = [false, false, false, false, false, false];
     
     init() {
         // Configuration (for Cognito)

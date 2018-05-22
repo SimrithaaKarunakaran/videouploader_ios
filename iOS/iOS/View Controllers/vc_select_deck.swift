@@ -10,14 +10,12 @@ import UIKit
 
 class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
+    let reuseIdentifier   = "cell" // also enter this string as the cell identifier in the storyboard
     var ArrayTitles       = ["Emoji", "Animals", "Faces", "Sports", "Jobs", "All Decks"]
     var ArrayDifficulties = ["Medium", "Easy", "Easy", "Hard", "Hard", "Variety"]
     var ArrayImages       = [#imageLiteral(resourceName: "a2_grin.png"),#imageLiteral(resourceName: "c3_horse.png"),#imageLiteral(resourceName: "f_angry3.png"),#imageLiteral(resourceName: "d2_soccer.png"),#imageLiteral(resourceName: "e1_scientist.png"),#imageLiteral(resourceName: "a13_confused.png")]
     
-    
-    // Keep track of what game modes are selected
-    var ArraySelected = [false, false, false, false, false, false];
+
 
     
     @IBAction func ClickNext(_ sender: Any) {
@@ -66,9 +64,9 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
             let Index = indexPath.row
             
             // Toggle whether or not this game mode is selected.
-            ArraySelected[Index] = !ArraySelected[Index]
+            GameEngineObject.ArraySelected[Index] = !GameEngineObject.ArraySelected[Index]
             
-            if(ArraySelected[Index] == true){
+            if(GameEngineObject.ArraySelected[Index] == true){
                 // "Selected" state
                 cell.backgroundColor = UIColor.lightGray
             } else {
@@ -81,6 +79,10 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Initialize to defaults.
+        GameEngineObject.ArraySelected = [false, false, false, false, false, false];
+        
     }
 
     override func didReceiveMemoryWarning() {

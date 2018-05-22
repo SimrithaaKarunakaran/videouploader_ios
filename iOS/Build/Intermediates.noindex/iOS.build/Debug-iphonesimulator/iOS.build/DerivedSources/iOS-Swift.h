@@ -257,10 +257,22 @@ SWIFT_CLASS("_TtC3iOS11DDBTableRow")
 @end
 
 
+SWIFT_CLASS("_TtC3iOS10EmojiEntry")
+@interface EmojiEntry : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC3iOS14NetworkManager")
 @interface NetworkManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)networkStatusChanged:(NSNotification * _Nonnull)notification;
+@end
+
+
+SWIFT_CLASS("_TtC3iOS13PromptManager")
+@interface PromptManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UILabel;
@@ -382,6 +394,11 @@ SWIFT_CLASS("_TtC3iOS8vc_login")
 
 SWIFT_CLASS("_TtC3iOS7vc_play")
 @interface vc_play : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextTime;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextScore;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified GameImageView;
+- (void)updateTimer;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)viewWillAppear:(BOOL)animated;
