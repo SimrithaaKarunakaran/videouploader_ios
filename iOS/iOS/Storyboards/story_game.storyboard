@@ -172,7 +172,7 @@
                                 <color key="textColor" red="1" green="0.3527819069" blue="0.7028208453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="c8_chicken.png" translatesAutoresizingMaskIntoConstraints="NO" id="woO-ev-Ic8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="c7_cow.png" translatesAutoresizingMaskIntoConstraints="NO" id="woO-ev-Ic8">
                                 <rect key="frame" x="135" y="25" width="387" height="325"/>
                             </imageView>
                         </subviews>
@@ -420,6 +420,6 @@ Cg
         <image name="AddPlayer.png" width="348" height="331"/>
         <image name="ImageClock.png" width="236" height="272"/>
         <image name="LogoTitle.png" width="1637" height="400"/>
-        <image name="c8_chicken.png" width="295" height="282"/>
+        <image name="c7_cow.png" width="358" height="299"/>
     </resources>
 </document>
