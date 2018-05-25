@@ -293,6 +293,8 @@ SWIFT_CLASS("_TtC3iOS16vc_confirm_video")
 @interface vc_confirm_video : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)ShareVideo:(id _Nonnull)sender;
+- (IBAction)DeleteVideo:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

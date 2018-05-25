@@ -710,39 +710,47 @@
 		</data>
 		<key>story_game.storyboardc/Info.plist</key>
 		<data>
-		WxyKMe4iJbEeJam6bNDjBEOyBfk=
+		aivvy7gjtplXLzz27VkpdSwN1IU=
 		</data>
 		<key>story_game.storyboardc/bDg-CZ-DZM-view-8Ik-aS-IKg.nib</key>
 		<data>
-		SQPd0LWs3JLkg1Ggf/YxQvp4vxc=
+		qOLF31l1KK+F+8t7Q0c/xt6mVAI=
 		</data>
 		<key>story_game.storyboardc/cyG-v3-OLs-view-E7x-8r-7j7.nib</key>
 		<data>
-		c4YZDCzUJZ+58Vdy7WR9d7lyjXg=
+		Zv3pMrOXwsdm/5G2axHv2bXvLm8=
+		</data>
+		<key>story_game.storyboardc/kRk-xT-KJn-view-G2b-hl-wMU.nib</key>
+		<data>
+		pT8+2q5BPmqENh9Z8J/TDRRulXw=
 		</data>
 		<key>story_game.storyboardc/o0W-FV-Y4M-view-WCc-c3-oLd.nib</key>
 		<data>
-		m0rsoZZbmlsAB9thE4RN5BwDPK0=
+		6aAoz0RVlxQFwF22nIr0Nm8tzoE=
 		</data>
 		<key>story_game.storyboardc/ubQ-bl-V7R-view-uAN-cB-rUj.nib</key>
 		<data>
-		TeqzPZBnbN81V2I3B823cmknM+k=
+		dvf6p5rNoN7b90OVf9uiNOAk5OU=
+		</data>
+		<key>story_game.storyboardc/vc_confirm_video.nib</key>
+		<data>
+		LWvlGAOqL4F71QMBFSRYsNDekvw=
 		</data>
 		<key>story_game.storyboardc/vc_countdown.nib</key>
 		<data>
-		3L4jGQT9aOPzTefyGh67PHmR7Fs=
+		/4Cac498c71USt2hhiDSS1MnGsg=
 		</data>
 		<key>story_game.storyboardc/vc_instructions.nib</key>
 		<data>
-		ncN7HgDSZaeaK+x/0V/QOXxqAtM=
+		MmvxSxRiQCWXAzJgV97kLDSm+Sc=
 		</data>
 		<key>story_game.storyboardc/vc_play.nib</key>
 		<data>
-		UNUUOy3JPSIm185YNv2MU22H9Ug=
+		6w+W41LThghFx1ozoBi+SUHWvZ0=
 		</data>
 		<key>story_game.storyboardc/vc_select_player.nib</key>
 		<data>
-		iUxOxEaIKr46LJ3B9yv37SNYxB8=
+		xsUlbJOqYNGkZFyTttImZuJqGjA=
 		</data>
 		<key>story_survey.storyboardc/0Tp-qR-WHO-view-YuP-6D-vzq.nib</key>
 		<data>
@@ -2733,99 +2741,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WxyKMe4iJbEeJam6bNDjBEOyBfk=
+			aivvy7gjtplXLzz27VkpdSwN1IU=
 			</data>
 			<key>hash2</key>
 			<data>
-			uoRSs0sGvIVjZFhs4GoOdwbRvQOfWR/sLUQznXn1w0M=
+			SmTvbSy5iIiFqEew69tCf61bybxZGDzcZArRPYvSxB0=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/bDg-CZ-DZM-view-8Ik-aS-IKg.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SQPd0LWs3JLkg1Ggf/YxQvp4vxc=
+			qOLF31l1KK+F+8t7Q0c/xt6mVAI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Kl/McykTn5QqS9/qSXh6FS3X874ep7ItO37Rcy5zlTM=
+			68WRX7rOrGQr5E2WNdbH/Y9nx/LBgXxaF6siXUzK9E8=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/cyG-v3-OLs-view-E7x-8r-7j7.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			c4YZDCzUJZ+58Vdy7WR9d7lyjXg=
+			Zv3pMrOXwsdm/5G2axHv2bXvLm8=
 			</data>
 			<key>hash2</key>
 			<data>
-			UQMfYM3BLglvnOhi/3SY6PnwIgo4hwzA7kpJHM9JHv0=
+			qWMzBjxGNTebqE9oxrEY+Oh4MiRQsARbFer34ViEDiA=
+			</data>
+		</dict>
+		<key>story_game.storyboardc/kRk-xT-KJn-view-G2b-hl-wMU.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pT8+2q5BPmqENh9Z8J/TDRRulXw=
+			</data>
+			<key>hash2</key>
+			<data>
+			lJpbPeogI2IwHgQc6AYtNxiwBgS1ppf2niw2zRu+ISU=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/o0W-FV-Y4M-view-WCc-c3-oLd.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			m0rsoZZbmlsAB9thE4RN5BwDPK0=
+			6aAoz0RVlxQFwF22nIr0Nm8tzoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			lA+U/WakIwGL327a/0mz8IPAqhIUH2kPsWnwsLsF/SY=
+			AbppnIsGOPaVRlUfb0VWNcCsWiB+v1FkVdUgCNY/1MA=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/ubQ-bl-V7R-view-uAN-cB-rUj.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TeqzPZBnbN81V2I3B823cmknM+k=
+			dvf6p5rNoN7b90OVf9uiNOAk5OU=
 			</data>
 			<key>hash2</key>
 			<data>
-			XWLIByP2qkYCmSRecPU1LneIQan8YxiV1YP25nfdTSQ=
+			7SSIX7BMdTX7VYd0FdsBrKnezE1PdNZv7l+WBa6GEJY=
+			</data>
+		</dict>
+		<key>story_game.storyboardc/vc_confirm_video.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LWvlGAOqL4F71QMBFSRYsNDekvw=
+			</data>
+			<key>hash2</key>
+			<data>
+			0KA2uKqG9tEsXNVg2LVwVLEE6r9NFd/E2JJtZ9gFPBw=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/vc_countdown.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3L4jGQT9aOPzTefyGh67PHmR7Fs=
+			/4Cac498c71USt2hhiDSS1MnGsg=
 			</data>
 			<key>hash2</key>
 			<data>
-			pJGpQGg7r0Jk8FlqA1mInIrqGbakvNQPqlQxcWAOvaA=
+			+w5kbY1eJrbkYZqDwIhNOVApPOYacocpl5t32WnAo1U=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/vc_instructions.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ncN7HgDSZaeaK+x/0V/QOXxqAtM=
+			MmvxSxRiQCWXAzJgV97kLDSm+Sc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Mbnp6/pIBA2xALNYP+zZI/ga8z48Ga7TAO2/8CTzI+4=
+			w0XBL3VZVml9N186tO/93YNlhVes2PP5+ka9PO1+D8Y=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/vc_play.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UNUUOy3JPSIm185YNv2MU22H9Ug=
+			6w+W41LThghFx1ozoBi+SUHWvZ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			MD73P2n5KftSrzsoYVK/Amwxvc54r4WJaVEWd53VdV0=
+			SauY/W27h35uiLrcYJ/Y7dvaUy1s48EyAeXUN/xEJWg=
 			</data>
 		</dict>
 		<key>story_game.storyboardc/vc_select_player.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iUxOxEaIKr46LJ3B9yv37SNYxB8=
+			xsUlbJOqYNGkZFyTttImZuJqGjA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/gAOLveIDxmpdH9nwE1f9GY/h6dr1YfEK8wK85A5uc4=
+			oSwgVPLbX/zHx0fC8Tto01CnSUlW/wgbJVQyKWeFwQw=
 			</data>
 		</dict>
 		<key>story_survey.storyboardc/0Tp-qR-WHO-view-YuP-6D-vzq.nib</key>
