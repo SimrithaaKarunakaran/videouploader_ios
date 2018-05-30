@@ -168,41 +168,41 @@ class vc_survey1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         Now that the user has made it this far, lets create a new record in the database.
         */
         
-        GameEngineObject.NewEntry = DDBTableRow()
-        GameEngineObject.NewEntry?.email   = GameEngineObject.getDBFriendlyEmail(email: GameEngineObject.UserEmail!)
-        GameEngineObject.NewEntry?.name    = StringName
-        GameEngineObject.NewEntry?.gender  = StringGender
-        GameEngineObject.NewEntry?.dOB     = StringDOB
-        GameEngineObject.NewEntry?.country = StringCountry
-        GameEngineObject.NewEntry?.city    = StringCity
-        GameEngineObject.NewEntry?.state   = StringState
-        GameEngineObject.NewEntry?.zIP     = StringZIP
-        GameEngineObject.NewEntry?.autismDiagnosis = StringAutism
-        GameEngineObject.NewEntry?.otherDiagnoses  = StringOtherDiagnosis
+        GameEngineObject.CurrentUserObject = DDBTableRow()
+        GameEngineObject.CurrentUserObject?.email   = GameEngineObject.getDBFriendlyEmail(email: GameEngineObject.UserEmail!)
+        GameEngineObject.CurrentUserObject?.name    = StringName
+        GameEngineObject.CurrentUserObject?.gender  = StringGender
+        GameEngineObject.CurrentUserObject?.dOB     = StringDOB
+        GameEngineObject.CurrentUserObject?.country = StringCountry
+        GameEngineObject.CurrentUserObject?.city    = StringCity
+        GameEngineObject.CurrentUserObject?.state   = StringState
+        GameEngineObject.CurrentUserObject?.zIP     = StringZIP
+        GameEngineObject.CurrentUserObject?.autismDiagnosis = StringAutism
+        GameEngineObject.CurrentUserObject?.otherDiagnoses  = StringOtherDiagnosis
         
 
-        GameEngineObject.NewEntry?.childSurveyCompleted = 0
+        GameEngineObject.CurrentUserObject?.childSurveyCompleted = 0
         
         //////////////////////////////////////////
         // IMPORTANT: FIX THIS LATER /////////////
-        GameEngineObject.NewEntry?.consentPlay = 1
-        GameEngineObject.NewEntry?.consentView = 1
-        GameEngineObject.NewEntry?.consentShare = 1
+        GameEngineObject.CurrentUserObject?.consentPlay = 1
+        GameEngineObject.CurrentUserObject?.consentView = 1
+        GameEngineObject.CurrentUserObject?.consentShare = 1
         //////////////////////////////////////////
         //////////////////////////////////////////
 
-        GameEngineObject.NewEntry?.childSurveyCompleted = 0
+        GameEngineObject.CurrentUserObject?.childSurveyCompleted = 0
         
-        GameEngineObject.NewEntry?.hispanic = LatinoSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.african   = CaribbeanSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.eastAsian = AsianSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.arab = ArabSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.nativeAmerican = NativeAmericanSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.pacificIslander = PacificSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.southeastAsian = SoutheastSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.southAsian = SouthAsianSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.caucasian = WhiteSwitchOn ? 1 : 0
-        GameEngineObject.NewEntry?.unknown = OtherSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.hispanic = LatinoSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.african   = CaribbeanSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.eastAsian = AsianSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.arab = ArabSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.nativeAmerican = NativeAmericanSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.pacificIslander = PacificSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.southeastAsian = SoutheastSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.southAsian = SouthAsianSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.caucasian = WhiteSwitchOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.unknown = OtherSwitchOn ? 1 : 0
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_1")

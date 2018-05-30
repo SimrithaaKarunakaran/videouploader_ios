@@ -16,36 +16,38 @@ class vc_thank_player: UIViewController {
         var RelevantUser = GameEngineObject.UserDBResults![GameEngineObject.SelectedChildIndex!]
 
         
-        GameEngineObject.NewEntry?.childSurveyCompleted = 1
+        GameEngineObject.CurrentUserObject?.childSurveyCompleted = 1
         
-        
-        GameEngineObject.NewEntry?.hispanic        = NSNumber(value:(Int((RelevantUser["hispanic"]?.n!)!)!))
-        GameEngineObject.NewEntry?.african         = NSNumber(value:(Int((RelevantUser["african" ]?.n!)!)!))
-        GameEngineObject.NewEntry?.eastAsian       = NSNumber(value:(Int((RelevantUser["eastAsian"]?.n!)!)!))
-        GameEngineObject.NewEntry?.arab            = NSNumber(value:(Int((RelevantUser["arab"]?.n!)!)!))
-        GameEngineObject.NewEntry?.nativeAmerican  = NSNumber(value:(Int((RelevantUser["nativeAmerican"]?.n!)!)!))
-        GameEngineObject.NewEntry?.pacificIslander = NSNumber(value:(Int((RelevantUser["pacificIslander"]?.n!)!)!))
-        GameEngineObject.NewEntry?.southeastAsian  = NSNumber(value:(Int((RelevantUser["southeastAsian"]?.n!)!)!))
-        GameEngineObject.NewEntry?.southAsian      = NSNumber(value:(Int((RelevantUser["southAsian"]?.n!)!)!))
-        GameEngineObject.NewEntry?.caucasian       = NSNumber(value:(Int((RelevantUser["caucasian"]?.n!)!)!))
-        GameEngineObject.NewEntry?.unknown         = NSNumber(value:(Int((RelevantUser["unknown"]?.n!)!)!))
+        // We are going to save user data to Dynamo.
+        // But first, lets fill out all information that WASNT populated in the "extra" survey.
+        // This is stuff that is there already that we don't want to override.
+        GameEngineObject.CurrentUserObject?.hispanic        = NSNumber(value:(Int((RelevantUser["hispanic"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.african         = NSNumber(value:(Int((RelevantUser["african" ]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.eastAsian       = NSNumber(value:(Int((RelevantUser["eastAsian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.arab            = NSNumber(value:(Int((RelevantUser["arab"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.nativeAmerican  = NSNumber(value:(Int((RelevantUser["nativeAmerican"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.pacificIslander = NSNumber(value:(Int((RelevantUser["pacificIslander"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.southeastAsian  = NSNumber(value:(Int((RelevantUser["southeastAsian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.southAsian      = NSNumber(value:(Int((RelevantUser["southAsian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.caucasian       = NSNumber(value:(Int((RelevantUser["caucasian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.unknown         = NSNumber(value:(Int((RelevantUser["unknown"]?.n!)!)!))
 
-        GameEngineObject.NewEntry?.consentPlay     = NSNumber(value:(Int((RelevantUser["consentPlay"]?.n!)!)!))
-        GameEngineObject.NewEntry?.consentView     = NSNumber(value:(Int((RelevantUser["consentView"]?.n!)!)!))
-        GameEngineObject.NewEntry?.consentShare    = NSNumber(value:(Int((RelevantUser["consentShare"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.consentPlay     = NSNumber(value:(Int((RelevantUser["consentPlay"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.consentView     = NSNumber(value:(Int((RelevantUser["consentView"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.consentShare    = NSNumber(value:(Int((RelevantUser["consentShare"]?.n!)!)!))
         
-        GameEngineObject.NewEntry?.email = (RelevantUser["email"]?.s!)!
-        GameEngineObject.NewEntry?.name = (RelevantUser["name"]?.s!)!
-        GameEngineObject.NewEntry?.gender = (RelevantUser["gender"]?.s!)!
-        GameEngineObject.NewEntry?.dOB = (RelevantUser["dOB"]?.s!)!
-        GameEngineObject.NewEntry?.country = (RelevantUser["country"]?.s!)!
-        GameEngineObject.NewEntry?.city = (RelevantUser["city"]?.s!)!
-        GameEngineObject.NewEntry?.state = (RelevantUser["state"]?.s!)!
-        GameEngineObject.NewEntry?.zIP = (RelevantUser["zIP"]?.s!)!
-        GameEngineObject.NewEntry?.autismDiagnosis = (RelevantUser["autismDiagnosis"]?.s!)!
-        GameEngineObject.NewEntry?.otherDiagnoses = (RelevantUser["otherDiagnoses"]?.s!)!
+        GameEngineObject.CurrentUserObject?.email = (RelevantUser["email"]?.s!)!
+        GameEngineObject.CurrentUserObject?.name = (RelevantUser["name"]?.s!)!
+        GameEngineObject.CurrentUserObject?.gender = (RelevantUser["gender"]?.s!)!
+        GameEngineObject.CurrentUserObject?.dOB = (RelevantUser["dOB"]?.s!)!
+        GameEngineObject.CurrentUserObject?.country = (RelevantUser["country"]?.s!)!
+        GameEngineObject.CurrentUserObject?.city = (RelevantUser["city"]?.s!)!
+        GameEngineObject.CurrentUserObject?.state = (RelevantUser["state"]?.s!)!
+        GameEngineObject.CurrentUserObject?.zIP = (RelevantUser["zIP"]?.s!)!
+        GameEngineObject.CurrentUserObject?.autismDiagnosis = (RelevantUser["autismDiagnosis"]?.s!)!
+        GameEngineObject.CurrentUserObject?.otherDiagnoses = (RelevantUser["otherDiagnoses"]?.s!)!
 
-        GameEngineObject.AddUserToDynamo(row: GameEngineObject.NewEntry!) { (Success) in
+        GameEngineObject.AddUserToDynamo(row: GameEngineObject.CurrentUserObject!) { (Success) in
             if(Success){
                 print("[HK] Success adding the user.")
             } else {

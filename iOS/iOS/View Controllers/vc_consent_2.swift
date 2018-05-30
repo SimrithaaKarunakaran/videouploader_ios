@@ -22,7 +22,7 @@ class vc_consent_2: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentShare = 0
+        GameEngineObject.CurrentUserObject?.consentShare = 0
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_wifi_warn")
@@ -30,7 +30,7 @@ class vc_consent_2: UIViewController {
     }
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentShare = 1
+        GameEngineObject.CurrentUserObject?.consentShare = 1
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_3")

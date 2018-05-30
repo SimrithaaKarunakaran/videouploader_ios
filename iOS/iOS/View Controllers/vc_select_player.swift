@@ -58,9 +58,35 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
         // Save which child was selected.
         GameEngineObject.SelectedChildIndex = indexPath[1]
         var RelevantUser = GameEngineObject.UserDBResults![indexPath[1]]
-
+        
+        // Transform the current user's dictionary (download from Dynamo) to an easily accessible data structure for use later in the app.
+        GameEngineObject.CurrentUserObject?.hispanic        = NSNumber(value:(Int((RelevantUser["hispanic"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.african         = NSNumber(value:(Int((RelevantUser["african" ]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.eastAsian       = NSNumber(value:(Int((RelevantUser["eastAsian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.arab            = NSNumber(value:(Int((RelevantUser["arab"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.nativeAmerican  = NSNumber(value:(Int((RelevantUser["nativeAmerican"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.pacificIslander = NSNumber(value:(Int((RelevantUser["pacificIslander"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.southeastAsian  = NSNumber(value:(Int((RelevantUser["southeastAsian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.southAsian      = NSNumber(value:(Int((RelevantUser["southAsian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.caucasian       = NSNumber(value:(Int((RelevantUser["caucasian"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.unknown         = NSNumber(value:(Int((RelevantUser["unknown"]?.n!)!)!))
+        
+        GameEngineObject.CurrentUserObject?.consentPlay     = NSNumber(value:(Int((RelevantUser["consentPlay"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.consentView     = NSNumber(value:(Int((RelevantUser["consentView"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.consentShare    = NSNumber(value:(Int((RelevantUser["consentShare"]?.n!)!)!))
+        GameEngineObject.CurrentUserObject?.email = (RelevantUser["email"]?.s!)!
+        GameEngineObject.CurrentUserObject?.name = (RelevantUser["name"]?.s!)!
+        GameEngineObject.CurrentUserObject?.gender = (RelevantUser["gender"]?.s!)!
+        GameEngineObject.CurrentUserObject?.dOB = (RelevantUser["dOB"]?.s!)!
+        GameEngineObject.CurrentUserObject?.country = (RelevantUser["country"]?.s!)!
+        GameEngineObject.CurrentUserObject?.city = (RelevantUser["city"]?.s!)!
+        GameEngineObject.CurrentUserObject?.state = (RelevantUser["state"]?.s!)!
+        GameEngineObject.CurrentUserObject?.zIP = (RelevantUser["zIP"]?.s!)!
+        GameEngineObject.CurrentUserObject?.autismDiagnosis = (RelevantUser["autismDiagnosis"]?.s!)!
+        GameEngineObject.CurrentUserObject?.otherDiagnoses = (RelevantUser["otherDiagnoses"]?.s!)!
+        
+        
         let SurveyCompleted2 = Int((RelevantUser["childSurveyCompleted"]?.n!)!)!
-
 
         print("Printing out childSurveyCompleted: \(SurveyCompleted2)")
 

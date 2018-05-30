@@ -24,13 +24,13 @@ class vc_survey2: UIViewController {
 
         
         
-        Q1.value = Float((GameEngineObject.NewEntry?.answers[0])!)
-        Q2.value = Float((GameEngineObject.NewEntry?.answers[1])!)
-        Q3.value = Float((GameEngineObject.NewEntry?.answers[2])!)
+        Q1.value = Float((GameEngineObject.CurrentUserObject?.answers[0])!)
+        Q2.value = Float((GameEngineObject.CurrentUserObject?.answers[1])!)
+        Q3.value = Float((GameEngineObject.CurrentUserObject?.answers[2])!)
 
-        NA1.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[0] == 0) ? false : true
-        NA2.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[1] == 0) ? false : true
-        NA3.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[2] == 0) ? false : true
+        NA1.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[0] == 0) ? false : true
+        NA2.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[1] == 0) ? false : true
+        NA3.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[2] == 0) ? false : true
 
     }
 
@@ -49,13 +49,13 @@ class vc_survey2: UIViewController {
     
     @IBAction func NextButtonClick(_ sender: Any) {
         
-        GameEngineObject.NewEntry?.answers[0] = Int(round(Q1.value))
-        GameEngineObject.NewEntry?.answers[1] = Int(round(Q2.value))
-        GameEngineObject.NewEntry?.answers[2] = Int(round(Q3.value))
+        GameEngineObject.CurrentUserObject?.answers[0] = Int(round(Q1.value))
+        GameEngineObject.CurrentUserObject?.answers[1] = Int(round(Q2.value))
+        GameEngineObject.CurrentUserObject?.answers[2] = Int(round(Q3.value))
         
-        GameEngineObject.NewEntry?.notApplicableChecked[0] = NA1.isOn ? 1 : 0
-        GameEngineObject.NewEntry?.notApplicableChecked[1] = NA2.isOn ? 1 : 0
-        GameEngineObject.NewEntry?.notApplicableChecked[2] = NA3.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[0] = NA1.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[1] = NA2.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[2] = NA3.isOn ? 1 : 0
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey3")

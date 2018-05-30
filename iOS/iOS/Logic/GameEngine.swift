@@ -32,7 +32,7 @@ class GameEngine {
     var UserEmail      : String?
     
     // This is a container that will store information about the child as it is filled out in survey 1, as well as the consent forms.
-    var NewEntry : DDBTableRow?
+    var CurrentUserObject : DDBTableRow?
     
     // Keep track of what game modes are selected
                         // ["Emoji", "Animals", "Faces", "Sports", "Jobs", "All Decks"]
@@ -48,11 +48,11 @@ class GameEngine {
         
         GlobalUserPool = AWSCognitoIdentityUserPool(forKey: GlobalUserPoolID)
         
-        NewEntry = DDBTableRow()
+        CurrentUserObject = DDBTableRow()
     }
     
     func getTempUser() -> DDBTableRow {
-        return NewEntry!
+        return CurrentUserObject!
     }
     
     /// This function initializes DynamoDB, which stores survey/user information./

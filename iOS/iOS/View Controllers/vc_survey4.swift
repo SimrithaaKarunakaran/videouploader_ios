@@ -13,15 +13,15 @@ class vc_survey4: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Q8.value = Float((GameEngineObject.NewEntry?.answers[7])!)
-        Q9.value = Float((GameEngineObject.NewEntry?.answers[8])!)
-        Q10.value = Float((GameEngineObject.NewEntry?.answers[9])!)
-        Q11.value = Float((GameEngineObject.NewEntry?.answers[10])!)
+        Q8.value = Float((GameEngineObject.CurrentUserObject?.answers[7])!)
+        Q9.value = Float((GameEngineObject.CurrentUserObject?.answers[8])!)
+        Q10.value = Float((GameEngineObject.CurrentUserObject?.answers[9])!)
+        Q11.value = Float((GameEngineObject.CurrentUserObject?.answers[10])!)
         
-        SW8.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[7] == 0) ? false : true
-        SW9.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[8] == 0) ? false : true
-        SW10.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[9] == 0) ? false : true
-        SW11.isOn = (GameEngineObject.NewEntry?.notApplicableChecked[10] == 0) ? false : true
+        SW8.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[7] == 0) ? false : true
+        SW9.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[8] == 0) ? false : true
+        SW10.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[9] == 0) ? false : true
+        SW11.isOn = (GameEngineObject.CurrentUserObject?.notApplicableChecked[10] == 0) ? false : true
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,15 +43,15 @@ class vc_survey4: UIViewController {
     
     @IBAction func NextButtonClick(_ sender: Any) {
         
-        GameEngineObject.NewEntry?.answers[7]  = Int(round(Q8.value))
-        GameEngineObject.NewEntry?.answers[8]  = Int(round(Q9.value))
-        GameEngineObject.NewEntry?.answers[9]  = Int(round(Q10.value))
-        GameEngineObject.NewEntry?.answers[10]  = Int(round(Q11.value))
+        GameEngineObject.CurrentUserObject?.answers[7]  = Int(round(Q8.value))
+        GameEngineObject.CurrentUserObject?.answers[8]  = Int(round(Q9.value))
+        GameEngineObject.CurrentUserObject?.answers[9]  = Int(round(Q10.value))
+        GameEngineObject.CurrentUserObject?.answers[10]  = Int(round(Q11.value))
         
-        GameEngineObject.NewEntry?.notApplicableChecked[7]  = SW8.isOn ? 1 : 0
-        GameEngineObject.NewEntry?.notApplicableChecked[8]  = SW9.isOn ? 1 : 0
-        GameEngineObject.NewEntry?.notApplicableChecked[9]  = SW10.isOn ? 1 : 0
-        GameEngineObject.NewEntry?.notApplicableChecked[10]  = SW11.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[7]  = SW8.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[8]  = SW9.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[9]  = SW10.isOn ? 1 : 0
+        GameEngineObject.CurrentUserObject?.notApplicableChecked[10]  = SW11.isOn ? 1 : 0
         
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)

@@ -25,7 +25,7 @@ class vc_consent_1: UIViewController {
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
         // This is found at the top of vc_consent_1 (outside class)
-        GameEngineObject.NewEntry?.consentPlay = 1
+        GameEngineObject.CurrentUserObject?.consentPlay = 1
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_2")

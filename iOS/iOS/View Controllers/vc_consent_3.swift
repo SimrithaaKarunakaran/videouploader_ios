@@ -22,13 +22,13 @@ class vc_consent_3: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentView = 0
+        GameEngineObject.CurrentUserObject?.consentView = 0
 
         self.CreatePlayerProfileAndRedirect()
     }
     
     @IBAction func ConsentClickNext(_ sender: Any) {
-        GameEngineObject.NewEntry?.consentView = 1
+        GameEngineObject.CurrentUserObject?.consentView = 1
 
         self.CreatePlayerProfileAndRedirect()
     }
@@ -36,7 +36,7 @@ class vc_consent_3: UIViewController {
     
     
     func CreatePlayerProfileAndRedirect(){
-        GameEngineObject.AddUserToDynamo(row: GameEngineObject.NewEntry!) { (Success) in
+        GameEngineObject.AddUserToDynamo(row: GameEngineObject.CurrentUserObject!) { (Success) in
             print("[HK] Finished adding a user to DynamoDB.")
             // After we added the player, lets re-download all user players associated with our account.
             // Then, we can redirect the user to the screen where they can select it...
