@@ -43,7 +43,7 @@ class vc_play: UIViewController {
         // Update the number of seconds remaining.
         TextTime.text = "\(seconds)";
         
-        updateGameImage()
+        //updateGameImage()
         
         if(seconds == 0){
             //Move to the next viewpager.
