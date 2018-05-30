@@ -8,6 +8,13 @@
 
 import UIKit
 
+// Create a nonsense default URL. When view loads, this URL will be overridden, pointing to the new directory we have
+// created in which the files (meta and video) will be stored.
+var LockedGameDirectory = URL(string: "google.com")!
+// Likewise, create a dummy URL to the text file (meta information) that will be written to throughout the game.
+var TextFileURL         = URL(string: "google.com")!
+
+
 class vc_play: UIViewController {
 
     var seconds        = 10 //This variable will hold a starting value of seconds. It could be any amount above 0.
@@ -16,12 +23,7 @@ class vc_play: UIViewController {
     
 
     
-    // Create a nonsense default URL. When view loads, this URL will be overridden, pointing to the new directory we have
-    // created in which the files (meta and video) will be stored.
-    var LockedGameDirectory = URL(string: "google.com")!
-    // Likewise, create a dummy URL to the text file (meta information) that will be written to throughout the game.
-    var TextFileURL         = URL(string: "google.com")!
-    
+
     
     @IBOutlet weak var TextTime: UILabel!
     @IBOutlet weak var TextScore: UILabel!
