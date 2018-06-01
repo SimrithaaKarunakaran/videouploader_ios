@@ -4,12 +4,12 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthCore/AWSAuthCore.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSAuthCore-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Headers/AWSAuthCore-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthCore/AWSAuthCore.framework/Headers/AWSAuthCore-Swift.h"
         },
         {
           'type': 'file',
@@ -55,23 +55,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthCore/AWSAuthCore.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthCore/AWSAuthCore.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSAuthCore.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSAuthCore.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthUI/AWSAuthUI.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSAuthUI-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Headers/AWSAuthUI-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthUI/AWSAuthUI.framework/Headers/AWSAuthUI-Swift.h"
         },
         {
           'type': 'file',
@@ -97,18 +97,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthUI/AWSAuthUI.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSAuthUI.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSAuthUI.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSAuthUI/AWSAuthUI.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSAuthUI/AWSAuthUI.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -139,12 +139,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognito/AWSCognito.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSCognito-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/Headers/AWSCognito-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognito/AWSCognito.framework/Headers/AWSCognito-Swift.h"
         },
         {
           'type': 'file',
@@ -200,18 +200,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognito/AWSCognito.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCognito.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSCognito.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognito/AWSCognito.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognito/AWSCognito.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -247,12 +247,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoAuth/AWSCognitoAuth.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSCognitoAuth-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/Headers/AWSCognitoAuth-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoAuth/AWSCognitoAuth.framework/Headers/AWSCognitoAuth-Swift.h"
         },
         {
           'type': 'file',
@@ -268,18 +268,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoAuth/AWSCognitoAuth.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCognitoAuth.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSCognitoAuth.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoAuth/AWSCognitoAuth.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoAuth/AWSCognitoAuth.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -290,12 +290,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSCognitoIdentityProvider-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers/AWSCognitoIdentityProvider-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers/AWSCognitoIdentityProvider-Swift.h"
         },
         {
           'type': 'file',
@@ -336,18 +336,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCognitoIdentityProvider.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSCognitoIdentityProvider.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -378,12 +378,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSCognitoIdentityProviderASF-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers/AWSCognitoIdentityProviderASF-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers/AWSCognitoIdentityProviderASF-Swift.h"
         },
         {
           'type': 'file',
@@ -399,18 +399,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCognitoIdentityProviderASF.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSCognitoIdentityProviderASF.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -421,7 +421,7 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCore/AWSCore.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -481,7 +481,7 @@
         {
           'type': 'file',
           'name': "AWSCore-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Headers/AWSCore-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCore/AWSCore.framework/Headers/AWSCore-Swift.h"
         },
         {
           'type': 'file',
@@ -817,18 +817,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCore/AWSCore.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSCore.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSCore.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSCore/AWSCore.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -894,12 +894,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSDynamoDB/AWSDynamoDB.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSDynamoDB-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDB-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSDynamoDB/AWSDynamoDB.framework/Headers/AWSDynamoDB-Swift.h"
         },
         {
           'type': 'file',
@@ -940,23 +940,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSDynamoDB/AWSDynamoDB.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSDynamoDB/AWSDynamoDB.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSDynamoDB.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSDynamoDB.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSMobileClient/AWSMobileClient.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSMobileClient-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Headers/AWSMobileClient-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSMobileClient/AWSMobileClient.framework/Headers/AWSMobileClient-Swift.h"
         },
         {
           'type': 'file',
@@ -972,23 +972,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSMobileClient/AWSMobileClient.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSMobileClient/AWSMobileClient.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSMobileClient.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSMobileClient.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSS3/AWSS3.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "AWSS3-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework/Headers/AWSS3-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSS3/AWSS3.framework/Headers/AWSS3-Swift.h"
         },
         {
           'type': 'file',
@@ -1049,18 +1049,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSS3/AWSS3.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSS3.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSS3.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1070,7 +1070,7 @@
         {
           'type': 'file',
           'name': "AWSUserPoolsSignIn-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Headers/AWSUserPoolsSignIn-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Headers/AWSUserPoolsSignIn-Swift.h"
         },
         {
           'type': 'file',
@@ -1091,18 +1091,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/AWSUserPoolsSignIn.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/AWSUserPoolsSignIn.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/PrivateHeaders",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -1143,7 +1143,7 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/Pods_iOS.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/Pods_iOS.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1153,29 +1153,29 @@
         {
           'type': 'file',
           'name': "Pods_iOS-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/Pods_iOS.framework/Headers/Pods_iOS-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/Pods_iOS.framework/Headers/Pods_iOS-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/Pods_iOS.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/Pods_iOS.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-iOS.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-iOS.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "Reachability-Swift.h",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
         },
         {
           'type': 'file',
@@ -1186,12 +1186,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules",
+      'name': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/ReachabilitySwift.build/module.modulemap"
+          'external-contents': "/Users/haik/Documents/guesswhat_ios/iOS/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/ReachabilitySwift.build/module.modulemap"
         }
       ]
     }

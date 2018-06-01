@@ -408,7 +408,7 @@ SWIFT_CLASS("_TtC3iOS7vc_play")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextTime;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TextScore;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified GameImageView;
-- (void)updateTimer;
+- (void)updateGameClockCallback;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
