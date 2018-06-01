@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 // Create a nonsense default URL. When view loads, this URL will be overridden, pointing to the new directory we have
 // created in which the files (meta and video) will be stored.
@@ -17,64 +18,99 @@ var TextFileURL         = URL(string: "google.com")!
 
 class vc_play: UIViewController {
 
-    var seconds        = 10 //This variable will hold a starting value of seconds. It could be any amount above 0.
-    var timer          : Timer?
-    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
+    // Number of seconds left in the game.
+    var GameClockSeconds        = 10 //This variable will hold a starting value of seconds. It could be any amount above 0.
     
+    // Update the game clock.
+    var timerGameClock     : Timer?
 
     
-
+    //This will be used to make sure only one timer is created at a time.
+    var isTimerRunningMain = false
+    
+    // We can stop tilt detection using this (pause temporarily after tilt reported)
+    // Tilt detection is disabled by default and gets enabled at time=4 seconds.
+    var TiltDetectionEnabled = false
+    var TimeSinceLastWordLoaded = 0
+    var NumberOfCorrectAnswers = 0
+    
+    // Manager for getting gyroscope data.
+    let motionManager = CMMotionManager()
     
     @IBOutlet weak var TextTime: UILabel!
     @IBOutlet weak var TextScore: UILabel!
     @IBOutlet weak var GameImageView: UIImageView!
     
-    func runTimer() {
-        if(isTimerRunning == false){
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(vc_countdown.updateTimer)), userInfo: nil, repeats: true)
-            isTimerRunning = true;
+    /// This function starts the main game clock timer: if it isn't started already.
+    func StartGameClock() {
+        if(isTimerRunningMain == false){
+            timerGameClock = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateGameClockCallback)), userInfo: nil, repeats: true)
+            isTimerRunningMain = true;
         }
     }
+
     
     
-    @objc func updateTimer() {
+
+    
+    // Every second, this function is called. It just updates # of seconds remaining.
+    // Also ends the game when time runs out.
+    @objc func updateGameClockCallback() {
         
         // Decrement number of seconds left.
-        seconds -= 1
+        GameClockSeconds -= 1
+        TimeSinceLastWordLoaded = TimeSinceLastWordLoaded + 1
+        
+        
+        
+        // We only allow detecting tilt if:
+        // (a) Game has been started for four seconds
+        // (b) At least three seconds have elapsed since last word loaded.
+        if((TimeSinceLastWordLoaded > 3) && (GameClockSeconds > 0)) {
+            if((90 - GameClockSeconds) >= 4) {
+                TiltDetectionEnabled = true
+            } else {
+                // No tilt allowed in the first four seconds.
+                TiltDetectionEnabled = false
+            }
+        }
+        
+        
         
         // Update the number of seconds remaining.
-        TextTime.text = "\(seconds)";
+        TextTime.text = "\(GameClockSeconds)";
         
         //updateGameImage()
         
-        if(seconds == 0){
+        if(GameClockSeconds == 0){
             //Move to the next viewpager.
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_confirm_video")
             self.present(newViewController, animated: false, completion: nil)
         }
         
-        if(seconds < 0){
-            timer?.invalidate()
+        if(GameClockSeconds < 0){
+            // No more timer callbacks.
+            timerGameClock?.invalidate()
+            // No more gyroscope updates.
+            motionManager.stopGyroUpdates()
         }
     }
-    
-    
-    
-    
 
-    
     /// Update the game image shown to the player based on the prompts they have selected.
     /// Also, write to the associated log file.
     func updateGameImage(){
         let EmojiObject = PromptManager.GetNextImage()
         let image       = UIImage(named:EmojiObject.FileName!)
         
+        // Reset this
+        TimeSinceLastWordLoaded = 0
+        
         GameImageView.image = image
         print("[PLAY] Showing image with file name: \(EmojiObject.FileName!)")
         
         // Now, we write to the ol' text file.
-        let SecondsSinceGameStart = String(90 - seconds)
+        let SecondsSinceGameStart = String(90 - GameClockSeconds)
         writeToTextFile(Text: SecondsSinceGameStart + ": " + EmojiObject.CodeName!)
         print("[PLAY] (Supposedly) finished writing to the text file.")
     }
@@ -115,7 +151,7 @@ class vc_play: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // Start the game timer, counting down from 90 seconds.
-        runTimer();
+        StartGameClock();
         
         // Set a default image to show the user.
         updateGameImage()
@@ -125,16 +161,91 @@ class vc_play: UIViewController {
         print("[PLAY] Got the timestamp associated with this session: \(TimeStamp)")
         
         // Create the directory that will be used to "house" the video and text file of meta information to upload.
+        // We append ".LOCKED" to the end of it indicating it is being written to. The .LOCKED will be removed after game session.
         let LockedDirectoryName = String(TimeStamp) + ".LOCKED"
         LockedGameDirectory = CreateLockedGameDirectory(FOLDER_NAME: LockedDirectoryName)
         print("[PLAY] Creating directory with name: \(LockedDirectoryName)")
         print("[PLAY] Received path with URL: \(LockedGameDirectory)")
         
         // Now that we have created the folder, lets create a text file inside the folder.
+        // This will contain information about who the user was, and what prompts were shown at what times.
         createMetaTextFile()
+        
+
+        // Update every 225 MS: equivalent to SENSOR_DELAY_NORMAL on Android platforms.
+        motionManager.gyroUpdateInterval = 0.225
+        // Now, let's enable the Gyroscope.
+        motionManager.startDeviceMotionUpdates(to: .main) {
+            [weak self] (data: CMDeviceMotion?, error: Error?) in
+            // Gyroscope callback: check for tilt on a sample-by-sample basis.
+            if let Rotation = data?.rotationRate{
+                self?.processGyroSample(x: Rotation.x, y: Rotation.y, z: Rotation.z)
+            }
+        }
+        
     }
     
     
+    // Given a sample from the gyroscope, lets determine (a) if there is a tilt, and (b) if so, is it in the forward or backward direction.
+    func processGyroSample(x: Double, y: Double, z: Double){
+            // We want to detect forward tilts, not "jiggles". Its complicated.
+            let TILT_THRESHOLD   = 1.3;
+            let JIGGLE_THRESHOLD = 0.8;
+
+            // In this case, there is no tilt. Otherwise, we will detect what kind of tilt.
+            if((abs(x) > JIGGLE_THRESHOLD) || (abs(z) > JIGGLE_THRESHOLD) || (abs(y) < TILT_THRESHOLD)){
+                return; // No tilt detected.
+            }
+            
+            if(!TiltDetectionEnabled){
+                return;
+            }
+            
+            // Now if we made it so far, we know tilt has happened. Lets find out which way, based on
+            // the orientation of the phone. But first, disable tilt detection until next time.
+            TiltDetectionEnabled = false
+        
+            var ScreenFlipped = true
+        
+            switch UIDevice.current.orientation{
+                case .landscapeLeft:
+                    ScreenFlipped = true
+                case .landscapeRight:
+                    ScreenFlipped = false
+                default:
+                    ScreenFlipped = true
+            }
+        
+            var TiltForward = true
+        
+            // Send a notification to the listener.
+            if(y >= TILT_THRESHOLD && !ScreenFlipped){
+                TiltForward = false
+            } else if(y <= -TILT_THRESHOLD && ScreenFlipped) {
+                TiltForward = false
+            }
+        
+        if(TiltForward){
+            print("[PLAY] Forward tilt detected.")
+            // Update game UI and also write to the log file.
+            increaseNumberOfCorrectAnswers();
+            writeToTextFile(Text: "Correct");
+            //PlaySound(GetSoundChime());
+        } else {
+            print("[PLAY] Backward tilt detected.")
+            writeToTextFile(Text: "Skipped");
+            //PlaySound(GetSoundChord());
+        }
+    }
+    
+    
+    func increaseNumberOfCorrectAnswers(){
+        NumberOfCorrectAnswers = NumberOfCorrectAnswers + 1
+        TextScore.text = String(NumberOfCorrectAnswers)
+    }
+    
+    // Write a line to our meta-information file.
+    // Specifically we will write the time and prompt everytime the prompt changes.
     func writeToTextFile(Text: String){
         do {
             try Text.write(to: TextFileURL, atomically: false, encoding: .utf8)
@@ -147,6 +258,11 @@ class vc_play: UIViewController {
         print("[PLAY] Wrote to text file: \(Text)")
     }
     
+    
+    
+    // This function creates the game meta-information text-file within the appropriate directory.
+    // Also populates the top of the file with user-specific information. Remaining information written
+    // On an ad-hoc basis during the game session.
     func createMetaTextFile(){
         let file = "GuessWhat.txt" //this is the file. we will write to and read from it
         
