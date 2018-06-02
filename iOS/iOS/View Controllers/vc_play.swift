@@ -19,7 +19,7 @@ var TextFileURL         = URL(string: "google.com")!
 class vc_play: UIViewController {
 
     // Number of seconds left in the game.
-    var GameClockSeconds        = 10 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var GameClockSeconds        = 90 //This variable will hold a starting value of seconds. It could be any amount above 0.
     
     // Update the game clock.
     var timerGameClock     : Timer?
@@ -189,8 +189,8 @@ class vc_play: UIViewController {
     // Given a sample from the gyroscope, lets determine (a) if there is a tilt, and (b) if so, is it in the forward or backward direction.
     func processGyroSample(x: Double, y: Double, z: Double){
             // We want to detect forward tilts, not "jiggles". Its complicated.
-            let TILT_THRESHOLD   = 1.3;
-            let JIGGLE_THRESHOLD = 0.8;
+            let TILT_THRESHOLD   = 1.45; // Increase this number to decrease tilt sensitivity.
+            let JIGGLE_THRESHOLD = 0.8; // Increase this number if non-tilt vibrations are being detected as tilts.
 
             // In this case, there is no tilt. Otherwise, we will detect what kind of tilt.
             if((abs(x) > JIGGLE_THRESHOLD) || (abs(z) > JIGGLE_THRESHOLD) || (abs(y) < TILT_THRESHOLD)){
@@ -216,13 +216,13 @@ class vc_play: UIViewController {
                     ScreenFlipped = true
             }
         
-            var TiltForward = true
+            var TiltForward = false
         
             // Send a notification to the listener.
             if(y >= TILT_THRESHOLD && !ScreenFlipped){
-                TiltForward = false
+                TiltForward = true
             } else if(y <= -TILT_THRESHOLD && ScreenFlipped) {
-                TiltForward = false
+                TiltForward = true
             }
         
         if(TiltForward){
@@ -236,6 +236,9 @@ class vc_play: UIViewController {
             writeToTextFile(Text: "Skipped");
             //PlaySound(GetSoundChord());
         }
+        
+        // Regardless of which direction the tilt is, we need a new prompt.
+        updateGameImage()
     }
     
     
