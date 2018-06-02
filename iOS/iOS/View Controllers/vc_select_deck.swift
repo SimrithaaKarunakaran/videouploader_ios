@@ -20,6 +20,16 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func ClickNext(_ sender: Any) {
         
+        // Did the user select at least one deck?
+        var AR = GameEngineObject.ArraySelected
+        
+        let SomethingSelected = AR[0] || AR[1] || AR[2] || AR[3] || AR[4] || AR[5] 
+        
+        if(!SomethingSelected){
+            // User didn't select anything- we don't let them proceed.
+            return
+        }
+        
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_instructions")
