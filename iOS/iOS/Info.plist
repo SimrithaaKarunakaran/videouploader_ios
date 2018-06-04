@@ -53,6 +53,8 @@
 	<string>Your child will be recorded during gameplay. You have the option to delete the video after the session.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Your child will be recorded during gameplay. You have the option to delete the video after the session.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Watch the video you recorded to decide whether to share or delete it.</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

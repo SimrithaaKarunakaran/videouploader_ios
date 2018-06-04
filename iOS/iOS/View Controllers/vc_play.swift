@@ -26,7 +26,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
 
 
     // Number of seconds left in the game.
-    var GameClockSeconds        = 90 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var GameClockSeconds        = 15 //This variable will hold a starting value of seconds. It could be any amount above 0.
     // Update the game clock.
     var timerGameClock     : Timer?
     

@@ -219,9 +219,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to share the video you recorded?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k70-3e-UNP">
-                                <rect key="frame" x="20" y="85" width="627" height="40"/>
+                                <rect key="frame" x="20" y="85" width="627" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sN1-aT-Z2b"/>
+                                    <constraint firstAttribute="height" constant="45" id="sN1-aT-Z2b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
                                 <nil key="textColor"/>

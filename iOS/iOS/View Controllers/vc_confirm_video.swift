@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import AVKit
+import AVFoundation
 class vc_confirm_video: UIViewController {
 
     override func viewDidLoad() {
@@ -25,7 +26,10 @@ class vc_confirm_video: UIViewController {
     }
     
     @IBAction func DeleteVideo(_ sender: Any) {
+    
     }
+    
+    
     /*
     // MARK: - Navigation
 
