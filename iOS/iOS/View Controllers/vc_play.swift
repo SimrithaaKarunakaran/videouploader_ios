@@ -26,7 +26,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
 
 
     // Number of seconds left in the game.
-    var GameClockSeconds        = 15 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var GameClockSeconds        = 35 //This variable will hold a starting value of seconds. It could be any amount above 0.
     // Update the game clock.
     var timerGameClock     : Timer?
     
@@ -380,7 +380,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
             }
             
             if(!TiltDetectionEnabled){
-                print("[PLAY] Detected tilt was \(abs(x))")
+                print("[PLAY] Detected tilt was \(abs(y))")
                 return;
             }
             
