@@ -8,22 +8,27 @@
 
 import UIKit
 import CoreMotion
+import MobileCoreServices
+import AVFoundation
 
-// Create a nonsense default URL. When view loads, this URL will be overridden, pointing to the new directory we have
-// created in which the files (meta and video) will be stored.
+// Create a nonsense default URL. When view loads, this will be overridden, pointing to new directory
+// in which the files (meta and video) will be stored.
 var LockedGameDirectory = URL(string: "google.com")!
 // Likewise, create a dummy URL to the text file (meta information) that will be written to throughout the game.
 var TextFileURL         = URL(string: "google.com")!
+var VideoFileURL        = URL(string: "google.com")!
 
 
-class vc_play: UIViewController {
+
+
+
+class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
+
 
     // Number of seconds left in the game.
     var GameClockSeconds        = 90 //This variable will hold a starting value of seconds. It could be any amount above 0.
-    
     // Update the game clock.
     var timerGameClock     : Timer?
-
     
     //This will be used to make sure only one timer is created at a time.
     var isTimerRunningMain = false
@@ -40,6 +45,18 @@ class vc_play: UIViewController {
     @IBOutlet weak var TextTime: UILabel!
     @IBOutlet weak var TextScore: UILabel!
     @IBOutlet weak var GameImageView: UIImageView!
+    @IBOutlet weak var UICameraPreview: UIView!
+    
+    
+    // Camera related elements
+    let captureSession = AVCaptureSession()
+    let movieOutput = AVCaptureMovieFileOutput()
+    var previewLayer: AVCaptureVideoPreviewLayer!
+    var activeInput: AVCaptureDeviceInput!
+    
+    
+    
+    
     
     /// This function starts the main game clock timer: if it isn't started already.
     func StartGameClock() {
@@ -51,17 +68,180 @@ class vc_play: UIViewController {
 
     
     
+    func setupSession() -> Bool {
+        captureSession.sessionPreset = AVCaptureSession.Preset.high
+        
+        // Setup Camera
+        let camera = GetDefaultVideoDevice()
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: camera)
+            if captureSession.canAddInput(input) {
+                captureSession.addInput(input)
+                activeInput = input
+            }
+        } catch {
+            print("Error setting device video input: \(error)")
+            return false
+        }
+        
+        // Setup Microphone
+        let microphone = AVCaptureDevice.default(for: AVMediaType.audio)
+        
+        do {
+            let micInput = try AVCaptureDeviceInput(device: microphone!)
+            if captureSession.canAddInput(micInput) {
+                captureSession.addInput(micInput)
+            }
+        } catch {
+            print("Error setting device audio input: \(error)")
+            return false
+        }
+        
+        // Movie output
+        if captureSession.canAddOutput(movieOutput) {
+            captureSession.addOutput(movieOutput)
+        }
+        
+        return true
+    }
+    
+    
+    func startPreview(){
+        // Configure previewLayer
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = UICameraPreview.bounds
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        UICameraPreview.layer.addSublayer(previewLayer)
+    }
+    
+    //MARK:- Camera Session
+    func startSession() {
+        if !captureSession.isRunning {
+            videoQueue().async {
+                self.captureSession.startRunning()
+            }
+        }
+    }
+    
+    func stopSession() {
+        if captureSession.isRunning {
+            videoQueue().async {
+                self.captureSession.stopRunning()
+            }
+        }
+    }
 
+    // Can't provide a meaningful comment because I copy-pasted this code from somewhere.
+    func videoQueue() -> DispatchQueue {
+        return DispatchQueue.main
+    }
+
+    
+    func GetDefaultVideoDevice() -> AVCaptureDevice {
+        var defaultVideoDevice: AVCaptureDevice?
+        
+        if let frontCameraDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .front) {
+            defaultVideoDevice = frontCameraDevice
+        }
+        else if let dualCameraDevice = AVCaptureDevice.default(.builtInDualCamera, for: AVMediaType.video, position: .back) {
+            defaultVideoDevice = dualCameraDevice
+        }
+        else if let backCameraDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back) {
+            defaultVideoDevice = backCameraDevice
+        }
+        
+        return defaultVideoDevice!
+    }
+    
+    
+    func currentVideoOrientation() -> AVCaptureVideoOrientation {
+        var orientation: AVCaptureVideoOrientation
+        
+        switch UIDevice.current.orientation {
+        case .portrait:
+            orientation = AVCaptureVideoOrientation.portrait
+        case .landscapeRight:
+            orientation = AVCaptureVideoOrientation.landscapeLeft
+        case .portraitUpsideDown:
+            orientation = AVCaptureVideoOrientation.portraitUpsideDown
+        default:
+            orientation = AVCaptureVideoOrientation.landscapeRight
+        }
+        
+        return orientation
+    }
+
+    
+    
+    
+    func startRecording() {
+        
+        if movieOutput.isRecording == false {
+            
+            let connection = movieOutput.connection(with: AVMediaType.video)
+            if (connection?.isVideoOrientationSupported)! {
+                connection?.videoOrientation = currentVideoOrientation()
+            }
+            
+            if (connection?.isVideoStabilizationSupported)! {
+                connection?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
+            }
+            
+            let device = activeInput.device
+            if (device.isSmoothAutoFocusSupported) {
+                do {
+                    try device.lockForConfiguration()
+                    device.isSmoothAutoFocusEnabled = false
+                    device.unlockForConfiguration()
+                } catch {
+                    print("Error setting configuration: \(error)")
+                }
+                
+            }
+            
+            VideoFileURL = LockedGameDirectory.appendingPathComponent("GuessWhat.mp4")
+            print("[Play] Started recording video to URL: \(VideoFileURL)")
+            movieOutput.startRecording(to: VideoFileURL, recordingDelegate: self)
+            
+        }
+        else {
+            stopRecording()
+        }
+        
+    }
+    
+    func stopRecording() {
+        
+        if movieOutput.isRecording == true {
+            movieOutput.stopRecording()
+            print("[Play] Stopped recording.")
+        }
+    }
+    
+    func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
+        print("[Play] Started recording.")
+    }
+    
+    func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
+        if (error != nil) {
+            print("[Play] Error recording movie: \(error!.localizedDescription)")
+        } else {
+            
+            _ = VideoFileURL as URL
+            
+        }
+        
+    }
+    
+    
     
     // Every second, this function is called. It just updates # of seconds remaining.
     // Also ends the game when time runs out.
     @objc func updateGameClockCallback() {
-        
         // Decrement number of seconds left.
         GameClockSeconds -= 1
         TimeSinceLastWordLoaded = TimeSinceLastWordLoaded + 1
-        
-        
         
         // We only allow detecting tilt if:
         // (a) Game has been started for four seconds
@@ -75,14 +255,16 @@ class vc_play: UIViewController {
             }
         }
         
-        
-        
         // Update the number of seconds remaining.
         TextTime.text = "\(GameClockSeconds)";
         
-        //updateGameImage()
-        
         if(GameClockSeconds == 0){
+            
+            // Stop recording video
+            stopRecording()
+            // No more gyroscope
+            motionManager.stopGyroUpdates()
+
             //Move to the next viewpager.
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_confirm_video")
@@ -92,8 +274,6 @@ class vc_play: UIViewController {
         if(GameClockSeconds < 0){
             // No more timer callbacks.
             timerGameClock?.invalidate()
-            // No more gyroscope updates.
-            motionManager.stopGyroUpdates()
         }
     }
 
@@ -146,9 +326,6 @@ class vc_play: UIViewController {
         return FilePathGameFolder
     }
     
-
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         // Start the game timer, counting down from 90 seconds.
         StartGameClock();
@@ -170,8 +347,7 @@ class vc_play: UIViewController {
         // Now that we have created the folder, lets create a text file inside the folder.
         // This will contain information about who the user was, and what prompts were shown at what times.
         createMetaTextFile()
-        
-
+    
         // Update every 225 MS: equivalent to SENSOR_DELAY_NORMAL on Android platforms.
         motionManager.gyroUpdateInterval = 0.225
         // Now, let's enable the Gyroscope.
@@ -183,13 +359,19 @@ class vc_play: UIViewController {
             }
         }
         
+        // Start the video recording process.
+        if(setupSession()){
+            startPreview()
+            startSession()
+            startRecording()
+        }
     }
     
     
     // Given a sample from the gyroscope, lets determine (a) if there is a tilt, and (b) if so, is it in the forward or backward direction.
     func processGyroSample(x: Double, y: Double, z: Double){
             // We want to detect forward tilts, not "jiggles". Its complicated.
-            let TILT_THRESHOLD   = 1.45; // Increase this number to decrease tilt sensitivity.
+            let TILT_THRESHOLD   = 2.0; // Increase this number to decrease tilt sensitivity.
             let JIGGLE_THRESHOLD = 0.8; // Increase this number if non-tilt vibrations are being detected as tilts.
 
             // In this case, there is no tilt. Otherwise, we will detect what kind of tilt.
@@ -198,6 +380,7 @@ class vc_play: UIViewController {
             }
             
             if(!TiltDetectionEnabled){
+                print("[PLAY] Detected tilt was \(abs(x))")
                 return;
             }
             
@@ -302,6 +485,11 @@ class vc_play: UIViewController {
         }
     }
     
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        print("[Play] Recording done!")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         PromptManager.LoadPromptsForGame(PromptArray: GameEngineObject.ArraySelected)
@@ -315,3 +503,5 @@ class vc_play: UIViewController {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
     }
 }
+
+
