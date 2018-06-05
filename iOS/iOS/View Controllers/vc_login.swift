@@ -32,6 +32,8 @@ class vc_login: UIViewController {
         
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
+        
+        ButtonLogin.resignFirstResponder()
       
         self.LoadingProgress.startAnimating()
 
@@ -87,6 +89,9 @@ class vc_login: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Make the "loading" animation not show up initially.
+        LoadingProgress.hidesWhenStopped = true
         
         // Setup the onclick handler when user presses the "Don't Have An Account" link
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))

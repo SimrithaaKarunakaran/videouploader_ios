@@ -434,8 +434,9 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         
         let CurrentUser = GameEngineObject.CurrentUserObject!
         
-        let ConsentShare = String(Int(CurrentUser.consentShare))
-        let ConsentView  = String(Int(CurrentUser.consentView))
+        
+        let ConsentShare = String(describing: CurrentUser.consentShare)
+        let ConsentView  = String(describing: CurrentUser.consentView)
 
         let L1 = "CONSENT_SHARE: "  + ConsentShare
         let L2 = "CONSENT_VIEW: "   + ConsentView

@@ -93,7 +93,7 @@ class GameEngine {
         getDynamoObjectMapper().save(row, completionHandler: { (error: Error?) -> Void in
             
             guard error == nil else {
-                print("[HK] Amazon DynamoDB Save Error: \(error)")
+                print("[HK] Amazon DynamoDB Save Error: \(String(describing: error))")
                 completion(false)
                 return
             }
@@ -144,10 +144,10 @@ class GameEngine {
         emailAttr?.value = email
         
         GlobalUserPool.signUp(email, password: password, userAttributes: [emailAttr!], validationData: nil)
-            .continueWith(block: {[weak self] (task) -> Any? in
+            .continueWith(block: {[] (task) -> Any? in
                 
                 guard task.error == nil else {
-                    print("[HK] Failed to create a user account: \(task.error)")
+                    print("[HK] Failed to create a user account: \(String(describing: task.error))")
                     completition(false)
                     return nil
                 }
@@ -179,7 +179,7 @@ class GameEngine {
             
                 // Save the access token for authentication of other AWS services.
                 self!.accessToken = session.accessToken?.tokenString
-                print("[HK] RestoreSession returned with access token: \(self!.accessToken)")
+                print("[HK] RestoreSession returned with access token: \(String(describing: self!.accessToken))")
 
                 GameEngineObject.getUserEmail(completion: { (Success, Email) in
                     sessionCompletion(Success, Email)
@@ -213,8 +213,8 @@ class GameEngine {
         
         GlobalCredentialsProvider.getIdentityId().continueWith(block:{ (task) in
             guard task.error == nil else {
-                print("[HK] fullyAuthenticateWithToken returning false: \(task.error)")
-                print(task.error)
+                print("[HK] fullyAuthenticateWithToken returning false: \(String(describing: task.error))")
+                print(task.error as Any)
                 sessionCompletion(false)
                 return nil
             }
@@ -239,7 +239,7 @@ class GameEngine {
                     print("Error!")
                     completion(false, "")
                 } else {
-                    if let response = task.result as? AWSCognitoIdentityUserGetDetailsResponse {
+                    if let response = task.result {
                         for attribute in response.userAttributes! {
                             if attribute.name == "email" {
                                 self.UserEmail = attribute.value
@@ -292,19 +292,14 @@ class GameEngine {
   
         GameEngineObject.dynamoDBCustom?.query(query).continueWith(block: { (task) in
             guard task.error == nil else {
-                print(task.error)
+                print(task.error as Any)
                 completion(false)
                 return nil
             }
             
-            let results = task.result as AWSDynamoDBQueryOutput!
+            let results = task.result as AWSDynamoDBQueryOutput?
             self.UserDBResults = results!.items!
-            
-            // For each user (e.g. child)
-            for item in self.UserDBResults!{
-                var val = item["name"]
-                //print("Printing item name: \(val?.s)")
-            }
+        
             
             completion(true)
             // Return success to listener.
