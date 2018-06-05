@@ -10,6 +10,7 @@ import UIKit
 import CoreMotion
 import MobileCoreServices
 import AVFoundation
+import AVKit
 
 // Create a nonsense default URL. When view loads, this will be overridden, pointing to new directory
 // in which the files (meta and video) will be stored.
@@ -26,7 +27,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
 
 
     // Number of seconds left in the game.
-    var GameClockSeconds        = 35 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var GameClockSeconds        = 15 //This variable will hold a starting value of seconds. It could be any amount above 0.
     // Update the game clock.
     var timerGameClock     : Timer?
     
@@ -35,9 +36,9 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     // We can stop tilt detection using this (pause temporarily after tilt reported)
     // Tilt detection is disabled by default and gets enabled at time=4 seconds.
-    var TiltDetectionEnabled = false
-    var TimeSinceLastWordLoaded = 0
-    var NumberOfCorrectAnswers = 0
+    var TiltDetectionEnabled     = false
+    var TimeSinceLastWordLoaded  = 0
+    var NumberOfCorrectAnswers   = 0
     
     // Manager for getting gyroscope data.
     let motionManager = CMMotionManager()
@@ -69,7 +70,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     
     func setupSession() -> Bool {
-        captureSession.sessionPreset = AVCaptureSession.Preset.high
+        captureSession.sessionPreset = AVCaptureSession.Preset.medium
         
         // Setup Camera
         let camera = GetDefaultVideoDevice()
@@ -81,7 +82,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
                 activeInput = input
             }
         } catch {
-            print("Error setting device video input: \(error)")
+            print("[PLAY] Error setting device video input: \(error)")
             return false
         }
         
@@ -94,7 +95,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
                 captureSession.addInput(micInput)
             }
         } catch {
-            print("Error setting device audio input: \(error)")
+            print("[PLAY] Error setting device audio input: \(error)")
             return false
         }
         
@@ -118,17 +119,20 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     //MARK:- Camera Session
     func startSession() {
         if !captureSession.isRunning {
-            videoQueue().async {
-                self.captureSession.startRunning()
-            }
+            
+            self.captureSession.startRunning()
+            
+           // videoQueue().async {
+           //     print("[PLAY] AVCaptureSession startRunning called.")
+           //     self.captureSession.startRunning()
+           // }
         }
     }
     
     func stopSession() {
         if captureSession.isRunning {
-            videoQueue().async {
-                self.captureSession.stopRunning()
-            }
+            print("[PLAY] AVCaptureSession stopRunning called.")
+            self.captureSession.stopRunning()
         }
     }
 
@@ -160,12 +164,16 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         
         switch UIDevice.current.orientation {
         case .portrait:
+            print("[ORIENTATION] Portrait detected.")
             orientation = AVCaptureVideoOrientation.portrait
         case .landscapeRight:
-            orientation = AVCaptureVideoOrientation.landscapeLeft
+            print("[ORIENTATION] Landscape right detected.")
+            orientation = AVCaptureVideoOrientation.portrait
         case .portraitUpsideDown:
+            print("[ORIENTATION] Portrait upside down detected.")
             orientation = AVCaptureVideoOrientation.portraitUpsideDown
         default:
+            print("[ORIENTATION] Default case detected.")
             orientation = AVCaptureVideoOrientation.landscapeRight
         }
         
@@ -177,14 +185,18 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     func startRecording() {
         
+        print("[PLAY] Entered startRecording")
         if movieOutput.isRecording == false {
-            
+            print("[PLAY] isRecording() was false. Setting up the recording.")
+
             let connection = movieOutput.connection(with: AVMediaType.video)
             if (connection?.isVideoOrientationSupported)! {
+                print("[PLAY] Video orientation was supported.")
                 connection?.videoOrientation = currentVideoOrientation()
             }
             
             if (connection?.isVideoStabilizationSupported)! {
+                print("[PLAY] Video stabilization was supported.")
                 connection?.preferredVideoStabilizationMode = AVCaptureVideoStabilizationMode.auto
             }
             
@@ -194,44 +206,42 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
                     try device.lockForConfiguration()
                     device.isSmoothAutoFocusEnabled = false
                     device.unlockForConfiguration()
+                    print("[PLAY] Smooth auto-focus is supported. Why do I care though?")
                 } catch {
-                    print("Error setting configuration: \(error)")
+                    print("[PLAY] Error setting configuration: \(error)")
                 }
-                
             }
             
             VideoFileURL = LockedGameDirectory.appendingPathComponent("GuessWhat.mp4")
-            print("[Play] Started recording video to URL: \(VideoFileURL)")
+            print("[PLAY] Started recording video to URL: \(VideoFileURL)")
             movieOutput.startRecording(to: VideoFileURL, recordingDelegate: self)
-            
+            print("[PLAY] Finished startRecording.")
         }
         else {
+            print("[PLAY] isRecording() was not false. Calling stopRecording.")
             stopRecording()
         }
         
     }
     
     func stopRecording() {
-        
+        print("PLAY] Stop recording has been called.")
         if movieOutput.isRecording == true {
             movieOutput.stopRecording()
-            print("[Play] Stopped recording.")
+            print("[PLAY] Stopped recording.")
         }
     }
     
     func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
-        print("[Play] Started recording.")
+        print("[PLAY] didStartRecordingToOutputFileAt callback occurred.")
     }
     
     func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
         if (error != nil) {
-            print("[Play] Error recording movie: \(error!.localizedDescription)")
+            print("[PLAY] Error recording movie: \(error!.localizedDescription)")
         } else {
-            
             _ = VideoFileURL as URL
-            
         }
-        
     }
     
     
@@ -259,11 +269,13 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         TextTime.text = "\(GameClockSeconds)";
         
         if(GameClockSeconds == 0){
-            
+            print("[PLAY] Game clock expired.")
             // Stop recording video
             stopRecording()
             // No more gyroscope
             motionManager.stopGyroUpdates()
+            // No more motion updates in general.
+            motionManager.stopDeviceMotionUpdates()
 
             //Move to the next viewpager.
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
@@ -292,7 +304,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         // Now, we write to the ol' text file.
         let SecondsSinceGameStart = String(90 - GameClockSeconds)
         writeToTextFile(Text: SecondsSinceGameStart + ": " + EmojiObject.CodeName!)
-        print("[PLAY] (Supposedly) finished writing to the text file.")
     }
     
   
@@ -327,12 +338,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // Start the game timer, counting down from 90 seconds.
-        StartGameClock();
-        
-        // Set a default image to show the user.
-        updateGameImage()
-        
         // Thie unix time (MS) that will be used to identify this game session.
         let TimeStamp = Int(NSDate().timeIntervalSince1970)
         print("[PLAY] Got the timestamp associated with this session: \(TimeStamp)")
@@ -342,11 +347,16 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         let LockedDirectoryName = String(TimeStamp) + ".LOCKED"
         LockedGameDirectory = CreateLockedGameDirectory(FOLDER_NAME: LockedDirectoryName)
         print("[PLAY] Creating directory with name: \(LockedDirectoryName)")
-        print("[PLAY] Received path with URL: \(LockedGameDirectory)")
         
         // Now that we have created the folder, lets create a text file inside the folder.
         // This will contain information about who the user was, and what prompts were shown at what times.
         createMetaTextFile()
+        
+        // Start the game timer, counting down from 90 seconds.
+        StartGameClock();
+        
+        // Set a default image to show the user.
+        updateGameImage()
     
         // Update every 225 MS: equivalent to SENSOR_DELAY_NORMAL on Android platforms.
         motionManager.gyroUpdateInterval = 0.225
@@ -371,7 +381,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     // Given a sample from the gyroscope, lets determine (a) if there is a tilt, and (b) if so, is it in the forward or backward direction.
     func processGyroSample(x: Double, y: Double, z: Double){
             // We want to detect forward tilts, not "jiggles". Its complicated.
-            let TILT_THRESHOLD   = 2.0; // Increase this number to decrease tilt sensitivity.
+            let TILT_THRESHOLD   = 3.0; // Increase this number to decrease tilt sensitivity.
             let JIGGLE_THRESHOLD = 0.8; // Increase this number if non-tilt vibrations are being detected as tilts.
 
             // In this case, there is no tilt. Otherwise, we will detect what kind of tilt.
@@ -475,9 +485,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
             try L5.write(to: TextFileURL, atomically: false, encoding: .utf8)
             try L6.write(to: TextFileURL, atomically: false, encoding: .utf8)
             print("[PLAY] Creating text file at URL: \(TextFileURL)")
-            print("[PLAY] Child's name appended: \(CurrentUser.name)")
-            print("[PLAY] Consent Share: \(ConsentShare)")
-            print("[PLAY] Consent View: \(ConsentView)")
         }
         catch {
             print("[PLAY] An unexpected error occurred when writing to the text file.")
