@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Guess What?</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,6 +24,12 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Watch the video you recorded to decide whether to share or delete it.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Your child will be recorded during gameplay. You have the option to delete the video after the session.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Your child will be recorded during gameplay. You have the option to delete the video after the session.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>story_main</string>
 	<key>UIMainStoryboardFile</key>
@@ -47,14 +55,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleDisplayName</key>
-	<string></string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Your child will be recorded during gameplay. You have the option to delete the video after the session.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Your child will be recorded during gameplay. You have the option to delete the video after the session.</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Watch the video you recorded to decide whether to share or delete it.</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

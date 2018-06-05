@@ -22,6 +22,7 @@ class vc_login: UIViewController {
     @IBOutlet weak var TextSignUpLink:   UILabel!
     @IBOutlet weak var TextViewError:    UILabel!
 
+    @IBOutlet weak var LoadingProgress: UIActivityIndicatorView!
     
     @IBAction func ActionTrigger(_ sender: UITextView) {
         sender.resignFirstResponder()
@@ -29,11 +30,12 @@ class vc_login: UIViewController {
     
     @IBAction func ButtonLoginClick(_ sender: Any) {
         
-        
-        
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
       
+        self.LoadingProgress.startAnimating()
+
+        
         GameEngineObject?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
             GameEngineObject?.accessToken     = Result!
 
@@ -56,6 +58,8 @@ class vc_login: UIViewController {
                 
             }
             else {
+                self.LoadingProgress.stopAnimating()
+
                 // Update UI separately..
                 DispatchQueue.main.async { // Correct
                     if(!Success){
@@ -88,6 +92,8 @@ class vc_login: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))
         TextSignUpLink.isUserInteractionEnabled = true
         TextSignUpLink.addGestureRecognizer(tap)
+        
+        
     }
         
     

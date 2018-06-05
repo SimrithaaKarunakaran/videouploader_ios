@@ -161,6 +161,9 @@
                                 <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eLz-9M-5K8">
+                                <rect key="frame" x="235" y="341" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -168,6 +171,7 @@
                             <constraint firstItem="5CO-wB-gDq" firstAttribute="top" secondItem="e25-4T-eSB" secondAttribute="bottom" constant="15" id="5uX-Ew-RVR"/>
                             <constraint firstItem="qnv-co-GBc" firstAttribute="top" secondItem="h7D-oA-bIV" secondAttribute="bottom" constant="8" id="Aqj-OO-QAo"/>
                             <constraint firstItem="sSf-vd-Gj6" firstAttribute="leading" secondItem="J7y-7I-D2X" secondAttribute="leadingMargin" id="CuG-g9-d1D"/>
+                            <constraint firstItem="eLz-9M-5K8" firstAttribute="centerY" secondItem="e25-4T-eSB" secondAttribute="centerY" id="I4g-iu-ddq"/>
                             <constraint firstItem="UAU-OH-vci" firstAttribute="top" secondItem="LMg-DH-PhF" secondAttribute="bottom" constant="8" symbolic="YES" id="K8B-mr-1mK"/>
                             <constraint firstItem="c9P-CO-jJy" firstAttribute="top" secondItem="J7y-7I-D2X" secondAttribute="topMargin" id="MX7-5s-zIN"/>
                             <constraint firstItem="K6b-e3-avC" firstAttribute="bottom" secondItem="qnv-co-GBc" secondAttribute="bottom" constant="20" id="RdK-Cn-5u6"/>
@@ -182,6 +186,7 @@
                             <constraint firstItem="qnv-co-GBc" firstAttribute="width" secondItem="J7y-7I-D2X" secondAttribute="width" id="kaA-cm-2wW"/>
                             <constraint firstItem="c9P-CO-jJy" firstAttribute="centerX" secondItem="J7y-7I-D2X" secondAttribute="centerX" id="lBh-CS-3No"/>
                             <constraint firstItem="5CO-wB-gDq" firstAttribute="leading" secondItem="h7D-oA-bIV" secondAttribute="leading" constant="20" id="lUv-xt-MqF"/>
+                            <constraint firstItem="e25-4T-eSB" firstAttribute="leading" secondItem="eLz-9M-5K8" secondAttribute="trailing" constant="10" id="mkj-Pj-4PG"/>
                             <constraint firstItem="ve8-Jk-oGi" firstAttribute="leading" secondItem="sSf-vd-Gj6" secondAttribute="leading" id="qDN-yb-UQB"/>
                             <constraint firstItem="h7D-oA-bIV" firstAttribute="leading" secondItem="qnv-co-GBc" secondAttribute="leading" id="r7f-1J-vwN"/>
                             <constraint firstItem="UAU-OH-vci" firstAttribute="trailing" secondItem="ve8-Jk-oGi" secondAttribute="trailing" id="vbx-LQ-60u"/>
@@ -193,6 +198,7 @@
                     <navigationItem key="navigationItem" id="BJc-9S-vvz"/>
                     <connections>
                         <outlet property="ButtonLogin" destination="e25-4T-eSB" id="I4C-zD-7Q1"/>
+                        <outlet property="LoadingProgress" destination="eLz-9M-5K8" id="wkP-Ef-EPX"/>
                         <outlet property="TextSignUpLink" destination="qnv-co-GBc" id="eIv-Xq-UBU"/>
                         <outlet property="TextViewError" destination="5CO-wB-gDq" id="eam-Si-K1R"/>
                         <outlet property="TextViewPassword" destination="UAU-OH-vci" id="hZw-ff-0I0"/>
