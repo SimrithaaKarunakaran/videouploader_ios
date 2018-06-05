@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIApplication.shared.isStatusBarHidden = true
         
+        
         GameEngineObject = GameEngine()
         
         

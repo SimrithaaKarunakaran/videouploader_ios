@@ -36,6 +36,10 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
         self.present(newViewController, animated: false, completion: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
     
     @IBAction func ClickBack(_ sender: Any) {
         // Direct user to screen where they can add a new player.

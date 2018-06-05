@@ -49,9 +49,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-Ku-vOv">
-                                <rect key="frame" x="217" y="0.0" width="233.5" height="53"/>
+                                <rect key="frame" x="217" y="0.0" width="233.5" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="yYb-Nh-sKY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="vLG-G9-S2w"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Who is Playing?">
@@ -90,7 +90,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-ut-8eQ">
-                                <rect key="frame" x="20" y="113" width="627" height="106"/>
+                                <rect key="frame" x="20" y="121" width="627" height="98"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

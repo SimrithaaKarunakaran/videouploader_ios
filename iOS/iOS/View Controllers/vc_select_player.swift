@@ -33,6 +33,11 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    
     @objc func AddNewPlayerClickHandler(sender:UITapGestureRecognizer) {
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)

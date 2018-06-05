@@ -39,12 +39,6 @@ class vc_confirm_video: UIViewController {
     }
     
     
-    // Make sure we restore the UI to portrait mode after the view disappears.
-    override func viewWillDisappear(_ animated : Bool) {
-        super.viewWillDisappear(animated)
-        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
-    }
-    
     
     /// This function starts the main game clock timer: if it isn't started already.
     func StartDelayTimer() {
@@ -88,8 +82,23 @@ class vc_confirm_video: UIViewController {
     }
     
     @IBAction func ShareVideo(_ sender: Any) {
-        // Do what needs to be done to share video.
-        // Specifically, remove the "lock" from directory name
+        // Do what needs to be done to share video: remove the "lock" from directory name
+        
+        let fileManager = FileManager.default
+        let OldDirectoryPath = LockedGameDirectory.path
+        let NewDirectoryPath = OldDirectoryPath.replacingOccurrences(of: ".LOCKED", with: "")
+        
+        print("[REVIEW] Old directory: \(OldDirectoryPath)")
+        print("[REVIEW] New directory: \(NewDirectoryPath)")
+        
+        
+        do {
+            try fileManager.moveItem(atPath: OldDirectoryPath, toPath: NewDirectoryPath)
+            print("[REVIEW] Possibly finished renaming directory.")
+        }
+        catch let error as NSError {
+            print("[REVIEW] Failed to rename directory: \(error)")
+        }
         
         // Update the UI
         ScreenText.text = "Your video will be shared!"
@@ -100,6 +109,17 @@ class vc_confirm_video: UIViewController {
     
     @IBAction func DeleteVideo(_ sender: Any) {
         // Do what needs to be done to delete the video.
+        
+        
+        let fileManager = FileManager.default
+        
+        do {
+            try fileManager.removeItem(atPath: LockedGameDirectory.path)
+            print("[REVIEW] Possibly finished deleting directory.")
+        }
+        catch let error as NSError {
+            print("[REVIEW] Failed to delete directory: \(error)")
+        }
         
         // Update the UI
         ScreenText.text = "Your video has been deleted!"
