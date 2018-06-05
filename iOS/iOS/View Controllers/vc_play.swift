@@ -338,36 +338,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // Thie unix time (MS) that will be used to identify this game session.
-        let TimeStamp = Int(NSDate().timeIntervalSince1970)
-        print("[PLAY] Got the timestamp associated with this session: \(TimeStamp)")
-        
-        // Create the directory that will be used to "house" the video and text file of meta information to upload.
-        // We append ".LOCKED" to the end of it indicating it is being written to. The .LOCKED will be removed after game session.
-        let LockedDirectoryName = String(TimeStamp) + ".LOCKED"
-        LockedGameDirectory = CreateLockedGameDirectory(FOLDER_NAME: LockedDirectoryName)
-        print("[PLAY] Creating directory with name: \(LockedDirectoryName)")
-        
-        // Now that we have created the folder, lets create a text file inside the folder.
-        // This will contain information about who the user was, and what prompts were shown at what times.
-        createMetaTextFile()
-        
-        // Start the game timer, counting down from 90 seconds.
-        StartGameClock();
-        
-        // Set a default image to show the user.
-        updateGameImage()
-    
-        // Update every 225 MS: equivalent to SENSOR_DELAY_NORMAL on Android platforms.
-        motionManager.gyroUpdateInterval = 0.225
-        // Now, let's enable the Gyroscope.
-        motionManager.startDeviceMotionUpdates(to: .main) {
-            [weak self] (data: CMDeviceMotion?, error: Error?) in
-            // Gyroscope callback: check for tilt on a sample-by-sample basis.
-            if let Rotation = data?.rotationRate{
-                self?.processGyroSample(x: Rotation.x, y: Rotation.y, z: Rotation.z)
-            }
-        }
+
         
         // Start the video recording process.
         if(setupSession()){
@@ -448,7 +419,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         }
         catch {
             print("[PLAY] An unexpected error occurred when writing to the text file.")
-            /* error handling here */
         }
         
         print("[PLAY] Wrote to text file: \(Text)")
@@ -500,6 +470,38 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         PromptManager.LoadPromptsForGame(PromptArray: GameEngineObject.ArraySelected)
+        
+        // Thie unix time (MS) that will be used to identify this game session.
+        let TimeStamp = Int(NSDate().timeIntervalSince1970)
+        print("[PLAY] Got the timestamp associated with this session: \(TimeStamp)")
+        
+        // Create the directory that will be used to "house" the video and text file of meta information to upload.
+        // We append ".LOCKED" to the end of it indicating it is being written to. The .LOCKED will be removed after game session.
+        let LockedDirectoryName = String(TimeStamp) + ".LOCKED"
+        LockedGameDirectory = CreateLockedGameDirectory(FOLDER_NAME: LockedDirectoryName)
+        print("[PLAY] Creating directory with name: \(LockedDirectoryName)")
+        
+        // Now that we have created the folder, lets create a text file inside the folder.
+        // This will contain information about who the user was, and what prompts were shown at what times.
+        createMetaTextFile()
+        
+        // Start the game timer, counting down from 90 seconds.
+        StartGameClock();
+        
+        // Set a default image to show the user.
+        updateGameImage()
+        
+        // Update every 225 MS: equivalent to SENSOR_DELAY_NORMAL on Android platforms.
+        motionManager.gyroUpdateInterval = 0.225
+        // Now, let's enable the Gyroscope.
+        motionManager.startDeviceMotionUpdates(to: .main) {
+            [weak self] (data: CMDeviceMotion?, error: Error?) in
+            // Gyroscope callback: check for tilt on a sample-by-sample basis.
+            if let Rotation = data?.rotationRate{
+                self?.processGyroSample(x: Rotation.x, y: Rotation.y, z: Rotation.z)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
