@@ -43,6 +43,9 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey1")
         self.present(newViewController, animated: true, completion: nil)
+        
+        // Play marimba sound.
+        AudioManagerObject.PlayClick()
     }
     
 
@@ -60,6 +63,10 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
+        // Play marimba sound.
+        AudioManagerObject.PlayClick()
+        
         // Save which child was selected.
         GameEngineObject.SelectedChildIndex = indexPath[1]
         var RelevantUser = GameEngineObject.UserDBResults![indexPath[1]]

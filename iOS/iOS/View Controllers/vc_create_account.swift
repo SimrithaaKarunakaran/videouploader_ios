@@ -39,6 +39,8 @@ class vc_create_account: UIViewController {
     
     
     @IBAction func CreateAccountNextClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
         
         // Get text out of the text fields corresponding with username and password
         Username = TextUsername.text!

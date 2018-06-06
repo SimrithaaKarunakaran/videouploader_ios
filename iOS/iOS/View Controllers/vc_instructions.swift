@@ -38,6 +38,8 @@ class vc_instructions: UIViewController {
     
 
     @IBAction func ButtonClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
         
         print("[HK] Button click callback.")
         // Lets check if the user is connected to WiFi. If not, we direct them to a screen where they must acknowledge

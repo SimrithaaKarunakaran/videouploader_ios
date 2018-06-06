@@ -127,6 +127,10 @@
 		22EBC9FE20B49D1200C21120 /* PromptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBC9FD20B49D1200C21120 /* PromptManager.swift */; };
 		22EBCA0020B4B8E800C21120 /* EmojiEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBC9FF20B4B8E800C21120 /* EmojiEntry.swift */; };
 		22EBCA0420B4D10400C21120 /* vc_confirm_video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EBCA0320B4D10400C21120 /* vc_confirm_video.swift */; };
+		22F530B020C84F6C00FFBFFA /* chime.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22F530AF20C84F6C00FFBFFA /* chime.wav */; };
+		22F530B220C84F7600FFBFFA /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22F530B120C84F7600FFBFFA /* click.wav */; };
+		22F530B420C84F7C00FFBFFA /* marimba.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22F530B320C84F7C00FFBFFA /* marimba.wav */; };
+		22F530B620C850A800FFBFFA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F530B520C850A800FFBFFA /* AudioManager.swift */; };
 		22FE7DC120913C4300883AE9 /* vc_countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE7DC020913C4300883AE9 /* vc_countdown.swift */; };
 		7D41C41477A8F109ECE0673F /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F22C9EA96EC1CB311D235B1 /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -254,6 +258,10 @@
 		22EBC9FD20B49D1200C21120 /* PromptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptManager.swift; sourceTree = "<group>"; };
 		22EBC9FF20B4B8E800C21120 /* EmojiEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiEntry.swift; sourceTree = "<group>"; };
 		22EBCA0320B4D10400C21120 /* vc_confirm_video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_confirm_video.swift; sourceTree = "<group>"; };
+		22F530AF20C84F6C00FFBFFA /* chime.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime.wav; sourceTree = "<group>"; };
+		22F530B120C84F7600FFBFFA /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		22F530B320C84F7C00FFBFFA /* marimba.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = marimba.wav; sourceTree = "<group>"; };
+		22F530B520C850A800FFBFFA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		22FE7DC020913C4300883AE9 /* vc_countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_countdown.swift; sourceTree = "<group>"; };
 		26FF3EE95720A99AE021AF88 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7E209C5EFA10721AF8752391 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -302,6 +310,7 @@
 		22207F192057553100D447F2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				22F530AE20C84EE400FFBFFA /* Audio */,
 				22908DC1209D21EC007CDA7F /* UIElements */,
 				22908D10209CF818007CDA7F /* Images */,
 				2265BB39208FB8110096CCAE /* View Controllers */,
@@ -360,6 +369,7 @@
 				22919A3E20B36D81003993AF /* NetworkManager.swift */,
 				22EBC9FD20B49D1200C21120 /* PromptManager.swift */,
 				22EBC9FF20B4B8E800C21120 /* EmojiEntry.swift */,
+				22F530B520C850A800FFBFFA /* AudioManager.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -484,6 +494,16 @@
 			path = UIElements;
 			sourceTree = "<group>";
 		};
+		22F530AE20C84EE400FFBFFA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				22F530AF20C84F6C00FFBFFA /* chime.wav */,
+				22F530B120C84F7600FFBFFA /* click.wav */,
+				22F530B320C84F7C00FFBFFA /* marimba.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		E20DB9670AD944F96952EA44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +607,7 @@
 				22908D86209CF85C007CDA7F /* c5_goat.png in Resources */,
 				22908D9E209CF85C007CDA7F /* c13_frog.png in Resources */,
 				22908D88209CF85C007CDA7F /* a4_think.png in Resources */,
+				22F530B020C84F6C00FFBFFA /* chime.wav in Resources */,
 				22207F202057553100D447F2 /* story_main.storyboard in Resources */,
 				22908D83209CF85C007CDA7F /* e3_doctor.png in Resources */,
 				22908D69209CF85C007CDA7F /* LogoSecondary.png in Resources */,
@@ -611,6 +632,7 @@
 				22908D75209CF85C007CDA7F /* f_disgust.png in Resources */,
 				22908D97209CF85C007CDA7F /* a9_cry.png in Resources */,
 				22B810BF20A4B4E20052CCB9 /* AddPlayer.png in Resources */,
+				22F530B420C84F7C00FFBFFA /* marimba.wav in Resources */,
 				22908D74209CF85C007CDA7F /* d11_running.png in Resources */,
 				22908D76209CF85C007CDA7F /* b8_sad.png in Resources */,
 				22908D8C209CF85C007CDA7F /* b7_surprised.png in Resources */,
@@ -631,6 +653,7 @@
 				22908DB8209CF85C007CDA7F /* c3_horse.png in Resources */,
 				22908D6B209CF85C007CDA7F /* LogoTitle.png in Resources */,
 				22908DB4209CF85C007CDA7F /* f_angry.png in Resources */,
+				22F530B220C84F7600FFBFFA /* click.wav in Resources */,
 				22908DAC209CF85C007CDA7F /* a6_angry.png in Resources */,
 				22908DB6209CF85C007CDA7F /* f_surprised2.png in Resources */,
 				22908DBD209CF85C007CDA7F /* b4_sad.png in Resources */,
@@ -731,6 +754,7 @@
 				22908D0C2097EF11007CDA7F /* vc_login.swift in Sources */,
 				2229565E20AA260800182CE9 /* DDBTableRow.swift in Sources */,
 				22B810BD20A39B140052CCB9 /* vc_survey6.swift in Sources */,
+				22F530B620C850A800FFBFFA /* AudioManager.swift in Sources */,
 				22908DC920A0D8B5007CDA7F /* vc_consent_1.swift in Sources */,
 				22B810B720A39AA80052CCB9 /* vc_survey3.swift in Sources */,
 				22EBCA0020B4B8E800C21120 /* EmojiEntry.swift in Sources */,

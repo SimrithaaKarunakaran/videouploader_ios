@@ -12,6 +12,7 @@ import AWSCore
 import AWSCore
 import AWSCognitoIdentityProvider
 import AWSUserPoolsSignIn
+import AVFoundation
 
 
 
@@ -34,6 +35,9 @@ var GlobalCredentialsProvider : AWSCognitoCredentialsProvider!
 // Manage game session information.
 var GameEngineObject : GameEngine!
 
+// Manage audio throughout the app
+var AudioManagerObject : AudioManager!
+
 
 
 
@@ -50,10 +54,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIApplication.shared.isStatusBarHidden = true
         
-        
+        // Initialize object that manages game state.
         GameEngineObject = GameEngine()
         
+        // This is necessary to setup audio playback later in the app.
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
         
+        
+        // Initialize object that manages audio state.
+        AudioManagerObject = AudioManager()
+        print("[AUDIO] Finished initializing audio manager.")
 
         return true
     }

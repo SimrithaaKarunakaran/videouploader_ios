@@ -23,6 +23,9 @@ class vc_wifi_warn: UIViewController {
     
 
     @IBAction func ButtonClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_countdown")
         self.present(newViewController, animated: false, completion: nil)

@@ -42,12 +42,17 @@ class vc_survey2: UIViewController {
 
 
     @IBAction func BackButtonClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_request_survey")
         self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func NextButtonClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
         
         GameEngineObject.CurrentUserObject?.answers[0] = Int(round(Q1.value))
         GameEngineObject.CurrentUserObject?.answers[1] = Int(round(Q2.value))

@@ -30,6 +30,9 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
             return
         }
         
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_instructions")
@@ -42,6 +45,9 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
     
     
     @IBAction func ClickBack(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
@@ -87,6 +93,9 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
                 // "Not Selected" state
                 cell.backgroundColor = UIColor.white
             }
+            
+            // Play audio queue.
+            AudioManagerObject.PlayClick()
         }
     }
     

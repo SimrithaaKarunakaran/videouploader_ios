@@ -42,6 +42,8 @@ class vc_survey4: UIViewController {
     
     
     @IBAction func NextButtonClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
         
         GameEngineObject.CurrentUserObject?.answers[7]  = Int(round(Q8.value))
         GameEngineObject.CurrentUserObject?.answers[8]  = Int(round(Q9.value))
@@ -59,6 +61,9 @@ class vc_survey4: UIViewController {
         self.present(newViewController, animated: false, completion: nil)
     }
     @IBAction func BackButtonClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey3")
         self.present(newViewController, animated: false, completion: nil)

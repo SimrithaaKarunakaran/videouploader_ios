@@ -20,12 +20,17 @@ class vc_survey6: UIViewController {
     @IBOutlet weak var Q18: UISlider!
     
     @IBAction func ButtonBack(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_survey", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_survey5")
         self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func ButtonNext(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
         
         GameEngineObject.CurrentUserObject?.answers[15]  = Int(round(Q16.value))
         GameEngineObject.CurrentUserObject?.answers[16]  = Int(round(Q17.value))

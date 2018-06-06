@@ -22,14 +22,18 @@ class vc_consent_3: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         GameEngineObject.CurrentUserObject?.consentView = 0
-
         self.CreatePlayerProfileAndRedirect()
     }
     
     @IBAction func ConsentClickNext(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         GameEngineObject.CurrentUserObject?.consentView = 1
-
         self.CreatePlayerProfileAndRedirect()
     }
     

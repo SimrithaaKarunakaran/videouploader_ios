@@ -82,8 +82,11 @@ class vc_confirm_video: UIViewController {
     }
     
     @IBAction func ShareVideo(_ sender: Any) {
-        // Do what needs to be done to share video: remove the "lock" from directory name
         
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
+        // Do what needs to be done to share video: remove the "lock" from directory name
         let fileManager = FileManager.default
         let OldDirectoryPath = LockedGameDirectory.path
         let NewDirectoryPath = OldDirectoryPath.replacingOccurrences(of: ".LOCKED", with: "")
@@ -108,9 +111,10 @@ class vc_confirm_video: UIViewController {
     }
     
     @IBAction func DeleteVideo(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         // Do what needs to be done to delete the video.
-        
-        
         let fileManager = FileManager.default
         
         do {

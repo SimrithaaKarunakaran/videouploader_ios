@@ -29,6 +29,8 @@ class vc_login: UIViewController {
     }
     
     @IBAction func ButtonLoginClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
         
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
@@ -80,6 +82,9 @@ class vc_login: UIViewController {
     
 
     @objc func TextSignUpClickHandler(sender:UITapGestureRecognizer) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         // Direct user to screen where they can create an account.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_create_account")

@@ -24,6 +24,9 @@ class vc_consent_1: UIViewController {
     }
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         // This is found at the top of vc_consent_1 (outside class)
         GameEngineObject.CurrentUserObject?.consentPlay = 1
         
@@ -33,6 +36,9 @@ class vc_consent_1: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         // User can't play without accepting the first agreement.
         ShowError(error: "You must accept the agreement to create an account.")
     }

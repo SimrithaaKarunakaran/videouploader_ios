@@ -268,6 +268,10 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         // Update the number of seconds remaining.
         TextTime.text = "\(GameClockSeconds)";
         
+        if(GameClockSeconds <= 3 && GameClockSeconds >= 1){
+            AudioManagerObject.PlayMarimba()
+        }
+        
         if(GameClockSeconds == 0){
             print("[PLAY] Game clock expired.")
             // Stop recording video
@@ -394,11 +398,13 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
             // Update game UI and also write to the log file.
             increaseNumberOfCorrectAnswers();
             writeToTextFile(Text: "Correct");
-            //PlaySound(GetSoundChime());
+            // Play marimba sound.
+            AudioManagerObject.PlayChime()
         } else {
             print("[PLAY] Backward tilt detected.")
             writeToTextFile(Text: "Skipped");
-            //PlaySound(GetSoundChord());
+            // Play marimba sound.
+            AudioManagerObject.PlayMarimba()
         }
         
         // Regardless of which direction the tilt is, we need a new prompt.

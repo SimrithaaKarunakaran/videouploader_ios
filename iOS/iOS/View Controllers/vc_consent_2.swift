@@ -22,6 +22,9 @@ class vc_consent_2: UIViewController {
     }
     
     @IBAction func ConsentClickBack(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         GameEngineObject.CurrentUserObject?.consentShare = 0
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
@@ -30,6 +33,9 @@ class vc_consent_2: UIViewController {
     }
     
     @IBAction func ConsentClickContinue(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
         GameEngineObject.CurrentUserObject?.consentShare = 1
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)

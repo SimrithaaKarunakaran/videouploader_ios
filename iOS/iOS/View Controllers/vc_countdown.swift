@@ -40,6 +40,10 @@ class vc_countdown: UIViewController {
         seconds -= 1
         
         if(seconds == 0){
+            
+            // Play chime sound.
+            AudioManagerObject.PlayChime()
+            
             // Instead of time = 0, we write "go!"
             TextTimeRemaining.text = "Go!";
         } else if(seconds <= -1){
@@ -53,6 +57,11 @@ class vc_countdown: UIViewController {
         } else {
             // Update the number of seconds remaining.
             TextTimeRemaining.text = "\(seconds)";
+            
+            // Play marimba sound.
+            if(seconds > 0 && (seconds < 4)){
+                AudioManagerObject.PlayMarimba()
+            }
         }
     }
     
