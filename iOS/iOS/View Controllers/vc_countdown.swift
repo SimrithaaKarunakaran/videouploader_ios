@@ -52,7 +52,7 @@ class vc_countdown: UIViewController {
     
              //Move to the next viewpager.
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_play")
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "nav_main_game")
             self.present(newViewController, animated: false, completion: nil)
         } else {
             // Update the number of seconds remaining.

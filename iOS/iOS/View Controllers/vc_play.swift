@@ -245,6 +245,51 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     }
     
     
+
+    @IBAction func QuitClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
+        // Stop the current game.
+        StopGame()
+        
+        // Delete residual files.
+        let fileManager = FileManager.default
+        
+        do {
+            try fileManager.removeItem(atPath: LockedGameDirectory.path)
+            print("[REVIEW] Possibly finished deleting directory.")
+        }
+        catch let error as NSError {
+            print("[REVIEW] Failed to delete directory: \(error)")
+        }
+        
+        //Move to the next viewpager.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    
+    
+    @IBAction func LogOutClick(_ sender: Any) {
+        // Play click sound.
+        AudioManagerObject.PlayClick()
+        
+    }
+    
+    
+    
+    func StopGame(){
+        // Stop recording video
+        stopRecording()
+        // No more gyroscope
+        motionManager.stopGyroUpdates()
+        // No more motion updates in general.
+        motionManager.stopDeviceMotionUpdates()
+        
+        timerGameClock?.invalidate()
+    }
+    
     
     // Every second, this function is called. It just updates # of seconds remaining.
     // Also ends the game when time runs out.
@@ -274,22 +319,14 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         
         if(GameClockSeconds == 0){
             print("[PLAY] Game clock expired.")
-            // Stop recording video
-            stopRecording()
-            // No more gyroscope
-            motionManager.stopGyroUpdates()
-            // No more motion updates in general.
-            motionManager.stopDeviceMotionUpdates()
+
+            // All the book-keeping to end a game.
+            StopGame()
 
             //Move to the next viewpager.
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_confirm_video")
             self.present(newViewController, animated: false, completion: nil)
-        }
-        
-        if(GameClockSeconds < 0){
-            // No more timer callbacks.
-            timerGameClock?.invalidate()
         }
     }
 
@@ -508,8 +545,12 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
                 self?.processGyroSample(x: Rotation.x, y: Rotation.y, z: Rotation.z)
             }
         }
-        
     }
+    
+    
+
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
