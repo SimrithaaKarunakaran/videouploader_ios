@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-Ku-vOv">
-                                <rect key="frame" x="217" y="32" width="233.5" height="61"/>
+                                <rect key="frame" x="217" y="37" width="233.5" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="vLG-G9-S2w"/>
                                 </constraints>
@@ -91,7 +91,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-ut-8eQ" userLabel="TableWho">
-                                <rect key="frame" x="20" y="153" width="627" height="66"/>
+                                <rect key="frame" x="20" y="138" width="627" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,17 +103,17 @@
                             <constraint firstItem="GS2-hG-Eea" firstAttribute="trailing" secondItem="pu5-ut-8eQ" secondAttribute="trailing" constant="20" id="Lsq-ic-gJH"/>
                             <constraint firstItem="pu5-ut-8eQ" firstAttribute="leading" secondItem="GS2-hG-Eea" secondAttribute="leading" constant="20" id="PWq-1M-10C"/>
                             <constraint firstItem="ykw-F6-wR8" firstAttribute="centerX" secondItem="GS2-hG-Eea" secondAttribute="centerX" id="R6p-G2-ZHs"/>
-                            <constraint firstItem="6ig-Ku-vOv" firstAttribute="top" secondItem="GS2-hG-Eea" secondAttribute="top" id="VwY-Ul-0oh"/>
+                            <constraint firstItem="6ig-Ku-vOv" firstAttribute="top" secondItem="GS2-hG-Eea" secondAttribute="top" constant="5" id="VwY-Ul-0oh"/>
                             <constraint firstItem="pu5-ut-8eQ" firstAttribute="width" secondItem="E7x-8r-7j7" secondAttribute="width" constant="-40" id="cwQ-yK-T6z"/>
                             <constraint firstItem="GS2-hG-Eea" firstAttribute="bottom" secondItem="ykw-F6-wR8" secondAttribute="bottom" id="fbW-fP-gci"/>
                             <constraint firstItem="ykw-F6-wR8" firstAttribute="top" secondItem="pu5-ut-8eQ" secondAttribute="bottom" constant="52" id="ftR-1D-n3n"/>
                             <constraint firstItem="6ig-Ku-vOv" firstAttribute="centerX" secondItem="GS2-hG-Eea" secondAttribute="centerX" id="iP4-4W-pVq"/>
-                            <constraint firstItem="pu5-ut-8eQ" firstAttribute="top" secondItem="6ig-Ku-vOv" secondAttribute="bottom" constant="60" id="t7s-3B-xXT"/>
+                            <constraint firstItem="pu5-ut-8eQ" firstAttribute="top" secondItem="6ig-Ku-vOv" secondAttribute="bottom" constant="40" id="t7s-3B-xXT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GS2-hG-Eea"/>
                     </view>
                     <navigationItem key="navigationItem" id="g5g-Yc-QHF">
-                        <barButtonItem key="leftBarButtonItem" title="Quit App" id="tn0-Hk-6Tz">
+                        <barButtonItem key="leftBarButtonItem" title="Quit" id="tn0-Hk-6Tz">
                             <connections>
                                 <action selector="QuitAppClick:" destination="cyG-v3-OLs" id="sqK-Z6-ydm"/>
                             </connections>
@@ -672,10 +672,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="-8" y="1706"/>
         </scene>
-        <!--nav_main_game-->
+        <!--vc_select_player_nav-->
         <scene sceneID="HaP-Ge-Wn0">
             <objects>
-                <navigationController storyboardIdentifier="nav_main_game" automaticallyAdjustsScrollViewInsets="NO" id="6UR-Wx-vDf" userLabel="nav_main_game" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="vc_select_player_nav" automaticallyAdjustsScrollViewInsets="NO" id="6UR-Wx-vDf" userLabel="vc_select_player_nav" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oL0-Xk-qVA">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
@@ -688,7 +688,7 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PB8-QJ-LBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="-601"/>
+            <point key="canvasLocation" x="-35" y="-762"/>
         </scene>
     </scenes>
     <resources>

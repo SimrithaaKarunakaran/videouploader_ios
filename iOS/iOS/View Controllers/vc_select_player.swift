@@ -50,11 +50,18 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
     
 
     @IBAction func QuitAppClick(_ sender: Any) {
-    
+        UIControl().sendAction(#selector(NSXPCConnection.suspend),
+                               to: UIApplication.shared, for: nil)
     }
     
     @IBAction func LogOutClick(_ sender: Any) {
-    
+        // Sign the user out of the userpool.
+        GlobalUserPool.clearAll()
+        
+        //Move to the login viewpager.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login_nav")
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

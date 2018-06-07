@@ -50,7 +50,7 @@ class vc_select_deck: UIViewController, UICollectionViewDataSource, UICollection
         
         // Direct user to screen where they can add a new player.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player_nav")
         self.present(newViewController, animated: false, completion: nil)
     }
     

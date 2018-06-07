@@ -59,7 +59,7 @@ class vc_countdown: UIViewController {
             TextTimeRemaining.text = "\(seconds)";
             
             // Play marimba sound.
-            if(seconds > 0 && (seconds < 4)){
+            if(seconds > 0 && (seconds <= 4)){
                 AudioManagerObject.PlayMarimba()
             }
         }

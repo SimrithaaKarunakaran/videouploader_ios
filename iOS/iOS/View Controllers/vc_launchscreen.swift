@@ -56,7 +56,7 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
                                 if(Success){
                                     DispatchQueue.main.async { // Correct
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player_nav")
                                         self.present(newViewController, animated: true, completion: nil)
                                     }
                                 } else {

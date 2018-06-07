@@ -258,7 +258,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         
         //Move to the next viewpager.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player_nav")
         self.present(newViewController, animated: false, completion: nil)
     }
     
