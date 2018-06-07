@@ -74,12 +74,30 @@ class vc_login: UIViewController {
                         } else if GameEngineObject?.accessToken?.range(of:"error 34") != nil {
                             self.TextViewError.text="Username not found!"
                         } else  {
-                            self.TextViewError.text = GameEngineObject.accessToken
+                            self.TextViewError.text = "Invalid credentials!"
                         }
                     }
                 }
             }
         }
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        // Restore to portrait mode in case the user arrived here from in-game session.
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
 
@@ -90,7 +108,7 @@ class vc_login: UIViewController {
         // Direct user to screen where they can create an account.
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_create_account")
-        self.present(newViewController, animated: false, completion: nil)
+        navigationController?.pushViewController(newViewController, animated: true)
     }
     
 
@@ -107,12 +125,7 @@ class vc_login: UIViewController {
     }
     
     
-    // Restore to portrait mode in case the user arrived here from in-game session.
-    override func viewWillAppear(_ animated: Bool) {
-        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
-    }
-    
-        
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

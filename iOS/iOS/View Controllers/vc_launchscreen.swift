@@ -88,7 +88,7 @@ class vc_launchscreen: UIViewController, UITextFieldDelegate {
     func RedirectToLoginScreenMainThread(){
         DispatchQueue.main.async {
             let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login_nav")
             self.present(newViewController, animated: true, completion: nil)
         }
     }
