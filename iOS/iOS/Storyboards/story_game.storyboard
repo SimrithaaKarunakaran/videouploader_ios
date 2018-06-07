@@ -180,10 +180,11 @@
                                 <rect key="frame" x="135" y="57" width="387" height="293"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XR1-Ya-8Fd" userLabel="UIViewCameraPreview">
-                                <rect key="frame" x="572" y="280" width="50" height="50"/>
+                                <rect key="frame" x="589.5" y="315" width="15" height="15"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="712-GV-Ls7"/>
+                                    <constraint firstAttribute="height" constant="15" id="712-GV-Ls7"/>
+                                    <constraint firstAttribute="width" constant="15" id="N36-0K-BzV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -202,7 +203,6 @@
                             <constraint firstItem="woO-ev-Ic8" firstAttribute="top" secondItem="kiO-RO-3qf" secondAttribute="top" constant="25" id="m0O-Ox-DSn"/>
                             <constraint firstItem="rRX-xm-g8y" firstAttribute="centerX" secondItem="1Kh-ER-BCm" secondAttribute="centerX" id="pEv-p4-fNW"/>
                             <constraint firstItem="kiO-RO-3qf" firstAttribute="bottom" secondItem="XR1-Ya-8Fd" secondAttribute="bottom" constant="45" id="rcP-Bx-Sq0"/>
-                            <constraint firstItem="XR1-Ya-8Fd" firstAttribute="leading" secondItem="woO-ev-Ic8" secondAttribute="trailing" constant="50" id="tMe-8p-ljE"/>
                             <constraint firstItem="rRX-xm-g8y" firstAttribute="centerY" secondItem="Zav-Ob-Az5" secondAttribute="centerY" id="tX5-1z-G0K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kiO-RO-3qf"/>

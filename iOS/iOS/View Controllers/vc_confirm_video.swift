@@ -46,9 +46,11 @@ class vc_confirm_video: UIViewController {
     }
     
     
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = true
     }
+   
     
     func SetupPlayback(){
         // Getting the shared instance of the audio session and setting audio to continue playback when the screen is locked.
