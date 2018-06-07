@@ -220,6 +220,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ClockImageReference" destination="BLZ-nX-Yuo" id="Q5A-S5-EFI"/>
                         <outlet property="GameImageView" destination="woO-ev-Ic8" id="yNc-5x-Q2T"/>
                         <outlet property="TextScore" destination="rRX-xm-g8y" id="sKi-Uf-wAD"/>
                         <outlet property="TextTime" destination="Zav-Ob-Az5" id="FYb-vz-pW1"/>

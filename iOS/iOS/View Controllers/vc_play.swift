@@ -25,9 +25,10 @@ var VideoFileURL        = URL(string: "google.com")!
 
 class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
 
-
+    @IBOutlet weak var ClockImageReference: UIImageView!
+    
     // Number of seconds left in the game.
-    var GameClockSeconds        = 15 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var GameClockSeconds        = 90 //This variable will hold a starting value of seconds. It could be any amount above 0.
     // Update the game clock.
     var timerGameClock     : Timer?
     
@@ -336,7 +337,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
             AudioManagerObject.PlayMarimba()
         }
         
-        if(GameClockSeconds == 0){
+        if(GameClockSeconds <= 0){
             print("[PLAY] Game clock expired.")
 
             // All the book-keeping to end a game.
@@ -564,11 +565,32 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
                 self?.processGyroSample(x: Rotation.x, y: Rotation.y, z: Rotation.z)
             }
         }
+        
+        // Add handler to when user presses on clock image.
+        // This is a little trick to reduce game time: for demos, we can show end-game scenario without waiting.
+        let ClickImage = UITapGestureRecognizer(target: self, action: #selector(vc_play.ReduceTimeHandler))
+        ClockImageReference.isUserInteractionEnabled = true
+        ClockImageReference.addGestureRecognizer(ClickImage)
     }
     
     
-
-    
+    /// Lets reduce gametime by ten seconds, to speed up the game process.
+    /// This will be helpful for demos!
+    @objc func ReduceTimeHandler(){
+        
+        if(GameClockSeconds > 50){
+            GameClockSeconds = GameClockSeconds - 20
+        }
+        if(GameClockSeconds > 12){
+            GameClockSeconds = GameClockSeconds - 10
+        }
+        else if(GameClockSeconds > 1){
+            GameClockSeconds = GameClockSeconds - 1
+        }
+        
+        // Update the number of seconds remaining.
+        TextTime.text = "\(GameClockSeconds)";
+    }
     
 
     override func didReceiveMemoryWarning() {
