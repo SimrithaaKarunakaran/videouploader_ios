@@ -719,7 +719,7 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PB8-QJ-LBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="-762"/>
+            <point key="canvasLocation" x="-35" y="-660"/>
         </scene>
     </scenes>
     <resources>
