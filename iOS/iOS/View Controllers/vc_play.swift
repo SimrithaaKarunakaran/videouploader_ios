@@ -253,6 +253,17 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         // Stop the current game.
         StopGame()
         
+        // Delete all files we have created: they won't be synced.
+        DeleteGameFiles()
+        
+        //Move to the next viewpager.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    
+    // Let's delete the video we are recording, and delete the text file as well.
+    func DeleteGameFiles(){
         // Delete residual files.
         let fileManager = FileManager.default
         
@@ -263,11 +274,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         catch let error as NSError {
             print("[REVIEW] Failed to delete directory: \(error)")
         }
-        
-        //Move to the next viewpager.
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player")
-        self.present(newViewController, animated: false, completion: nil)
     }
     
     
@@ -275,6 +281,19 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
+        // Stop the current game.
+        StopGame()
+        
+        // Delete all files we have created: they won't be synced.
+        DeleteGameFiles()
+        
+        // Sign the user out of the userpool.
+        GlobalUserPool.clearAll()
+        
+        //Move to the login viewpager.
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_login")
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     

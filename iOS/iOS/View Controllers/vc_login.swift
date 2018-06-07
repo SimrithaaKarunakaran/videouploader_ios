@@ -62,11 +62,13 @@ class vc_login: UIViewController {
                 
             }
             else {
-                self.LoadingProgress.stopAnimating()
 
                 // Update UI separately..
                 DispatchQueue.main.async { // Correct
                     if(!Success){
+                    
+                        self.LoadingProgress.stopAnimating()
+                        
                         if GameEngineObject?.accessToken?.range(of:"error 20") != nil {
                             self.TextViewError.text="Incorrect password!"
                         } else if GameEngineObject?.accessToken?.range(of:"error 34") != nil {
@@ -102,9 +104,14 @@ class vc_login: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))
         TextSignUpLink.isUserInteractionEnabled = true
         TextSignUpLink.addGestureRecognizer(tap)
-        
-        
     }
+    
+    
+    // Restore to portrait mode in case the user arrived here from in-game session.
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
         
     
     override func didReceiveMemoryWarning() {

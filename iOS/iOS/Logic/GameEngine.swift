@@ -138,6 +138,12 @@ class GameEngine {
     
     
     
+    /// Create a new account in the AWS Userpool..
+    ///
+    /// - Parameters:
+    ///   - email: User's email address.
+    ///   - password: User's password: must meet criteria of 8 characters, 1 cap, 1 symbol.
+    ///   - completition: Callback when operation is complete.
     func signup(email: String, password: String, completition: @escaping ((Bool?) -> ())) {
         let emailAttr = AWSCognitoIdentityUserAttributeType()
         emailAttr?.name = "email"
@@ -157,6 +163,7 @@ class GameEngine {
                 return nil
             })
         //user = GlobalUserPool.getUser(email),
+    
     }
     
     

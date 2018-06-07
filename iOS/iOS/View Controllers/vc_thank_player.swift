@@ -68,7 +68,7 @@ class vc_thank_player: UIViewController {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
         self.present(newViewController, animated: false, completion: nil)
     }
