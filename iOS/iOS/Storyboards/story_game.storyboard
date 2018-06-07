@@ -348,13 +348,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="s0k-jr-1pr">
-                                <rect key="frame" x="0.0" y="10" width="667" height="65"/>
+                                <rect key="frame" x="0.0" y="5" width="667" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="vzY-2B-9Eg"/>
+                                    <constraint firstAttribute="height" constant="60" id="vzY-2B-9Eg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orh-Hu-5wH">
-                                <rect key="frame" x="10" y="85" width="647" height="224"/>
+                                <rect key="frame" x="10" y="75" width="647" height="234"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="PARENTS">
@@ -510,7 +510,7 @@ Cg
                             <constraint firstItem="hNh-MF-xnt" firstAttribute="trailing" secondItem="orh-Hu-5wH" secondAttribute="trailing" constant="10" id="X5y-NG-HVx"/>
                             <constraint firstItem="s0k-jr-1pr" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="aFX-OX-S9m"/>
                             <constraint firstItem="hNh-MF-xnt" firstAttribute="bottom" secondItem="orh-Hu-5wH" secondAttribute="bottom" constant="66" id="fpv-sZ-QHp"/>
-                            <constraint firstItem="hNh-MF-xnt" firstAttribute="top" secondItem="s0k-jr-1pr" secondAttribute="top" constant="-10" id="gJd-kS-2p6"/>
+                            <constraint firstItem="hNh-MF-xnt" firstAttribute="top" secondItem="s0k-jr-1pr" secondAttribute="top" constant="-5" id="gJd-kS-2p6"/>
                             <constraint firstItem="xcc-6y-hDV" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="rHt-vu-wLA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hNh-MF-xnt"/>
