@@ -213,7 +213,7 @@
         <!--vc_wifi_warn-->
         <scene sceneID="j0q-aV-xB0">
             <objects>
-                <viewController storyboardIdentifier="vc_wifi_warn" id="Px0-PO-gqO" userLabel="vc_wifi_warn" customClass="vc_wifi_warn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc_wifi_warn" id="Px0-PO-gqO" userLabel="vc_wifi_warn" customClass="vc_wifi_warn" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22G-Rn-5RR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,10 +221,18 @@
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoInstructions.png" translatesAutoresizingMaskIntoConstraints="NO" id="Map-Dj-aQi">
                                 <rect key="frame" x="0.0" y="120" width="375" height="501"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The video upload process uses a lot of data. Please consider enabling WiFi. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFM-mh-Em5">
-                                <rect key="frame" x="10" y="135" width="355" height="134.5"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFM-mh-Em5">
+                                <rect key="frame" x="25" y="135" width="325" height="125"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The video upload process uses a lot of data.
+ Please consider enabling WiFi. </string>
+                                        <attributes>
+                                            <font key="NSFont" size="26" name="Noteworthy-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-1D-qc4">
@@ -233,8 +241,8 @@
                                     <constraint firstAttribute="height" constant="80" id="vco-ns-olg"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o83-9T-FWT">
-                                <rect key="frame" x="127.5" y="604" width="120" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o83-9T-FWT">
+                                <rect key="frame" x="127.5" y="605" width="120" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="36M-HL-Egq"/>
@@ -256,40 +264,43 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ButtonClick:" destination="Px0-PO-gqO" eventType="touchUpInside" id="r9I-yY-D3Q"/>
+                                    <action selector="ButtonClick:" destination="Px0-PO-gqO" eventType="touchUpInside" id="Ssx-SV-yvE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a34-bi-chI">
-                                <rect key="frame" x="10" y="309.5" width="355" height="134.5"/>
+                                <rect key="frame" x="20" y="300" width="335" height="125"/>
                                 <string key="text">Your video will be uploaded and shared after the game.
 </string>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="a34-bi-chI" firstAttribute="leading" secondItem="fUP-r1-lKt" secondAttribute="leading" constant="10" id="4Rq-yE-bY9"/>
-                            <constraint firstItem="fUP-r1-lKt" firstAttribute="bottom" secondItem="o83-9T-FWT" secondAttribute="bottom" constant="13" id="BhC-JM-MYN"/>
+                            <constraint firstItem="a34-bi-chI" firstAttribute="leading" secondItem="fUP-r1-lKt" secondAttribute="leading" constant="20" id="4Rq-yE-bY9"/>
+                            <constraint firstItem="fUP-r1-lKt" firstAttribute="bottom" secondItem="o83-9T-FWT" secondAttribute="bottom" constant="10" id="BhC-JM-MYN"/>
                             <constraint firstItem="PMt-1D-qc4" firstAttribute="leading" secondItem="fUP-r1-lKt" secondAttribute="leading" constant="20" id="C9J-1a-6eT"/>
                             <constraint firstItem="a34-bi-chI" firstAttribute="top" secondItem="aFM-mh-Em5" secondAttribute="bottom" constant="40" id="Enx-Uk-waf"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="bottom" secondItem="Map-Dj-aQi" secondAttribute="bottom" constant="46" id="LmF-uL-RZJ"/>
-                            <constraint firstItem="aFM-mh-Em5" firstAttribute="leading" secondItem="Map-Dj-aQi" secondAttribute="leading" constant="10" id="MJa-hl-5ni"/>
+                            <constraint firstItem="aFM-mh-Em5" firstAttribute="leading" secondItem="Map-Dj-aQi" secondAttribute="leading" constant="25" id="MJa-hl-5ni"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="trailing" secondItem="PMt-1D-qc4" secondAttribute="trailing" constant="20" id="Ncl-VB-jhF"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="top" secondItem="PMt-1D-qc4" secondAttribute="top" constant="-10" id="XPM-06-wPB"/>
                             <constraint firstItem="aFM-mh-Em5" firstAttribute="top" secondItem="PMt-1D-qc4" secondAttribute="bottom" constant="25" id="YXB-L5-hC0"/>
                             <constraint firstItem="fUP-r1-lKt" firstAttribute="trailing" secondItem="Map-Dj-aQi" secondAttribute="trailing" id="ahl-hQ-ThZ"/>
-                            <constraint firstItem="a34-bi-chI" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" constant="-20" id="eXG-tu-5c5"/>
-                            <constraint firstItem="aFM-mh-Em5" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" constant="-20" id="htr-G2-enh"/>
+                            <constraint firstItem="a34-bi-chI" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" constant="-40" id="eXG-tu-5c5"/>
+                            <constraint firstItem="aFM-mh-Em5" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" constant="-50" id="htr-G2-enh"/>
                             <constraint firstItem="PMt-1D-qc4" firstAttribute="width" secondItem="22G-Rn-5RR" secondAttribute="width" constant="-40" id="j9c-QU-ZUU"/>
                             <constraint firstItem="Map-Dj-aQi" firstAttribute="top" secondItem="fUP-r1-lKt" secondAttribute="top" constant="100" id="lGe-xT-YSm"/>
                             <constraint firstItem="Map-Dj-aQi" firstAttribute="leading" secondItem="22G-Rn-5RR" secondAttribute="leading" id="mTe-Ko-SlD"/>
                             <constraint firstItem="o83-9T-FWT" firstAttribute="centerX" secondItem="fUP-r1-lKt" secondAttribute="centerX" id="maW-3l-Mip"/>
-                            <constraint firstItem="fUP-r1-lKt" firstAttribute="trailing" secondItem="a34-bi-chI" secondAttribute="trailing" constant="10" id="vNR-dy-GTq"/>
+                            <constraint firstItem="fUP-r1-lKt" firstAttribute="trailing" secondItem="a34-bi-chI" secondAttribute="trailing" constant="20" id="vNR-dy-GTq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fUP-r1-lKt"/>
                     </view>
+                    <connections>
+                        <outlet property="ContinueButton" destination="o83-9T-FWT" id="vPS-DB-3hb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIg-nv-OKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2t-wb-N9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="1251.7241379310346"/>
+            <point key="canvasLocation" x="-458" y="1252"/>
         </scene>
         <!--Vc consent1-->
         <scene sceneID="9uL-Lj-NWY">
@@ -422,15 +433,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="xuj-I4-eYJ">
-                                <rect key="frame" x="12" y="0.0" width="349" height="104"/>
+                                <rect key="frame" x="12" y="0.0" width="349" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="104" id="YQp-Je-e1a"/>
+                                    <constraint firstAttribute="height" constant="80" id="YQp-Je-e1a"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-uS-QuZ" userLabel="NoButton">
                                 <rect key="frame" x="10" y="596" width="353" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="No! I am not interested in sharing my data and therefore choose not to participate in this study.">
@@ -448,16 +460,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="BackClickNew:" destination="9bX-lZ-SdM" eventType="touchUpInside" id="X37-ME-aKr"/>
+                                    <action selector="ConsentClickBack:" destination="sZB-NZ-jo7" eventType="touchUpInside" id="cz7-L6-KrC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-v7-aHs" userLabel="YesButton">
-                                <rect key="frame" x="10" y="522" width="353" height="65"/>
+                                <rect key="frame" x="10" y="532" width="353" height="55"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="DOf-pb-8p3"/>
+                                    <constraint firstAttribute="height" constant="55" id="DOf-pb-8p3"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Yes! I agree to share my video and demographics data with researchers at Stanford University.">
@@ -479,7 +492,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x5-Z6c">
-                                <rect key="frame" x="0.0" y="110" width="375" height="407"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="427"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-eD-Xok" userLabel="TextBlock">
                                         <rect key="frame" x="5" y="0.0" width="375" height="6002.5"/>
@@ -580,7 +593,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                             <constraint firstAttribute="trailing" secondItem="KnH-v7-aHs" secondAttribute="trailing" constant="12" id="AcR-T6-xpI"/>
                             <constraint firstItem="KnH-v7-aHs" firstAttribute="leading" secondItem="e3e-0Y-CXZ" secondAttribute="leading" constant="10" id="OD0-00-dqJ"/>
                             <constraint firstItem="6A8-hb-u9z" firstAttribute="bottom" secondItem="vVr-uS-QuZ" secondAttribute="bottom" constant="6" id="UkE-d5-zcp"/>
-                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="top" secondItem="xuj-I4-eYJ" secondAttribute="top" constant="110" id="WkE-VH-vMm"/>
+                            <constraint firstItem="WwM-x5-Z6c" firstAttribute="top" secondItem="xuj-I4-eYJ" secondAttribute="top" constant="90" id="WkE-VH-vMm"/>
                             <constraint firstItem="xuj-I4-eYJ" firstAttribute="leading" secondItem="6A8-hb-u9z" secondAttribute="leading" constant="12" id="X10-Vb-u16"/>
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="trailing" secondItem="KnH-v7-aHs" secondAttribute="trailing" id="cQl-XW-2qh"/>
                             <constraint firstItem="vVr-uS-QuZ" firstAttribute="top" secondItem="KnH-v7-aHs" secondAttribute="bottom" constant="9" id="dm2-6f-6kK"/>
@@ -593,7 +606,6 @@ By clicking the “Accept” button below, you are consenting to participate and
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhy-Kw-RvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="9bX-lZ-SdM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1823" y="525"/>
         </scene>
@@ -609,6 +621,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 <rect key="frame" x="10" y="596" width="353" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
@@ -631,12 +644,13 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGF-bG-JdH" userLabel="YesButton">
-                                <rect key="frame" x="10" y="512" width="353" height="75"/>
+                                <rect key="frame" x="10" y="517" width="353" height="70"/>
                                 <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="aqA-NU-l7w"/>
+                                    <constraint firstAttribute="height" constant="70" id="aqA-NU-l7w"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
@@ -662,7 +676,7 @@ By clicking the “Accept” button below, you are consenting to participate and
                                 <rect key="frame" x="0.0" y="20" width="375" height="487"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIl-eE-p7Q" userLabel="TextBlock">
-                                        <rect key="frame" x="5" y="0.0" width="375" height="5107.5"/>
+                                        <rect key="frame" x="5" y="5" width="375" height="5107.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">In addition to sharing your video with researchers at Stanford, you can optionally consent to share your videos with other participants. This will help us understand if crowdsourcing methods can identify the core features of autism.
 
@@ -745,7 +759,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                     <constraint firstItem="YIl-eE-p7Q" firstAttribute="width" secondItem="0l7-mO-4VI" secondAttribute="width" id="BqK-c5-FOa"/>
                                     <constraint firstAttribute="bottom" secondItem="YIl-eE-p7Q" secondAttribute="bottom" constant="20" symbolic="YES" id="jJG-OK-My9"/>
                                     <constraint firstAttribute="trailing" secondItem="YIl-eE-p7Q" secondAttribute="trailing" id="oyr-uN-XUG"/>
-                                    <constraint firstItem="YIl-eE-p7Q" firstAttribute="top" secondItem="0l7-mO-4VI" secondAttribute="top" id="sPz-px-OWO"/>
+                                    <constraint firstItem="YIl-eE-p7Q" firstAttribute="top" secondItem="0l7-mO-4VI" secondAttribute="top" constant="5" id="sPz-px-OWO"/>
                                     <constraint firstItem="YIl-eE-p7Q" firstAttribute="leading" secondItem="0l7-mO-4VI" secondAttribute="leading" constant="5" id="yn2-Q1-56c"/>
                                 </constraints>
                             </scrollView>
@@ -784,7 +798,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="459"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-eQ-W5q" userLabel="TextBlock">
-                                        <rect key="frame" x="5" y="20" width="375" height="4753.5"/>
+                                        <rect key="frame" x="5" y="25" width="375" height="4753.5"/>
                                         <color key="tintColor" red="0.0" green="0.13530460620000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Optionally, you can choose to opt in to view videos of other participants and answer several questions. If you are interested, please read the information below carefully.
 
@@ -859,7 +873,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                     <constraint firstAttribute="trailing" secondItem="Ssm-eQ-W5q" secondAttribute="trailing" id="JeL-eh-hOu"/>
                                     <constraint firstAttribute="bottom" secondItem="Ssm-eQ-W5q" secondAttribute="bottom" id="NXE-QL-5ss"/>
                                     <constraint firstItem="Ssm-eQ-W5q" firstAttribute="width" secondItem="dUf-Wb-9GL" secondAttribute="width" id="Ptw-ri-T4J"/>
-                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="top" secondItem="dUf-Wb-9GL" secondAttribute="top" constant="20" id="z5b-iZ-Hyc"/>
+                                    <constraint firstItem="Ssm-eQ-W5q" firstAttribute="top" secondItem="dUf-Wb-9GL" secondAttribute="top" constant="25" id="z5b-iZ-Hyc"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-XM-VR2" userLabel="NoButton">
@@ -869,6 +883,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                     <constraint firstAttribute="height" constant="90" id="6e8-ae-F5Z"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="11" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
@@ -897,6 +912,7 @@ By clicking the “Yes” button below, you are consenting to participate and th
                                     <constraint firstAttribute="height" constant="90" id="o7S-ag-uoP"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>

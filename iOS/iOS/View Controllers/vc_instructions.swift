@@ -41,17 +41,21 @@ class vc_instructions: UIViewController {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
-        print("[HK] Button click callback.")
+        print("[Instructions] Button click callback.")
         // Lets check if the user is connected to WiFi. If not, we direct them to a screen where they must acknowledge
         // the bandwidth implciations. Otherwise, we redirect them to the "countdown" screen that initiates the game.
         
         NetworkManager.isReachableViaWiFi() { Result in
+            print("[Instructions] Reachable via WiFI callback.")
+
+            
             if(Result){
-                print("[HK] WiFi connection detected.")
+                print("[Instructions] WiFi connection detected.")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_countdown")
                 self.present(newViewController, animated: false, completion: nil)
             } else {
+                print("[Instructions] No WiFi connection detected.")
                 // No wifi connection- warn them.
                 let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_wifi_warn")

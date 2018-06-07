@@ -28,7 +28,7 @@ class vc_consent_2: UIViewController {
         GameEngineObject.CurrentUserObject?.consentShare = 0
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_wifi_warn")
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_consent_3")
         self.present(newViewController, animated: false, completion: nil)
     }
     

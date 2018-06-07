@@ -10,6 +10,8 @@ import UIKit
 
 class vc_wifi_warn: UIViewController {
 
+    @IBOutlet weak var ContinueButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +33,7 @@ class vc_wifi_warn: UIViewController {
         print("[WIFI] Button click detected.")
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_countdown")
         self.present(newViewController, animated: false, completion: nil)
     }
     /*
