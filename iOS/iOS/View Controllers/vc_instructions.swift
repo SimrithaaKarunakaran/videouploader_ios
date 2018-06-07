@@ -37,6 +37,13 @@ class vc_instructions: UIViewController {
     }
     
 
+    @IBAction func ButtonBack(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_deck")
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    
+    
     @IBAction func ButtonClick(_ sender: Any) {
         // Play click sound.
         AudioManagerObject.PlayClick()

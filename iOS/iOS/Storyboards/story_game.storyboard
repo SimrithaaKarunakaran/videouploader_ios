@@ -347,32 +347,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-Es-xae">
-                                <rect key="frame" x="273.5" y="315" width="120" height="50"/>
-                                <color key="backgroundColor" red="0.21283424540000001" green="0.56187888789999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="12N-Hd-RXh"/>
-                                    <constraint firstAttribute="width" constant="120" id="Kpi-mB-0Fu"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Continue">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="22" name="Noteworthy-Light"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="ButtonClick:" destination="o0W-FV-Y4M" eventType="touchUpInside" id="FQ8-wt-4um"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="s0k-jr-1pr">
                                 <rect key="frame" x="0.0" y="10" width="667" height="65"/>
                                 <constraints>
@@ -380,7 +354,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orh-Hu-5wH">
-                                <rect key="frame" x="10" y="85" width="647" height="220"/>
+                                <rect key="frame" x="10" y="85" width="647" height="224"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="PARENTS">
@@ -469,19 +443,75 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-6y-hDV">
+                                <rect key="frame" x="204" y="317" width="260" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8p-pb-Sst">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.18341051550000001" blue="0.32040264889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Cdt-gO-Fw0"/>
+                                            <constraint firstAttribute="width" constant="120" id="mj7-KV-mmx"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Back">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="22" name="Noteworthy-Light"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ButtonBack:" destination="o0W-FV-Y4M" eventType="touchUpInside" id="bTo-98-qkn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7HV-BF-AGo">
+                                        <rect key="frame" x="140" y="0.0" width="120" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Tf7-8o-bSX"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Continue">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="22" name="Noteworthy-Light"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ButtonClick:" destination="o0W-FV-Y4M" eventType="touchUpInside" id="Rle-vg-umg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hNh-MF-xnt" firstAttribute="bottom" secondItem="xcc-6y-hDV" secondAttribute="bottom" constant="8" id="3OF-j3-eyw"/>
                             <constraint firstItem="orh-Hu-5wH" firstAttribute="top" secondItem="s0k-jr-1pr" secondAttribute="bottom" constant="10" id="418-aJ-dqZ"/>
                             <constraint firstItem="orh-Hu-5wH" firstAttribute="width" secondItem="WCc-c3-oLd" secondAttribute="width" constant="-20" id="6M4-kQ-ExH"/>
-                            <constraint firstItem="U2X-Es-xae" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="HO6-Gy-zJ5"/>
                             <constraint firstItem="orh-Hu-5wH" firstAttribute="leading" secondItem="hNh-MF-xnt" secondAttribute="leading" constant="10" id="Igh-Ce-fRy"/>
-                            <constraint firstItem="hNh-MF-xnt" firstAttribute="bottom" secondItem="U2X-Es-xae" secondAttribute="bottom" constant="10" id="TSb-4y-XEc"/>
                             <constraint firstItem="s0k-jr-1pr" firstAttribute="width" secondItem="WCc-c3-oLd" secondAttribute="width" id="Ts7-d7-SX8"/>
                             <constraint firstItem="hNh-MF-xnt" firstAttribute="trailing" secondItem="orh-Hu-5wH" secondAttribute="trailing" constant="10" id="X5y-NG-HVx"/>
                             <constraint firstItem="s0k-jr-1pr" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="aFX-OX-S9m"/>
+                            <constraint firstItem="hNh-MF-xnt" firstAttribute="bottom" secondItem="orh-Hu-5wH" secondAttribute="bottom" constant="66" id="fpv-sZ-QHp"/>
                             <constraint firstItem="hNh-MF-xnt" firstAttribute="top" secondItem="s0k-jr-1pr" secondAttribute="top" constant="-10" id="gJd-kS-2p6"/>
-                            <constraint firstItem="U2X-Es-xae" firstAttribute="top" secondItem="orh-Hu-5wH" secondAttribute="bottom" constant="10" id="m68-JC-Cjk"/>
+                            <constraint firstItem="xcc-6y-hDV" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="rHt-vu-wLA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hNh-MF-xnt"/>
                     </view>
