@@ -22,6 +22,7 @@ class vc_login: UIViewController {
     @IBOutlet weak var TextSignUpLink:   UILabel!
     @IBOutlet weak var TextViewError:    UILabel!
 
+    @IBOutlet weak var TextLoginTitle: UILabel!
     @IBOutlet weak var LoadingProgress: UIActivityIndicatorView!
     
     @IBAction func ActionTrigger(_ sender: UITextView) {
@@ -35,14 +36,21 @@ class vc_login: UIViewController {
         let LastUsername = String(TextViewUsername.text!)
         let LastPassword = String(TextViewPassword.text!)
         
-        ButtonLogin.resignFirstResponder()
-      
-        self.LoadingProgress.startAnimating()
+        HandleLoginClick(Username: LastUsername, Password: LastPassword)
+    }
+    
+    
+    func HandleLoginClick(Username: String, Password: String){
 
         
-        GameEngineObject?.login(email: LastUsername, password: LastPassword) { (Success, Result) in
+        ButtonLogin.resignFirstResponder()
+        
+        self.LoadingProgress.startAnimating()
+        
+        
+        GameEngineObject?.login(email: Username, password: Password) { (Success, Result) in
             GameEngineObject?.accessToken     = Result!
-
+            
             if(Success){
                 
                 GameEngineObject.fullyAuthenticateWithToken(sessionCompletion: { (Success) in
@@ -62,11 +70,11 @@ class vc_login: UIViewController {
                 
             }
             else {
-
+                
                 // Update UI separately..
                 DispatchQueue.main.async { // Correct
                     if(!Success){
-                    
+                        
                         self.LoadingProgress.stopAnimating()
                         
                         if GameEngineObject?.accessToken?.range(of:"error 20") != nil {
@@ -111,6 +119,10 @@ class vc_login: UIViewController {
         navigationController?.pushViewController(newViewController, animated: true)
     }
     
+    @objc func AutoLoginClickHandler(sender:UITapGestureRecognizer) {
+        HandleLoginClick(Username: "demo@gmail.com", Password: "Cureaut1sm!")
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +134,11 @@ class vc_login: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(vc_login.TextSignUpClickHandler))
         TextSignUpLink.isUserInteractionEnabled = true
         TextSignUpLink.addGestureRecognizer(tap)
+        
+        // Quick trick to auto-login: tap the "Log In" title.
+        let autolog = UITapGestureRecognizer(target: self, action: #selector(vc_login.AutoLoginClickHandler))
+        TextLoginTitle.isUserInteractionEnabled = true
+        TextLoginTitle.addGestureRecognizer(autolog)
     }
     
     

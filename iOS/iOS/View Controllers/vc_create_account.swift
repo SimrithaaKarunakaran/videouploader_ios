@@ -17,6 +17,7 @@ class vc_create_account: UIViewController {
 
     @IBOutlet weak var TextUsername: UITextField!
     @IBOutlet weak var TextPassword: UITextField!
+    @IBOutlet weak var ProgressIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,8 @@ class vc_create_account: UIViewController {
             return;
         }
         
+        ProgressIndicator.startAnimating()
+        
         GameEngineObject.signup(email: Username, password: Password) { (SuccessRegister) in
             
             if(SuccessRegister!){
@@ -94,6 +97,10 @@ class vc_create_account: UIViewController {
                             })
                         })
                     }
+                }
+            } else {
+                DispatchQueue.main.async { // Correct
+                    self.ProgressIndicator.stopAnimating()
                 }
             }
         }

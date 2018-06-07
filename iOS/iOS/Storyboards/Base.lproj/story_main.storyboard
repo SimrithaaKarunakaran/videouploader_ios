@@ -87,8 +87,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSf-vd-Gj6">
-                                <rect key="frame" x="16" y="154" width="94" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSf-vd-Gj6">
+                                <rect key="frame" x="16" y="154" width="49.5" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -199,6 +199,7 @@
                     <connections>
                         <outlet property="ButtonLogin" destination="e25-4T-eSB" id="I4C-zD-7Q1"/>
                         <outlet property="LoadingProgress" destination="eLz-9M-5K8" id="wkP-Ef-EPX"/>
+                        <outlet property="TextLoginTitle" destination="c9P-CO-jJy" id="ZSD-d1-WiT"/>
                         <outlet property="TextSignUpLink" destination="qnv-co-GBc" id="eIv-Xq-UBU"/>
                         <outlet property="TextViewError" destination="5CO-wB-gDq" id="eam-Si-K1R"/>
                         <outlet property="TextViewPassword" destination="UAU-OH-vci" id="hZw-ff-0I0"/>
@@ -338,8 +339,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUS-YD-wch">
-                                <rect key="frame" x="16" y="157" width="94" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUS-YD-wch">
+                                <rect key="frame" x="16" y="157" width="49.5" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -390,6 +391,9 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XwM-OZ-9xF">
+                                <rect key="frame" x="206" y="388" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -409,13 +413,16 @@
                             <constraint firstItem="It6-PM-qeS" firstAttribute="leading" secondItem="kI4-zu-zxM" secondAttribute="leading" id="jWR-dz-VPZ"/>
                             <constraint firstItem="mWo-Lw-L0U" firstAttribute="top" secondItem="d01-NO-hQe" secondAttribute="top" id="kGY-nO-Iem"/>
                             <constraint firstItem="wUS-YD-wch" firstAttribute="leading" secondItem="bF9-nL-vvw" secondAttribute="leadingMargin" id="lLQ-8b-gOl"/>
+                            <constraint firstItem="qqQ-sz-uxq" firstAttribute="leading" secondItem="XwM-OZ-9xF" secondAttribute="trailing" constant="8" id="pr4-H6-aZh"/>
                             <constraint firstItem="It6-PM-qeS" firstAttribute="top" secondItem="kI4-zu-zxM" secondAttribute="bottom" constant="8" symbolic="YES" id="qQS-vd-f7M"/>
+                            <constraint firstItem="XwM-OZ-9xF" firstAttribute="centerY" secondItem="qqQ-sz-uxq" secondAttribute="centerY" id="rSm-M8-b37"/>
                             <constraint firstItem="kI4-zu-zxM" firstAttribute="top" secondItem="QkN-f8-IbB" secondAttribute="bottom" constant="37" id="sNX-Jr-ANY"/>
                             <constraint firstItem="QkN-f8-IbB" firstAttribute="leading" secondItem="wUS-YD-wch" secondAttribute="leading" id="yT5-Ed-FMP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d01-NO-hQe"/>
                     </view>
                     <connections>
+                        <outlet property="ProgressIndicator" destination="XwM-OZ-9xF" id="Zs4-hL-GoV"/>
                         <outlet property="TextPassword" destination="It6-PM-qeS" id="H2e-nG-Cfr"/>
                         <outlet property="TextUsername" destination="QkN-f8-IbB" id="HZP-m9-IS7"/>
                     </connections>

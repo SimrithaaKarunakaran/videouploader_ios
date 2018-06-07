@@ -49,6 +49,13 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
 
+    @IBAction func QuitAppClick(_ sender: Any) {
+    
+    }
+    
+    @IBAction func LogOutClick(_ sender: Any) {
+    
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
