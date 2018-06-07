@@ -27,10 +27,11 @@ class vc_select_player: UIViewController, UITableViewDelegate, UITableViewDataSo
         AddPlayerText.addGestureRecognizer(tap)
         AddPlayerImage.isUserInteractionEnabled = true
         AddPlayerImage.addGestureRecognizer(tap)
-        
-        
+    
         UITableViewInstance.tableFooterView = UIView(frame: .zero)
 
+        // Update the title
+        self.title = GameEngineObject.UserEmail
     }
     
     override func viewWillAppear(_ animated: Bool) {

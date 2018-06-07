@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="-718" y="176"/>
         </scene>
-        <!--Vc select player-->
+        <!--email-->
         <scene sceneID="ueC-OS-zFS">
             <objects>
                 <viewController storyboardIdentifier="vc_select_player" id="cyG-v3-OLs" customClass="vc_select_player" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GS2-hG-Eea"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g5g-Yc-QHF">
+                    <navigationItem key="navigationItem" title="email" id="g5g-Yc-QHF">
                         <barButtonItem key="leftBarButtonItem" title="Quit" id="tn0-Hk-6Tz">
                             <connections>
                                 <action selector="QuitAppClick:" destination="cyG-v3-OLs" id="sqK-Z6-ydm"/>

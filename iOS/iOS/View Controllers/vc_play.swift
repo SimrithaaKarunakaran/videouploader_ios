@@ -533,6 +533,11 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Update the title
+        self.title = GameEngineObject.CurrentUserObject?.email
+        
+        // Load game prompts.
         PromptManager.LoadPromptsForGame(PromptArray: GameEngineObject.ArraySelected)
         
         // Thie unix time (MS) that will be used to identify this game session.
