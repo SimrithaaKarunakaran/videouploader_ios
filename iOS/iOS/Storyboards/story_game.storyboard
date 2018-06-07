@@ -380,7 +380,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orh-Hu-5wH">
-                                <rect key="frame" x="5" y="85" width="657" height="220"/>
+                                <rect key="frame" x="10" y="85" width="647" height="220"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="PARENTS">
@@ -473,12 +473,12 @@ Cg
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="orh-Hu-5wH" firstAttribute="top" secondItem="s0k-jr-1pr" secondAttribute="bottom" constant="10" id="418-aJ-dqZ"/>
-                            <constraint firstItem="orh-Hu-5wH" firstAttribute="width" secondItem="WCc-c3-oLd" secondAttribute="width" constant="-10" id="6M4-kQ-ExH"/>
+                            <constraint firstItem="orh-Hu-5wH" firstAttribute="width" secondItem="WCc-c3-oLd" secondAttribute="width" constant="-20" id="6M4-kQ-ExH"/>
                             <constraint firstItem="U2X-Es-xae" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="HO6-Gy-zJ5"/>
-                            <constraint firstItem="orh-Hu-5wH" firstAttribute="leading" secondItem="hNh-MF-xnt" secondAttribute="leading" constant="5" id="Igh-Ce-fRy"/>
+                            <constraint firstItem="orh-Hu-5wH" firstAttribute="leading" secondItem="hNh-MF-xnt" secondAttribute="leading" constant="10" id="Igh-Ce-fRy"/>
                             <constraint firstItem="hNh-MF-xnt" firstAttribute="bottom" secondItem="U2X-Es-xae" secondAttribute="bottom" constant="10" id="TSb-4y-XEc"/>
                             <constraint firstItem="s0k-jr-1pr" firstAttribute="width" secondItem="WCc-c3-oLd" secondAttribute="width" id="Ts7-d7-SX8"/>
-                            <constraint firstItem="hNh-MF-xnt" firstAttribute="trailing" secondItem="orh-Hu-5wH" secondAttribute="trailing" constant="5" id="X5y-NG-HVx"/>
+                            <constraint firstItem="hNh-MF-xnt" firstAttribute="trailing" secondItem="orh-Hu-5wH" secondAttribute="trailing" constant="10" id="X5y-NG-HVx"/>
                             <constraint firstItem="s0k-jr-1pr" firstAttribute="centerX" secondItem="hNh-MF-xnt" secondAttribute="centerX" id="aFX-OX-S9m"/>
                             <constraint firstItem="hNh-MF-xnt" firstAttribute="top" secondItem="s0k-jr-1pr" secondAttribute="top" constant="-10" id="gJd-kS-2p6"/>
                             <constraint firstItem="U2X-Es-xae" firstAttribute="top" secondItem="orh-Hu-5wH" secondAttribute="bottom" constant="10" id="m68-JC-Cjk"/>
