@@ -83,6 +83,36 @@ class vc_confirm_video: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
+    
+    func ProcessLocalFiles(){
+        
+        let fileManager = FileManager.default
+        if let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first{
+            do {
+                let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+                
+                for file in fileURLs{
+                    
+                    if(file.path.contains("LOCKED")){
+                        print("[FILES] Found a locked directory to delete.")
+                        DeleteFile(Path: file.path)
+                    } else {
+                        print("[FILES] Found a non-locked directory to possibly upload.")
+                        print(file.path)
+                    }
+                }
+            }
+            catch {
+                print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+            }
+        }
+    
+    }
+    
+    
     @IBAction func ShareVideo(_ sender: Any) {
         
         // Play click sound.
@@ -96,39 +126,51 @@ class vc_confirm_video: UIViewController {
         print("[REVIEW] Old directory: \(OldDirectoryPath)")
         print("[REVIEW] New directory: \(NewDirectoryPath)")
         
-        
         do {
             try fileManager.moveItem(atPath: OldDirectoryPath, toPath: NewDirectoryPath)
-            print("[REVIEW] Possibly finished renaming directory.")
+            print("[FILE] Possibly finished renaming directory.")
         }
         catch let error as NSError {
-            print("[REVIEW] Failed to rename directory: \(error)")
+            print("[FILE] Failed to rename directory: \(error)")
         }
         
         // Update the UI
         ScreenText.text = "Your video will be shared!"
         
+        // Process local files (from this game session and others)
+        ProcessLocalFiles()
+        
         // Redirect the user after two seconds.
         StartDelayTimer()
+    }
+    
+    
+    
+    func DeleteFile(Path: String){
+        // Do what needs to be done to delete the video.
+        let fileManager = FileManager.default
+        
+        do {
+            try fileManager.removeItem(atPath: Path)
+            print("[FILE] Possibly finished deleting directory.")
+        }
+        catch let error as NSError {
+            print("[FILE] Failed to delete directory: \(error)")
+        }
     }
     
     @IBAction func DeleteVideo(_ sender: Any) {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
-        // Do what needs to be done to delete the video.
-        let fileManager = FileManager.default
-        
-        do {
-            try fileManager.removeItem(atPath: LockedGameDirectory.path)
-            print("[REVIEW] Possibly finished deleting directory.")
-        }
-        catch let error as NSError {
-            print("[REVIEW] Failed to delete directory: \(error)")
-        }
+        //Delete the files associated with last game session.
+        DeleteFile(Path: LockedGameDirectory.path)
         
         // Update the UI
         ScreenText.text = "Your video has been deleted!"
+        
+        // Process local files (from this game session and others)
+        ProcessLocalFiles()
         
         // Redirect the user after two seconds.
         StartDelayTimer()

@@ -10,6 +10,9 @@ import UIKit
 
 class vc_consent_3: UIViewController {
 
+    
+    var OperationInProgress = false;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,19 +28,23 @@ class vc_consent_3: UIViewController {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
-        GameEngineObject.CurrentUserObject?.consentView = 0
-        self.CreatePlayerProfileAndRedirect()
+        if(OperationInProgress == false){
+            OperationInProgress = true
+            GameEngineObject.CurrentUserObject?.consentView = 0
+            self.CreatePlayerProfileAndRedirect()
+        }
     }
     
     @IBAction func ConsentClickNext(_ sender: Any) {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
-        GameEngineObject.CurrentUserObject?.consentView = 1
-        self.CreatePlayerProfileAndRedirect()
+        if(OperationInProgress == false){
+            OperationInProgress = true
+            GameEngineObject.CurrentUserObject?.consentView = 1
+            self.CreatePlayerProfileAndRedirect()
+        }
     }
-    
-    
     
     func CreatePlayerProfileAndRedirect(){
         GameEngineObject.AddUserToDynamo(row: GameEngineObject.CurrentUserObject!) { (Success) in
@@ -55,15 +62,4 @@ class vc_consent_3: UIViewController {
             })
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

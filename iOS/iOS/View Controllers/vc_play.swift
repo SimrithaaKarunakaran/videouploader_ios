@@ -15,10 +15,10 @@ import AVKit
 // Create a nonsense default URL. When view loads, this will be overridden, pointing to new directory
 // in which the files (meta and video) will be stored.
 var LockedGameDirectory = URL(string: "google.com")!
-// Likewise, create a dummy URL to the text file (meta information) that will be written to throughout the game.
+// Create a dummy URL that will later be the path to text file written to throughout the game.
 var TextFileURL         = URL(string: "google.com")!
+// Create a dummy URL that will later be the path to video file written to throughout the game.
 var VideoFileURL        = URL(string: "google.com")!
-
 
 
 
@@ -383,6 +383,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         
         let fileManager = FileManager.default
         if let tDocumentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+            // Story a handle to the main folder which contains all subfolders: each representing one game session.
             FilePathGameFolder =  tDocumentDirectory.appendingPathComponent("\(FOLDER_NAME)")
             if !fileManager.fileExists(atPath: FilePathGameFolder.path) {
                 do {
