@@ -478,7 +478,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     // Write a line to our meta-information buffer.
     // Buffer flushed to text file after game end.
     func WriteToTextBuffer(Text: String){
-        MetaInfoBuffer = MetaInfoBuffer + "\n" + Text
+        MetaInfoBuffer = MetaInfoBuffer + Text + "\n"
     }
     
     
