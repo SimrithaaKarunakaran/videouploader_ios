@@ -24,6 +24,8 @@ let GlobalAppClientID             = "6arguf9m5ecvbgulsei89ketnm";
 let GlobalAppClientSecret         = "178ml88t93a5cvjndco5ao7asu7r2omcl4lbopsee96s40kticis";
 let GlobalCognitoUserpoolProvider = "cognito-idp.us-west-2.amazonaws.com/us-west-2_bB7kdaf7g"
 
+var AWSBucketName                 = "headsup-du1r3b78fy"
+
 var GlobalRegionObject        = AWSRegionType.USWest2
 var GlobalUserPool            : AWSCognitoIdentityUserPool!
 var GlobalPoolConfig          : AWSCognitoIdentityUserPoolConfiguration!

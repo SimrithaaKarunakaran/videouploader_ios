@@ -110,7 +110,7 @@ class vc_confirm_video: UIViewController {
         let transferManager = AWSS3TransferManager.default()
         let uploadRequest = AWSS3TransferManagerUploadRequest()
         
-        uploadRequest?.bucket = "headsup-du1r3b78fy"
+        uploadRequest?.bucket = AWSBucketName
         uploadRequest?.key = FilePathURL.lastPathComponent
         uploadRequest?.body = FilePathURL
         
