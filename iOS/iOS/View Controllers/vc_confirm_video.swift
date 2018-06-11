@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import AWSS3
 
 
 
@@ -30,8 +31,7 @@ class vc_confirm_video: UIViewController {
         SetupPlayback()
     }
     
-    // Every second, this function is called. It just updates # of seconds remaining.
-    // Also ends the game when time runs out.
+    // Move to a new screen when time is up.
     @objc func ChangeScreensCallback() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "story_game", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "vc_select_player_nav")
@@ -75,20 +75,13 @@ class vc_confirm_video: UIViewController {
         present(controller, animated: true) {
             player.play()
         }
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    
-    
+    /// Search through files in local directory.
+    /// (1) If file is locked, just delete it.
+    /// (2) If file is not locked, upload it.
     func ProcessLocalFiles(){
-        
+
         let fileManager = FileManager.default
         if let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first{
             do {
@@ -102,19 +95,51 @@ class vc_confirm_video: UIViewController {
                     } else {
                         print("[FILES] Found a non-locked directory to possibly upload.")
                         print(file.path)
+                        UploadFile(FilePathURL: file)
                     }
                 }
             }
             catch {
-                print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+                print("[FILES] Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
             }
         }
+    }
+
     
+    func UploadFile(FilePathURL: URL){
+        let transferManager = AWSS3TransferManager.default()
+        let uploadRequest = AWSS3TransferManagerUploadRequest()
+        
+        uploadRequest?.bucket = "headsup-du1r3b78fy"
+        uploadRequest?.key = FilePathURL.lastPathComponent
+        uploadRequest?.body = FilePathURL
+        
+        
+        transferManager.upload(uploadRequest!).continueWith(executor: AWSExecutor.mainThread(), block: { (task:AWSTask<AnyObject>) -> Any? in
+            
+            if let error = task.error as NSError? {
+                if error.domain == AWSS3TransferManagerErrorDomain, let code = AWSS3TransferManagerErrorType(rawValue: error.code) {
+                    switch code {
+                    case .cancelled, .paused:
+                        print("[FILES] Error uploading (cancel or pause): \(String(describing: uploadRequest?.key)) Error: \(error)")
+                        break
+                    default:
+                        print("[FILES] Error uploading (default): \(String(describing: uploadRequest?.key)) Error: \(error)")
+                    }
+                } else {
+                    print("[FILES] Error uploading (generic): \(String(describing: uploadRequest?.key)) Error: \(error)")
+                }
+                return nil
+            }
+            
+            let uploadOutput = task.result
+            print("[FILES] Upload complete for: \(String(describing: uploadRequest?.key)) with result: \(String(describing:uploadOutput))")
+            return nil
+        })
     }
     
     
-    @IBAction func ShareVideo(_ sender: Any) {
-        
+    @IBAction func ShareVideoClick(_ sender: Any) {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
@@ -123,43 +148,44 @@ class vc_confirm_video: UIViewController {
         let OldDirectoryPath = LockedGameDirectory.path
         let NewDirectoryPath = OldDirectoryPath.replacingOccurrences(of: ".LOCKED", with: "")
         
-        print("[REVIEW] Old directory: \(OldDirectoryPath)")
-        print("[REVIEW] New directory: \(NewDirectoryPath)")
+        print("[FILES] Old directory: \(OldDirectoryPath)")
+        print("[FILES] New directory: \(NewDirectoryPath)")
         
         do {
             try fileManager.moveItem(atPath: OldDirectoryPath, toPath: NewDirectoryPath)
-            print("[FILE] Possibly finished renaming directory.")
+            print("[FILES] Possibly finished renaming directory.")
         }
         catch let error as NSError {
-            print("[FILE] Failed to rename directory: \(error)")
+            print("[FILES] Failed to rename directory: \(error)")
         }
         
         // Update the UI
         ScreenText.text = "Your video will be shared!"
-        
         // Process local files (from this game session and others)
         ProcessLocalFiles()
-        
         // Redirect the user after two seconds.
         StartDelayTimer()
     }
     
     
     
+    /// Delete a file or directory at the given path.
+    /// Necessary if user elects not to remove the text and video files.
+    /// - Parameter Path: Path to the file or directory to delete.
     func DeleteFile(Path: String){
         // Do what needs to be done to delete the video.
         let fileManager = FileManager.default
         
         do {
             try fileManager.removeItem(atPath: Path)
-            print("[FILE] Possibly finished deleting directory.")
+            print("[FILES] Possibly finished deleting directory.")
         }
         catch let error as NSError {
-            print("[FILE] Failed to delete directory: \(error)")
+            print("[FILES] Failed to delete directory: \(error)")
         }
     }
     
-    @IBAction func DeleteVideo(_ sender: Any) {
+    @IBAction func DeleteVideoClick(_ sender: Any) {
         // Play click sound.
         AudioManagerObject.PlayClick()
         
@@ -174,6 +200,5 @@ class vc_confirm_video: UIViewController {
         
         // Redirect the user after two seconds.
         StartDelayTimer()
-        
     }
 }

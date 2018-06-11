@@ -13,6 +13,7 @@ import AWSCore
 import AWSCognitoIdentityProvider
 import AWSUserPoolsSignIn
 import AVFoundation
+import AWSS3
 
 
 
@@ -71,7 +72,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AudioManagerObject = AudioManager()
         print("[AUDIO] Finished initializing audio manager.")
 
-        return true
+        return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
+        
+    }
+    
+    
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        /*
+         Store the completion handler.
+         */
+        AWSS3TransferUtility.interceptApplication(application, handleEventsForBackgroundURLSession: identifier, completionHandler: completionHandler)
     }
     
     

@@ -6,14 +6,14 @@ target 'iOS' do
   use_frameworks!
 
   # Pods for iOS
-    pod 'AWSMobileClient', '~> 2.6.13'
+    pod 'AWSMobileClient', '~> 2.6.13'  # For AWSMobileClient
+    pod 'AWSS3', '~> 2.6.13'            # For file transfers
+    pod 'AWSCognito', '~> 2.6.13'       # For data sync
     pod 'AWSUserPoolsSignIn', '~> 2.6.13'
     pod 'AWSAuthUI', '~> 2.6.13'
-    pod 'AWSCognito'
     pod 'AWSCognitoAuth'
     pod 'AWSCognitoIdentityProvider'
     pod 'AWSCognitoIdentityProviderASF'
     pod 'AWSDynamoDB'
-    pod 'AWSS3'
     pod 'ReachabilitySwift'
 end

@@ -25,6 +25,9 @@ class vc_login: UIViewController {
     @IBOutlet weak var TextLoginTitle: UILabel!
     @IBOutlet weak var LoadingProgress: UIActivityIndicatorView!
     
+    
+    var TapCount = 0
+    
     @IBAction func ActionTrigger(_ sender: UITextView) {
         sender.resignFirstResponder()
     }
@@ -120,7 +123,12 @@ class vc_login: UIViewController {
     }
     
     @objc func AutoLoginClickHandler(sender:UITapGestureRecognizer) {
-        HandleLoginClick(Username: "demo@gmail.com", Password: "Cureaut1sm!")
+        
+        TapCount = TapCount + 1
+        
+        if(TapCount >= 3){
+            HandleLoginClick(Username: "demo@gmail.com", Password: "Cureaut1sm!")
+        }
     }
     
 

@@ -14,6 +14,7 @@
 		2229565820AA0C7800182CE9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565720AA0C7800182CE9 /* GameEngine.swift */; };
 		2229565C20AA185D00182CE9 /* vc_select_player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565B20AA185D00182CE9 /* vc_select_player.swift */; };
 		2229565E20AA260800182CE9 /* DDBTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229565D20AA260800182CE9 /* DDBTableRow.swift */; };
+		223E56D720CEE97B00FAB315 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 223E56D620CEE97B00FAB315 /* awsconfiguration.json */; };
 		2247C8D320AFBAB0000187CC /* vc_thank_player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2247C8D220AFBAB0000187CC /* vc_thank_player.swift */; };
 		224CF92320A61C410070F7A7 /* vc_wifi_warn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */; };
 		2265BB3B208FD1D20096CCAE /* story_game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265BB3A208FD1D20096CCAE /* story_game.storyboard */; };
@@ -146,6 +147,7 @@
 		2229565720AA0C7800182CE9 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		2229565B20AA185D00182CE9 /* vc_select_player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_select_player.swift; sourceTree = "<group>"; };
 		2229565D20AA260800182CE9 /* DDBTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDBTableRow.swift; sourceTree = "<group>"; };
+		223E56D620CEE97B00FAB315 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Desktop/awsconfiguration.json; sourceTree = "<group>"; };
 		2247C8D220AFBAB0000187CC /* vc_thank_player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_thank_player.swift; sourceTree = "<group>"; };
 		224CF92220A61C410070F7A7 /* vc_wifi_warn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc_wifi_warn.swift; sourceTree = "<group>"; };
 		2265BB3A208FD1D20096CCAE /* story_game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = story_game.storyboard; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				228C1E4E2059BB9000DD9F63 /* Logic */,
 				22207F1A2057553100D447F2 /* AppDelegate.swift */,
 				22207F212057553100D447F2 /* Assets.xcassets */,
+				223E56D620CEE97B00FAB315 /* awsconfiguration.json */,
 				22207F262057553200D447F2 /* Info.plist */,
 			);
 			path = iOS;
@@ -581,6 +584,7 @@
 				22908D7A209CF85C007CDA7F /* c4_pig.png in Resources */,
 				22908DA6209CF85C007CDA7F /* d13_volleyball.png in Resources */,
 				22908D7B209CF85C007CDA7F /* e9_dentist.png in Resources */,
+				223E56D720CEE97B00FAB315 /* awsconfiguration.json in Resources */,
 				22908D6E209CF85C007CDA7F /* d4_football.png in Resources */,
 				22908D98209CF85C007CDA7F /* f_neutral.png in Resources */,
 				22908D90209CF85C007CDA7F /* f_disgust3.png in Resources */,

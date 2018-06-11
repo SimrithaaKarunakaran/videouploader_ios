@@ -226,7 +226,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     }
     
     func stopRecording() {
-        print("PLAY] Stop recording has been called.")
+        print("[PLAY] Stop recording has been called.")
         if movieOutput.isRecording == true {
             movieOutput.stopRecording()
             print("[PLAY] Stopped recording.")
@@ -423,7 +423,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
             }
             
             if(!TiltDetectionEnabled){
-                print("[PLAY] Detected tilt was \(abs(y))")
+                //print("[PLAY] Detected tilt was \(abs(y))")
                 return;
             }
             
