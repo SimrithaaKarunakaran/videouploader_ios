@@ -21,6 +21,16 @@ class vc_confirm_video: UIViewController {
     
     @IBOutlet weak var ScreenText: UILabel!
     
+    
+    var completionHandler: AWSS3TransferUtilityUploadCompletionHandlerBlock?
+    var progressBlock: AWSS3TransferUtilityProgressBlock?
+    
+    let transferUtility = AWSS3TransferUtility.default()
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -78,9 +88,9 @@ class vc_confirm_video: UIViewController {
     }
 
     /// Search through files in local directory.
-    /// (1) If file is locked, just delete it.
-    /// (2) If file is not locked, upload it.
-    func ProcessLocalFiles(){
+    /// (1) For each game session, upload files then delete them.
+    /// (2) If game session folder is empty, delete it.
+    func SearchThroughGameSessions(){
 
         let fileManager = FileManager.default
         if let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first{
@@ -93,9 +103,29 @@ class vc_confirm_video: UIViewController {
                         print("[FILES] Found a locked directory to delete.")
                         DeleteFile(Path: file.path)
                     } else {
-                        print("[FILES] Found a non-locked directory to possibly upload.")
-                        print(file.path)
-                        UploadFile(FilePathURL: file)
+                        print("[FILES] Found a non-locked directory to possibly upload: \(file.lastPathComponent)")
+                        /// We have found a directory. Lets figure out if its empty.
+                        /// If so, we delete it. If not, we upload the contents.
+                        
+                        let VideoExists = fileManager.fileExists(atPath: file.appendingPathComponent("GuessWhat.mp4").path)
+                        let FileExists  = fileManager.fileExists(atPath: file.appendingPathComponent("GuessWhat.txt").path)
+                        
+                        if(VideoExists){
+                            // Upload the video file if it exists.
+                            print("[FILES] Found a video within this directory to upload.")
+                            UploadFile(ContentType: "video/mp4", FolderName: file.lastPathComponent, FilePathURL: file.appendingPathComponent("GuessWhat.mp4"))
+                        }
+                        if(FileExists){
+                            // Upload the text file if it exists.
+                            print("[FILES] Found a text file within this directory to upload.")
+                            UploadFile(ContentType: "text/plain", FolderName: file.lastPathComponent, FilePathURL: file.appendingPathComponent("GuessWhat.txt"))
+                        }
+                        
+                        if(!VideoExists && !FileExists) {
+                            print("[FILES] Found this directory is empty: deleting.")
+                            // Neither the file or the meta information exist. Lets just delete the entire directory.
+                            DeleteFile(Path: file.path)
+                        }
                     }
                 }
             }
@@ -106,36 +136,55 @@ class vc_confirm_video: UIViewController {
     }
 
     
-    func UploadFile(FilePathURL: URL){
-        let transferManager = AWSS3TransferManager.default()
-        let uploadRequest = AWSS3TransferManagerUploadRequest()
+    func UploadFile(ContentType: String, FolderName: String, FilePathURL: URL){
+    
+        self.progressBlock = {(task, progress) in
+            DispatchQueue.main.async(execute: {
+               // print("Progress: \(progress.fractionCompleted)")
+            })
+        }
         
-        uploadRequest?.bucket = AWSBucketName
-        uploadRequest?.key = FilePathURL.lastPathComponent
-        uploadRequest?.body = FilePathURL
-        
-        
-        transferManager.upload(uploadRequest!).continueWith(executor: AWSExecutor.mainThread(), block: { (task:AWSTask<AnyObject>) -> Any? in
-            
-            if let error = task.error as NSError? {
-                if error.domain == AWSS3TransferManagerErrorDomain, let code = AWSS3TransferManagerErrorType(rawValue: error.code) {
-                    switch code {
-                    case .cancelled, .paused:
-                        print("[FILES] Error uploading (cancel or pause): \(String(describing: uploadRequest?.key)) Error: \(error)")
-                        break
-                    default:
-                        print("[FILES] Error uploading (default): \(String(describing: uploadRequest?.key)) Error: \(error)")
-                    }
-                } else {
-                    print("[FILES] Error uploading (generic): \(String(describing: uploadRequest?.key)) Error: \(error)")
+        self.completionHandler = { (task, error) -> Void in
+            DispatchQueue.main.async(execute: {
+                if let error = error {
+                    print("[FILES] Upload failed with error: \(error)")
+                  //  self.statusLabel.text = "Failed"
                 }
-                return nil
-            }
-            
-            let uploadOutput = task.result
-            print("[FILES] Upload complete for: \(String(describing: uploadRequest?.key)) with result: \(String(describing:uploadOutput))")
-            return nil
-        })
+                else{
+                    print("[FILES] Upload complete.")
+                    // Now we delete the file locally so we don't upload again.
+                    // Directory is deleted in a seperate step: for now we are just worried about the file.
+                    self.DeleteFile(Path: FilePathURL.path)
+                }
+            })
+        }
+        
+        let expression = AWSS3TransferUtilityUploadExpression()
+        expression.progressBlock = progressBlock
+        
+        
+        print("[FILES] Attempting to upload file with URL: \(FilePathURL)")
+        let FinalFileName = (GameEngineObject.CurrentUserObject?.email)! + "/" + FolderName + "/" + FilePathURL.lastPathComponent
+        print("[FILES] New file name (key) will be: \(FinalFileName)")
+
+        transferUtility.uploadFile(
+            FilePathURL,
+            bucket: AWSBucketName,
+            key: FinalFileName,
+            contentType: ContentType,
+            expression: expression,
+            completionHandler: completionHandler).continueWith { (task) -> AnyObject? in
+                if let error = task.error {
+                    print("[FILES] Error: \(error.localizedDescription)")
+                    
+                    DispatchQueue.main.async {
+                        print("[FILES]  Failed to upload file.")
+                    }
+                }
+                
+                return nil;
+        }
+        
     }
     
     
@@ -162,7 +211,7 @@ class vc_confirm_video: UIViewController {
         // Update the UI
         ScreenText.text = "Your video will be shared!"
         // Process local files (from this game session and others)
-        ProcessLocalFiles()
+        SearchThroughGameSessions()
         // Redirect the user after two seconds.
         StartDelayTimer()
     }
@@ -178,10 +227,10 @@ class vc_confirm_video: UIViewController {
         
         do {
             try fileManager.removeItem(atPath: Path)
-            print("[FILES] Possibly finished deleting directory.")
+            print("[FILES] Possibly finished deleting file or directory at \(Path)")
         }
         catch let error as NSError {
-            print("[FILES] Failed to delete directory: \(error)")
+            print("[FILES] Failed to delete file or directory. \(error)")
         }
     }
     
@@ -196,7 +245,7 @@ class vc_confirm_video: UIViewController {
         ScreenText.text = "Your video has been deleted!"
         
         // Process local files (from this game session and others)
-        ProcessLocalFiles()
+        SearchThroughGameSessions()
         
         // Redirect the user after two seconds.
         StartDelayTimer()

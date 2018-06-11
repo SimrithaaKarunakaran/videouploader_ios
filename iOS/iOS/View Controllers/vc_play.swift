@@ -56,8 +56,8 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     var previewLayer: AVCaptureVideoPreviewLayer!
     var activeInput: AVCaptureDeviceInput!
     
-    
-    
+    // We write to this buffer periodically and then write this buffer to file after game ends.
+    var MetaInfoBuffer  = ""
     
     
     /// This function starts the main game clock timer: if it isn't started already.
@@ -68,8 +68,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         }
     }
 
-    
-    
     func setupSession() -> Bool {
         captureSession.sessionPreset = AVCaptureSession.Preset.medium
         
@@ -185,7 +183,6 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     
     func startRecording() {
-        
         print("[PLAY] Entered startRecording")
         if movieOutput.isRecording == false {
             print("[PLAY] isRecording() was false. Setting up the recording.")
@@ -300,6 +297,9 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     
     func StopGame(){
+        
+        // Flush game meta information string buffer to text file that will be uploaded.
+        createMetaTextFile()
         // Stop recording video
         stopRecording()
         // No more gyroscope
@@ -364,7 +364,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         
         // Now, we write to the ol' text file.
         let SecondsSinceGameStart = String(90 - GameClockSeconds)
-        writeToTextFile(Text: SecondsSinceGameStart + ": " + EmojiObject.CodeName!)
+        WriteToTextBuffer(Text: SecondsSinceGameStart + ": " + EmojiObject.CodeName!)
     }
     
   
@@ -413,54 +413,54 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     // Given a sample from the gyroscope, lets determine (a) if there is a tilt, and (b) if so, is it in the forward or backward direction.
     func processGyroSample(x: Double, y: Double, z: Double){
-            // We want to detect forward tilts, not "jiggles". Its complicated.
-            let TILT_THRESHOLD   = 3.0; // Increase this number to decrease tilt sensitivity.
-            let JIGGLE_THRESHOLD = 0.8; // Increase this number if non-tilt vibrations are being detected as tilts.
+        // We want to detect forward tilts, not "jiggles". Its complicated.
+        let TILT_THRESHOLD   = 3.0; // Increase this number to decrease tilt sensitivity.
+        let JIGGLE_THRESHOLD = 0.8; // Increase this number if non-tilt vibrations are being detected as tilts.
 
-            // In this case, there is no tilt. Otherwise, we will detect what kind of tilt.
-            if((abs(x) > JIGGLE_THRESHOLD) || (abs(z) > JIGGLE_THRESHOLD) || (abs(y) < TILT_THRESHOLD)){
-                return; // No tilt detected.
-            }
-            
-            if(!TiltDetectionEnabled){
-                //print("[PLAY] Detected tilt was \(abs(y))")
-                return;
-            }
-            
-            // Now if we made it so far, we know tilt has happened. Lets find out which way, based on
-            // the orientation of the phone. But first, disable tilt detection until next time.
-            TiltDetectionEnabled = false
+        // In this case, there is no tilt. Otherwise, we will detect what kind of tilt.
+        if((abs(x) > JIGGLE_THRESHOLD) || (abs(z) > JIGGLE_THRESHOLD) || (abs(y) < TILT_THRESHOLD)){
+            return; // No tilt detected.
+        }
         
-            var ScreenFlipped = true
+        if(!TiltDetectionEnabled){
+            //print("[PLAY] Detected tilt was \(abs(y))")
+            return;
+        }
         
-            switch UIDevice.current.orientation{
-                case .landscapeLeft:
-                    ScreenFlipped = true
-                case .landscapeRight:
-                    ScreenFlipped = false
-                default:
-                    ScreenFlipped = true
-            }
-        
-            var TiltForward = false
-        
-            // Send a notification to the listener.
-            if(y >= TILT_THRESHOLD && !ScreenFlipped){
-                TiltForward = true
-            } else if(y <= -TILT_THRESHOLD && ScreenFlipped) {
-                TiltForward = true
-            }
+        // Now if we made it so far, we know tilt has happened. Lets find out which way, based on
+        // the orientation of the phone. But first, disable tilt detection until next time.
+        TiltDetectionEnabled = false
+    
+        var ScreenFlipped = true
+    
+        switch UIDevice.current.orientation{
+            case .landscapeLeft:
+                ScreenFlipped = true
+            case .landscapeRight:
+                ScreenFlipped = false
+            default:
+                ScreenFlipped = true
+        }
+    
+        var TiltForward = false
+    
+        // Send a notification to the listener.
+        if(y >= TILT_THRESHOLD && !ScreenFlipped){
+            TiltForward = true
+        } else if(y <= -TILT_THRESHOLD && ScreenFlipped) {
+            TiltForward = true
+        }
         
         if(TiltForward){
             print("[PLAY] Forward tilt detected.")
             // Update game UI and also write to the log file.
             increaseNumberOfCorrectAnswers();
-            writeToTextFile(Text: "Correct");
+            WriteToTextBuffer(Text: "Correct");
             // Play marimba sound.
             AudioManagerObject.PlayChime()
         } else {
             print("[PLAY] Backward tilt detected.")
-            writeToTextFile(Text: "Skipped");
+            WriteToTextBuffer(Text: "Skipped");
             // Play marimba sound.
             AudioManagerObject.PlayMarimba()
         }
@@ -475,55 +475,45 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         TextScore.text = String(NumberOfCorrectAnswers)
     }
     
-    // Write a line to our meta-information file.
-    // Specifically we will write the time and prompt everytime the prompt changes.
-    func writeToTextFile(Text: String){
-        do {
-            try Text.write(to: TextFileURL, atomically: false, encoding: .utf8)
-        }
-        catch {
-            print("[PLAY] An unexpected error occurred when writing to the text file.")
-        }
-        
-        print("[PLAY] Wrote to text file: \(Text)")
+    // Write a line to our meta-information buffer.
+    // Buffer flushed to text file after game end.
+    func WriteToTextBuffer(Text: String){
+        MetaInfoBuffer = MetaInfoBuffer + "\n" + Text
     }
     
+    
+    
+    
+    
+    func WriteMetaInformationToTextBuffer(){
+        let CurrentUser = GameEngineObject.CurrentUserObject!
+    
+        let ConsentShare = String(describing: CurrentUser.consentShare)
+        let ConsentView  = String(describing: CurrentUser.consentView)
+        
+        let L1 = "CONSENT_SHARE: "  + ConsentShare
+            + "\nCONSENT_VIEW: "   + ConsentView
+            + "\nChild Name: "     + CurrentUser.name
+            + "\nChild DOB: "       + CurrentUser.dOB
+            + "\nChild Gender: "    + CurrentUser.gender
+            + "\nChild Diagnosis: " + CurrentUser.autismDiagnosis
+        
+        WriteToTextBuffer(Text: L1)
+    }
     
     
     // This function creates the game meta-information text-file within the appropriate directory.
     // Also populates the top of the file with user-specific information. Remaining information written
     // On an ad-hoc basis during the game session.
     func createMetaTextFile(){
-        let file = "GuessWhat.txt" //this is the file. we will write to and read from it
-        
-        let CurrentUser = GameEngineObject.CurrentUserObject!
-        
-        
-        let ConsentShare = String(describing: CurrentUser.consentShare)
-        let ConsentView  = String(describing: CurrentUser.consentView)
+        TextFileURL = LockedGameDirectory.appendingPathComponent("GuessWhat.txt")
+        print("[PLAY] Creating text file at URL: \(TextFileURL)")
 
-        let L1 = "CONSENT_SHARE: "  + ConsentShare
-        let L2 = "CONSENT_VIEW: "   + ConsentView
-        let L3 = "Child Name: "     + CurrentUser.name
-        let L4 = "Child DOB: "       + CurrentUser.dOB
-        let L5 = "Child Gender: "    + CurrentUser.gender
-        let L6 = "Child Diagnosis: " + CurrentUser.autismDiagnosis
-        
-        TextFileURL = LockedGameDirectory.appendingPathComponent(file)
-        
-        //writing
+        let data = Data(MetaInfoBuffer.utf8)
         do {
-            try L1.write(to: TextFileURL, atomically: false, encoding: .utf8)
-            try L2.write(to: TextFileURL, atomically: false, encoding: .utf8)
-            try L3.write(to: TextFileURL, atomically: false, encoding: .utf8)
-            try L4.write(to: TextFileURL, atomically: false, encoding: .utf8)
-            try L5.write(to: TextFileURL, atomically: false, encoding: .utf8)
-            try L6.write(to: TextFileURL, atomically: false, encoding: .utf8)
-            print("[PLAY] Creating text file at URL: \(TextFileURL)")
-        }
-        catch {
-            print("[PLAY] An unexpected error occurred when writing to the text file.")
-            /* error handling here */
+            try data.write(to: TextFileURL, options: .atomic)
+        } catch {
+            print(error)
         }
     }
     
@@ -551,9 +541,9 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         LockedGameDirectory = CreateLockedGameDirectory(FOLDER_NAME: LockedDirectoryName)
         print("[PLAY] Creating directory with name: \(LockedDirectoryName)")
         
-        // Now that we have created the folder, lets create a text file inside the folder.
-        // This will contain information about who the user was, and what prompts were shown at what times.
-        createMetaTextFile()
+        // Now that we have created the folder, lets write game meta information (what we have so far) to the text buffer.
+        // Text buffer will be copied into the text file as the game ends.
+        WriteMetaInformationToTextBuffer()
         
         // Start the game timer, counting down from 90 seconds.
         StartGameClock();
@@ -607,5 +597,7 @@ class vc_play: UIViewController, AVCaptureFileOutputRecordingDelegate {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
     }
 }
+
+
 
 
