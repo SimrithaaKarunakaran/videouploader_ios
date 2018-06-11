@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AWSMobileClient
 import AWSCore
 import AWSCore
 import AWSCognitoIdentityProvider
@@ -72,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AudioManagerObject = AudioManager()
         print("[AUDIO] Finished initializing audio manager.")
 
-        return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
+        return true
         
     }
     
